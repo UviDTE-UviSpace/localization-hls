@@ -1,9 +1,7 @@
 # Positioning the center of a circle with OpenCV.
 ___
 ## _circleContours.py
-To display the center points on a plot with an image change the following :
-* line 66 = img path
-* line 77 & 89 = uncomment
+
 
 In the script a (binary) image gets blurred, processed, detects the contours and returns the X,Y coordinates of the center of a circle. The OpenCV library is used to process the image.
 
@@ -74,93 +72,19 @@ def _groupUVG(contourData):
 ```
 ---
 # EXAMPLE
+To display the center points on a plot with an image from '/Docs' change the following :
+* line 66 = img path
+* line 77 & 89 = uncomment
+
+For new images make sure the radius variable is adjusted.
 
 ![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple.png)
 ![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
 ![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
 
+Execution speed = ~9ms.
 ---
 ## Documentation
 * [Image moments](https://www.learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/)
 * [Thresholding](https://www.learnopencv.com/opencv-threshold-python-cpp/)
-
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-
-<!-- Italics -->
-*This text* is italic
-
-_This text_ is italic
-
-<!-- Strong -->
-**This text** is italic
-
-__This text__ is italic
-
-<!-- Strikethrough -->
-~~This text~~ is strikethrough
-
-<!-- Horizontal Rule -->
-
----
-___
-
-<!-- Blockquote -->
-> This is a quote
-
-<!-- Links -->
-[Traversy Media](http://www.traversymedia.com)
-
-[Traversy Media](http://www.traversymedia.com "Traversy Media")
-
-<!-- UL -->
-* Item 1
-* Item 2
-* Item 3
-  * Nested Item 1
-  * Nested Item 2
-
-<!-- OL -->
-1. Item 1
-1. Item 2
-1. Item 3
-
-<!-- Inline Code Block -->
-`<p>This is a paragraph</p>`
-
-<!-- Images -->
-![Markdown Logo](https://markdown-here.com/img/icon256.png)
-
-<!-- Github Markdown -->
-
-<!-- Code Blocks -->
-```bash
-  npm install
-
-  npm start
-```
-
-```javascript
-  function add(num1, num2) {
-    return num1 + num2;
-  }
-```
-
-```python
-  def add(num1, num2):
-    return num1 + num2
-```
-
-<!-- Tables -->
-| Name     | Email          |
-| -------- | -------------- |
-| John Doe | john@gmail.com |
-| Jane Doe | jane@gmail.com |
-
-<!-- Task List -->
-* [x] Task 1
-* [x] Task 2
-* [ ] Task 3
+* [OpenCV](https://opencv.org/)
