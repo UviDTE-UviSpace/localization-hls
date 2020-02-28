@@ -41,7 +41,7 @@ def _findCircleMass(imgFind):
             
     return circlesData
 
-def _groupUVG(contourData):
+def _groupUGV(contourData):
     bigCircles = []
     smallCircles = []
     UVGList = []
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     h, w = img.shape[:2]
     #Find center locations
     data = _findCircleMass(img)
-    UGVS = _groupUVG(data)
+    UGVS = _groupUGV(data)
     
     
     print("[ [UVG1], [UVG2], [UVG3], ...] = ", UGVS)

@@ -19,8 +19,7 @@ def _findCircleMass(imgFind):
 ```
 For the purpose of the project the algorithm is based on detecting circles. The contours found are filtered out by the big circle's radius and the small ones (big radius / 2) in a for loop by detecting the far left and right edge of a contour. The radius limit is predefined by the known symbol patterns created & printed on the UGV:
 ```python
-coordinates = []
-radiusList = []
+circlesData = []
 for c in contours:
   extLeft = tuple(c[c[:, :, 0].argmin()][0])
   extRight = tuple(c[c[:, :, 0].argmax()][0])
@@ -33,26 +32,29 @@ Using the following formula inside the function :
 ![Formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/900cb0605c954a17961360525a87fa6e38569c8b)
 
 ```python
-  if radius > 130 and radius < 180:       
-      M = cv.moments(c)
-      cx = int(M['m10']/M['m00'])
-      cy = int(M['m01']/M['m00'])
-      coordinates.append((cx, cy))                       
-      radiusList.append(radius)
-
-return coordinates, radiusList
+       #Check if radius is correct to the one drawn if yes save. This is to avoid collision over each other.
+       if radius > radiusSize - 6 and radius < radiusSize+19:       
+           M = cv.moments(c)
+           cx = int(M['m10']/M['m00'])
+           cy = int(M['m01']/M['m00'])
+           circlesData.append((cx, cy, radius))
+           '''                               
+           cv.drawContours(img, [c], 0, (0,255,0), 3)
+           plt.imshow(img)
+           '''
+   return circlesData
 ```
 
-The centers and radius found are appended to a list, circlesData,  and returned after every contour is checked. This list is used in the function '_groupUVG' to sort a list in the correct order before sending it to the main controller.
+The center coordinates X, Y and radius found are appended to a list 'circlesData' and returned after every contour is checked. This list is used in the function '_groupUGV' to sort a list in the correct order before sending it to the main controller.
 
-The format is :
+The UGV list format is :
 * [ [UVG1], [UVG2], [UVG3],..]
   *  [ [ (447, 392), (548, 341) ], [ (156, 221), (158, 108) ], [ (465, 155), (378, 83) ], ... ]
-* UVG1 = [xPBig, yPBig, xPSmall, yPSmall]
+* where UVG1 = [xPBig, yPBig, xPSmall, yPSmall]
   * [ (447, 392), (548, 341) ]
 
 ```python
-def _groupUVG(contourData):
+def _groupUGV(contourData):
     bigCircles = []
     smallCircles = []
     UVGList = []
