@@ -10,7 +10,7 @@ import cv2
 import numpy as np
  
  
-planets	= cv2.imread('CirclePicBinarySlant.png')
+planets	= cv2.imread('CirclePicFinal.png')
 gray_img	=	cv2.cvtColor(planets,	cv2.COLOR_BGR2GRAY)
 img	= cv2.medianBlur(gray_img,	5)
 cimg = cv2.cvtColor(img,cv2.COLOR_GRAY2BGR)
