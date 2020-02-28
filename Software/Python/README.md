@@ -1,5 +1,3 @@
-
----
 # Positioning the center of a circle with OpenCV.
 ___
 ## _circleContours.py
@@ -47,12 +45,39 @@ Using the following formula inside the function :
 return coordinates, radiusList
 ```
 
-The centers and radius found are appended to a list, circlesData,  and returned after every contour is checked. This list is used in the function '_groupUVG' to sort a list in the correct order before sending it to the main controller. The format is :
+The centers and radius found are appended to a list, circlesData,  and returned after every contour is checked. This list is used in the function '_groupUVG' to sort a list in the correct order before sending it to the main controller.
+
+The format is :
 * [ [UVG1], [UVG2], [UVG3],..]
   *  [ [ (447, 392), (548, 341) ], [ (156, 221), (158, 108) ], [ (465, 155), (378, 83) ], ... ]
 * UVG1 = [xPBig, yPBig, xPSmall, yPSmall]
   * [ (447, 392), (548, 341) ]
 
+```python
+def _groupUVG(contourData):
+    bigCircles = []
+    smallCircles = []
+    UVGList = []
+
+    #Filter circles by its radius and group accordingly.
+    #!!! change radius with picture size radius later !!!
+    for centerpoints in contourData:
+        if centerpoints[2] > radiusSize and centerpoints[2] < radiusSize + 15:
+            bigCircles.append(centerpoints[:2])
+        elif centerpoints[2] < radiusSize and centerpoints[2] > radiusSize - 2:
+            smallCircles.append(centerpoints[:2])
+
+    for big, small in zip(bigCircles, smallCircles):
+        UVGList.append([big, small])
+
+    return UVGList
+```
+---
+# EXAMPLE
+
+![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple.png)
+![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
+![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
 
 ---
 ## Documentation
