@@ -84,7 +84,9 @@ For new images make sure the radius variable is adjusted.
 ![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
 ![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
 
-Execution speed = ~9ms.
+### Execution speed = ~9ms.
+### Time = 9/1000 = 0.009s.
+### FPS = 1/Time =  111 fps.
 ---
 ## Documentation
 * [Image moments](https://www.learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/)
