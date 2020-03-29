@@ -5,6 +5,7 @@ ___
 * [x] Python circle algorithm
 * [x] Python algorithm to C++
 * [x] Create Petalinux image with OpenCV Library
+* [ ] QEMU Simulation of Zedboard
 * [ ] Software implementation on Zedboard
 * [ ] Evaluate with Triangle method
 * [ ] Simple HLS program

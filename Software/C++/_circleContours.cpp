@@ -5,14 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <chrono>
 
 #define radius_size 46
 
 
 using namespace cv;
 using namespace std;
-using namespace std::chrono;
 
 struct UGV_data
 {
@@ -36,7 +34,6 @@ RNG rng(12345);
 int main( int argc, char** argv )
 {
     // Get starting timepoint 
-    auto start = high_resolution_clock::now();
     
     Mat src; // Source image
     src = imread( "Docs/CirclePicMultiple2.png", IMREAD_GRAYSCALE);
@@ -53,10 +50,7 @@ int main( int argc, char** argv )
     grpUGV(UGV_List, circle_List);
     //drawCircleCenter(src, UGV_List);
     
-    // Get ending timepoint 
-    auto stop = high_resolution_clock::now(); 
-    auto duration = duration_cast<microseconds>(stop - start); 
-    cout << "Time taken: " << duration.count() << " ms." << endl; 
+    // Get ending timepoint  
     
     //imshow( "Source image", src );
     waitKey(0);

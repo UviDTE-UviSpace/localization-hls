@@ -26,6 +26,7 @@ def _findCircleMass(imgFind):
     for c in contours:
         extLeft = tuple(c[c[:, :, 0].argmin()][0])
         extRight = tuple(c[c[:, :, 0].argmax()][0])
+        print(extLeft, extRight)
         radius = (extRight[0] - extLeft[0])/2
         #Check if radius is correct to the one drawn if yes save. This is to avoid collision over each other.
         if radius > radiusSize - 6 and radius < radiusSize+19:       

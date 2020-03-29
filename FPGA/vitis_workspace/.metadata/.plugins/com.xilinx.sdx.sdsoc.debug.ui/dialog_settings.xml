@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="waveform_vector_add_Debug"/>
+	<item value="" key="emulatorarguments_vector_add_Debug"/>
+	<item value="false" key="enabletrace_vector_add_Debug"/>
+</section>

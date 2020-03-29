@@ -80,7 +80,7 @@ The contours found are filtered out by the big circle's radius and the small one
 
  If the radius is the one we are looking for, the calculation off the mass center is done by the captured image moment of the contour. "Image Moments are a particular weighted average of image pixel intensities, with the help of which we can find some specific properties of an image, like radius, area, centroid etc."
 
-Using the following formula for getting the pixels location :
+Using the following formula for getting the moment center pixel location :
 
 ![Formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/900cb0605c954a17961360525a87fa6e38569c8b)
 
@@ -165,7 +165,7 @@ To display the center points on an image from '/Docs' make sure:
 * line 37 = img path is correct
 * line 49 = uncommented
 
-![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple.png)
+![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/C%2B%2B/Docs/CirclePicMultiple2.png)
 ![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
 ![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
 
