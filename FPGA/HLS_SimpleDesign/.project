@@ -29,42 +29,42 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/.apc/.src</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/.apc/.tb</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/.apc/.tb</location>
 		</link>
 		<link>
-			<name>solution1/constraints</name>
+			<name>conv/constraints</name>
 			<type>2</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/solution1/.tcls</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/.tcls</location>
 		</link>
 		<link>
-			<name>source/variables.cpp</name>
+			<name>source/conv.cpp</name>
 			<type>1</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/variables.cpp</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv.cpp</location>
 		</link>
 		<link>
-			<name>testbench/testbench.cpp</name>
+			<name>testbench/conv_test.cpp</name>
 			<type>1</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/testbench.cpp</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv_test.cpp</location>
 		</link>
 		<link>
-			<name>solution1/constraints/.xml.directive</name>
+			<name>conv/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/solution1/solution1.directive</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/conv.directive</location>
 		</link>
 		<link>
-			<name>solution1/constraints/directives.tcl</name>
+			<name>conv/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/solution1/directives.tcl</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/directives.tcl</location>
 		</link>
 		<link>
-			<name>solution1/constraints/script.tcl</name>
+			<name>conv/constraints/script.tcl</name>
 			<type>1</type>
-			<location>D:/localization-hls/FPGA/HLS_SimpleDesign/solution1/script.tcl</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

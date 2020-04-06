@@ -13,6 +13,6 @@ ___
 * [ ] HLS hardware implementation
 * [ ] Document steps
 * [ ] Comparison with software implementation
-* [ ]
+* [ ] ...
 
 # [Google Drive Paper](https://docs.google.com/document/d/1WXC-WZeJukpFURYbbGiiq8jS_l3rZbQjlULRKu-fks4/edit?usp=sharing)

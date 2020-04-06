@@ -1,17 +1,14 @@
-# Xilinx HLS hardware implementation of UviSpace UVG localization algorithm
+# Designing a costum IP Core for UviSpace with HLS
 ___
-## Workflow
-* [x] Explore Python OpenCV
-* [x] Python circle algorithm
-* [x] Python algorithm to C++
-* [x] Create Petalinux image with OpenCV Library
-* [ ] Software implementation on Zedboard
-* [ ] Evaluate with Triangle method
-* [ ] Simple HLS program
-* [ ] Prep. circle algorithm in HLS with OpenCV to Axi video
-* [ ] HLS hardware implementation
-* [ ] Document steps
-* [ ] Comparison with software implementation
-* [ ]
+## This shows an example of a simple OpenCV usage.
+IP Core function 'Convolution':
+* #pragma HLS dataflow
+* Mat SRC, DST
+* 3x3 Kernel
+* 2D Convolution
 
-# [Google Drive Paper](https://docs.google.com/document/d/1WXC-WZeJukpFURYbbGiiq8jS_l3rZbQjlULRKu-fks4/edit?usp=sharing)
+We basically develop the IP as a C++ function in this step. We only design the IP core for functional testing. The usage of '#pragma HLS dataflow' is required as it indicates the functions used of HLS.
+
+Test bench:
+
+#

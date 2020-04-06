@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="variables.cpp" path="D:\localization-hls\FPGA\HLS_SimpleDesign\variables.cpp"/>
+    <originFiles name="conv.cpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\conv.cpp"/>
   </source>
   <testbench>
-    <originFiles name="testbench.cpp" path="D:\localization-hls\FPGA\HLS_SimpleDesign\testbench.cpp"/>
+    <originFiles name="conv_test.cpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\conv_test.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
