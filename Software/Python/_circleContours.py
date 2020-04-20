@@ -10,7 +10,7 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 import time
 
-radiusSize = 46 # !!! Change later with code line 51 !!!!
+radiusSize = 145 # !!! Change later with code line 51 !!!!
 
 def _findCircleMass(imgFind):
     #imgray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
@@ -26,10 +26,11 @@ def _findCircleMass(imgFind):
     for c in contours:
         extLeft = tuple(c[c[:, :, 0].argmin()][0])
         extRight = tuple(c[c[:, :, 0].argmax()][0])
-        print(extLeft, extRight)
         radius = (extRight[0] - extLeft[0])/2
         #Check if radius is correct to the one drawn if yes save. This is to avoid collision over each other.
-        if radius > radiusSize - 6 and radius < radiusSize+19:       
+        if radius > radiusSize - 15 and radius < radiusSize+30: 
+            #print(radius)
+            print(extLeft, extRight)
             M = cv.moments(c)
             cx = int(M['m10']/M['m00'])
             cy = int(M['m01']/M['m00'])
@@ -50,9 +51,9 @@ def _groupUGV(contourData):
     #Filter circles by its radius and group accordingly.
     #!!! change radius with picture size radius later !!!
     for centerpoints in contourData:
-        if centerpoints[2] > radiusSize and centerpoints[2] < radiusSize + 15:
+        if centerpoints[2] > radiusSize and centerpoints[2] < radiusSize + 30:
             bigCircles.append(centerpoints[:2])
-        elif centerpoints[2] < radiusSize and centerpoints[2] > radiusSize - 2:
+        elif centerpoints[2] < radiusSize and centerpoints[2] > radiusSize - 15:
             smallCircles.append(centerpoints[:2])
     
     for big, small in zip(bigCircles, smallCircles):
@@ -64,7 +65,7 @@ if __name__ == '__main__':
 
     start = time.time()
     #Read binary image
-    img = cv.imread('Docs/CirclePicMultiple2.png',0)
+    img = cv.imread('Docs/UGV1.png',0)
     #Get dimensions
     h, w = img.shape[:2]
     #Find center locations
@@ -72,13 +73,13 @@ if __name__ == '__main__':
     UGVS = _groupUGV(data)
     
     
-    print("[ [UVG1], [UVG2], [UVG3], ...] = ", UGVS)
-    print("UVG1 = [xPBig, yPBig, xPSmall, yPSmall] = ", UGVS[0])
+    #print("[ [UVG1], [UVG2], [UVG3], ...] = ", UGVS)
+    #print("UVG1 = [xPBig, yPBig, xPSmall, yPSmall] = ", UGVS[0])
     
-    '''
     #To unpack your data from pairs into lists for plotting, use zip:
     #plotting takes round +100ms
     
+    '''
     #Plot centers
     for data in UGVS:
         plt.scatter(*zip(*data))
