@@ -162,11 +162,12 @@ void grpUGV(vector<UGV_data>& UGVS, vector<Circle_data>& circles)
 # EXAMPLE
 To display the center points on an image from '/Docs' make sure:
 * the defined radiusSize = 46, for new images change this.
-* line 37 = img path is correct
-* line 49 = uncommented
+* line 46 = img path is correct
+* drawCircleCenter() uncommented
 
-![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/C%2B%2B/Docs/CirclePicMultiple2.png)
-![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
+![Circle image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/C%2B%2B/Docs/CirclePicMultiple2.png)
+![ZedBoard log](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
+![Vitis TCF-Agent log](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
 ![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
 
 ### Execution speed = ~9ms.
