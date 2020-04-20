@@ -63,23 +63,27 @@ def _groupUGV(contourData):
 
 if __name__ == '__main__':
 
-    start = time.time()
+    print("Circle algorithm by Gilles Lenaerts.")
+    
+    #start = time.time()
+    tic = time.perf_counter()
     #Read binary image
-    img = cv.imread('Docs/UGV1.png',0)
+    img = cv.imread('images/UGV1.png',0)
     #Get dimensions
     h, w = img.shape[:2]
     #Find center locations
     data = _findCircleMass(img)
     UGVS = _groupUGV(data)
     
+    #end = time.time()
+    toc = time.perf_counter()
+    print("Circle algorithm completed in {toc - tic:0.4f} seconds") #,(end - start)*100, "ms")
     
     #print("[ [UVG1], [UVG2], [UVG3], ...] = ", UGVS)
     #print("UVG1 = [xPBig, yPBig, xPSmall, yPSmall] = ", UGVS[0])
     
     #To unpack your data from pairs into lists for plotting, use zip:
-    #plotting takes round +100ms
-    
-    '''
+    #plotting takes round +100ms  
     #Plot centers
     for data in UGVS:
         plt.scatter(*zip(*data))
@@ -87,8 +91,7 @@ if __name__ == '__main__':
     #Reverse Y axis , like mirroring
     ax = plt.gca()
     ax.set_ylim(ax.get_ylim()[::-1])
-    plt.show()
-    '''
+    plt.savefig('/plots/centerpoints.png')
+    #plt.show()
     
-    end = time.time()
-    print("Execution speed is :",(end - start)*1000, "ms")
+    

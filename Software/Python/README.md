@@ -82,11 +82,12 @@ For new images make sure the radius variable is adjusted.
 
 ![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple.png)
 ![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
+![Zedboard Python Execution speed](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
 ![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
 
-### Execution speed = ~9ms.
-### Time = 9/1000 = 0.009s.
-### FPS = 1/Time =  111 fps.
+### Execution speed = ~610ms.
+### Time = 610/1000 = 0.61s.
+### FPS = 1/Time =  1.62 fps.
 ---
 ## Documentation
 * [Image moments](https://www.learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/)

@@ -131,3 +131,5 @@ dmypy.json
 #Excludes
 Zed_Platform/*
 Backups/*
+Software/Vitis/wksp1/zed1/*
+Software/Vitis/wksp1/.metadata/*

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="opencvzed1" location="/home/gilles/PetaTesting/wksp1/opencvzed1" platform="/home/gilles/PetaTesting/wksp1/zed1/export/zed1/zed1.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="opencvzed1_system" sysConfig="zed1" runtime="C/C++" cpu="linux_domain" cpuInstance="" os="linux" language="CPP" sysrootLocation="/home/gilles/PetaTesting/wksp1/zed1/export/zed1/sw/zed1/linux_domain/sysroot/cortexa9t2hf-neon-xilinx-linux-gnueabi">
+  <configuration name="Debug" id="xilinx.gnu.armv7.linux.exe.debug.645893724">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.linux.exe.release.1794638916">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

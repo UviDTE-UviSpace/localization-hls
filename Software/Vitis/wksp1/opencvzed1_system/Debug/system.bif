@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+[bootloader] <zed1/boot/zynq_fsbl.elf>
+<bitstream>
+<zed1/boot/u-boot.elf>
+}
