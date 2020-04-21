@@ -80,10 +80,10 @@ To display the center points on a plot with an image from '/Docs' change the fol
 
 For new images make sure the radius variable is adjusted.
 
-![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple.png)
-![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
-![Zedboard Python Execution speed](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_contours.png)
-![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/Docs/CirclePicMultiple_plot.png)
+![Image](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/images/CirclePicMultiple.png)
+![Contours](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/pics/CirclePicMultiple_contours.png)
+![Zedboard Python Execution speed](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/pics/execute%20speed%20UGVMultiple%20Python%20ZedBoard.PNG)
+![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/Python/pics/CirclePicMultiple_plot.png)
 
 ### Execution speed = ~610ms.
 ### Time = 610/1000 = 0.61s.

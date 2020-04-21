@@ -19,7 +19,7 @@ import time
 
 start = time.time()
 
-img = cv.imread('CirclePicBinary.png',0)
+img = cv.imread('../Docs/CirclePicMultiple2.png',0)
 #imgray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 imgray = cv.bilateralFilter(img,9,75,75)
 imgray	=	cv.GaussianBlur(imgray,(5,5),0)
