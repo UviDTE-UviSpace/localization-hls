@@ -7,71 +7,21 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:53:53.409+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:53:20.133+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:34.185+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:34.175+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:02.352+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:02.342+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:49:25.266+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:37:43.882+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:37:43.877+0200"/>
-        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/localization-hls/FPGA/HLS_SimpleDesign/conv/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/localization-hls/FPGA/HLS_SimpleDesign/conv/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:47.486+0200"/>
-        <logs message="ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:47.340+0200"/>
-        <logs message="ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:47.336+0200"/>
-        <logs message="ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:47.332+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:31:38.565+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:31:38.562+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:30:53.151+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:30:53.148+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:29:27.507+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:29:27.504+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:27:08.409+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:27:08.405+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:23:12.962+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:23:12.958+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-22T21:05:29.362+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-22T21:02:08.931+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-22T20:54:00.236+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-22T20:52:49.142+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-22T20:50:54.039+0200"/>
       </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.450+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.150+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.091+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.087+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>' to 'AXIM2Mat' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:174:46)" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.083+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Filter2D&lt;0, 0, char, int, 1080, 1920, 3, 3>' to 'Filter2D' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.023+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>' to 'Mat2AXIM' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:240:46)" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:23.019+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-713] Argument 'image_in' has read operations in process function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:22.399+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'image_in' in the middle of dataflow may stall the dataflow pipeline:" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:22.391+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1080 for loop 'loop_pixel' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:22.371+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1920 for loop 'Loop-0-0' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:22.339+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src.data_stream.V' (HLS_SimpleDesign/conv.cpp:8)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:22.049+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file HLS_SimpleDesign/conv.cpp" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:20.015+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: HLS_SimpleDesign/conv.cpp:14:4" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:11.181+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: HLS_SimpleDesign/conv.cpp:20:33" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:22:11.177+0200" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:11.384+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:11.080+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:11.034+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:11.031+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>' to 'AXIM2Mat' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:174:46)" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:11.028+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Filter2D&lt;0, 0, char, int, 1080, 1920, 3, 3>' to 'Filter2D' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:10.940+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>' to 'Mat2AXIM' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:240:46)" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:10.935+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-713] Argument 'image_in' has read operations in process function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:10.319+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'image_in' in the middle of dataflow may stall the dataflow pipeline:" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:10.316+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1080 for loop 'loop_pixel' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:10.264+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1920 for loop 'Loop-0-0' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:10.237+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src.data_stream.V' (HLS_SimpleDesign/conv.cpp:8)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:09.948+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file HLS_SimpleDesign/conv.cpp" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:08.005+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: HLS_SimpleDesign/conv.cpp:14:4" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:34:59.094+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: HLS_SimpleDesign/conv.cpp:20:33" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:34:59.088+0200" type="Warning"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

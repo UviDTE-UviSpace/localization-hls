@@ -37,9 +37,24 @@
 			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/core.hpp</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/core/core.hpp</location>
+		</link>
+		<link>
 			<name>.reference/highgui_c.h</name>
 			<type>1</type>
 			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/highgui/highgui_c.h</location>
+		</link>
+		<link>
+			<name>.reference/hls_opencv.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/hls_opencv.h</location>
+		</link>
+		<link>
+			<name>.reference/mat.hpp</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/core/mat.hpp</location>
 		</link>
 		<link>
 			<name>.reference/types_c.h</name>
@@ -47,9 +62,9 @@
 			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/core/types_c.h</location>
 		</link>
 		<link>
-			<name>conv/constraints</name>
+			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/.tcls</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/Grey_image.cpp</name>
@@ -67,19 +82,19 @@
 			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/Grey_image_tb.cpp</location>
 		</link>
 		<link>
-			<name>conv/constraints/.xml.directive</name>
+			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/conv.directive</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/solution1/solution1.directive</location>
 		</link>
 		<link>
-			<name>conv/constraints/directives.tcl</name>
+			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/directives.tcl</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/solution1/directives.tcl</location>
 		</link>
 		<link>
-			<name>conv/constraints/script.tcl</name>
+			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/conv/script.tcl</location>
+			<location>C:/localization-hls/FPGA/HLS_SimpleDesign/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

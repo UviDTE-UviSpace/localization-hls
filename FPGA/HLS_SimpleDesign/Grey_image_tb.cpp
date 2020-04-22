@@ -1,29 +1,47 @@
 #include "simple.hpp"
 #include <iostream>
+#include <hls_opencv.h>
 
 using namespace std;
-//using namespace cv;
+using namespace cv;
 
-void conv(uint8_t * image_in, uint8_t * image_out);
 int main(){
 
+	/*
+	 * command line inpput image with argc&v
+	if( argc != 2)
+	{
+	 cout <<" Usage: display_image ImageToLoadAndDisplay" << endl;
+	 return -1;
+	}
+	Mat image;
+	image = imread(argv[1], CV_LOAD_IMAGE_COLOR);   // Read the file
+	*/
+
+   /*
    IplImage* src;
    IplImage* dst;
    src = cvLoadImage("test.jpg");
-   Grey_image(src,dst);
-
-   //Mat im = imread("test.jpg",CV_LOAD_IMAGE_GRAYSCALE);
-   /*
-   uint8_t image_in[MAX_HEIGHT*MAX_WIDTH];
-   uint8_t image_out[MAX_HEIGHT*MAX_WIDTH];
-   memcpy(image_in,src->imageData,sizeof(uint8_t)*src->height*src->width);
-   conv(image_in,image_out);
-   Mat out = Mat(MAX_HEIGHT,MAX_WIDTH,CV_8UC1,image_out);
+   AXI_STREAM src_axi, dst_axi;
+   IplImage2AXIvideo(*src, src_axi);
+   //IplImage2AXIvideo(IplImage* img, hls::stream<ap_axiu<W,1,1,1> >& AXI_video_strm);
+   Grey_image(src_axi, dst_axi);
+   AXIvideo2IplImage(dst_axi, dst);
    */
 
-   cvSaveImage("testout.jpg", dst);
-   cvReleaseImage(&src);
-   cvReleaseImage(&dst);
+   RGB_IMAGE INPUT_IMG;
+   GRAY_IMAGE OUTPUT_IMG;
+   Mat im, res;
+   printf("")
+   im = imread("test3.jpg");
+   cvMat2hlsMat(im, INPUT_IMG);
+   Grey_image(INPUT_IMG, OUTPUT_IMG);
+   hlsMat2cvMat(OUTPUT_IMG, res);
+
+
+   namedWindow( "Grayed", WINDOW_AUTOSIZE );// Create a window for display.
+   imshow("Display window", res );
+   waitKey (0);
  
  return 0;
 }

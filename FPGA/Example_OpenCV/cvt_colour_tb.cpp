@@ -1,4 +1,4 @@
- #include <hls_opencv.h>
+#include <hls_opencv.h>
 #include "cvt_colour.hpp"
 #include <iostream>
 
