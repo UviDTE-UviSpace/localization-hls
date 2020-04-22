@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="conv.cpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\conv.cpp"/>
+    <originFiles name="Grey_image.cpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\Grey_image.cpp"/>
+    <originFiles name="simple.hpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\simple.hpp"/>
   </source>
   <testbench>
-    <originFiles name="conv_test.cpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\conv_test.cpp"/>
+    <originFiles name="Grey_image_tb.cpp" path="C:\localization-hls\FPGA\HLS_SimpleDesign\Grey_image_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/localization-hls/FPGA/Simple_Adder/solution1/sim/vhdl/AESL_sim_pkg.vhd,1587480540,vhdl,,,,aesl_sim_components,C:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims;unisims_ver;xil_defaultlib;xpm,,,,,,
+C:/localization-hls/FPGA/Simple_Adder/solution1/sim/vhdl/add_ex.autotb.vhd,1587480540,vhdl,,,,apatb_add_ex_top,C:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims;unisims_ver;xil_defaultlib;xpm,,,,,,
+C:/localization-hls/FPGA/Simple_Adder/solution1/sim/vhdl/add_ex.vhd,1587480313,vhdl,,,,add_ex,C:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims;unisims_ver;xil_defaultlib;xpm,,,,,,

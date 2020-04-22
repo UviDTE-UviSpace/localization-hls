@@ -7,6 +7,13 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:53:53.409+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:53:20.133+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:34.185+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:34.175+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:02.352+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:50:02.342+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-22T16:49:25.266+0200"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:37:43.882+0200"/>
         <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:37:43.877+0200"/>
         <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/localization-hls/FPGA/HLS_SimpleDesign/conv/csim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/localization-hls/FPGA/HLS_SimpleDesign/conv/csim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;" projectName="HLS_SimpleDesign" solutionName="conv" date="2020-04-06T16:35:47.486+0200"/>

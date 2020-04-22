@@ -1,13 +1,14 @@
-<project xmlns="com.autoesl.autopilot.project" name="HLS_SimpleDesign" top="conv">
+<project xmlns="com.autoesl.autopilot.project" name="HLS_SimpleDesign" top="Grey_image">
+    <files>
+        <file name="../Grey_image_tb.cpp" sc="0" tb="1" cflags=""/>
+        <file name="HLS_SimpleDesign/Grey_image.cpp" sc="0" tb="false" cflags="" blackbox="false"/>
+        <file name="HLS_SimpleDesign/simple.hpp" sc="0" tb="false" cflags="" blackbox="false"/>
+    </files>
     <includePaths/>
     <libraryPaths/>
     <Simulation>
-        <SimFlow askAgain="false" name="csim" csimMode="0" lastCsimMode="0"/>
+        <SimFlow name="csim" csimMode="2" lastCsimMode="2"/>
     </Simulation>
-    <files xmlns="">
-        <file name="../conv_test.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="HLS_SimpleDesign/conv.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-    </files>
     <solutions xmlns="">
         <solution name="conv" status="active"/>
     </solutions>

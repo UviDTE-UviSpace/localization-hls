@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cvt_colour.cpp" path="C:\localization-hls\FPGA\cvt_colour.cpp"/>
+    <originFiles name="cvt_colour.hpp" path="C:\localization-hls\FPGA\cvt_colour.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="cvt_colour_tb.cpp" path="C:\localization-hls\FPGA\cvt_colour_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
