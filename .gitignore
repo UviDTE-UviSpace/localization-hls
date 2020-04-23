@@ -133,3 +133,5 @@ Zed_Platform/*
 Backups/*
 Software/Vitis/wksp1/zed1/*
 Software/Vitis/wksp1/.metadata/*
+Software/Vitis/wksp1/RemoteSystemsTempFiles/*
+Software/Vitis/wksp1/webtalk/*

@@ -39,15 +39,23 @@ int main( int argc, char** argv )
     // Get starting timepoint
 	clock_t start;
 	double duration;
+
+	printf("\n\r-------------------------\n\rCircle detection algorithm for UviSpace by Gilles Lenaerts.\n\r");
+
+	if (argc != 2)
+	{
+		cout << "usage: ./program imagetohandle" << endl;
+		return -1;
+	}
+
 	start = clock();
 
-	printf("-------------------------\n\rCircle detection algorithm for UviSpace by Gilles Lenaerts.\n\r");
     Mat src; // Source image
-    src = imread( "Docs/CirclePicMultiple2.png", IMREAD_GRAYSCALE);
+    src = imread(argv[1], IMREAD_GRAYSCALE);
 
     if(! src.data )
     {
-        printf("Error imagen\n\r"); exit(1);
+        printf("Error loading image\n\r"); exit(1);
     }
 
     vector<UGV_data> UGV_List;
@@ -59,12 +67,12 @@ int main( int argc, char** argv )
     // Get ending timepoint
     duration = (float)start / CLOCKS_PER_SEC;
     printf("Circle algorithm done in %f sec.	%0.2f ms.	%0.2f FPS\n\r", duration, duration*100, 1/duration);
-    printf("total UGVS : %dn\r-------------------------\n\r", UGV_List.size() );
+    cout << "\n\rCars found: "<< (UGV_List).size() << endl; //n\r-------------------------\n\r", );
 
     printf("drawing center points. \n\r");
     drawCircleCenter(src, UGV_List);
 
-    printf("program completed.\n\r");
+    printf("program completed.\n\r-------------------------\n\r");
   return(0);
 }
 
@@ -169,7 +177,7 @@ void drawCircleCenter(const Mat &Image,vector<UGV_data>& UGVS)
         //Draw dots
         circle( drawing, (UGVS)[i].coordsBig, 5, (255,255,255), -1 );
         circle( drawing, (UGVS)[i].coordsSmall, 2, (255,255,255), -1 );
-        printf("\n\rUGV%d\n\r-------------------------\n\rBig coords = [%f, %f] \n\rSml coords = [%f,%f]\n\r", i, (UGVS)[i].coordsBig.x, (UGVS)[i].coordsBig.y, (UGVS)[i].coordsSmall.x, (UGVS)[i].coordsSmall.y);
+        printf("\n\rUGV%d\n\r-------------------------\n\rBig coords = [%f, %f] \n\rSml coords = [%f, %f]\n\r", i, (UGVS)[i].coordsBig.x, (UGVS)[i].coordsBig.y, (UGVS)[i].coordsSmall.x, (UGVS)[i].coordsSmall.y);
     }
 
     // Show in a window
