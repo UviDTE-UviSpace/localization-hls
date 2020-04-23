@@ -1,5 +1,0 @@
-<annotationInfo>
-<annotationInfo>
-<item  id="9" filename="add_ex.c" linenumber="7" name="res" contextFuncName="add_ex" moduleName="add_ex" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\localization-hls\FPGA"><\/item>
-<\/annotationInfo>
-</annotationInfo>

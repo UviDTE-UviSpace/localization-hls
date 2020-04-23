@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed with errors." projectName="Simple_Adder" solutionName="solution1" date="2020-04-23T20:13:25.382+0200"/>
+        <logs message="ERROR: [HLS 200-627] Cannot find C test bench. Please specify test bench files using 'add_files -tb'." projectName="Simple_Adder" solutionName="solution1" date="2020-04-23T20:13:25.368+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed with errors." projectName="Simple_Adder" solutionName="solution1" date="2020-04-23T20:13:06.882+0200"/>
+        <logs message="ERROR: [HLS 200-627] Cannot find C test bench. Please specify test bench files using 'add_files -tb'." projectName="Simple_Adder" solutionName="solution1" date="2020-04-23T20:13:06.872+0200"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

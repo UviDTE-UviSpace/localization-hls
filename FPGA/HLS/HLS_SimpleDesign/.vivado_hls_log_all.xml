@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Pre-synthesis failed.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/localization-hls/FPGA/HLS_SimpleDesign/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/localization-hls/FPGA/HLS_SimpleDesign/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:44.885+0200"/>
+        <logs message="ERROR: [XFORM 203-711] Array 'img_1.data_stream.V' failed dataflow checking: it cannot be connected to more than 2 processes." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.944+0200"/>
+        <logs message="ERROR: [XFORM 203-711] Variable 'img_1.data_stream.V' failed dataflow checking: it can only be written in one process function." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.896+0200"/>
+        <logs message="ERROR: [XFORM 203-711] Internal stream 'img_0.data_stream[2].V' failed dataflow checking: it must be produced and consumed exactly once." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.859+0200"/>
+        <logs message="ERROR: [XFORM 203-711] Internal stream 'img_0.data_stream[1].V' failed dataflow checking: it must be produced and consumed exactly once." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.819+0200"/>
+        <logs message="ERROR: [XFORM 203-711] Internal stream 'img_0.data_stream[0].V' failed dataflow checking: it must be produced and consumed exactly once." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.776+0200"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T20:19:28.653+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:32:47.746+0200"/>
+        <logs message="&#xD;@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:32:47.738+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:32:01.076+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:32:01.068+0200"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_1.data_stream.V' has read operations in process function 'hls::Threshold&lt;480, 640, 0, 0>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.976+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_1.data_stream.V' has write operations in process function 'hls::GaussianBlur&lt;3, 3, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.965+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_1.data_stream.V' has write operations in process function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.954+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'img_1.data_stream.V' should be updated in process function 'hls::GaussianBlur&lt;3, 3, 4096, 0, 480, 640>', otherwise it may not be synthesized correctly." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.935+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'img_1.data_stream.V' should be updated in process function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 480, 640>', otherwise it may not be synthesized correctly." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.926+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_1.data_stream.V' has write operations in process function 'hls::GaussianBlur&lt;3, 3, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.917+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_1.data_stream.V' has write operations in process function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.907+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[2].V' has read operations in process function 'hls::GaussianBlur&lt;3, 3, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.886+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[2].V' has read operations in process function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.878+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[2].V' has write operations in process function 'hls::AXIvideo2Mat&lt;24, 480, 640, 4096>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.867+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[1].V' has read operations in process function 'hls::GaussianBlur&lt;3, 3, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.846+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[1].V' has read operations in process function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.836+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[1].V' has write operations in process function 'hls::AXIvideo2Mat&lt;24, 480, 640, 4096>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.826+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[0].V' has read operations in process function 'hls::GaussianBlur&lt;3, 3, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.809+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[0].V' has read operations in process function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.797+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Variable 'img_0.data_stream[0].V' has write operations in process function 'hls::AXIvideo2Mat&lt;24, 480, 640, 4096>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.786+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 10 to 482 for loop 'loop_height' in function 'hls::Dilate&lt;0, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.768+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 10 to 642 for loop 'loop_width' in function 'hls::Dilate&lt;0, 0, 480, 640>'." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:43.579+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (HLS_SimpleDesign/Grey_image.cpp:40)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:41.931+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_1.data_stream.V' (HLS_SimpleDesign/Grey_image.cpp:41)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:41.646+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'thImg2.data_stream.V' (HLS_SimpleDesign/Grey_image.cpp:44)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:41.636+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'thImg.data_stream.V' (HLS_SimpleDesign/Grey_image.cpp:43)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:41.628+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2.data_stream.V' (HLS_SimpleDesign/Grey_image.cpp:45)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:41.619+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2c.data_stream.V' (HLS_SimpleDesign/Grey_image.cpp:48)." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:41.612+0200" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_axi_io.h:49: variable-indexed range selection may cause suboptimal QoR." projectName="HLS_SimpleDesign" solutionName="solution1" date="2020-04-23T15:30:40.764+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

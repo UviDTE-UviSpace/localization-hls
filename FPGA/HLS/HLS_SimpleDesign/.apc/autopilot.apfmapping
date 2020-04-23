@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="simple.hpp" path="C:\localization-hls\FPGA\HLS\HLS_SimpleDesign\simple.hpp"/>
+    <originFiles name="Grey_image.cpp" path="C:\localization-hls\FPGA\HLS\HLS_SimpleDesign\Grey_image.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="Grey_image_tb.cpp" path="C:\localization-hls\FPGA\HLS\HLS_SimpleDesign\Grey_image_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

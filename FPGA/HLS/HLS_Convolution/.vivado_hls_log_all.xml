@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:57:34.704+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:57:34.700+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:50:41.540+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:50:41.536+0200"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.757+0200" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.472+0200" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.427+0200" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.424+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>' to 'AXIM2Mat' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:174:46)" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.421+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Filter2D&lt;0, 0, char, int, 1080, 1920, 3, 3>' to 'Filter2D' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.362+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>' to 'Mat2AXIM' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:240:46)" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.359+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Argument 'image_in' has read operations in process function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.732+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'image_in' in the middle of dataflow may stall the dataflow pipeline:" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.724+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1080 for loop 'loop_pixel' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.705+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1920 for loop 'Loop-0-0' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.674+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src.data_stream.V' (HLS_Convolution/core.cpp:8)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.395+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file HLS_Convolution/core.cpp" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:33.473+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: HLS_Convolution/core.cpp:14:4" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:24.600+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: HLS_Convolution/core.cpp:20:33" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:24.596+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
