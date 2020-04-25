@@ -9,6 +9,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <ctime>
+#include <chrono>
 
 using namespace std;
 using namespace cv;
@@ -34,11 +35,10 @@ void drawCircleCenter(const Mat &Image, vector<UGV_data>& UGVS);
 
 RNG rng(12345);
 
+
 int main( int argc, char** argv )
 {
     // Get starting timepoint
-	clock_t start;
-	double duration;
 
 	printf("\n\r-------------------------\n\rCircle detection algorithm for UviSpace by Gilles Lenaerts.\n\r");
 
@@ -48,7 +48,12 @@ int main( int argc, char** argv )
 		return -1;
 	}
 
+	using namespace std::chrono;
+	clock_t start;
+	double durations;
 	start = clock();
+	high_resolution_clock::time_point startf, endf;
+    startf = high_resolution_clock::now();
 
     Mat src; // Source image
     src = imread(argv[1], IMREAD_GRAYSCALE);
@@ -65,13 +70,16 @@ int main( int argc, char** argv )
     grpUGV(UGV_List, circle_List);
 
     // Get ending timepoint
-    duration = (float)start / CLOCKS_PER_SEC;
-    printf("Circle algorithm done in %f sec.	%0.2f ms.	%0.2f FPS\n\r", duration, duration*100, 1/duration);
-    cout << "\n\rCars found: "<< (UGV_List).size() << endl; //n\r-------------------------\n\r", );
+    durations = (float)start / CLOCKS_PER_SEC;
+    printf("Circle algorithm done in %f sec.	%0.2f ms.	%0.2f FPS\n\r", durations, durations*100, 1/durations);
 
+    endf = high_resolution_clock::now();
+    duration<double> elapsed_seconds = duration_cast<duration<double>>(endf-startf);
+    cout << "finished in : " << elapsed_seconds.count() << endl;
+
+    cout << "\n\rCars found: "<< (UGV_List).size() << endl; //n\r-------------------------\n\r", );
     printf("drawing center points. \n\r");
     drawCircleCenter(src, UGV_List);
-
     printf("program completed.\n\r-------------------------\n\r");
   return(0);
 }
@@ -84,17 +92,31 @@ void findCircleCenter(const Mat &Image, vector<Circle_data>& circles)
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
 
+    using namespace std::chrono;
+    high_resolution_clock::time_point startfind, endfind, startfilter, endfilter, startmoments, endmoments;
+
+    startfilter = high_resolution_clock::now();
     bilateralFilter(Image, imgray, 9,75,75);
     GaussianBlur(imgray, imgray, Size(5,5),0);
     threshold(imgray, thresh, 127,255, 0);
     threshold(imgray, thresh, 0, 255, THRESH_BINARY | THRESH_OTSU); //THRESH_BINARY | THRESH_OTSU
+    endfilter = high_resolution_clock::now();
+    duration<double> elapsed_seconds1 = duration_cast<duration<double>>(endfilter-startfilter);
+
+    startfind = high_resolution_clock::now();
     findContours(thresh, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0,0) );
+    endfind = high_resolution_clock::now();
+    duration<double> elapsed_seconds2 = duration_cast<duration<double>>(endfind-startfind);
+
+    //cout << "finished findContours in : " << elapsed_seconds.count() << endl;  //"at: " << std::ctime(&endtime) << endl;
+
     //printf("-------------------------\n\rContours found = %d", contours.size());
 
     static Moments mu;
     static Point2f pt;
     static Circle_data circleinfo;
 
+    startmoments = high_resolution_clock::now();
     for( size_t i = 0; i < contours.size(); i++ )
     {
         radius = 0;
@@ -126,6 +148,11 @@ void findCircleCenter(const Mat &Image, vector<Circle_data>& circles)
         }
 
     }
+
+    endmoments = high_resolution_clock::now();
+    duration<double> elapsed_seconds3 = duration_cast<duration<double>>(endmoments-startmoments);
+
+    cout << "finished findContours in : " << elapsed_seconds2.count() << "	filters in: "<< elapsed_seconds1.count() << "	moments in: "<< elapsed_seconds3.count() << endl;  //"at: " << std::ctime(&endtime) << endl;
 
     //printf("\n\r-------------------------\n\rcircles = %d n\r-------------------------\n\r", circles.size());
 

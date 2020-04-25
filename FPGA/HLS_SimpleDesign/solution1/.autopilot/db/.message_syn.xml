@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;HLS_SimpleDesign/Grey_image.cpp&apos; ..."/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: In file included from HLS_SimpleDesign/Grey_image.cpp:1:
+In file included from HLS_SimpleDesign/Grey_image.cpp:1:
+HLS_SimpleDesign/simple.hpp:16:6: error: variable has incomplete type &apos;void&apos;
+void Grey_image(IplImage *src,IplImage *dst);
+     ^
+HLS_SimpleDesign/simple.hpp:16:17: error: use of undeclared identifier &apos;IplImage&apos;
+void Grey_image(IplImage *src,IplImage *dst);
+                ^
+HLS_SimpleDesign/simple.hpp:16:27: error: use of undeclared identifier &apos;src&apos;
+void Grey_image(IplImage *src,IplImage *dst);
+                          ^
+In file included from HLS_SimpleDesign/Grey_image.cpp:1:
+HLS_SimpleDesign/Grey_image.cpp:27:6: error: variable has incomplete type &apos;void&apos;
+void Grey_image(IplImage *src, IplImage *dst)
+     ^
+HLS_SimpleDesign/Grey_image.cpp:27:17: error: use of undeclared identifier &apos;IplImage&apos;
+void Grey_image(IplImage *src, IplImage *dst)
+                ^
+HLS_SimpleDesign/Grey_image.cpp:27:27: error: use of undeclared identifier &apos;src&apos;
+void Grey_image(IplImage *src, IplImage *dst)
+                          ^
+HLS_SimpleDesign/Grey_image.cpp:27:46: error: expected &apos;;&apos; after top level declarator
+void Grey_image(IplImage *src, IplImage *dst)
+                                             ^
+                                             ;
+7 errors generated."/>
+</Messages>
