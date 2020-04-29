@@ -29,42 +29,77 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/.apc/.src</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/.apc/.tb</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/.apc/.tb</location>
+		</link>
+		<link>
+			<name>.reference/ap_axi_sdata.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/ap_axi_sdata.h</location>
+		</link>
+		<link>
+			<name>.reference/highgui_c.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/highgui/highgui_c.h</location>
+		</link>
+		<link>
+			<name>.reference/hls_opencv.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/hls_opencv.h</location>
+		</link>
+		<link>
+			<name>.reference/hls_stream.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/hls_stream.h</location>
+		</link>
+		<link>
+			<name>.reference/hls_video_imgproc.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/hls/hls_video_imgproc.h</location>
+		</link>
+		<link>
+			<name>.reference/hls_video_mem.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/hls/hls_video_mem.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/solution1/.tcls</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/core.cpp</name>
+			<name>source/conv.cpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/core.cpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/conv.cpp</location>
 		</link>
 		<link>
-			<name>testbench/test.cpp</name>
+			<name>source/conv.hpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/test.cpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/conv.hpp</location>
+		</link>
+		<link>
+			<name>testbench/conv_tb.cpp</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/conv_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/solution1/solution1.directive</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/solution1/directives.tcl</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS_Convolution/solution1/script.tcl</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_Convolution/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

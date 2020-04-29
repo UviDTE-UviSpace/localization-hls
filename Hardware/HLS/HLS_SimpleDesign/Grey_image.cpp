@@ -37,8 +37,8 @@ void blur_image(AXI_STREAM& video_in, AXI_STREAM& video_out)//, int rows, int co
     #pragma HLS INTERFACE ap_stable port=cols
 	 */
 
-	RGB_IMAGE  img_0(MAX_HEIGHT, MAX_WIDTH);
-	GRAY_IMAGE   img_1(MAX_HEIGHT, MAX_WIDTH);
+	RGB_IMAGE   img_0(MAX_HEIGHT, MAX_WIDTH);
+	GRAY_IMAGE  img_1(MAX_HEIGHT, MAX_WIDTH);
 
 	GRAY_IMAGE  thImg(MAX_HEIGHT, MAX_WIDTH);
 	GRAY_IMAGE  thImg2(MAX_HEIGHT, MAX_WIDTH);
@@ -59,7 +59,7 @@ void blur_image(AXI_STREAM& video_in, AXI_STREAM& video_out)//, int rows, int co
 	hls::AddWeighted(img_4,0.5,img_3,0.5,0.0,img_5);
 	hls::CvtColor<HLS_GRAY2RGB>(img_5, img_6);
 	*/
-
+	hls::g
 	hls::Threshold(img_1,img_2, 120, 255, HLS_THRESH_BINARY);
 	hls::Duplicate(img_2,thImg,thImg2);
 	hls::Dilate(thImg, img_2a);

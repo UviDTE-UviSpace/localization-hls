@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="core.cpp" path="C:\localization-hls\FPGA\HLS_Convolution\core.cpp"/>
+    <originFiles name="conv.cpp" path="C:\localization-hls\Hardware\HLS\HLS_Convolution\conv.cpp"/>
+    <originFiles name="conv.hpp" path="C:\localization-hls\Hardware\HLS\HLS_Convolution\conv.hpp"/>
   </source>
   <testbench>
-    <originFiles name="test.cpp" path="C:\localization-hls\FPGA\HLS_Convolution\test.cpp"/>
+    <originFiles name="conv_tb.cpp" path="C:\localization-hls\Hardware\HLS\HLS_Convolution\conv_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -7,36 +7,87 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:57:34.704+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:57:34.700+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:50:41.540+0200"/>
-        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:50:41.536+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:49:15.258+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:48:55.349+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:48:07.125+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:46:04.366+0200"/>
+        <logs message="&#xD;@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:46:04.359+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:43:46.893+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:43:06.745+0200"/>
+        <logs message="&#xD;@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:43:06.736+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:38:38.432+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:38:38.424+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:38:14.402+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:38:14.394+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:37:41.607+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:37:41.600+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:33:29.714+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:27:49.429+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:27:16.527+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:23:32.824+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:22:54.183+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:19:08.216+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:18:46.617+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:17:47.786+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:16:41.128+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:15:42.658+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:14:56.767+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:14:34.777+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:14:03.488+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:13:48.977+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:03:26.907+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:02:23.221+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:01:55.534+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:00:31.473+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:33:55.424+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:26:01.916+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:23:51.344+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:21:35.738+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:20:35.320+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:20:00.806+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:18:55.681+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:18:03.392+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:12:01.168+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T16:11:02.733+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:56:30.577+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:56:13.094+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:55:01.294+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:53:28.347+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:52:45.797+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:51:24.255+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T15:50:09.220+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T14:52:31.794+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T14:51:20.866+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T14:50:23.055+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T14:49:43.844+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T16:13:09.586+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T16:11:21.413+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T16:10:50.998+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T16:09:46.898+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:29:42.621+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:28:53.656+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:27:53.508+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:26:30.033+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:25:54.374+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:25:07.621+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:23:58.399+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:22:41.035+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:22:09.979+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-25T15:20:27.266+0200"/>
       </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.757+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.472+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.427+0200" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.424+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>' to 'AXIM2Mat' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:174:46)" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.421+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Filter2D&lt;0, 0, char, int, 1080, 1920, 3, 3>' to 'Filter2D' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.362+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>' to 'Mat2AXIM' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:240:46)" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:36.359+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-713] Argument 'image_in' has read operations in process function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.732+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-713] Reading dataflow channel 'image_in' in the middle of dataflow may stall the dataflow pipeline:" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.724+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1080 for loop 'loop_pixel' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.705+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1920 for loop 'Loop-0-0' in function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.674+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src.data_stream.V' (HLS_Convolution/core.cpp:8)." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:35.395+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file HLS_Convolution/core.cpp" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:33.473+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: HLS_Convolution/core.cpp:14:4" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:24.600+0200" type="Warning"/>
-        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: HLS_Convolution/core.cpp:20:33" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-06T16:46:24.596+0200" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="WARNING: Hls::stream 'hls::stream&lt;unsigned char>.7' contains leftover data, which may result in RTL simulation hanging.&#xD;&#xA;DST CHANNELS 3&#xD;&#xA;&#xD;Image finished" projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:34:05.946+0200" type="Warning"/>
+        <logs message="WARNING: Hls::stream 'hls::stream&lt;unsigned char>.8' contains leftover data, which may result in RTL simulation hanging." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:34:05.717+0200" type="Warning"/>
+        <logs message="&#xD;WARNING: Hls::stream 'hls::stream&lt;unsigned char>.9' contains leftover data, which may result in RTL simulation hanging." projectName="HLS_Convolution" solutionName="solution1" date="2020-04-27T17:34:05.709+0200" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

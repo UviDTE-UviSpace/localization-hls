@@ -4,14 +4,15 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project HLS_Convolution
-set_top conv
-add_files HLS_Convolution/core.cpp
-add_files -tb HLS_Convolution/test.cpp
+set_top blur_image
+add_files HLS_Convolution/conv.cpp
+add_files HLS_Convolution/conv.hpp
+add_files -tb HLS_Convolution/conv_tb.cpp
 open_solution "solution1"
 set_part {xc7z020-clg484-1}
 create_clock -period 10 -name default
 #source "./HLS_Convolution/solution1/directives.tcl"
-csim_design -clean
+csim_design
 csynth_design
 cosim_design
 export_design -format ip_catalog

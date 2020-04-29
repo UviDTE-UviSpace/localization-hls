@@ -29,47 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/.apc/.src</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/.apc/.tb</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/solution1/.tcls</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/Grey_image.cpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/Grey_image.cpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/Grey_image.cpp</location>
 		</link>
 		<link>
 			<name>source/simple.hpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/simple.hpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/simple.hpp</location>
 		</link>
 		<link>
 			<name>testbench/Grey_image_tb.cpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/Grey_image_tb.cpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/Grey_image_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/solution1/solution1.directive</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/solution1/directives.tcl</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/localization-hls/FPGA/HLS/HLS_SimpleDesign/solution1/script.tcl</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <xaxidma.h>
+//#include <filter_0.h>
+#include "xparameters.h"
+#include "xtmrctr.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+
+int main ()
+{
+
+	initDMA();
+	initFilter();
+}

@@ -10,15 +10,22 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 import time
 
-radiusSize = 145 # !!! Change later with code line 51 !!!!
+radiusSize = 12 # !!! Change later with code line 51 !!!!
 
 def _findCircleMass(imgFind):
+    
+    filenameBila = 'images/bila.jpg'
+    filenameBlur = 'images/blur.jpg'
+    filenameThresh = 'images/thresh.jpg'
+
     #imgray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
     imgray = cv.bilateralFilter(imgFind,9,75,75)
+    cv.imwrite(filenameBila, imgray)
     imgray	=	cv.GaussianBlur(imgray,(5,5),0)
-    ret,thresh = cv.threshold(imgray,127,255,0)
+    cv.imwrite(filenameBlur, imgray)
     
-    _, thresh = cv.threshold(imgray,0,255,cv.THRESH_BINARY+cv.THRESH_OTSU)
+    _, thresh = cv.threshold(imgray,200,255,cv.THRESH_BINARY)
+    cv.imwrite(filenameThresh, thresh)
     contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
     
     circlesData = []
@@ -28,9 +35,9 @@ def _findCircleMass(imgFind):
         extRight = tuple(c[c[:, :, 0].argmax()][0])
         radius = (extRight[0] - extLeft[0])/2
         #Check if radius is correct to the one drawn if yes save. This is to avoid collision over each other.
-        if radius > radiusSize - 15 and radius < radiusSize+30: 
-            #print(radius)
-            print(extLeft, extRight)
+        if radius > radiusSize - 3 and radius < radiusSize+ 3: 
+            print(radius)
+            #print(extLeft, extRight)
             M = cv.moments(c)
             cx = int(M['m10']/M['m00'])
             cy = int(M['m01']/M['m00'])
@@ -51,9 +58,9 @@ def _groupUGV(contourData):
     #Filter circles by its radius and group accordingly.
     #!!! change radius with picture size radius later !!!
     for centerpoints in contourData:
-        if centerpoints[2] > radiusSize and centerpoints[2] < radiusSize + 30:
+        if centerpoints[2] > radiusSize and centerpoints[2] < radiusSize + 3:
             bigCircles.append(centerpoints[:2])
-        elif centerpoints[2] < radiusSize and centerpoints[2] > radiusSize - 15:
+        elif centerpoints[2] < radiusSize and centerpoints[2] > radiusSize - 3:
             smallCircles.append(centerpoints[:2])
     
     for big, small in zip(bigCircles, smallCircles):
@@ -68,7 +75,7 @@ if __name__ == '__main__':
     #start = time.time()
     tic = time.perf_counter()
     #Read binary image
-    img = cv.imread('images/UGV1.png',0)
+    img = cv.imread('images//binary/circle/bin_90degree.png',0)
     #Get dimensions
     h, w = img.shape[:2]
     #Find center locations
@@ -77,10 +84,10 @@ if __name__ == '__main__':
     
     #end = time.time()
     toc = time.perf_counter()
-    print("Circle algorithm completed in {toc - tic:0.4f} seconds") #,(end - start)*100, "ms")
+    print("Circle algorithm completed in {:0.4f} seconds".format(toc-tic) )
     
-    #print("[ [UVG1], [UVG2], [UVG3], ...] = ", UGVS)
-    #print("UVG1 = [xPBig, yPBig, xPSmall, yPSmall] = ", UGVS[0])
+    print("[ [UVG1], [UVG2], [UVG3], ...] = ", UGVS)
+    print("UVG1 = [xPBig, yPBig, xPSmall, yPSmall] = ", UGVS[0])
     
     #To unpack your data from pairs into lists for plotting, use zip:
     #plotting takes round +100ms  
@@ -91,7 +98,7 @@ if __name__ == '__main__':
     #Reverse Y axis , like mirroring
     ax = plt.gca()
     ax.set_ylim(ax.get_ylim()[::-1])
-    plt.savefig('/plots/centerpoints.png')
-    #plt.show()
+    #plt.savefig('/plots/centerpoints.png')
+    plt.show()
     
     

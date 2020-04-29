@@ -1,0 +1,41 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_0": {
+			"proto_instances": {
+				"/hls_inst/video_in": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "video_in_TDATA"},
+						"TDEST": { "actual": "video_in_TDEST"},
+						"TID": { "actual": "video_in_TID"},
+						"TKEEP": { "actual": "video_in_TKEEP"},
+						"TLAST": { "actual": "video_in_TLAST"},
+						"TREADY": { "actual": "video_in_TREADY"},
+						"TSTRB": { "actual": "video_in_TSTRB"},
+						"TUSER": { "actual": "video_in_TUSER"},
+						"TVALID": { "actual": "video_in_TVALID"}
+					}
+				},
+				"/hls_inst/video_out": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "video_out_TDATA"},
+						"TDEST": { "actual": "video_out_TDEST"},
+						"TID": { "actual": "video_out_TID"},
+						"TKEEP": { "actual": "video_out_TKEEP"},
+						"TLAST": { "actual": "video_out_TLAST"},
+						"TREADY": { "actual": "video_out_TREADY"},
+						"TSTRB": { "actual": "video_out_TSTRB"},
+						"TUSER": { "actual": "video_out_TUSER"},
+						"TVALID": { "actual": "video_out_TVALID"}
+					}
+				}
+			}
+		}
+	}
+}
