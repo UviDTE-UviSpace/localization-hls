@@ -1,16 +1,22 @@
 # Xilinx HLS hardware implementation of UviSpace UVG localization algorithm
 ___
-## Workflow
+## Software
 * [x] Explore Python OpenCV
 * [x] Python circle algorithm
 * [x] Python algorithm to C++
-* [x] Create Petalinux image with OpenCV Library
+* [x] Create & boot Petalinux image with OpenCV Libraries
 * [ ] QEMU Simulation of Zedboard
-* [x] Software implementation on Zedboard
+* [x] Software implementation on Zedboard (Python + C++)
 * [ ] Evaluate with Triangle method
-* [ ] Simple HLS program
-* [ ] Prep. circle algorithm in HLS with OpenCV to Axi video
-* [ ] HLS hardware implementation
+
+## Hardware
+* [x] Simple HLS program
+* [x] Circle filter algorithm in HLS through an AXI Stream with OpenCV testbench
+* [x] Vivado block design with DMA access to filter IP block
+* [ ] PetaLinux DMA access to filter IP block in the ZedBoard HW
+* [ ] Complete hardware implementation of the circle algorithm through HLS
 * [ ] Document steps
 * [ ] Comparison with software implementation
-* [ ] ...
+
+#### Other
+* [ ] Documentation
