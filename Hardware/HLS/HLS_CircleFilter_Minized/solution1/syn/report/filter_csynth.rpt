@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vivado HLS Report for 'filter'
+================================================================
+* Date:           Fri May  1 18:18:42 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        HLS_CircleFilter_Minized
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z007s-clg225-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 10.00 ns | 10.831 ns |   1.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   | min |   max  |   Type   |
+    +---------+---------+----------+----------+-----+--------+----------+
+    |      195|   316711| 2.112 us | 3.430 ms |  192|  316708| dataflow |
+    +---------+---------+----------+----------+-----+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------+--------------+---------+---------+-----------+----------+-----+--------+---------+
+        |                 |              |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
+        |     Instance    |    Module    |   min   |   max   |    min    |    max   | min |   max  |   Type  |
+        +-----------------+--------------+---------+---------+-----------+----------+-----+--------+---------+
+        |GaussianBlur_U0  |GaussianBlur  |      191|   316707|  2.069 us | 3.430 ms |  191|  316707|   none  |
+        |AXIvideo2Mat_U0  |AXIvideo2Mat  |        3|   309603| 32.493 ns | 3.353 ms |    3|  309603|   none  |
+        |Mat2AXIvideo_U0  |Mat2AXIvideo  |        1|   309121| 10.831 ns | 3.348 ms |    1|  309121|   none  |
+        |Threshold_U0     |Threshold     |        1|   309121| 10.831 ns | 3.348 ms |    1|  309121|   none  |
+        |Block_proc_U0    |Block_proc    |        0|        0|    0 ns   |   0 ns   |    0|       0|   none  |
+        +-----------------+--------------+---------+---------+-----------+----------+-----+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      -|      -|    -|
+|FIFO             |        0|      -|     55|    240|    -|
+|Instance         |        5|     19|   2030|   3853|    0|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|      -|    -|
+|Register         |        -|      -|      -|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        5|     19|   2085|   4093|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      100|     66|  28800|  14400|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        5|     28|      7|     28|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------+--------------+---------+-------+------+------+-----+
+    |     Instance    |    Module    | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +-----------------+--------------+---------+-------+------+------+-----+
+    |AXIvideo2Mat_U0  |AXIvideo2Mat  |        0|      0|   269|   427|    0|
+    |Block_proc_U0    |Block_proc    |        0|      0|     3|    56|    0|
+    |GaussianBlur_U0  |GaussianBlur  |        5|     19|  1381|  2797|    0|
+    |Mat2AXIvideo_U0  |Mat2AXIvideo  |        0|      0|   205|   299|    0|
+    |Threshold_U0     |Threshold     |        0|      0|   172|   274|    0|
+    +-----------------+--------------+---------+-------+------+------+-----+
+    |Total            |              |        5|     19|  2030|  3853|    0|
+    +-----------------+--------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------------+---------+---+----+-----+------+-----+---------+
+    |          Name         | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +-----------------------+---------+---+----+-----+------+-----+---------+
+    |img_1_cols_V_c11_U     |        0|  5|   0|    -|     2|   11|       22|
+    |img_1_cols_V_c_U       |        0|  5|   0|    -|     2|   11|       22|
+    |img_1_data_stream_0_U  |        0|  5|   0|    -|     2|    8|       16|
+    |img_1_rows_V_c10_U     |        0|  5|   0|    -|     2|   10|       20|
+    |img_1_rows_V_c_U       |        0|  5|   0|    -|     2|   10|       20|
+    |img_2_data_stream_0_U  |        0|  5|   0|    -|     2|    8|       16|
+    |img_3_cols_V_c13_U     |        0|  5|   0|    -|     2|   11|       22|
+    |img_3_cols_V_c_U       |        0|  5|   0|    -|     4|   11|       44|
+    |img_3_data_stream_0_U  |        0|  5|   0|    -|     2|    8|       16|
+    |img_3_rows_V_c12_U     |        0|  5|   0|    -|     2|   10|       20|
+    |img_3_rows_V_c_U       |        0|  5|   0|    -|     4|   10|       40|
+    +-----------------------+---------+---+----+-----+------+-----+---------+
+    |Total                  |        0| 55|   0|    0|    26|  108|      258|
+    +-----------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+--------------+--------------------+--------------+
+|     RTL Ports    | Dir | Bits|   Protocol   |    Source Object   |    C Type    |
++------------------+-----+-----+--------------+--------------------+--------------+
+|video_in_TDATA    |  in |   16|     axis     |  video_in_V_data_V |    pointer   |
+|video_in_TKEEP    |  in |    2|     axis     |  video_in_V_keep_V |    pointer   |
+|video_in_TSTRB    |  in |    2|     axis     |  video_in_V_strb_V |    pointer   |
+|video_in_TUSER    |  in |    1|     axis     |  video_in_V_user_V |    pointer   |
+|video_in_TLAST    |  in |    1|     axis     |  video_in_V_last_V |    pointer   |
+|video_in_TID      |  in |    1|     axis     |   video_in_V_id_V  |    pointer   |
+|video_in_TDEST    |  in |    1|     axis     |  video_in_V_dest_V |    pointer   |
+|video_in_TVALID   |  in |    1|     axis     |  video_in_V_dest_V |    pointer   |
+|video_in_TREADY   | out |    1|     axis     |  video_in_V_dest_V |    pointer   |
+|video_out_TDATA   | out |   16|     axis     | video_out_V_data_V |    pointer   |
+|video_out_TKEEP   | out |    2|     axis     | video_out_V_keep_V |    pointer   |
+|video_out_TSTRB   | out |    2|     axis     | video_out_V_strb_V |    pointer   |
+|video_out_TUSER   | out |    1|     axis     | video_out_V_user_V |    pointer   |
+|video_out_TLAST   | out |    1|     axis     | video_out_V_last_V |    pointer   |
+|video_out_TID     | out |    1|     axis     |  video_out_V_id_V  |    pointer   |
+|video_out_TDEST   | out |    1|     axis     | video_out_V_dest_V |    pointer   |
+|video_out_TVALID  | out |    1|     axis     | video_out_V_dest_V |    pointer   |
+|video_out_TREADY  |  in |    1|     axis     | video_out_V_dest_V |    pointer   |
+|ap_clk            |  in |    1| ap_ctrl_none |       filter       | return value |
+|ap_rst_n          |  in |    1| ap_ctrl_none |       filter       | return value |
++------------------+-----+-----+--------------+--------------------+--------------+
+

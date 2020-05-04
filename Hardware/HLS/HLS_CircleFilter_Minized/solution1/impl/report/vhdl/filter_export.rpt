@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2019.2
+Project:             HLS_CircleFilter_Minized
+Solution:            solution1
+Device target:       xc7z007s-clg225-1
+Report date:         Fri May 01 18:36:05 +0200 2020
+
+#=== Post-Implementation Resource usage ===
+SLICE:          598
+LUT:           1524
+FF:            1173
+DSP:             23
+BRAM:             5
+SRL:              6
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    9.187
+CP achieved post-implementation:    9.634
+Timing met

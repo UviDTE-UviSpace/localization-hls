@@ -2,7 +2,7 @@
 #include "xaxidma.h"
 #include "xparameters.h"
 #include "xdebug.h"
-#include "opencv2.h"
+//#include "opencv2.h"
 
 #ifndef TESTAPP_GEN
 #define DMA_DEV_ID		XPAR_AXIDMA_0_DEVICE_ID
@@ -23,7 +23,7 @@ int AxiDMASelfTestExample(u16 DeviceId);
 XAxiDma AxiDma;
 
 using namespace std;
-using namespace cv;
+//using namespace cv;
 
 #ifndef TESTAPP_GEN
 int main()
@@ -42,6 +42,8 @@ int main()
 
 	xil_printf("Successfully ran AxiDMASelfTest Example\r\n");
 
+	/*
+	 *
 	Xil_DCacheFlushRange((u32)imgIn_HW, SIZE_ARR*sizeof(unsigned char));
 	Xil_DCacheFlushRange((u32)m_dma_buffer_RX, SIZE_ARR*sizeof(unsigned char));
 
@@ -65,6 +67,8 @@ int main()
 	while(XAxiDma_Busy(&AxiDma, XAXIDMA_DEVICE_TO_DMA));
 
 	Xil_DCacheInvalidateRange((u32)m_dma_buffer_RX, SIZE_ARR*sizeof(unsigned char));
+
+	*/
 
 	return XST_SUCCESS;
 

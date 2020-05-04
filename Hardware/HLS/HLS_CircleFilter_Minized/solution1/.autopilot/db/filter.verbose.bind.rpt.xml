@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'filter'" level="0">
+<item name = "Date">Fri May  1 18:18:39 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">HLS_CircleFilter_Minized</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z007s-clg225-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 10.831 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">195, 316711, 2.112 us, 3.430 ms, 192, 316708, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_GaussianBlur_fu_294">GaussianBlur, 191, 316707, 2.069 us, 3.430 ms, 191, 316707, none</column>
+<column name="grp_AXIvideo2Mat_fu_302">AXIvideo2Mat, 3, 309603, 32.493 ns, 3.353 ms, 3, 309603, none</column>
+<column name="grp_Mat2AXIvideo_fu_325">Mat2AXIvideo, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
+<column name="grp_Threshold_fu_346">Threshold, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
+<column name="call_ln0_Block_proc_fu_356">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

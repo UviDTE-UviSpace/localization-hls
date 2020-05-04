@@ -37,36 +37,6 @@
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/highgui_c.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/highgui/highgui_c.h</location>
-		</link>
-		<link>
-			<name>.reference/hls_opencv.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/hls_opencv.h</location>
-		</link>
-		<link>
-			<name>.reference/hls_video_imgproc.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/hls/hls_video_imgproc.h</location>
-		</link>
-		<link>
-			<name>.reference/hls_video_types.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/hls/hls_video_types.h</location>
-		</link>
-		<link>
-			<name>.reference/imgproc.hpp</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/imgproc/imgproc.hpp</location>
-		</link>
-		<link>
-			<name>.reference/types_c.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/opencv2/core/types_c.h</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/solution1/.tcls</location>
