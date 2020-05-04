@@ -7,8 +7,8 @@ Created on Wed Feb 26 14:36:16 2020
 
 
 import cv2 as cv
-from matplotlib import pyplot as plt
 import time
+import numpy as np
 
 radiusSize = 12 # !!! Change later with code line 51 !!!!
 

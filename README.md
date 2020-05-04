@@ -5,7 +5,6 @@ ___
 * [x] Python circle algorithm
 * [x] Python algorithm to C++
 * [x] Create & boot Petalinux image with OpenCV Libraries
-* [ ] QEMU Simulation of Zedboard
 * [x] Software implementation on Zedboard (Python + C++)
 * [ ] Evaluate with Triangle method
 
@@ -20,3 +19,4 @@ ___
 
 #### Other
 * [ ] Documentation
+* [ ] QEMU Simulation of Zedboard

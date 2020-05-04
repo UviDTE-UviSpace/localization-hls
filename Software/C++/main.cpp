@@ -122,7 +122,7 @@ void findCircleCenter(const Mat &Image, vector<Circle_data>& circles)
         area = static_cast<float>(mu.m00);
         radius = sqrt(area/(atan(1)*4));  //pi = atan(1)*4 // r= sqrt(area/pi)
 
-        if ( (radius > (radius_size - 3)) && (radius < (radius_size + 3)) )
+        if ( (radius >= (radius_size - 3)) && (radius <= (radius_size + 3)) )
         {
             //add 1e-5 to avoid division by zero
             pt = Point2f( static_cast<float>(mu.m10 / (mu.m00 + 1e-5)),
@@ -165,14 +165,14 @@ void grpUGV(vector<UGV_data>& UGVS, vector<Circle_data>& circles)
     for( int i = 0; i < circles.size(); i++)
     {
         //Check for big circle
-        if ( (circles[i].radius > radius_size) && ( circles[i].radius < radius_size + 3) )
+        if ( (circles[i].radius >= radius_size) && ( circles[i].radius <= radius_size + 3) )
         {
             bigcircles.push_back( Point(circles[i].centerX, circles[i].centerY) );
             //printf("Big coord = %f,%f \n\rRadius = %f \n\r", circles[i].centerX, circles[i].centerY, circles[i].radius);
         }
 
         //else for the small circle
-        else if ( (circles[i].radius < radius_size) && (circles[i].radius > radius_size - 3) )
+        else if ( (circles[i].radius <= radius_size) && (circles[i].radius >= radius_size - 3) )
         {
             smallcircles.push_back( Point(circles[i].centerX, circles[i].centerY) );
             //printf("Small coord = %f,%f \n\rRadius = %f \n\r", circles[i].centerX, circles[i].centerY, circles[i].radius);
