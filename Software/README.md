@@ -8,6 +8,6 @@ ___
 * Inkscape is a program used to created the topdesign for the UGV's and contains checkplots to place the created plot of the algorithm over it to check if it is actually correct.
 
 ## TODO
-[x] Update cpp code with tweaks of timers, plots, radius size checks...
-[ ] Python proper plot for usage in paper ?
-[ ] standard deviations & mean/max error shown on a table & maybe triangle table next to it ? (currently under 'deviationPlot' as text)
+* [x] Update cpp code with tweaks of timers, plots, radius size checks...
+* [ ] Python proper plot for usage in paper ?
+* [ ] standard deviations & mean/max error shown on a table & maybe triangle table next to it ? (currently under 'deviationPlot' as text)

@@ -19,6 +19,7 @@ def _makePlot(df, itr):
     fig = plt.figure(figsize=(45, 30))
     
     if itr == 1:
+        print("BIG CIRCLES 0°-45°-90°:")
         df1 = df[["X_big_0degree"]]
         df2 = df[["Y_big_0degree"]]
         df3 = df[["R_big_0degree"]]
@@ -44,7 +45,35 @@ def _makePlot(df, itr):
         #df1 = df1.apply(lambda x: pd.to_numeric(x.astype(str).str.replace(',',''), errors='coerce'))
         ax = fig.add_subplot(111)
         ax.set_xlabel('picture nr.', fontsize = 18)
-        ax.set_ylabel('90° UGV', fontsize = 18)       
+        ax.set_ylabel('90° UGV', fontsize = 18) 
+    if itr == 4:
+        print("\nSMALL CIRCLES 0°-45°-90°:")
+        df1 = df[["X_small_0degree"]]
+        df2 = df[["Y_small_0degree"]]
+        df3 = df[["R_small_0degree"]]
+        #df1 = df1.apply(lambda x: pd.to_numeric(x.astype(str).str.replace(',',''), errors='coerce'))
+        ax = fig.add_subplot(111)
+        # Set the axis lables
+        ax.set_xlabel('picture nr.', fontsize = 18)
+        ax.set_ylabel('0° UGV', fontsize = 18)
+        
+    if itr == 5:
+        df1 = df[["X_small_45degree"]]
+        df2 = df[["Y_small_45degree"]]
+        df3 = df[["R_small_45degree"]]
+        ax = fig.add_subplot(111)
+        # Set the axis lables
+        ax.set_xlabel('picture nr.', fontsize = 18)
+        ax.set_ylabel('45° UGV', fontsize = 18)
+        
+    if itr == 6:
+        df1 = df[["X_small_90degree"]]
+        df2 = df[["Y_small_90degree"]]
+        df3 = df[["R_small_90degree"]]
+        #df1 = df1.apply(lambda x: pd.to_numeric(x.astype(str).str.replace(',',''), errors='coerce'))
+        ax = fig.add_subplot(111)
+        ax.set_xlabel('picture nr.', fontsize = 18)
+        ax.set_ylabel('90° UGV', fontsize = 18) 
         
     data1 = df1.values
     data2 = df2.values
@@ -107,8 +136,10 @@ def _makePlot(df, itr):
     ax.set_facecolor('w')
     
     plt.show()
-    print("Mean X = ", Mean_X, "//      Mean Y = ", Mean_Y, "//     Mean R = ", Mean_R)
-    print("STDV X pixel = ", STDV_X, " //       STDV Y pixel = ", STDV_Y, " //      STDV R pixel = ", STDV_R)
+    print("Min X = ", np.min(data1), " =>      Min Y = ", np.min(data2), " =>      Min R = ", np.min(data3))
+    print("Max X = ", np.max(data1), " =>       Max Y = ", np.max(data2), " =>      Max R = ", np.max(data3))
+    print("Mean X = ", Mean_X, " =>       Mean Y = ", Mean_Y, " =>      Mean R = ", Mean_R)
+    print("STDV X pixel = ", STDV_X, "  =>        STDV Y pixel = ", STDV_Y, "  =>       STDV R pixel = ", STDV_R)
     print("STDV X mm= ", 0.264583333*STDV_X, "  =>    STDV Y mm = ", 0.264583333*STDV_Y, "mm  =>     STDV R mm = ", 0.264583333*STDV_R)
     
     varianceX = 0
@@ -120,15 +151,17 @@ def _makePlot(df, itr):
        varianceY = varianceY + math.sqrt( (get-int(Mean_Y)) )
     for get in data2:
        varianceR = varianceR + math.sqrt( (get-int(Mean_Y)) )
-    print("Vari X = ", varianceX/1000, "//      Vari Y = ", varianceY/1000, "//         Vari R = ", varianceR/1000 )
+    print("Vari X = ", varianceX/1000, " =>       Vari Y = ", varianceY/1000, " =>          Vari R = ", varianceR/1000 )
     
 if __name__ == '__main__':   
     # load array
     df = pd.read_pickle('measuredata\\data.pkl')
-    print(df[["Y_big_0degree", "Y_big_90degree", "Y_big_45degree"]])
+    #print(df[["Y_big_0degree", "Y_big_90degree", "Y_big_45degree"]])
     _makePlot(df,1)
     _makePlot(df,2)
     _makePlot(df,3)
-    
+    _makePlot(df,4)
+    _makePlot(df,5)
+    _makePlot(df,6)    
     
    
