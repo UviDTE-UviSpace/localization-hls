@@ -99783,7 +99783,7 @@ void FindStereoCorrespondenceBM(
 
 # 1 "C:/Xilinx/Vivado/2019.2/include/hls_math.h" 1
 # 5 "C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.hpp" 2
-# 15 "C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.hpp"
+# 16 "C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.hpp"
 typedef hls::stream<ap_axiu<16,1,1,1> > AXI_STREAM;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IMAGE;
@@ -99800,7 +99800,7 @@ void filter(AXI_STREAM& video_in, AXI_STREAM& video_out)
 #pragma HLS INTERFACE axis port=video_in
 #pragma HLS INTERFACE axis port=video_out
 #pragma HLS INTERFACE ap_ctrl_none port=return
-# 20 "C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.cpp"
+# 21 "C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.cpp"
  GRAY_IMAGE img_1(480, 640);
  GRAY_IMAGE img_2(480, 640);
  GRAY_IMAGE img_3(480, 640);

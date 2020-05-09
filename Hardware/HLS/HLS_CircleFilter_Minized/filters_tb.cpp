@@ -88,15 +88,6 @@ void findCircle(const cv::Mat &Image, vector<Circle_data>& circles)
             circleinfo.radius = radius;
             circles.push_back(circleinfo);
 
-            /*
-            //Draw circles
-            drawing = Mat::zeros( Image.size(), CV_8UC3 );
-            Scalar color = Scalar( rng.uniform(i*10, 255), rng.uniform(0,255), rng.uniform(0,255) );
-            drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, Point() );
-            namedWindow( "Contours", WINDOW_AUTOSIZE );
-            imshow( "Contours", drawing);
-            */
-
         }
 
     }

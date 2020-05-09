@@ -34433,7 +34433,7 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 }
 # 70 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_video.h" 2
 # 2 "HLS_CircleFilter/filters.hpp" 2
-# 15 "HLS_CircleFilter/filters.hpp"
+# 16 "HLS_CircleFilter/filters.hpp"
 typedef hls::stream<ap_axiu<16,1,1,1> > AXI_STREAM;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IMAGE;
@@ -34450,7 +34450,7 @@ void filter(AXI_STREAM& video_in, AXI_STREAM& video_out)
 _ssdm_op_SpecInterface(&video_in, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&video_out, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-# 20 "HLS_CircleFilter/filters.cpp"
+# 21 "HLS_CircleFilter/filters.cpp"
  GRAY_IMAGE img_1(480, 640);
  GRAY_IMAGE img_2(480, 640);
  GRAY_IMAGE img_3(480, 640);
