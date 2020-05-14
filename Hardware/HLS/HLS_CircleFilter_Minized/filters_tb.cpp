@@ -25,17 +25,19 @@ int main(){
     IplImage* dst;
     AXI_STREAM src_axi, dst_axi;
 
-	src=cvLoadImage(INPUT_IMAGE_CORE, CV_LOAD_IMAGE_GRAYSCALE);
+	src=cvLoadImage(INPUT_IMAGE_CORE);
 
     if(!src->imageData){
 	   printf("Error could not load file.\n\r");
 	   return -1;
     }
 
-    printf("SRC CHANNELS %d\n\r", src->nChannels);
+    printf("SRC WIDTH & HEIGTH: %d x  %d \n\r", src->width, src->height);
     dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
+    cvSaveImage(OUTPUT_IMAGE_CORE, src);
+
     IplImage2AXIvideo(src, src_axi);
-    filter(src_axi, dst_axi);//, src->width, src->height);//src->height,src->width);
+    filter(src_axi, dst_axi);
     AXIvideo2IplImage(dst_axi, dst);
 
     cvSaveImage(OUTPUT_IMAGE_CORE2, dst);

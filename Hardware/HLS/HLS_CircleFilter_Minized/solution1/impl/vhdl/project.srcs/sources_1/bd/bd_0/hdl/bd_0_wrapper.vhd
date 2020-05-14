@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
---Date        : Thu May  7 15:15:27 2020
+--Date        : Tue May 12 16:55:27 2020
 --Host        : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 --Command     : generate_target bd_0_wrapper.bd
 --Design      : bd_0_wrapper
@@ -14,23 +14,27 @@ use UNISIM.VCOMPONENTS.ALL;
 entity bd_0_wrapper is
   port (
     ap_clk : in STD_LOGIC;
+    ap_ctrl_done : out STD_LOGIC;
+    ap_ctrl_idle : out STD_LOGIC;
+    ap_ctrl_ready : out STD_LOGIC;
+    ap_ctrl_start : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
-    video_in_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    video_in_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     video_in_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    video_in_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_in_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
     video_in_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tready : out STD_LOGIC;
-    video_in_tstrb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_in_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     video_in_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tvalid : in STD_LOGIC;
-    video_out_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    video_out_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     video_out_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    video_out_tkeep : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_out_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
     video_out_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tready : in STD_LOGIC;
-    video_out_tstrb : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_out_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     video_out_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tvalid : out STD_LOGIC
   );
@@ -41,20 +45,24 @@ architecture STRUCTURE of bd_0_wrapper is
   port (
     ap_clk : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
+    ap_ctrl_start : in STD_LOGIC;
+    ap_ctrl_done : out STD_LOGIC;
+    ap_ctrl_ready : out STD_LOGIC;
+    ap_ctrl_idle : out STD_LOGIC;
     video_in_tvalid : in STD_LOGIC;
     video_in_tready : out STD_LOGIC;
-    video_in_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    video_in_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    video_in_tstrb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_in_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    video_in_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    video_in_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     video_in_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tvalid : out STD_LOGIC;
     video_out_tready : in STD_LOGIC;
-    video_out_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    video_out_tkeep : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    video_out_tstrb : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    video_out_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    video_out_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    video_out_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     video_out_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -65,23 +73,27 @@ begin
 bd_0_i: component bd_0
      port map (
       ap_clk => ap_clk,
+      ap_ctrl_done => ap_ctrl_done,
+      ap_ctrl_idle => ap_ctrl_idle,
+      ap_ctrl_ready => ap_ctrl_ready,
+      ap_ctrl_start => ap_ctrl_start,
       ap_rst_n => ap_rst_n,
-      video_in_tdata(15 downto 0) => video_in_tdata(15 downto 0),
+      video_in_tdata(31 downto 0) => video_in_tdata(31 downto 0),
       video_in_tdest(0) => video_in_tdest(0),
       video_in_tid(0) => video_in_tid(0),
-      video_in_tkeep(1 downto 0) => video_in_tkeep(1 downto 0),
+      video_in_tkeep(3 downto 0) => video_in_tkeep(3 downto 0),
       video_in_tlast(0) => video_in_tlast(0),
       video_in_tready => video_in_tready,
-      video_in_tstrb(1 downto 0) => video_in_tstrb(1 downto 0),
+      video_in_tstrb(3 downto 0) => video_in_tstrb(3 downto 0),
       video_in_tuser(0) => video_in_tuser(0),
       video_in_tvalid => video_in_tvalid,
-      video_out_tdata(15 downto 0) => video_out_tdata(15 downto 0),
+      video_out_tdata(31 downto 0) => video_out_tdata(31 downto 0),
       video_out_tdest(0) => video_out_tdest(0),
       video_out_tid(0) => video_out_tid(0),
-      video_out_tkeep(1 downto 0) => video_out_tkeep(1 downto 0),
+      video_out_tkeep(3 downto 0) => video_out_tkeep(3 downto 0),
       video_out_tlast(0) => video_out_tlast(0),
       video_out_tready => video_out_tready,
-      video_out_tstrb(1 downto 0) => video_out_tstrb(1 downto 0),
+      video_out_tstrb(3 downto 0) => video_out_tstrb(3 downto 0),
       video_out_tuser(0) => video_out_tuser(0),
       video_out_tvalid => video_out_tvalid
     );

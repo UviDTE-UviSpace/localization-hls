@@ -8,13 +8,10 @@ use IEEE.numeric_std.all;
 
 entity filter_mac_muladdtde_DSP48_13 is
 port (
-    in0:  in  std_logic_vector(10 - 1 downto 0);
+    in0:  in  std_logic_vector(11 - 1 downto 0);
     in1:  in  std_logic_vector(8 - 1 downto 0);
-    in2:  in  std_logic_vector(19 - 1 downto 0);
+    in2:  in  std_logic_vector(18 - 1 downto 0);
     dout: out std_logic_vector(19 - 1 downto 0));
-
-    attribute use_dsp : string;
-    attribute use_dsp of filter_mac_muladdtde_DSP48_13 : entity is "yes";
 
 end entity;
 

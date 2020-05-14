@@ -34433,23 +34433,103 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 }
 # 70 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_video.h" 2
 # 2 "HLS_SimpleDesign/simple.hpp" 2
-# 13 "HLS_SimpleDesign/simple.hpp"
-typedef hls::stream<ap_axiu<24,1,1,1> > AXI_STREAM;
+# 16 "HLS_SimpleDesign/simple.hpp"
+typedef hls::stream<ap_axiu<8,1,1,1> > AXI_STREAM;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IMAGE;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((2)-1) << 11))> YUV_IMAGE;
 
-void Grey_image(RGB_IMAGE& inputimg, GRAY_IMAGE& outputimg);
 void blur_image(AXI_STREAM& video_in, AXI_STREAM& video_out);
 # 2 "HLS_SimpleDesign/Grey_image.cpp" 2
-# 24 "HLS_SimpleDesign/Grey_image.cpp"
+# 1 "HLS_SimpleDesign/Mat2AXIvideo_DMA.h" 1
+
+
+
+
+
+
+namespace hls{
+
+template<int W, int ROWS, int COLS, int T>
+int AXIvideo2Mat_DMA(stream<ap_axiu<W,1,1,1> >& AXI_video_strm,
+                 Mat<ROWS, COLS, T>& img)
+{
+    int res = 0;
+    ap_axiu<W,1,1,1> axi;
+    Scalar<((((T) & ((512 - 1) << 11)) >> 11) + 1), typename Type<((T) & ((1 << 11) - 1))>::name> pix;
+    int depth = Type<((T) & ((1 << 11) - 1))>::bitdepth;
+
+    (void) ((!!(W >= depth*((((T) & ((512 - 1) << 11)) >> 11) + 1) && "Width of AXI stream must be greater the total number of bits in a pixel")) || (_assert("W >= depth*HLS_MAT_CN(T) && \"Width of AXI stream must be greater the total number of bits in a pixel\"","HLS_SimpleDesign/Mat2AXIvideo_DMA.h",18),0));
+    HLS_SIZE_T rows = img.rows;
+    HLS_SIZE_T cols = img.cols;
+
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+#pragma HLS loop_tripcount max=ROWS
+ bool eol = 0;
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+#pragma HLS loop_tripcount max=COLS
+#pragma HLS loop_flatten off
+#pragma HLS pipeline II=1
+
+ AXI_video_strm >> axi;
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < ((((T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+                AXIGetBitFields(axi, k*depth, depth, pix.val[k]);
+            }
+            img << pix;
+        }
+    }
+    return res;
+}
+
+template<int W, int ROWS, int COLS, int T>
+int Mat2AXIvideo_DMA(Mat<ROWS, COLS, T>& img,
+                 stream<ap_axiu<W,1,1,1> >& AXI_video_strm)
+{
+    int res = 0;
+    Scalar<((((T) & ((512 - 1) << 11)) >> 11) + 1), typename Type<((T) & ((1 << 11) - 1))>::name> pix;
+    ap_axiu<W,1,1,1> axi;
+    int depth = Type<((T) & ((1 << 11) - 1))>::bitdepth;
+
+    (void) ((!!(W >= depth*((((T) & ((512 - 1) << 11)) >> 11) + 1) && "Width of AXI stream must be greater the total number of bits in a pixel")) || (_assert("W >= depth*HLS_MAT_CN(T) && \"Width of AXI stream must be greater the total number of bits in a pixel\"","HLS_SimpleDesign/Mat2AXIvideo_DMA.h",49),0));
+    HLS_SIZE_T rows = img.rows;
+    HLS_SIZE_T cols = img.cols;
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+#pragma HLS loop_tripcount max=ROWS
+ loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+#pragma HLS loop_tripcount max=COLS
+#pragma HLS loop_flatten off
+#pragma HLS pipeline II=1
+ axi.user = 0;
+            axi.id = 0;
+            axi.dest = 0;
+            if ( (i == rows - 1) && (j == cols - 1)) {
+                axi.last = 1;
+            } else {
+                axi.last = 0;
+            }
+            img >> pix;
+            axi.data = -1;
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < ((((T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+                AXISetBitFields(axi, k*depth, depth, pix.val[k]);
+            }
+            axi.keep = -1;
+            axi.strb = -1;
+            AXI_video_strm << axi;
+        }
+    }
+    return res;
+}
+
+}
+# 3 "HLS_SimpleDesign/Grey_image.cpp" 2
+# 25 "HLS_SimpleDesign/Grey_image.cpp"
 void blur_image(AXI_STREAM& video_in, AXI_STREAM& video_out)
 {
 
 #pragma HLS INTERFACE axis port=&video_in
 #pragma HLS INTERFACE axis port=&video_out
 #pragma HLS INTERFACE ap_ctrl_none port=return
-# 40 "HLS_SimpleDesign/Grey_image.cpp"
+# 41 "HLS_SimpleDesign/Grey_image.cpp"
  RGB_IMAGE img_0(480, 640);
  GRAY_IMAGE img_1(480, 640);
 
@@ -34461,13 +34541,7 @@ void blur_image(AXI_STREAM& video_in, AXI_STREAM& video_out)
  GRAY_IMAGE img_2c(480, 640);
 
 #pragma HLS dataflow
- hls::AXIvideo2Mat(video_in, img_0);
- hls::CvtColor<HLS_BGR2GRAY>(img_0, img_1);
- hls::GaussianBlur<3,3>(img_0,img_1, 0, 0);
-# 63 "HLS_SimpleDesign/Grey_image.cpp"
- hls::Threshold(img_1,img_2, 120, 255, 0);
- hls::Duplicate(img_2,thImg,thImg2);
- hls::Dilate(thImg, img_2a);
- hls::AbsDiff(img_2a,thImg2,img_2c);
- hls::Mat2AXIvideo(img_2c, video_out);
+ hls::AXIvideo2Mat_DMA(video_in, img_1);
+
+ hls::Mat2AXIvideo_DMA(img_1, video_out);
 }

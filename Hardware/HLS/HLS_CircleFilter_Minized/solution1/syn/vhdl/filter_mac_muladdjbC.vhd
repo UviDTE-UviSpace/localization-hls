@@ -8,10 +8,13 @@ use IEEE.numeric_std.all;
 
 entity filter_mac_muladdjbC_DSP48_3 is
 port (
-    in0:  in  std_logic_vector(11 - 1 downto 0);
+    in0:  in  std_logic_vector(8 - 1 downto 0);
     in1:  in  std_logic_vector(8 - 1 downto 0);
-    in2:  in  std_logic_vector(19 - 1 downto 0);
-    dout: out std_logic_vector(20 - 1 downto 0));
+    in2:  in  std_logic_vector(17 - 1 downto 0);
+    dout: out std_logic_vector(17 - 1 downto 0));
+
+    attribute use_dsp : string;
+    attribute use_dsp of filter_mac_muladdjbC_DSP48_3 : entity is "yes";
 
 end entity;
 
@@ -29,7 +32,7 @@ c  <= signed(resize(unsigned(in2), 48));
 m  <= a * b;
 p  <= m + c;
 
-dout <= std_logic_vector(resize(unsigned(p), 20));
+dout <= std_logic_vector(resize(unsigned(p), 17));
 
 end architecture;
 Library IEEE;

@@ -161,8 +161,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_1_rows_V_out_din</name>
-<Object>img_1_rows_V_out</Object>
+<name>img_0_rows_V_out_din</name>
+<Object>img_0_rows_V_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -172,8 +172,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_1_rows_V_out_full_n</name>
-<Object>img_1_rows_V_out</Object>
+<name>img_0_rows_V_out_full_n</name>
+<Object>img_0_rows_V_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -183,8 +183,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_1_rows_V_out_write</name>
-<Object>img_1_rows_V_out</Object>
+<name>img_0_rows_V_out_write</name>
+<Object>img_0_rows_V_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -194,8 +194,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_1_cols_V_out_din</name>
-<Object>img_1_cols_V_out</Object>
+<name>img_0_cols_V_out_din</name>
+<Object>img_0_cols_V_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -205,8 +205,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_1_cols_V_out_full_n</name>
-<Object>img_1_cols_V_out</Object>
+<name>img_0_cols_V_out_full_n</name>
+<Object>img_0_cols_V_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -216,8 +216,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>img_1_cols_V_out_write</name>
-<Object>img_1_cols_V_out</Object>
+<name>img_0_cols_V_out_write</name>
+<Object>img_0_cols_V_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

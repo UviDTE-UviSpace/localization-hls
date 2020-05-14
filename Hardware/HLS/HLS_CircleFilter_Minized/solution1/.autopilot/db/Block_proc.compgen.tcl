@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 1 \
-    name img_1_rows_V_out \
+    name img_0_rows_V_out \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_img_1_rows_V_out \
+    corename dc_img_0_rows_V_out \
     op interface \
-    ports { img_1_rows_V_out_din { O 10 vector } img_1_rows_V_out_full_n { I 1 bit } img_1_rows_V_out_write { O 1 bit } } \
+    ports { img_0_rows_V_out_din { O 10 vector } img_0_rows_V_out_full_n { I 1 bit } img_0_rows_V_out_write { O 1 bit } } \
 } "
 }
 
@@ -26,14 +26,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 2 \
-    name img_1_cols_V_out \
+    name img_0_cols_V_out \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_img_1_cols_V_out \
+    corename dc_img_0_cols_V_out \
     op interface \
-    ports { img_1_cols_V_out_din { O 11 vector } img_1_cols_V_out_full_n { I 1 bit } img_1_cols_V_out_write { O 1 bit } } \
+    ports { img_0_cols_V_out_din { O 11 vector } img_0_cols_V_out_full_n { I 1 bit } img_0_cols_V_out_write { O 1 bit } } \
 } "
 }
 

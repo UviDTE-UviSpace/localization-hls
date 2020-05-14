@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z007s:-clg225:-1
-set SourceFiles {sc {} c ../../HLS_CircleFilter/filters.cpp}
+set SourceFiles {sc {} c ../filters.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized/solution1/solution1.directive
 set TBFiles {verilog ../filters_tb.cpp bc ../filters_tb.cpp vhdl ../filters_tb.cpp sc ../filters_tb.cpp cas ../filters_tb.cpp c {}}

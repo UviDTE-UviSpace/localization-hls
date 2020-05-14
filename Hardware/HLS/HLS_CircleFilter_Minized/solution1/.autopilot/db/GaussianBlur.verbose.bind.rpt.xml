@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'GaussianBlur'" level="0">
-<item name = "Date">Thu May  7 15:10:45 2020
+<item name = "Date">Tue May 12 16:47:54 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">HLS_CircleFilter_Minized</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">191, 316707, 2.069 us, 3.430 ms, 191, 316707, none</column>
+<column name="">315401, 315401, 3.416 ms, 3.416 ms, 315401, 315401, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Filter2D_fu_82">Filter2D, 190, 316706, 2.058 us, 3.430 ms, 190, 316706, none</column>
+<column name="grp_Filter2D_fu_40">Filter2D, 315400, 315400, 3.416 ms, 3.416 ms, 315400, 315400, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

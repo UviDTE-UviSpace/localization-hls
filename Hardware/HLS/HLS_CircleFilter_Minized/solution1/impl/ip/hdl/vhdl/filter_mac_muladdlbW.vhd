@@ -11,7 +11,7 @@ port (
     in0:  in  std_logic_vector(10 - 1 downto 0);
     in1:  in  std_logic_vector(8 - 1 downto 0);
     in2:  in  std_logic_vector(18 - 1 downto 0);
-    dout: out std_logic_vector(18 - 1 downto 0));
+    dout: out std_logic_vector(19 - 1 downto 0));
 
     attribute use_dsp : string;
     attribute use_dsp of filter_mac_muladdlbW_DSP48_5 : entity is "yes";
@@ -32,7 +32,7 @@ c  <= signed(resize(unsigned(in2), 48));
 m  <= a * b;
 p  <= m + c;
 
-dout <= std_logic_vector(resize(unsigned(p), 18));
+dout <= std_logic_vector(resize(unsigned(p), 19));
 
 end architecture;
 Library IEEE;

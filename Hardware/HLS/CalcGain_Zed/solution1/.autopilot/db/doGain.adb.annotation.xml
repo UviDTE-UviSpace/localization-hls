@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="36" filename="CalcGain_Zed/gain.cpp" linenumber="13" name="icmp_ln13" contextFuncName="doGain" moduleName="doGain" rtlName="icmp_ln13_fu_126_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="C:\localization-hls\Hardware\HLS"><\/item>
+<item  id="38" filename="CalcGain_Zed/gain.cpp" linenumber="13" name="idx" contextFuncName="doGain" moduleName="doGain" rtlName="idx_fu_132_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="14" fileDirectory="C:\localization-hls\Hardware\HLS"><\/item>
+<item  id="51" filename="CalcGain_Zed/gain.cpp" linenumber="19" name="valOut_data_V" contextFuncName="doGain" moduleName="doGain" rtlName="outStream_TDATA_int" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\localization-hls\Hardware\HLS"><\/item>
+<\/annotationInfo>
+</annotationInfo>

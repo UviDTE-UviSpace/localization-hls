@@ -47,6 +47,11 @@
 			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/Grey_image.cpp</location>
 		</link>
 		<link>
+			<name>source/Mat2AXIvideo_DMA.h</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/Mat2AXIvideo_DMA.h</location>
+		</link>
+		<link>
 			<name>source/simple.hpp</name>
 			<type>1</type>
 			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/simple.hpp</location>
@@ -55,6 +60,11 @@
 			<name>testbench/Grey_image_tb.cpp</name>
 			<type>1</type>
 			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/Grey_image_tb.cpp</location>
+		</link>
+		<link>
+			<name>testbench/IplImage2AXIvideo_DMA.h</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_SimpleDesign/IplImage2AXIvideo_DMA.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

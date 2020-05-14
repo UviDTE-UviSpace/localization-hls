@@ -2,8 +2,8 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu May  7 15:13:50 2020
-# Process ID: 1244
+# Start of session at: Tue May 12 16:50:46 2020
+# Process ID: 11644
 # Current directory: C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized/solution1/sim/vhdl
 # Command line: xsim.exe -mode tcl -source {xsim.dir/filter/xsim_script.tcl}
 # Log file: C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized/solution1/sim/vhdl/xsim.log

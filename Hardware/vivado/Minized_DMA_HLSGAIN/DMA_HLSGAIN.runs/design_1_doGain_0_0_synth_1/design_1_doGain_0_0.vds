@@ -1,0 +1,772 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon May 11 16:04:47 2020
+# Process ID: 5336
+# Current directory: C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1
+# Command line: vivado.exe -log design_1_doGain_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_doGain_0_0.tcl
+# Log file: C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/design_1_doGain_0_0.vds
+# Journal file: C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_doGain_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/DMAStream/solution1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top design_1_doGain_0_0 -part xc7z007sclg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7400 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 926.625 ; gain = 234.297
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_doGain_0_0' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/synth/design_1_doGain_0_0.vhd:99]
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'doGain' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:12' bound to instance 'U0' of component 'doGain' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/synth/design_1_doGain_0_0.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'doGain' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:58]
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:83]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:86]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:91]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:122]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'doGain_CTRL_s_axi' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain_CTRL_s_axi.vhd:9' bound to instance 'doGain_CTRL_s_axi_U' of component 'doGain_CTRL_s_axi' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'doGain_CTRL_s_axi' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain_CTRL_s_axi.vhd:67]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'doGain_CTRL_s_axi' (1#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain_CTRL_s_axi.vhd:67]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_data_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf' (2#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf' (3#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_keep_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized1' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 4 - type: integer 
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized0' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized0' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized0' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized0' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized1' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_strb_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:291]
+	Parameter DataWidth bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_user_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized3' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 2 - type: integer 
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized1' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized1' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized1' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized1' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized3' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_last_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:319]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized5' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized2' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized2' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized2' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized2' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized5' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_id_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:333]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized7' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized3' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized3' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized3' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized3' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized7' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_dest_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:347]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized9' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 6 - type: integer 
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized4' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized4' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized4' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized4' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized9' (4#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_data_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:361]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_keep_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:375]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_strb_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:389]
+	Parameter DataWidth bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_user_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:403]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_last_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:417]
+	Parameter DataWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_id_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:431]
+	Parameter DataWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_dest_V_U' of component 'regslice_both' [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:445]
+INFO: [Synth 8-256] done synthesizing module 'doGain' (5#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'design_1_doGain_0_0' (6#1) [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/synth/design_1_doGain_0_0.vhd:99]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1004.281 ; gain = 311.953
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1004.281 ; gain = 311.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1004.281 ; gain = 311.953
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1004.281 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/constraints/doGain_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/constraints/doGain_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1101.797 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1113.898 ; gain = 12.102
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1113.898 ; gain = 421.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1113.898 ; gain = 421.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1113.898 ; gain = 421.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'doGain_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'doGain_CTRL_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'doGain_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'doGain_CTRL_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1113.898 ; gain = 421.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               33 Bit    Registers := 4     
+	               32 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 14    
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 17    
+	   4 Input      2 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 60    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module doGain_CTRL_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module doGain 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [c:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/3613/hdl/vhdl/doGain.vhd:747]
+DSP Report: Generating DSP valOut_data_V_fu_178_p2, operation Mode is: A2*B2.
+DSP Report: register regslice_both_inStream_V_data_V_U/obuf_inst/odata_int_reg is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: register valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: Generating DSP valOut_data_V_reg_227_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register gain_read_reg_183_reg is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: register regslice_both_inStream_V_data_V_U/obuf_inst/odata_int_reg is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: register valOut_data_V_reg_227_reg is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: Generating DSP valOut_data_V_fu_178_p2, operation Mode is: A2*B2.
+DSP Report: register valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: register valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_fu_178_p2.
+DSP Report: Generating DSP valOut_data_V_reg_227_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register gain_read_reg_183_reg is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: register valOut_data_V_reg_227_reg is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: register valOut_data_V_reg_227_reg is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_reg_227_reg.
+DSP Report: operator valOut_data_V_fu_178_p2 is absorbed into DSP valOut_data_V_reg_227_reg.
+WARNING: [Synth 8-3332] Sequential element (doGain_CTRL_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (doGain_CTRL_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[47]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[46]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[45]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[44]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[43]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[42]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[41]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[40]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[39]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[38]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[37]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[36]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[35]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[34]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[33]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[32]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[31]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[30]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[29]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[28]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[27]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[26]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[25]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[24]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[23]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[22]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[21]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[20]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[19]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[18]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[17]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[16]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[15]) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[47]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[46]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[45]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[44]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[43]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[42]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[41]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[40]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[39]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[38]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[37]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[36]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[35]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[34]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[33]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[32]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[31]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[30]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[29]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[28]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[27]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[26]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[25]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[24]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[23]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[22]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[21]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[20]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[19]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[18]__0) is unused and will be removed from module doGain.
+WARNING: [Synth 8-3332] Sequential element (valOut_data_V_reg_227_reg[17]__0) is unused and will be removed from module doGain.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1113.898 ; gain = 421.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|doGain      | A2*B2            | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|doGain      | (PCIN>>17)+A2*B2 | 15     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|doGain      | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|doGain      | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1127.996 ; gain = 435.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1129.340 ; gain = 437.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1150.039 ; gain = 457.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |     4|
+|2     |DSP48E1_2 |     1|
+|3     |DSP48E1_3 |     1|
+|4     |DSP48E1_4 |     1|
+|5     |LUT1      |     2|
+|6     |LUT2      |    39|
+|7     |LUT3      |   123|
+|8     |LUT4      |    72|
+|9     |LUT5      |    19|
+|10    |LUT6      |    30|
+|11    |FDRE      |   354|
+|12    |FDSE      |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+---------------------------------------+------+
+|      |Instance                               |Module                                 |Cells |
++------+---------------------------------------+---------------------------------------+------+
+|1     |top                                    |                                       |   647|
+|2     |  U0                                   |doGain                                 |   647|
+|3     |    doGain_CTRL_s_axi_U                |doGain_CTRL_s_axi                      |   150|
+|4     |    regslice_both_inStream_V_data_V_U  |regslice_both                          |    71|
+|5     |      ibuf_inst                        |xil_defaultlib_ibuf_22                 |    66|
+|6     |      obuf_inst                        |xil_defaultlib_obuf_23                 |     5|
+|7     |    regslice_both_inStream_V_dest_V_U  |regslice_both__parameterized9          |    24|
+|8     |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized4_20 |    14|
+|9     |      obuf_inst                        |xil_defaultlib_obuf__parameterized4_21 |    10|
+|10    |    regslice_both_inStream_V_id_V_U    |regslice_both__parameterized7          |    21|
+|11    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized3_18 |    12|
+|12    |      obuf_inst                        |xil_defaultlib_obuf__parameterized3_19 |     9|
+|13    |    regslice_both_inStream_V_keep_V_U  |regslice_both__parameterized1          |    18|
+|14    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0_16 |    10|
+|15    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0_17 |     8|
+|16    |    regslice_both_inStream_V_last_V_U  |regslice_both__parameterized5          |     9|
+|17    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized2_14 |     5|
+|18    |      obuf_inst                        |xil_defaultlib_obuf__parameterized2_15 |     4|
+|19    |    regslice_both_inStream_V_strb_V_U  |regslice_both__parameterized1_0        |    18|
+|20    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0_12 |    10|
+|21    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0_13 |     8|
+|22    |    regslice_both_inStream_V_user_V_U  |regslice_both__parameterized3          |    17|
+|23    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized1_10 |     8|
+|24    |      obuf_inst                        |xil_defaultlib_obuf__parameterized1_11 |     9|
+|25    |    regslice_both_outStream_V_data_V_U |regslice_both_1                        |   144|
+|26    |      ibuf_inst                        |xil_defaultlib_ibuf                    |   100|
+|27    |      obuf_inst                        |xil_defaultlib_obuf                    |    38|
+|28    |    regslice_both_outStream_V_dest_V_U |regslice_both__parameterized9_2        |    24|
+|29    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized4    |    14|
+|30    |      obuf_inst                        |xil_defaultlib_obuf__parameterized4    |    10|
+|31    |    regslice_both_outStream_V_id_V_U   |regslice_both__parameterized7_3        |    21|
+|32    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized3    |    12|
+|33    |      obuf_inst                        |xil_defaultlib_obuf__parameterized3    |     9|
+|34    |    regslice_both_outStream_V_keep_V_U |regslice_both__parameterized1_4        |    18|
+|35    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0_8  |    10|
+|36    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0_9  |     8|
+|37    |    regslice_both_outStream_V_last_V_U |regslice_both__parameterized5_5        |    10|
+|38    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized2    |     4|
+|39    |      obuf_inst                        |xil_defaultlib_obuf__parameterized2    |     6|
+|40    |    regslice_both_outStream_V_strb_V_U |regslice_both__parameterized1_6        |    18|
+|41    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0    |    10|
+|42    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0    |     8|
+|43    |    regslice_both_outStream_V_user_V_U |regslice_both__parameterized3_7        |    13|
+|44    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized1    |     6|
+|45    |      obuf_inst                        |xil_defaultlib_obuf__parameterized1    |     7|
++------+---------------------------------------+---------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1165.715 ; gain = 473.387
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 66 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1165.715 ; gain = 363.770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1165.715 ; gain = 473.387
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1165.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1165.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+94 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1165.715 ; gain = 745.867
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1165.715 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/design_1_doGain_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_doGain_0_0, cache-ID = 8909e5d4e1fda499
+INFO: [Coretcl 2-1174] Renamed 44 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1165.715 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA/DMA_HLSGAIN/DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/design_1_doGain_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_doGain_0_0_utilization_synth.rpt -pb design_1_doGain_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 16:05:38 2020...

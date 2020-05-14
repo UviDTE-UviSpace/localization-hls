@@ -1,0 +1,102 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu May 14 15:28:08 2020
+| Host         : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    47 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    24 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     8 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            8 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              14 |            6 |
+| Yes          | No                    | No                     |              53 |           15 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             230 |           43 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                      Enable Signal                                      |                                   Set/Reset Signal                                  | Slice Load Count | Bel Load Count |
++--------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_keep_V_U/obuf_inst/odata_int[4]_i_1__6_n_0  | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_keep_V_U/obuf_inst/E[0]                     | bd_0_i/hls_inst/U0/regslice_both_inStream_V_keep_V_U/ibuf_inst/ireg[4]_i_1_n_0      |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_strb_V_U/obuf_inst/E[0]                     | bd_0_i/hls_inst/U0/regslice_both_inStream_V_strb_V_U/ibuf_inst/ireg[4]_i_1__0_n_0   |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_strb_V_U/obuf_inst/odata_int[4]_i_1__7_n_0  | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_keep_V_U/obuf_inst/odata_int[3]_i_1__7_n_0 | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_keep_V_U/obuf_inst/E[0]                    | bd_0_i/hls_inst/U0/regslice_both_outStream_V_keep_V_U/ibuf_inst/ireg[4]_i_1__1_n_0  |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_strb_V_U/obuf_inst/odata_int[3]_i_1__8_n_0 | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_strb_V_U/obuf_inst/E[0]                    | bd_0_i/hls_inst/U0/regslice_both_outStream_V_strb_V_U/ibuf_inst/ireg[4]_i_1__2_n_0  |                1 |              5 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_id_V_U/obuf_inst/E[0]                       | bd_0_i/hls_inst/U0/regslice_both_inStream_V_id_V_U/ibuf_inst/ireg[5]_i_1_n_0        |                1 |              6 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_id_V_U/obuf_inst/odata_int[5]_i_1__3_n_0    | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              6 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_id_V_U/obuf_inst/odata_int[4]_i_1__8_n_0   | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              6 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_id_V_U/obuf_inst/E[0]                      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_id_V_U/ibuf_inst/ireg[5]_i_1__0_n_0    |                1 |              6 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_dest_V_U/obuf_inst/odata_int[6]_i_1__2_n_0  | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                1 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_dest_V_U/obuf_inst/E[0]                     | bd_0_i/hls_inst/U0/regslice_both_inStream_V_dest_V_U/ibuf_inst/ireg[6]_i_1_n_0      |                1 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_dest_V_U/obuf_inst/odata_int[5]_i_1__4_n_0 | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                2 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_dest_V_U/obuf_inst/E[0]                    | bd_0_i/hls_inst/U0/regslice_both_outStream_V_dest_V_U/ibuf_inst/ireg[6]_i_1__0_n_0  |                1 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_data_V_U/obuf_inst/odata_int_reg[32]_0      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_data_V_U/obuf_inst/ap_CS_fsm_reg[0][0]  |                3 |             10 |
+|  ap_clk      |                                                                                         | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                6 |             14 |
+|  ap_clk      |                                                                                         |                                                                                     |                8 |             16 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_data_V_U/obuf_inst/odata_int_reg[32]_2[0]   | bd_0_i/hls_inst/U0/regslice_both_inStream_V_data_V_U/obuf_inst/SR[0]                |                6 |             32 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_data_V_U/obuf_inst/odata_int[32]_i_1__0_n_0 | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                5 |             32 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/E[0]                    | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/ibuf_inst/ireg[32]_i_1__0_n_0 |                6 |             32 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/odata_int[31]_i_2_n_0   | bd_0_i/hls_inst/U0/regslice_both_outStream_V_data_V_U/obuf_inst/SR[0]               |                6 |             32 |
+|  ap_clk      | bd_0_i/hls_inst/U0/regslice_both_inStream_V_data_V_U/obuf_inst/E[0]                     |                                                                                     |               15 |             53 |
++--------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------+----------------+
+
+

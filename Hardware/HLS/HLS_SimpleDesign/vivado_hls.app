@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="com.autoesl.autopilot.project" name="HLS_SimpleDesign" top="blur_image">
   <files>
+    <file name="../IplImage2AXIvideo_DMA.h" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
     <file name="../Grey_image_tb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
     <file name="HLS_SimpleDesign/simple.hpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
+    <file name="HLS_SimpleDesign/Mat2AXIvideo_DMA.h" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
     <file name="HLS_SimpleDesign/Grey_image.cpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
   </files>
   <solutions>

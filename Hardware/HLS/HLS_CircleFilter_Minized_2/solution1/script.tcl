@@ -5,8 +5,10 @@
 ############################################################
 open_project HLS_CircleFilter_Minized_2
 set_top filter
-add_files HLS_CircleFilter/filters.hpp
-add_files HLS_CircleFilter/filters.cpp
+add_files HLS_CircleFilter_Minized_2/Mat2AXIvideo_DMA.h
+add_files HLS_CircleFilter_Minized_2/filters.cpp
+add_files HLS_CircleFilter_Minized_2/filters.hpp
+add_files -tb HLS_CircleFilter_Minized_2/IplImage2AXIvideo_DMA.h -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb HLS_CircleFilter_Minized_2/filters_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z007s-clg225-1}
@@ -15,5 +17,5 @@ config_export -format ip_catalog -rtl vhdl
 #source "./HLS_CircleFilter_Minized_2/solution1/directives.tcl"
 csim_design
 csynth_design
-cosim_design -rtl vhdl -tool xsim
-export_design -flow impl -rtl vhdl -format ip_catalog
+cosim_design -trace_level all -rtl vhdl -tool xsim
+export_design -rtl vhdl -format ip_catalog

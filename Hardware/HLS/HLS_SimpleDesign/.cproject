@@ -191,6 +191,8 @@
                         					
                     </fileInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1075323653.437238481" name="IplImage2AXIvideo_DMA.h" rcbsApplicability="disable" resourcePath="testbench/IplImage2AXIvideo_DMA.h" toolsToInvoke=""/>
+                    					
                     <sourceEntries>
                         						
                         <entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
@@ -372,6 +374,8 @@
                         </tool>
                         					
                     </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.901263495.1081344464" name="IplImage2AXIvideo_DMA.h" rcbsApplicability="disable" resourcePath="testbench/IplImage2AXIvideo_DMA.h" toolsToInvoke=""/>
                     					
                     <sourceEntries>
                         						

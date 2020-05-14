@@ -4,7 +4,7 @@
 // ==============================================================
 #ifndef __filter_mac_muladdjbC__HH__
 #define __filter_mac_muladdjbC__HH__
-#include "simcore_mac_3.h"
+#include "simcore_mac_2.h"
 #include <systemc>
 
 template<
@@ -22,13 +22,13 @@ SC_MODULE(filter_mac_muladdjbC) {
 
 
 
-    simcore_mac_3<ID, 1, din0_WIDTH, din1_WIDTH, din2_WIDTH, dout_WIDTH> simcore_mac_3_U;
+    simcore_mac_2<ID, 1, din0_WIDTH, din1_WIDTH, din2_WIDTH, dout_WIDTH> simcore_mac_2_U;
 
-    SC_CTOR(filter_mac_muladdjbC):  simcore_mac_3_U ("simcore_mac_3_U") {
-        simcore_mac_3_U.din0(din0);
-        simcore_mac_3_U.din1(din1);
-        simcore_mac_3_U.din2(din2);
-        simcore_mac_3_U.dout(dout);
+    SC_CTOR(filter_mac_muladdjbC):  simcore_mac_2_U ("simcore_mac_2_U") {
+        simcore_mac_2_U.din0(din0);
+        simcore_mac_2_U.din1(din1);
+        simcore_mac_2_U.din2(din2);
+        simcore_mac_2_U.dout(dout);
 
     }
 

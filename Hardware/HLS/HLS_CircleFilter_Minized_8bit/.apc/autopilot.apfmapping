@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="core.hpp" path="C:\localization-hls\Hardware\HLS\HLS_CircleFilter_Minized_8bit\core.hpp"/>
+    <originFiles name="core.cpp" path="C:\localization-hls\Hardware\HLS\HLS_CircleFilter_Minized_8bit\core.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.cpp" path="C:\localization-hls\Hardware\HLS\HLS_CircleFilter_Minized_8bit\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

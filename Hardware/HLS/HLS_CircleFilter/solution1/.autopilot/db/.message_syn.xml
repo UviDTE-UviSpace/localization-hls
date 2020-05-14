@@ -2,17 +2,22 @@
 <Messages>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;HLS_CircleFilter/filters.cpp&apos; ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 195.434 ; gain = 105.930"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 195.434 ; gain = 105.930"/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="HLS_CircleFilter/filters.cpp:51:2: warning: &apos;/*&apos; within block comment [-Wcomment]
+        /*
+        ^
+1 warning generated."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 195.008 ; gain = 104.766"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 195.008 ; gain = 104.766"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
 	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:677) in function &apos;hls::Mat&lt;480, 640, 0&gt;::read()&apos; completely with a factor of 1."/>
 	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:701) in function &apos;hls::Mat&lt;480, 640, 0&gt;::write(hls::Scalar&lt;1, unsigned char&gt;)&apos; completely with a factor of 1."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 4096&gt;::init&apos; into &apos;hls::Mat&lt;480, 640, 4096&gt;::Mat.1&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:642)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::init&apos; into &apos;hls::Mat&lt;480, 640, 0&gt;::Mat.1&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:642)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXIGetBitFields&lt;16, unsigned char&gt;.1&apos; into &apos;hls::AXIGetBitFields&lt;16, unsigned char&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_axi_io.h:71)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXIGetBitFields&lt;16, unsigned char&gt;&apos; into &apos;hls::AXIvideo2Mat&lt;16, 480, 640, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:92)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXIGetBitFields&lt;8, unsigned char&gt;.1&apos; into &apos;hls::AXIGetBitFields&lt;8, unsigned char&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_axi_io.h:71)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXIGetBitFields&lt;8, unsigned char&gt;&apos; into &apos;hls::AXIvideo2Mat_DMA&lt;8, 480, 640, 0&gt;&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:32)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::write&apos; into &apos;hls::Mat&lt;480, 640, 0&gt;::operator&lt;&lt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::operator&lt;&lt;&apos; into &apos;hls::Threshold&lt;480, 640, 0, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::operator&lt;&lt;&apos; into &apos;hls::AXIvideo2Mat&lt;16, 480, 640, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:94)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::operator&lt;&lt;&apos; into &apos;hls::AXIvideo2Mat_DMA&lt;8, 480, 640, 0&gt;&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:34)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::normalizeAnchor&lt;int, int&gt;&apos; into &apos;hls::filter_opr&lt;hls::filter2d_kernel, hls::BORDER_DEFAULT&gt;::filter&lt;0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:424)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::filter_opr&lt;hls::filter2d_kernel, hls::BORDER_DEFAULT&gt;::get_parameters&lt;5, 5, int&gt;&apos; into &apos;hls::filter_opr&lt;hls::filter2d_kernel, hls::BORDER_DEFAULT&gt;::filter&lt;0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:434)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::borderInterpolate&apos; into &apos;hls::filter_opr&lt;hls::filter2d_kernel, hls::BORDER_DEFAULT&gt;::filter&lt;0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:452)."/>
@@ -43,11 +48,11 @@
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::filter2d_kernel::apply&lt;unsigned char, unsigned char, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, 5, 5&gt;&apos; into &apos;hls::filter_opr&lt;hls::filter2d_kernel, hls::BORDER_DEFAULT&gt;::filter&lt;0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:514)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::filter_opr&lt;hls::filter2d_kernel, hls::BORDER_DEFAULT&gt;::filter&lt;0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; into &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:1289)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::read&apos; into &apos;hls::Mat&lt;480, 640, 0&gt;::operator&gt;&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::operator&gt;&gt;&apos; into &apos;hls::Mat2AXIvideo&lt;16, 480, 640, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:140)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::operator&gt;&gt;&apos; into &apos;hls::Mat2AXIvideo_DMA&lt;8, 480, 640, 0&gt;&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:66)."/>
 	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::Mat&lt;480, 640, 0&gt;::operator&gt;&gt;&apos; into &apos;hls::Threshold&lt;480, 640, 0, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXISetBitFields&lt;16, unsigned char&gt;.1&apos; into &apos;hls::AXISetBitFields&lt;16, unsigned char&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_axi_io.h:100)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXISetBitFields&lt;16, unsigned char&gt;&apos; into &apos;hls::Mat2AXIvideo&lt;16, 480, 640, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:143)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 360.395 ; gain = 270.891"/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXISetBitFields&lt;8, unsigned char&gt;.1&apos; into &apos;hls::AXISetBitFields&lt;8, unsigned char&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_axi_io.h:100)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;hls::AXISetBitFields&lt;8, unsigned char&gt;&apos; into &apos;hls::Mat2AXIvideo_DMA&lt;8, 480, 640, 0&gt;&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:69)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:29 . Memory (MB): peak = 357.402 ; gain = 267.160"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
 	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;hls::sr_cast_class&lt;ap_uint&lt;8&gt; &gt;::operator()&lt;29, 15, (ap_q_mode)5, (ap_o_mode)3&gt;&apos; into &apos;hls::sr_cast&lt;unsigned char, ap_fixed&lt;29, 15, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically."/>
 	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;hls::sr_cast&lt;unsigned char, ap_fixed&lt;29, 15, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;&apos; into &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:304-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:514-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:1289) automatically."/>
@@ -55,9 +60,9 @@
 	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;hls::sr_cast_class&lt;ap_uint&lt;8&gt; &gt;::operator()&lt;8&gt;&apos; into &apos;hls::sr_cast_class&lt;ap_uint&lt;8&gt; &gt;::operator()&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_types.h:432) automatically."/>
 	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;hls::sr_cast_class&lt;ap_uint&lt;8&gt; &gt;::operator()&apos; into &apos;hls::sr_cast&lt;unsigned char, unsigned char&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_types.h:500) automatically."/>
 	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;hls::sr_cast&lt;unsigned char, unsigned char&gt;&apos; into &apos;hls::Threshold&lt;480, 640, 0, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1486) automatically."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 406.785 ; gain = 317.281"/>
-	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;img_3.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:22)."/>
-	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;img_1.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:20)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:30 . Memory (MB): peak = 406.813 ; gain = 316.570"/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;img_3.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:23)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;img_1.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:21)."/>
 	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_245" tag="" content="Unrolling small iteration loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; automatically."/>
 	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_245" tag="" content="Unrolling small iteration loop &apos;Loop-2&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; automatically."/>
 	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_245" tag="" content="Unrolling small iteration loop &apos;Loop-3&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; automatically."/>
@@ -77,23 +82,23 @@
 	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-5.1.6&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:501) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; completely with a factor of 5."/>
 	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;loop_height&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:285) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; completely with a factor of 5."/>
 	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;loop_width&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:286) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; completely with a factor of 5."/>
-	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;img_2.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:21) ."/>
-	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;img_3.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:22) ."/>
-	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;img_1.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:20) ."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;img_2.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:22) ."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;img_3.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:23) ."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_112" tag="" content="Automatically partitioning streamed array &apos;img_1.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:21) ."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;s.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1484) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;d.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1485) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;scl.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:670) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;pix.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:115) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;pix.val&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:45) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;scl.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:670) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;kernel.val.V&apos;  in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;src_kernel_win.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;k_buf.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;right_border_buf.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:403) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;col_buf.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:405) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;pix.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:56) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;img_2.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:21) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;img_3.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:22) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;img_1.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:20) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;pix.val&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:15) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;img_2.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:22) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;img_3.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:23) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;img_1.data_stream.V&apos; (HLS_CircleFilter/filters.cpp:21) in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;kernel.val.V&apos;  in dimension 2 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;src_kernel_win.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:398) in dimension 2 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;k_buf.val&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400) in dimension 2 completely."/>
@@ -110,28 +115,29 @@
 	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;hls::sr_cast&lt;unsigned char, unsigned char&gt;&apos; into &apos;hls::Threshold&lt;480, 640, 0, 0&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1486) automatically."/>
 	<Message severity="INFO" prefix="[XFORM 203-712]" key="XFORM_DATAFLOW_TRANSFORM_230" tag="DATAFLOW" content="Applying dataflow to function &apos;filter&apos;, detected/extracted 5 process function(s): 
 	 &apos;Block__proc&apos;
-	 &apos;hls::AXIvideo2Mat&lt;16, 480, 640, 0&gt;&apos;
+	 &apos;hls::AXIvideo2Mat_DMA&lt;8, 480, 640, 0&gt;&apos;
 	 &apos;hls::GaussianBlur&lt;5, 5, 0, 0, 480, 640&gt;&apos;
 	 &apos;hls::Threshold&lt;480, 640, 0, 0&gt;&apos;
-	 &apos;hls::Mat2AXIvideo&lt;16, 480, 640, 0&gt;&apos;."/>
+	 &apos;hls::Mat2AXIvideo_DMA&lt;8, 480, 640, 0&gt;&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (HLS_CircleFilter/Mat2AXIvideo_DMA.h:54:53) to (HLS_CircleFilter/Mat2AXIvideo_DMA.h:54:47) in function &apos;hls::Mat2AXIvideo_DMA&lt;8, 480, 640, 0&gt;&apos;... converting 4 basic blocks."/>
 	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:444:57) to (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:465:21) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos;... converting 19 basic blocks."/>
 	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_mem.h:165:17) to (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:512:24) in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos;... converting 21 basic blocks."/>
 	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)...32 expression(s) balanced."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:32 . Memory (MB): peak = 505.117 ; gain = 415.613"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:32 . Memory (MB): peak = 502.859 ; gain = 412.617"/>
 	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::Threshold&lt;480, 640, 0, 0&gt;&apos; to &apos;Threshold&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:589:50)"/>
-	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::Mat2AXIvideo&lt;16, 480, 640, 0&gt;&apos; to &apos;Mat2AXIvideo&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:78:50)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::Mat2AXIvideo_DMA&lt;8, 480, 640, 0&gt;&apos; to &apos;Mat2AXIvideo_DMA&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:50:47)"/>
 	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::GaussianBlur&lt;5, 5, 0, 0, 480, 640&gt;&apos; to &apos;GaussianBlur&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2678:5)"/>
 	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::Filter2D&lt;hls::BORDER_DEFAULT, 0, 0, ap_fixed&lt;16, 2, (ap_q_mode)0, (ap_o_mode)3, 0&gt;, int, 480, 640, 5, 5&gt;&apos; to &apos;Filter2D&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)"/>
-	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::AXIvideo2Mat&lt;16, 480, 640, 0&gt;&apos; to &apos;AXIvideo2Mat&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_io.h:49:9)"/>
-	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[6]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;hls::AXIvideo2Mat_DMA&lt;8, 480, 640, 0&gt;&apos; to &apos;AXIvideo2Mat_DMA&apos; (HLS_CircleFilter/Mat2AXIvideo_DMA.h:19:50)"/>
 	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[5]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
+	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[6]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
+	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[7]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
 	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[8]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
 	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[9]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
-	<Message severity="WARNING" prefix="[ANALYSIS 214-52]" key="ANALYSIS_USER_SET_DEP_242" tag="" content="Found false inter dependency for variable &apos;k_buf[0].val[7]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:400)."/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;k_buf[0].val[9]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:489:43)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;k_buf[0].val[5]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:493:62)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;k_buf[0].val[9]&apos; (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:472:43)"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:34 . Memory (MB): peak = 562.688 ; gain = 473.184"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 560.172 ; gain = 469.930"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;filter&apos; ..."/>
 	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;Block__proc&apos; to &apos;Block_proc&apos;."/>
@@ -140,31 +146,27 @@
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 34.058 seconds; current allocated memory: 492.011 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 33.636 seconds; current allocated memory: 490.210 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.159 seconds; current allocated memory: 492.098 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.155 seconds; current allocated memory: 490.297 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;AXIvideo2Mat&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;AXIvideo2Mat_DMA&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;loop_wait_for_start&apos;."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;loop_width&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;loop_wait_for_eol&apos;."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.381 seconds; current allocated memory: 492.309 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.286 seconds; current allocated memory: 490.407 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.207 seconds; current allocated memory: 492.683 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.159 seconds; current allocated memory: 490.638 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Filter2D&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
@@ -179,25 +181,25 @@
 	&apos;add&apos; operation (&apos;add_ln703_10&apos;, C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:290-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:303-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:514-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:1289) [373]  (2.23 ns)
 	&apos;add&apos; operation (&apos;add_ln703_12&apos;, C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:290-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:303-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:514-&gt;C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:1289) [402]  (2.23 ns)"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.519 seconds; current allocated memory: 494.211 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.451 seconds; current allocated memory: 492.203 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.479 seconds; current allocated memory: 495.513 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.401 seconds; current allocated memory: 493.489 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;GaussianBlur&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.541 seconds; current allocated memory: 495.721 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.482 seconds; current allocated memory: 493.677 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.208 seconds; current allocated memory: 495.804 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.183 seconds; current allocated memory: 493.796 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Threshold&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
@@ -205,49 +207,49 @@
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;loop_width&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.471 seconds; current allocated memory: 496.030 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.439 seconds; current allocated memory: 494.023 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.199 seconds; current allocated memory: 496.211 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.171 seconds; current allocated memory: 494.203 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Mat2AXIvideo&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Mat2AXIvideo_DMA&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;loop_width&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.302 seconds; current allocated memory: 496.369 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.274 seconds; current allocated memory: 494.359 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.2 seconds; current allocated memory: 496.611 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.174 seconds; current allocated memory: 494.597 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;filter&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.215 seconds; current allocated memory: 496.740 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.18 seconds; current allocated memory: 494.725 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.366 seconds; current allocated memory: 497.244 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.387 seconds; current allocated memory: 495.335 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Block_proc&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Block_proc&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.332 seconds; current allocated memory: 497.512 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.295 seconds; current allocated memory: 495.582 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;AXIvideo2Mat&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;AXIvideo2Mat_DMA&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;AXIvideo2Mat&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.283 seconds; current allocated memory: 498.150 MB."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;AXIvideo2Mat_DMA&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.221 seconds; current allocated memory: 496.073 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Filter2D&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
@@ -288,22 +290,22 @@
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;filter_mul_mul_13mb6&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;filter_mux_53_8_1_1&apos;: 10 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Filter2D&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.863 seconds; current allocated memory: 500.895 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.659 seconds; current allocated memory: 498.822 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;GaussianBlur&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;GaussianBlur&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.394 seconds; current allocated memory: 501.865 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.029 seconds; current allocated memory: 499.725 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Threshold&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Threshold&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.39 seconds; current allocated memory: 502.300 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.333 seconds; current allocated memory: 500.196 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Mat2AXIvideo&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Mat2AXIvideo_DMA&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Mat2AXIvideo&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.368 seconds; current allocated memory: 502.784 MB."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Mat2AXIvideo_DMA&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.442 seconds; current allocated memory: 500.653 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;filter&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
@@ -325,9 +327,9 @@
 	<Message severity="INFO" prefix="[HLS 200-633]" key="HLS 200-633" tag="" content="Setting ap_ctrl_none interface for filter"/>
 	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;start_for_Threshold_U0&apos; to &apos;start_for_Threshovdy&apos; due to the length limit 20"/>
 	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;start_for_GaussianBlur_U0&apos; to &apos;start_for_GaussiawdI&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;start_for_Mat2AXIvideo_U0&apos; to &apos;start_for_Mat2AXIxdS&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;start_for_Mat2AXIvideo_DMA_U0&apos; to &apos;start_for_Mat2AXIxdS&apos; due to the length limit 20"/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;filter&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.573 seconds; current allocated memory: 503.558 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.477 seconds; current allocated memory: 501.487 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,SDX_LOOP" content="**** Loop Constraint Status: All loop constraints were satisfied."/>
 	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,SDX_KERNEL" content="**** Estimated Fmax: 92.33 MHz"/>
 	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;Filter2D_k_buf_0_bkb_ram (RAM)&apos; using block RAMs."/>
@@ -345,7 +347,7 @@
 	<Message severity="INFO" prefix="[RTMG 210-285]" key="RTMG_285_1799" tag="" content="Implementing FIFO &apos;start_for_Threshovdy_U(start_for_Threshovdy)&apos; using Shift Registers."/>
 	<Message severity="INFO" prefix="[RTMG 210-285]" key="RTMG_285_1799" tag="" content="Implementing FIFO &apos;start_for_GaussiawdI_U(start_for_GaussiawdI)&apos; using Shift Registers."/>
 	<Message severity="INFO" prefix="[RTMG 210-285]" key="RTMG_285_1799" tag="" content="Implementing FIFO &apos;start_for_Mat2AXIxdS_U(start_for_Mat2AXIxdS)&apos; using Shift Registers."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 594.801 ; gain = 505.297"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:45 . Memory (MB): peak = 590.508 ; gain = 500.266"/>
 	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for filter."/>
 	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for filter."/>
 </Messages>

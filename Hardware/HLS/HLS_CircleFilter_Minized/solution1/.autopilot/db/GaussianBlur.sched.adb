@@ -8,14 +8,14 @@
 		<name>GaussianBlur</name>
 		<ret_bitwidth>0</ret_bitwidth>
 		<ports class_id="2" tracking_level="0" version="0">
-			<count>4</count>
+			<count>2</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="1" version="0" object_id="_1">
 				<Value class_id="4" tracking_level="0" version="0">
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>p_src_rows_V</name>
+						<name>p_src_data_stream_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -24,11 +24,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>_src.rows.V</originalName>
+						<originalName>_src.data_stream.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>3</if_type>
@@ -43,62 +43,6 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>p_src_cols_V</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>_src.cols.V</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>3</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_3">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>3</id>
-						<name>p_src_data_stream_V</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>_src.data_stream.V</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>8</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>3</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_4">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>4</id>
 						<name>p_dst_data_stream_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -124,111 +68,13 @@
 			</item>
 		</ports>
 		<nodes class_id="8" tracking_level="0" version="0">
-			<count>4</count>
+			<count>2</count>
 			<item_version>0</item_version>
-			<item class_id="9" tracking_level="1" version="0" object_id="_5">
+			<item class_id="9" tracking_level="1" version="0" object_id="_3">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>9</id>
-						<name>p_src_rows_V_read</name>
-						<fileName>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
-						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>2688</lineNumber>
-						<contextFuncName>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item class_id="10" tracking_level="0" version="0">
-								<first>C:\localization-hls\Hardware\HLS</first>
-								<second class_id="11" tracking_level="0" version="0">
-									<count>1</count>
-									<item_version>0</item_version>
-									<item class_id="12" tracking_level="0" version="0">
-										<first class_id="13" tracking_level="0" version="0">
-											<first>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</second>
-										</first>
-										<second>2688</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>15</item>
-					<item>16</item>
-				</oprand_edges>
-				<opcode>read</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.63</m_delay>
-				<m_topoIndex>1</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_6">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>10</id>
-						<name>p_src_cols_V_read</name>
-						<fileName>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
-						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>2688</lineNumber>
-						<contextFuncName>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\localization-hls\Hardware\HLS</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
-											<second>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</second>
-										</first>
-										<second>2688</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>11</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>18</item>
-					<item>19</item>
-				</oprand_edges>
-				<opcode>read</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.63</m_delay>
-				<m_topoIndex>2</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_7">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>11</id>
+						<id>5</id>
 						<name>_ln2678</name>
 						<fileName>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
@@ -237,13 +83,13 @@
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
-							<item>
+							<item class_id="10" tracking_level="0" version="0">
 								<first>C:\localization-hls\Hardware\HLS</first>
-								<second>
+								<second class_id="11" tracking_level="0" version="0">
 									<count>2</count>
 									<item_version>0</item_version>
-									<item>
-										<first>
+									<item class_id="12" tracking_level="0" version="0">
+										<first class_id="13" tracking_level="0" version="0">
 											<first>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
 											<second>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</second>
 										</first>
@@ -266,36 +112,48 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>5</count>
+					<count>3</count>
 					<item_version>0</item_version>
-					<item>21</item>
-					<item>22</item>
-					<item>23</item>
-					<item>24</item>
-					<item>25</item>
+					<item>9</item>
+					<item>10</item>
+					<item>11</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.73</m_delay>
-				<m_topoIndex>3</m_topoIndex>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>1</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_8">
+			<item class_id_reference="9" object_id="_4">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>12</id>
-						<name>_ln0</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
+						<id>6</id>
+						<name>_ln2689</name>
+						<fileName>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</fileName>
+						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
+						<lineNumber>2689</lineNumber>
+						<contextFuncName>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</contextFuncName>
 						<inlineStackInfo>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>C:\localization-hls\Hardware\HLS</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h</first>
+											<second>GaussianBlur&amp;lt;5, 5, 0, 0, 480, 640&amp;gt;</second>
+										</first>
+										<second>2689</second>
+									</item>
+								</second>
+							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -313,18 +171,18 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>4</m_topoIndex>
+				<m_topoIndex>2</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="16" tracking_level="1" version="0" object_id="_9">
+			<item class_id="16" tracking_level="1" version="0" object_id="_5">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>20</id>
+						<id>8</id>
 						<name>Filter2D</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -347,10 +205,10 @@
 		<blocks class_id="17" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_10">
+			<item class_id="18" tracking_level="1" version="0" object_id="_6">
 				<Obj>
 					<type>3</type>
-					<id>13</id>
+					<id>7</id>
 					<name>GaussianBlur</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -365,65 +223,35 @@
 					<coreName></coreName>
 				</Obj>
 				<node_objs>
-					<count>4</count>
+					<count>2</count>
 					<item_version>0</item_version>
-					<item>9</item>
-					<item>10</item>
-					<item>11</item>
-					<item>12</item>
+					<item>5</item>
+					<item>6</item>
 				</node_objs>
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>7</count>
+			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_11">
-				<id>16</id>
+			<item class_id="20" tracking_level="1" version="0" object_id="_7">
+				<id>9</id>
+				<edge_type>1</edge_type>
+				<source_obj>8</source_obj>
+				<sink_obj>5</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_8">
+				<id>10</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
-				<sink_obj>9</sink_obj>
+				<sink_obj>5</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_12">
-				<id>19</id>
+			<item class_id_reference="20" object_id="_9">
+				<id>11</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
-				<sink_obj>10</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_13">
-				<id>21</id>
-				<edge_type>1</edge_type>
-				<source_obj>20</source_obj>
-				<sink_obj>11</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_14">
-				<id>22</id>
-				<edge_type>1</edge_type>
-				<source_obj>9</source_obj>
-				<sink_obj>11</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_15">
-				<id>23</id>
-				<edge_type>1</edge_type>
-				<source_obj>10</source_obj>
-				<sink_obj>11</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_16">
-				<id>24</id>
-				<edge_type>1</edge_type>
-				<source_obj>3</source_obj>
-				<sink_obj>11</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_17">
-				<id>25</id>
-				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
-				<sink_obj>11</sink_obj>
+				<sink_obj>5</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -431,7 +259,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_18">
+		<item class_id="22" tracking_level="1" version="0" object_id="_10">
 			<mId>1</mId>
 			<mTag>GaussianBlur</mTag>
 			<mType>0</mType>
@@ -442,14 +270,14 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>13</item>
+				<item>7</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>191</mMinLatency>
-			<mMaxLatency>316707</mMaxLatency>
+			<mMinLatency>315401</mMinLatency>
+			<mMaxLatency>315401</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -457,31 +285,17 @@
 	<fsm class_id="-1"></fsm>
 	<res class_id="-1"></res>
 	<node_label_latency class_id="26" tracking_level="0" version="0">
-		<count>4</count>
+		<count>2</count>
 		<item_version>0</item_version>
 		<item class_id="27" tracking_level="0" version="0">
-			<first>9</first>
+			<first>5</first>
 			<second class_id="28" tracking_level="0" version="0">
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>10</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>11</first>
-			<second>
 				<first>0</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>12</first>
+			<first>6</first>
 			<second>
 				<first>1</first>
 				<second>0</second>
@@ -492,7 +306,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="30" tracking_level="0" version="0">
-			<first>13</first>
+			<first>7</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
 				<second>1</second>

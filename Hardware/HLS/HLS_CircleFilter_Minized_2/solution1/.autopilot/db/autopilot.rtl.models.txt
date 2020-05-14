@@ -33,9 +33,9 @@ start_for_GaussiawdI
 start_for_Mat2AXIxdS
 regslice_core
 Block_proc
-AXIvideo2Mat
+AXIvideo2Mat_DMA
 Filter2D
 GaussianBlur
 Threshold
-Mat2AXIvideo
+Mat2AXIvideo_DMA
 filter

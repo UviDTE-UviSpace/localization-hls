@@ -28,7 +28,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -56,7 +56,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>2</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -84,7 +84,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>2</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -224,7 +224,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -252,7 +252,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>2</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -280,7 +280,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>2</bitwidth>
+					<bitwidth>1</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -686,7 +686,7 @@
 						<name>img_1_data_stream_0</name>
 						<fileName>HLS_CircleFilter/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>21</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -701,7 +701,7 @@
 											<first>HLS_CircleFilter/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>20</second>
+										<second>21</second>
 									</item>
 								</second>
 							</item>
@@ -734,7 +734,7 @@
 						<name>img_2_data_stream_0</name>
 						<fileName>HLS_CircleFilter/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -749,7 +749,7 @@
 											<first>HLS_CircleFilter/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>21</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -782,7 +782,7 @@
 						<name>img_3_data_stream_0</name>
 						<fileName>HLS_CircleFilter/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<lineNumber>23</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -797,7 +797,7 @@
 											<first>HLS_CircleFilter/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>22</second>
+										<second>23</second>
 									</item>
 								</second>
 							</item>
@@ -865,10 +865,10 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>_ln25</name>
+						<name>_ln27</name>
 						<fileName>HLS_CircleFilter/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -883,7 +883,7 @@
 											<first>HLS_CircleFilter/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>25</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -927,10 +927,10 @@
 					<Obj>
 						<type>0</type>
 						<id>65</id>
-						<name>_ln27</name>
+						<name>_ln28</name>
 						<fileName>HLS_CircleFilter/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -945,7 +945,7 @@
 											<first>HLS_CircleFilter/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -981,10 +981,10 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>_ln28</name>
+						<name>_ln29</name>
 						<fileName>HLS_CircleFilter/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -999,7 +999,7 @@
 											<first>HLS_CircleFilter/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>28</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -1194,7 +1194,7 @@
 					<Obj>
 						<type>2</type>
 						<id>92</id>
-						<name>AXIvideo2Mat</name>
+						<name>AXIvideo2Mat_DMA</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1210,7 +1210,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:AXIvideo2Mat&gt;</content>
+				<content>&lt;constant:AXIvideo2Mat_DMA&gt;</content>
 			</item>
 			<item class_id_reference="16" object_id="_35">
 				<Value>
@@ -1263,7 +1263,7 @@
 					<Obj>
 						<type>2</type>
 						<id>120</id>
-						<name>Mat2AXIvideo</name>
+						<name>Mat2AXIvideo_DMA</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1279,7 +1279,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:Mat2AXIvideo&gt;</content>
+				<content>&lt;constant:Mat2AXIvideo_DMA&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -1770,8 +1770,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>195</mMinLatency>
-			<mMaxLatency>316711</mMaxLatency>
+			<mMinLatency>193</mMinLatency>
+			<mMaxLatency>316709</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_100">
 				<port_list class_id="24" tracking_level="0" version="0">
@@ -1828,7 +1828,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_111">
 						<type>0</type>
-						<name>AXIvideo2Mat_U0</name>
+						<name>AXIvideo2Mat_DMA_U0</name>
 						<ssdmobj_id>64</ssdmobj_id>
 						<pins>
 							<count>12</count>
@@ -1841,7 +1841,7 @@
 								</port>
 								<inst class_id_reference="30" object_id="_114">
 									<type>0</type>
-									<name>AXIvideo2Mat_U0</name>
+									<name>AXIvideo2Mat_DMA_U0</name>
 									<ssdmobj_id>64</ssdmobj_id>
 								</inst>
 							</item>
@@ -2043,7 +2043,7 @@
 					</item>
 					<item class_id_reference="26" object_id="_161">
 						<type>0</type>
-						<name>Mat2AXIvideo_U0</name>
+						<name>Mat2AXIvideo_DMA_U0</name>
 						<ssdmobj_id>71</ssdmobj_id>
 						<pins>
 							<count>10</count>
@@ -2056,7 +2056,7 @@
 								</port>
 								<inst class_id_reference="30" object_id="_164">
 									<type>0</type>
-									<name>Mat2AXIvideo_U0</name>
+									<name>Mat2AXIvideo_DMA_U0</name>
 									<ssdmobj_id>71</ssdmobj_id>
 								</inst>
 							</item>
@@ -3253,26 +3253,26 @@
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>64</item>
-				<item>64</item>
-			</second>
-		</item>
-		<item>
-			<first>325</first>
-			<second>
-				<count>2</count>
-				<item_version>0</item_version>
 				<item>71</item>
 				<item>71</item>
 			</second>
 		</item>
 		<item>
-			<first>346</first>
+			<first>323</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
 				<item>70</item>
 				<item>70</item>
+			</second>
+		</item>
+		<item>
+			<first>333</first>
+			<second>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>64</item>
+				<item>64</item>
 			</second>
 		</item>
 		<item>
@@ -3388,7 +3388,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_AXIvideo2Mat_fu_302</first>
+			<first>grp_AXIvideo2Mat_DMA_fu_333</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3406,7 +3406,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_Mat2AXIvideo_fu_325</first>
+			<first>grp_Mat2AXIvideo_DMA_fu_302</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3415,7 +3415,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_Threshold_fu_346</first>
+			<first>grp_Threshold_fu_323</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>

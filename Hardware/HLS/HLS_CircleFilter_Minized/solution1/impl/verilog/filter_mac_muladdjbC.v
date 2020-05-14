@@ -4,11 +4,11 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module filter_mac_muladdjbC_DSP48_3(
-    input  [11 - 1:0] in0,
+(* use_dsp = "yes" *) module filter_mac_muladdjbC_DSP48_3(
+    input  [8 - 1:0] in0,
     input  [8 - 1:0] in1,
-    input  [19 - 1:0] in2,
-    output [20 - 1:0]  dout);
+    input  [17 - 1:0] in2,
+    output [17 - 1:0]  dout);
 
 wire signed [25 - 1:0]     a;
 wire signed [18 - 1:0]     b;

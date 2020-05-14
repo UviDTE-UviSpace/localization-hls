@@ -44,12 +44,12 @@
 		<link>
 			<name>source/filters.cpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.cpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized/filters.cpp</location>
 		</link>
 		<link>
 			<name>source/filters.hpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.hpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized/filters.hpp</location>
 		</link>
 		<link>
 			<name>testbench/filters_tb.cpp</name>

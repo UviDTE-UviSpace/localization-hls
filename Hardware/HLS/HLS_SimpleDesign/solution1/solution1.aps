@@ -3,13 +3,16 @@
         <value string="false"/>
     </checksum>
     <downStreamTool>
-        <DownStreamTool name="vivado"/>
+        <DownStreamTool name=""/>
     </downStreamTool>
-    <config/>
+    <config>
+        <config_sdx optimization_level="none" target="none"/>
+        <config_export vivado_optimization_level="2" format="ip_catalog" rtl="vhdl"/>
+        <schedule model="blur_image"/>
+    </config>
     <UIConfigurations>
-        <UIAutosynConf boardInfo="ZedBoard Zynq Evaluation and Development Kit (xc7z020clg484-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf boardInfo="MiniZed (xc7z007sclg225-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynq/zynq</Platform>
-            <Platform>xilinx/zynq/zynq_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -38,23 +41,20 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="false" rtlCombo="verilog">
-        <Format formatName="ip_catalog"/>
+    <ExportDesign askAgain="true" evaluate="true" flow="true" flowChoice="impl" formatName="ip_catalog" rtl="vhdl" rtlButton="true" rtlCombo="vhdl">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="false">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim" waveDebug="false">
             <Rtl active="false" name="systemc"/>
-            <Rtl active="true" name="verilog"/>
-            <Rtl active="false" name="vhdl"/>
+            <Rtl active="false" name="verilog"/>
+            <Rtl active="true" name="vhdl"/>
         </SimFlow>
     </Simulation>
-    <clockList>
-        <clock default="false" name="default" period="10"/>
-    </clockList>
     <name>
         <value string="solution1"/>
     </name>
@@ -62,11 +62,14 @@
         <value string="HLS_SimpleDesign"/>
     </project>
     <targetInfo>
-        <TargetInfo value="xc7z020:-clg484:-1"/>
+        <TargetInfo value="xc7z007s:-clg225:-1"/>
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/zynq/zynq"/>
-        <library name="DefaultPlatform" value="xilinx/zynq/zynq_fpv6"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
+    <clockList>
+        <clock name="default" default="false" uncertainty="12.5%" period="10"/>
+    </clockList>
 </solution>
 

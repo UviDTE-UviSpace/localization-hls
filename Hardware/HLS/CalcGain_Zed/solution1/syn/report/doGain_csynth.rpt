@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vivado HLS Report for 'doGain'
+================================================================
+* Date:           Thu May 14 15:21:16 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        CalcGain_Zed
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 1.770 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1003|     1003| 10.030 us | 10.030 us |  1003|  1003|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |     1001|     1001|         3|          1|          1|  1000|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     41|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     66|    -|
+|Register         |        -|      -|      72|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      72|    107|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |idx_fu_132_p2                     |     +    |      0|  0|  14|          10|           1|
+    |ap_block_pp0_stage0_01001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_io                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_io                |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln13_fu_126_p2               |   icmp   |      0|  0|  13|          10|           6|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  41|          28|          15|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |idx_0_reg_115            |   9|          2|   10|         20|
+    |inStream_TDATA_blk_n     |   9|          2|    1|          2|
+    |outStream_TDATA_blk_n    |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  66|         14|   15|         32|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |   3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |icmp_ln13_reg_172                |   1|   0|    1|          0|
+    |icmp_ln13_reg_172_pp0_iter1_reg  |   1|   0|    1|          0|
+    |idx_0_reg_115                    |  10|   0|   10|          0|
+    |tmp_data_V_reg_181               |  32|   0|   32|          0|
+    |tmp_dest_V_reg_211               |   6|   0|    6|          0|
+    |tmp_id_V_reg_206                 |   5|   0|    5|          0|
+    |tmp_keep_V_reg_186               |   4|   0|    4|          0|
+    |tmp_last_V_reg_201               |   1|   0|    1|          0|
+    |tmp_strb_V_reg_191               |   4|   0|    4|          0|
+    |tmp_user_V_reg_196               |   2|   0|    2|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            |  72|   0|   72|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+--------------+--------------------+--------------+
+|     RTL Ports    | Dir | Bits|   Protocol   |    Source Object   |    C Type    |
++------------------+-----+-----+--------------+--------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_none |       doGain       | return value |
+|ap_rst_n          |  in |    1| ap_ctrl_none |       doGain       | return value |
+|inStream_TDATA    |  in |   32|     axis     |  inStream_V_data_V |    pointer   |
+|inStream_TVALID   |  in |    1|     axis     |  inStream_V_dest_V |    pointer   |
+|inStream_TREADY   | out |    1|     axis     |  inStream_V_dest_V |    pointer   |
+|inStream_TDEST    |  in |    6|     axis     |  inStream_V_dest_V |    pointer   |
+|inStream_TKEEP    |  in |    4|     axis     |  inStream_V_keep_V |    pointer   |
+|inStream_TSTRB    |  in |    4|     axis     |  inStream_V_strb_V |    pointer   |
+|inStream_TUSER    |  in |    2|     axis     |  inStream_V_user_V |    pointer   |
+|inStream_TLAST    |  in |    1|     axis     |  inStream_V_last_V |    pointer   |
+|inStream_TID      |  in |    5|     axis     |   inStream_V_id_V  |    pointer   |
+|outStream_TDATA   | out |   32|     axis     | outStream_V_data_V |    pointer   |
+|outStream_TVALID  | out |    1|     axis     | outStream_V_dest_V |    pointer   |
+|outStream_TREADY  |  in |    1|     axis     | outStream_V_dest_V |    pointer   |
+|outStream_TDEST   | out |    6|     axis     | outStream_V_dest_V |    pointer   |
+|outStream_TKEEP   | out |    4|     axis     | outStream_V_keep_V |    pointer   |
+|outStream_TSTRB   | out |    4|     axis     | outStream_V_strb_V |    pointer   |
+|outStream_TUSER   | out |    2|     axis     | outStream_V_user_V |    pointer   |
+|outStream_TLAST   | out |    1|     axis     | outStream_V_last_V |    pointer   |
+|outStream_TID     | out |    5|     axis     |  outStream_V_id_V  |    pointer   |
++------------------+-----+-----+--------------+--------------------+--------------+
+

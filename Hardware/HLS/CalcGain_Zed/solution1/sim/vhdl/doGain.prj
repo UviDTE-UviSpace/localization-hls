@@ -1,0 +1,8 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "AESL_axi_s_inStream.vhd"
+vhdl xil_defaultlib "AESL_axi_s_outStream.vhd"
+vhdl xil_defaultlib "doGain.autotb.vhd"
+vhdl xil_defaultlib "doGain.vhd"
+vhdl xil_defaultlib "regslice_core.vhd"
+

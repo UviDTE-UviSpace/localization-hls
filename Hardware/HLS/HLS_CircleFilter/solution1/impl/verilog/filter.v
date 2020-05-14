@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="filter,hls_ip_2019_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=10.830875,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=5,HLS_SYN_DSP=19,HLS_SYN_FF=2085,HLS_SYN_LUT=4093,HLS_VERSION=2019_2}" *)
+(* CORE_GENERATION_INFO="filter,hls_ip_2019_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=10.830875,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=5,HLS_SYN_DSP=19,HLS_SYN_FF=2026,HLS_SYN_LUT=3987,HLS_VERSION=2019_2}" *)
 
 module filter (
         video_in_TDATA,
@@ -33,16 +33,16 @@ module filter (
 );
 
 
-input  [15:0] video_in_TDATA;
-input  [1:0] video_in_TKEEP;
-input  [1:0] video_in_TSTRB;
+input  [7:0] video_in_TDATA;
+input  [0:0] video_in_TKEEP;
+input  [0:0] video_in_TSTRB;
 input  [0:0] video_in_TUSER;
 input  [0:0] video_in_TLAST;
 input  [0:0] video_in_TID;
 input  [0:0] video_in_TDEST;
-output  [15:0] video_out_TDATA;
-output  [1:0] video_out_TKEEP;
-output  [1:0] video_out_TSTRB;
+output  [7:0] video_out_TDATA;
+output  [0:0] video_out_TKEEP;
+output  [0:0] video_out_TSTRB;
 output  [0:0] video_out_TUSER;
 output  [0:0] video_out_TLAST;
 output  [0:0] video_out_TID;
@@ -70,22 +70,22 @@ wire   [9:0] Block_proc_U0_img_3_rows_V_out_din;
 wire    Block_proc_U0_img_3_rows_V_out_write;
 wire   [10:0] Block_proc_U0_img_3_cols_V_out_din;
 wire    Block_proc_U0_img_3_cols_V_out_write;
-wire    AXIvideo2Mat_U0_ap_start;
-wire    AXIvideo2Mat_U0_ap_done;
-wire    AXIvideo2Mat_U0_ap_continue;
-wire    AXIvideo2Mat_U0_ap_idle;
-wire    AXIvideo2Mat_U0_ap_ready;
-wire    AXIvideo2Mat_U0_start_out;
-wire    AXIvideo2Mat_U0_start_write;
-wire    AXIvideo2Mat_U0_video_in_TREADY;
-wire    AXIvideo2Mat_U0_img_rows_V_read;
-wire    AXIvideo2Mat_U0_img_cols_V_read;
-wire   [7:0] AXIvideo2Mat_U0_img_data_stream_V_din;
-wire    AXIvideo2Mat_U0_img_data_stream_V_write;
-wire   [9:0] AXIvideo2Mat_U0_img_rows_V_out_din;
-wire    AXIvideo2Mat_U0_img_rows_V_out_write;
-wire   [10:0] AXIvideo2Mat_U0_img_cols_V_out_din;
-wire    AXIvideo2Mat_U0_img_cols_V_out_write;
+wire    AXIvideo2Mat_DMA_U0_ap_start;
+wire    AXIvideo2Mat_DMA_U0_ap_done;
+wire    AXIvideo2Mat_DMA_U0_ap_continue;
+wire    AXIvideo2Mat_DMA_U0_ap_idle;
+wire    AXIvideo2Mat_DMA_U0_ap_ready;
+wire    AXIvideo2Mat_DMA_U0_start_out;
+wire    AXIvideo2Mat_DMA_U0_start_write;
+wire    AXIvideo2Mat_DMA_U0_video_in_TREADY;
+wire    AXIvideo2Mat_DMA_U0_img_rows_V_read;
+wire    AXIvideo2Mat_DMA_U0_img_cols_V_read;
+wire   [7:0] AXIvideo2Mat_DMA_U0_img_data_stream_V_din;
+wire    AXIvideo2Mat_DMA_U0_img_data_stream_V_write;
+wire   [9:0] AXIvideo2Mat_DMA_U0_img_rows_V_out_din;
+wire    AXIvideo2Mat_DMA_U0_img_rows_V_out_write;
+wire   [10:0] AXIvideo2Mat_DMA_U0_img_cols_V_out_din;
+wire    AXIvideo2Mat_DMA_U0_img_cols_V_out_write;
 wire    GaussianBlur_U0_ap_start;
 wire    GaussianBlur_U0_ap_done;
 wire    GaussianBlur_U0_ap_continue;
@@ -112,22 +112,22 @@ wire   [9:0] Threshold_U0_dst_rows_V_out_din;
 wire    Threshold_U0_dst_rows_V_out_write;
 wire   [10:0] Threshold_U0_dst_cols_V_out_din;
 wire    Threshold_U0_dst_cols_V_out_write;
-wire    Mat2AXIvideo_U0_ap_start;
-wire    Mat2AXIvideo_U0_ap_done;
-wire    Mat2AXIvideo_U0_ap_continue;
-wire    Mat2AXIvideo_U0_ap_idle;
-wire    Mat2AXIvideo_U0_ap_ready;
-wire    Mat2AXIvideo_U0_img_rows_V_read;
-wire    Mat2AXIvideo_U0_img_cols_V_read;
-wire    Mat2AXIvideo_U0_img_data_stream_V_read;
-wire   [15:0] Mat2AXIvideo_U0_video_out_TDATA;
-wire    Mat2AXIvideo_U0_video_out_TVALID;
-wire   [1:0] Mat2AXIvideo_U0_video_out_TKEEP;
-wire   [1:0] Mat2AXIvideo_U0_video_out_TSTRB;
-wire   [0:0] Mat2AXIvideo_U0_video_out_TUSER;
-wire   [0:0] Mat2AXIvideo_U0_video_out_TLAST;
-wire   [0:0] Mat2AXIvideo_U0_video_out_TID;
-wire   [0:0] Mat2AXIvideo_U0_video_out_TDEST;
+wire    Mat2AXIvideo_DMA_U0_ap_start;
+wire    Mat2AXIvideo_DMA_U0_ap_done;
+wire    Mat2AXIvideo_DMA_U0_ap_continue;
+wire    Mat2AXIvideo_DMA_U0_ap_idle;
+wire    Mat2AXIvideo_DMA_U0_ap_ready;
+wire    Mat2AXIvideo_DMA_U0_img_rows_V_read;
+wire    Mat2AXIvideo_DMA_U0_img_cols_V_read;
+wire    Mat2AXIvideo_DMA_U0_img_data_stream_V_read;
+wire   [7:0] Mat2AXIvideo_DMA_U0_video_out_TDATA;
+wire    Mat2AXIvideo_DMA_U0_video_out_TVALID;
+wire   [0:0] Mat2AXIvideo_DMA_U0_video_out_TKEEP;
+wire   [0:0] Mat2AXIvideo_DMA_U0_video_out_TSTRB;
+wire   [0:0] Mat2AXIvideo_DMA_U0_video_out_TUSER;
+wire   [0:0] Mat2AXIvideo_DMA_U0_video_out_TLAST;
+wire   [0:0] Mat2AXIvideo_DMA_U0_video_out_TID;
+wire   [0:0] Mat2AXIvideo_DMA_U0_video_out_TDEST;
 wire    ap_sync_continue;
 wire    img_1_rows_V_c_full_n;
 wire   [9:0] img_1_rows_V_c_dout;
@@ -172,12 +172,12 @@ wire   [0:0] start_for_GaussianBlur_U0_dout;
 wire    start_for_GaussianBlur_U0_empty_n;
 wire    GaussianBlur_U0_start_full_n;
 wire    GaussianBlur_U0_start_write;
-wire   [0:0] start_for_Mat2AXIvideo_U0_din;
-wire    start_for_Mat2AXIvideo_U0_full_n;
-wire   [0:0] start_for_Mat2AXIvideo_U0_dout;
-wire    start_for_Mat2AXIvideo_U0_empty_n;
-wire    Mat2AXIvideo_U0_start_full_n;
-wire    Mat2AXIvideo_U0_start_write;
+wire   [0:0] start_for_Mat2AXIvideo_DMA_U0_din;
+wire    start_for_Mat2AXIvideo_DMA_U0_full_n;
+wire   [0:0] start_for_Mat2AXIvideo_DMA_U0_dout;
+wire    start_for_Mat2AXIvideo_DMA_U0_empty_n;
+wire    Mat2AXIvideo_DMA_U0_start_full_n;
+wire    Mat2AXIvideo_DMA_U0_start_write;
 
 Block_proc Block_proc_U0(
     .ap_clk(ap_clk),
@@ -204,20 +204,20 @@ Block_proc Block_proc_U0(
     .img_3_cols_V_out_write(Block_proc_U0_img_3_cols_V_out_write)
 );
 
-AXIvideo2Mat AXIvideo2Mat_U0(
+AXIvideo2Mat_DMA AXIvideo2Mat_DMA_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(AXIvideo2Mat_U0_ap_start),
+    .ap_start(AXIvideo2Mat_DMA_U0_ap_start),
     .start_full_n(start_for_GaussianBlur_U0_full_n),
-    .ap_done(AXIvideo2Mat_U0_ap_done),
-    .ap_continue(AXIvideo2Mat_U0_ap_continue),
-    .ap_idle(AXIvideo2Mat_U0_ap_idle),
-    .ap_ready(AXIvideo2Mat_U0_ap_ready),
-    .start_out(AXIvideo2Mat_U0_start_out),
-    .start_write(AXIvideo2Mat_U0_start_write),
+    .ap_done(AXIvideo2Mat_DMA_U0_ap_done),
+    .ap_continue(AXIvideo2Mat_DMA_U0_ap_continue),
+    .ap_idle(AXIvideo2Mat_DMA_U0_ap_idle),
+    .ap_ready(AXIvideo2Mat_DMA_U0_ap_ready),
+    .start_out(AXIvideo2Mat_DMA_U0_start_out),
+    .start_write(AXIvideo2Mat_DMA_U0_start_write),
     .video_in_TDATA(video_in_TDATA),
     .video_in_TVALID(video_in_TVALID),
-    .video_in_TREADY(AXIvideo2Mat_U0_video_in_TREADY),
+    .video_in_TREADY(AXIvideo2Mat_DMA_U0_video_in_TREADY),
     .video_in_TKEEP(video_in_TKEEP),
     .video_in_TSTRB(video_in_TSTRB),
     .video_in_TUSER(video_in_TUSER),
@@ -226,19 +226,19 @@ AXIvideo2Mat AXIvideo2Mat_U0(
     .video_in_TDEST(video_in_TDEST),
     .img_rows_V_dout(img_1_rows_V_c_dout),
     .img_rows_V_empty_n(img_1_rows_V_c_empty_n),
-    .img_rows_V_read(AXIvideo2Mat_U0_img_rows_V_read),
+    .img_rows_V_read(AXIvideo2Mat_DMA_U0_img_rows_V_read),
     .img_cols_V_dout(img_1_cols_V_c_dout),
     .img_cols_V_empty_n(img_1_cols_V_c_empty_n),
-    .img_cols_V_read(AXIvideo2Mat_U0_img_cols_V_read),
-    .img_data_stream_V_din(AXIvideo2Mat_U0_img_data_stream_V_din),
+    .img_cols_V_read(AXIvideo2Mat_DMA_U0_img_cols_V_read),
+    .img_data_stream_V_din(AXIvideo2Mat_DMA_U0_img_data_stream_V_din),
     .img_data_stream_V_full_n(img_1_data_stream_0_full_n),
-    .img_data_stream_V_write(AXIvideo2Mat_U0_img_data_stream_V_write),
-    .img_rows_V_out_din(AXIvideo2Mat_U0_img_rows_V_out_din),
+    .img_data_stream_V_write(AXIvideo2Mat_DMA_U0_img_data_stream_V_write),
+    .img_rows_V_out_din(AXIvideo2Mat_DMA_U0_img_rows_V_out_din),
     .img_rows_V_out_full_n(img_1_rows_V_c10_full_n),
-    .img_rows_V_out_write(AXIvideo2Mat_U0_img_rows_V_out_write),
-    .img_cols_V_out_din(AXIvideo2Mat_U0_img_cols_V_out_din),
+    .img_rows_V_out_write(AXIvideo2Mat_DMA_U0_img_rows_V_out_write),
+    .img_cols_V_out_din(AXIvideo2Mat_DMA_U0_img_cols_V_out_din),
     .img_cols_V_out_full_n(img_1_cols_V_c11_full_n),
-    .img_cols_V_out_write(AXIvideo2Mat_U0_img_cols_V_out_write)
+    .img_cols_V_out_write(AXIvideo2Mat_DMA_U0_img_cols_V_out_write)
 );
 
 GaussianBlur GaussianBlur_U0(
@@ -267,7 +267,7 @@ Threshold Threshold_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(Threshold_U0_ap_start),
-    .start_full_n(start_for_Mat2AXIvideo_U0_full_n),
+    .start_full_n(start_for_Mat2AXIvideo_DMA_U0_full_n),
     .ap_done(Threshold_U0_ap_done),
     .ap_continue(Threshold_U0_ap_continue),
     .ap_idle(Threshold_U0_ap_idle),
@@ -294,32 +294,32 @@ Threshold Threshold_U0(
     .dst_cols_V_out_write(Threshold_U0_dst_cols_V_out_write)
 );
 
-Mat2AXIvideo Mat2AXIvideo_U0(
+Mat2AXIvideo_DMA Mat2AXIvideo_DMA_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(Mat2AXIvideo_U0_ap_start),
-    .ap_done(Mat2AXIvideo_U0_ap_done),
-    .ap_continue(Mat2AXIvideo_U0_ap_continue),
-    .ap_idle(Mat2AXIvideo_U0_ap_idle),
-    .ap_ready(Mat2AXIvideo_U0_ap_ready),
+    .ap_start(Mat2AXIvideo_DMA_U0_ap_start),
+    .ap_done(Mat2AXIvideo_DMA_U0_ap_done),
+    .ap_continue(Mat2AXIvideo_DMA_U0_ap_continue),
+    .ap_idle(Mat2AXIvideo_DMA_U0_ap_idle),
+    .ap_ready(Mat2AXIvideo_DMA_U0_ap_ready),
     .img_rows_V_dout(img_3_rows_V_c12_dout),
     .img_rows_V_empty_n(img_3_rows_V_c12_empty_n),
-    .img_rows_V_read(Mat2AXIvideo_U0_img_rows_V_read),
+    .img_rows_V_read(Mat2AXIvideo_DMA_U0_img_rows_V_read),
     .img_cols_V_dout(img_3_cols_V_c13_dout),
     .img_cols_V_empty_n(img_3_cols_V_c13_empty_n),
-    .img_cols_V_read(Mat2AXIvideo_U0_img_cols_V_read),
+    .img_cols_V_read(Mat2AXIvideo_DMA_U0_img_cols_V_read),
     .img_data_stream_V_dout(img_3_data_stream_0_dout),
     .img_data_stream_V_empty_n(img_3_data_stream_0_empty_n),
-    .img_data_stream_V_read(Mat2AXIvideo_U0_img_data_stream_V_read),
-    .video_out_TDATA(Mat2AXIvideo_U0_video_out_TDATA),
-    .video_out_TVALID(Mat2AXIvideo_U0_video_out_TVALID),
+    .img_data_stream_V_read(Mat2AXIvideo_DMA_U0_img_data_stream_V_read),
+    .video_out_TDATA(Mat2AXIvideo_DMA_U0_video_out_TDATA),
+    .video_out_TVALID(Mat2AXIvideo_DMA_U0_video_out_TVALID),
     .video_out_TREADY(video_out_TREADY),
-    .video_out_TKEEP(Mat2AXIvideo_U0_video_out_TKEEP),
-    .video_out_TSTRB(Mat2AXIvideo_U0_video_out_TSTRB),
-    .video_out_TUSER(Mat2AXIvideo_U0_video_out_TUSER),
-    .video_out_TLAST(Mat2AXIvideo_U0_video_out_TLAST),
-    .video_out_TID(Mat2AXIvideo_U0_video_out_TID),
-    .video_out_TDEST(Mat2AXIvideo_U0_video_out_TDEST)
+    .video_out_TKEEP(Mat2AXIvideo_DMA_U0_video_out_TKEEP),
+    .video_out_TSTRB(Mat2AXIvideo_DMA_U0_video_out_TSTRB),
+    .video_out_TUSER(Mat2AXIvideo_DMA_U0_video_out_TUSER),
+    .video_out_TLAST(Mat2AXIvideo_DMA_U0_video_out_TLAST),
+    .video_out_TID(Mat2AXIvideo_DMA_U0_video_out_TID),
+    .video_out_TDEST(Mat2AXIvideo_DMA_U0_video_out_TDEST)
 );
 
 fifo_w10_d2_A img_1_rows_V_c_U(
@@ -332,7 +332,7 @@ fifo_w10_d2_A img_1_rows_V_c_U(
     .if_write(Block_proc_U0_img_1_rows_V_out_write),
     .if_dout(img_1_rows_V_c_dout),
     .if_empty_n(img_1_rows_V_c_empty_n),
-    .if_read(AXIvideo2Mat_U0_img_rows_V_read)
+    .if_read(AXIvideo2Mat_DMA_U0_img_rows_V_read)
 );
 
 fifo_w11_d2_A img_1_cols_V_c_U(
@@ -345,7 +345,7 @@ fifo_w11_d2_A img_1_cols_V_c_U(
     .if_write(Block_proc_U0_img_1_cols_V_out_write),
     .if_dout(img_1_cols_V_c_dout),
     .if_empty_n(img_1_cols_V_c_empty_n),
-    .if_read(AXIvideo2Mat_U0_img_cols_V_read)
+    .if_read(AXIvideo2Mat_DMA_U0_img_cols_V_read)
 );
 
 fifo_w10_d4_A img_3_rows_V_c_U(
@@ -379,9 +379,9 @@ fifo_w8_d2_A img_1_data_stream_0_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(AXIvideo2Mat_U0_img_data_stream_V_din),
+    .if_din(AXIvideo2Mat_DMA_U0_img_data_stream_V_din),
     .if_full_n(img_1_data_stream_0_full_n),
-    .if_write(AXIvideo2Mat_U0_img_data_stream_V_write),
+    .if_write(AXIvideo2Mat_DMA_U0_img_data_stream_V_write),
     .if_dout(img_1_data_stream_0_dout),
     .if_empty_n(img_1_data_stream_0_empty_n),
     .if_read(GaussianBlur_U0_p_src_data_stream_V_read)
@@ -392,9 +392,9 @@ fifo_w10_d2_A img_1_rows_V_c10_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(AXIvideo2Mat_U0_img_rows_V_out_din),
+    .if_din(AXIvideo2Mat_DMA_U0_img_rows_V_out_din),
     .if_full_n(img_1_rows_V_c10_full_n),
-    .if_write(AXIvideo2Mat_U0_img_rows_V_out_write),
+    .if_write(AXIvideo2Mat_DMA_U0_img_rows_V_out_write),
     .if_dout(img_1_rows_V_c10_dout),
     .if_empty_n(img_1_rows_V_c10_empty_n),
     .if_read(GaussianBlur_U0_p_src_rows_V_read)
@@ -405,9 +405,9 @@ fifo_w11_d2_A img_1_cols_V_c11_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(AXIvideo2Mat_U0_img_cols_V_out_din),
+    .if_din(AXIvideo2Mat_DMA_U0_img_cols_V_out_din),
     .if_full_n(img_1_cols_V_c11_full_n),
-    .if_write(AXIvideo2Mat_U0_img_cols_V_out_write),
+    .if_write(AXIvideo2Mat_DMA_U0_img_cols_V_out_write),
     .if_dout(img_1_cols_V_c11_dout),
     .if_empty_n(img_1_cols_V_c11_empty_n),
     .if_read(GaussianBlur_U0_p_src_cols_V_read)
@@ -436,7 +436,7 @@ fifo_w8_d2_A img_3_data_stream_0_U(
     .if_write(Threshold_U0_dst_data_stream_V_write),
     .if_dout(img_3_data_stream_0_dout),
     .if_empty_n(img_3_data_stream_0_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_data_stream_V_read)
+    .if_read(Mat2AXIvideo_DMA_U0_img_data_stream_V_read)
 );
 
 fifo_w10_d2_A img_3_rows_V_c12_U(
@@ -449,7 +449,7 @@ fifo_w10_d2_A img_3_rows_V_c12_U(
     .if_write(Threshold_U0_dst_rows_V_out_write),
     .if_dout(img_3_rows_V_c12_dout),
     .if_empty_n(img_3_rows_V_c12_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_rows_V_read)
+    .if_read(Mat2AXIvideo_DMA_U0_img_rows_V_read)
 );
 
 fifo_w11_d2_A img_3_cols_V_c13_U(
@@ -462,7 +462,7 @@ fifo_w11_d2_A img_3_cols_V_c13_U(
     .if_write(Threshold_U0_dst_cols_V_out_write),
     .if_dout(img_3_cols_V_c13_dout),
     .if_empty_n(img_3_cols_V_c13_empty_n),
-    .if_read(Mat2AXIvideo_U0_img_cols_V_read)
+    .if_read(Mat2AXIvideo_DMA_U0_img_cols_V_read)
 );
 
 start_for_Threshovdy start_for_Threshovdy_U(
@@ -485,7 +485,7 @@ start_for_GaussiawdI start_for_GaussiawdI_U(
     .if_write_ce(1'b1),
     .if_din(start_for_GaussianBlur_U0_din),
     .if_full_n(start_for_GaussianBlur_U0_full_n),
-    .if_write(AXIvideo2Mat_U0_start_write),
+    .if_write(AXIvideo2Mat_DMA_U0_start_write),
     .if_dout(start_for_GaussianBlur_U0_dout),
     .if_empty_n(start_for_GaussianBlur_U0_empty_n),
     .if_read(GaussianBlur_U0_ap_ready)
@@ -496,17 +496,17 @@ start_for_Mat2AXIxdS start_for_Mat2AXIxdS_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(start_for_Mat2AXIvideo_U0_din),
-    .if_full_n(start_for_Mat2AXIvideo_U0_full_n),
+    .if_din(start_for_Mat2AXIvideo_DMA_U0_din),
+    .if_full_n(start_for_Mat2AXIvideo_DMA_U0_full_n),
     .if_write(Threshold_U0_start_write),
-    .if_dout(start_for_Mat2AXIvideo_U0_dout),
-    .if_empty_n(start_for_Mat2AXIvideo_U0_empty_n),
-    .if_read(Mat2AXIvideo_U0_ap_ready)
+    .if_dout(start_for_Mat2AXIvideo_DMA_U0_dout),
+    .if_empty_n(start_for_Mat2AXIvideo_DMA_U0_empty_n),
+    .if_read(Mat2AXIvideo_DMA_U0_ap_ready)
 );
 
-assign AXIvideo2Mat_U0_ap_continue = 1'b1;
+assign AXIvideo2Mat_DMA_U0_ap_continue = 1'b1;
 
-assign AXIvideo2Mat_U0_ap_start = 1'b1;
+assign AXIvideo2Mat_DMA_U0_ap_start = 1'b1;
 
 assign Block_proc_U0_ap_continue = 1'b1;
 
@@ -520,13 +520,13 @@ assign GaussianBlur_U0_start_full_n = 1'b1;
 
 assign GaussianBlur_U0_start_write = 1'b0;
 
-assign Mat2AXIvideo_U0_ap_continue = 1'b1;
+assign Mat2AXIvideo_DMA_U0_ap_continue = 1'b1;
 
-assign Mat2AXIvideo_U0_ap_start = start_for_Mat2AXIvideo_U0_empty_n;
+assign Mat2AXIvideo_DMA_U0_ap_start = start_for_Mat2AXIvideo_DMA_U0_empty_n;
 
-assign Mat2AXIvideo_U0_start_full_n = 1'b1;
+assign Mat2AXIvideo_DMA_U0_start_full_n = 1'b1;
 
-assign Mat2AXIvideo_U0_start_write = 1'b0;
+assign Mat2AXIvideo_DMA_U0_start_write = 1'b0;
 
 assign Threshold_U0_ap_continue = 1'b1;
 
@@ -540,26 +540,26 @@ assign ap_sync_continue = 1'b0;
 
 assign start_for_GaussianBlur_U0_din = 1'b1;
 
-assign start_for_Mat2AXIvideo_U0_din = 1'b1;
+assign start_for_Mat2AXIvideo_DMA_U0_din = 1'b1;
 
 assign start_for_Threshold_U0_din = 1'b1;
 
-assign video_in_TREADY = AXIvideo2Mat_U0_video_in_TREADY;
+assign video_in_TREADY = AXIvideo2Mat_DMA_U0_video_in_TREADY;
 
-assign video_out_TDATA = Mat2AXIvideo_U0_video_out_TDATA;
+assign video_out_TDATA = Mat2AXIvideo_DMA_U0_video_out_TDATA;
 
-assign video_out_TDEST = Mat2AXIvideo_U0_video_out_TDEST;
+assign video_out_TDEST = Mat2AXIvideo_DMA_U0_video_out_TDEST;
 
-assign video_out_TID = Mat2AXIvideo_U0_video_out_TID;
+assign video_out_TID = Mat2AXIvideo_DMA_U0_video_out_TID;
 
-assign video_out_TKEEP = Mat2AXIvideo_U0_video_out_TKEEP;
+assign video_out_TKEEP = Mat2AXIvideo_DMA_U0_video_out_TKEEP;
 
-assign video_out_TLAST = Mat2AXIvideo_U0_video_out_TLAST;
+assign video_out_TLAST = Mat2AXIvideo_DMA_U0_video_out_TLAST;
 
-assign video_out_TSTRB = Mat2AXIvideo_U0_video_out_TSTRB;
+assign video_out_TSTRB = Mat2AXIvideo_DMA_U0_video_out_TSTRB;
 
-assign video_out_TUSER = Mat2AXIvideo_U0_video_out_TUSER;
+assign video_out_TUSER = Mat2AXIvideo_DMA_U0_video_out_TUSER;
 
-assign video_out_TVALID = Mat2AXIvideo_U0_video_out_TVALID;
+assign video_out_TVALID = Mat2AXIvideo_DMA_U0_video_out_TVALID;
 
 endmodule //filter

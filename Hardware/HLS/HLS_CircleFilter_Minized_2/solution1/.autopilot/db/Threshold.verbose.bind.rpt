@@ -3,10 +3,10 @@
 ================================================================
 == Vivado HLS Report for 'Threshold'
 ================================================================
-* Date:           Thu May  7 15:10:46 2020
+* Date:           Thu May 14 01:38:23 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
-* Project:        HLS_CircleFilter_Minized
+* Project:        HLS_CircleFilter_Minized_2
 * Solution:       solution1
 * Product family: zynq
 * Target device:  xc7z007s-clg225-1
@@ -110,8 +110,8 @@ ST_2 : Operation 21 [1/1] (2.47ns)   --->   "%icmp_ln1489 = icmp eq i32 %t_V, %r
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 480, i64 0)"   --->   Operation 22 'speclooptripcount' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 23 [1/1] (2.55ns)   --->   "%i_V = add i32 %t_V, 1" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 23 'add' 'i_V' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %icmp_ln1489, label %.exit, label %loop_height_begin" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 24 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 25 'specloopname' <Predicate = (!icmp_ln1489)> <Delay = 0.00>
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 26 'specregionbegin' 'tmp_3_i' <Predicate = (!icmp_ln1489)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str7) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 25 'specloopname' <Predicate = (!icmp_ln1489)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 26 'specregionbegin' 'tmp_3_i' <Predicate = (!icmp_ln1489)> <Delay = 0.00>
 ST_2 : Operation 27 [1/1] (1.76ns)   --->   "br label %1" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 27 'br' <Predicate = (!icmp_ln1489)> <Delay = 1.76>
 ST_2 : Operation 28 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 28 'ret' <Predicate = (icmp_ln1489)> <Delay = 0.00>
 
@@ -123,26 +123,26 @@ ST_3 : Operation 32 [1/1] (2.55ns)   --->   "%j_V = add i32 %t_V_1, 1" [C:/Xilin
 ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %icmp_ln1490, label %loop_height_end, label %loop_width_begin" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 33 'br' <Predicate = true> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 5.18>
-ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_5_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str13)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:672->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 34 'specregionbegin' 'tmp_5_i' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
-ST_4 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str2) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:676->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 35 'specprotocol' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_5_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str12)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:672->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 34 'specregionbegin' 'tmp_5_i' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:676->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 35 'specprotocol' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
 ST_4 : Operation 36 [1/1] (3.63ns)   --->   "%tmp = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src_data_stream_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:679->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 36 'read' 'tmp' <Predicate = (!icmp_ln1490)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
-ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str13, i32 %tmp_5_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:681->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 37 'specregionend' 'empty' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str12, i32 %tmp_5_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:681->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:711->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1493]   --->   Operation 37 'specregionend' 'empty' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
 ST_4 : Operation 38 [1/1] (1.55ns)   --->   "%icmp_ln1497 = icmp ugt i8 %tmp, -56" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1497]   --->   Operation 38 'icmp' 'icmp_ln1497' <Predicate = (!icmp_ln1490)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 4.62>
-ST_5 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 39 'specloopname' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
-ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_4_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 40 'specregionbegin' 'tmp_4_i' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
-ST_5 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1492]   --->   Operation 41 'specpipeline' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str8) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 39 'specloopname' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_4_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str8)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 40 'specregionbegin' 'tmp_4_i' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1492]   --->   Operation 41 'specpipeline' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
 ST_5 : Operation 42 [1/1] (0.99ns)   --->   "%tmp_1 = select i1 %icmp_ln1497, i8 -1, i8 0" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1497]   --->   Operation 42 'select' 'tmp_1' <Predicate = (!icmp_ln1490)> <Delay = 0.99> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_6_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str17)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:696->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 43 'specregionbegin' 'tmp_6_i' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
-ST_5 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str2) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:700->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 44 'specprotocol' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_6_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str18)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:696->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 43 'specregionbegin' 'tmp_6_i' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str3) nounwind" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:700->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 44 'specprotocol' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
 ST_5 : Operation 45 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_data_stream_V, i8 %tmp_1)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:703->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 45 'write' <Predicate = (!icmp_ln1490)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
-ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%empty_45 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str17, i32 %tmp_6_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:705->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 46 'specregionend' 'empty_45' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
-ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%empty_46 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_4_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1517]   --->   Operation 47 'specregionend' 'empty_46' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%empty_42 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str18, i32 %tmp_6_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:705->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_core.h:717->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1516]   --->   Operation 46 'specregionend' 'empty_42' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%empty_43 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str8, i32 %tmp_4_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1517]   --->   Operation 47 'specregionend' 'empty_43' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
 ST_5 : Operation 48 [1/1] (0.00ns)   --->   "br label %1" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1490]   --->   Operation 48 'br' <Predicate = (!icmp_ln1490)> <Delay = 0.00>
 
 State 6 <SV = 3> <Delay = 0.00>
-ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%empty_47 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_3_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1518]   --->   Operation 49 'specregionend' 'empty_47' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%empty_44 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_3_i)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1518]   --->   Operation 49 'specregionend' 'empty_44' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 50 [1/1] (0.00ns)   --->   "br label %0" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_arithm.h:1489]   --->   Operation 50 'br' <Predicate = true> <Delay = 0.00>
 
 
@@ -208,10 +208,10 @@ tmp_1                 (select           ) [ 0000000]
 tmp_6_i               (specregionbegin  ) [ 0000000]
 specprotocol_ln700    (specprotocol     ) [ 0000000]
 write_ln703           (write            ) [ 0000000]
-empty_45              (specregionend    ) [ 0000000]
-empty_46              (specregionend    ) [ 0000000]
+empty_42              (specregionend    ) [ 0000000]
+empty_43              (specregionend    ) [ 0000000]
 br_ln1490             (br               ) [ 0011111]
-empty_47              (specregionend    ) [ 0000000]
+empty_44              (specregionend    ) [ 0000000]
 br_ln1489             (br               ) [ 0111111]
 </LifeTime>
 
@@ -700,7 +700,7 @@ br_ln1489             (br               ) [ 0111111]
 <pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str8"/></StgValue>
+<StgValue><ssdm name="p_str7"/></StgValue>
 </bind>
 </comp>
 
@@ -727,7 +727,7 @@ br_ln1489             (br               ) [ 0111111]
 <pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str13"/></StgValue>
+<StgValue><ssdm name="p_str12"/></StgValue>
 </bind>
 </comp>
 
@@ -745,7 +745,7 @@ br_ln1489             (br               ) [ 0111111]
 <pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -781,7 +781,7 @@ br_ln1489             (br               ) [ 0111111]
 <pin id="125" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str9"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 
@@ -817,7 +817,7 @@ br_ln1489             (br               ) [ 0111111]
 <pin id="133" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str17"/></StgValue>
+<StgValue><ssdm name="p_str18"/></StgValue>
 </bind>
 </comp>
 
@@ -1235,8 +1235,8 @@ br_ln1489             (br               ) [ 0111111]
 		empty : 1
 	State 5
 		write_ln703 : 1
-		empty_45 : 1
-		empty_46 : 1
+		empty_42 : 1
+		empty_43 : 1
 	State 6
 
 

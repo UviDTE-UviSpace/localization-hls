@@ -985,7 +985,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_in} \
     metadata {  } \
     op interface \
-    ports { video_in_TDATA { I 16 vector } } \
+    ports { video_in_TDATA { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'video_in_V_data_V'"
@@ -1004,7 +1004,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_in} \
     metadata {  } \
     op interface \
-    ports { video_in_TKEEP { I 2 vector } } \
+    ports { video_in_TKEEP { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'video_in_V_keep_V'"
@@ -1023,7 +1023,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_in} \
     metadata {  } \
     op interface \
-    ports { video_in_TSTRB { I 2 vector } } \
+    ports { video_in_TSTRB { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'video_in_V_strb_V'"
@@ -1118,7 +1118,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_out} \
     metadata {  } \
     op interface \
-    ports { video_out_TDATA { O 16 vector } } \
+    ports { video_out_TDATA { O 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'video_out_V_data_V'"
@@ -1137,7 +1137,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_out} \
     metadata {  } \
     op interface \
-    ports { video_out_TKEEP { O 2 vector } } \
+    ports { video_out_TKEEP { O 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'video_out_V_keep_V'"
@@ -1156,7 +1156,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_out} \
     metadata {  } \
     op interface \
-    ports { video_out_TSTRB { O 2 vector } } \
+    ports { video_out_TSTRB { O 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'video_out_V_strb_V'"

@@ -21,7 +21,7 @@
       "index": "0",
       "type": {
         "kinds": ["struct"],
-        "dataType": "ap_axiu<16, 1, 1, 1>",
+        "dataType": "ap_axiu<8, 1, 1, 1>",
         "structImpl": "flat-field",
         "dataPack": true,
         "fields": {
@@ -60,7 +60,7 @@
       "index": "1",
       "type": {
         "kinds": ["struct"],
-        "dataType": "ap_axiu<16, 1, 1, 1>",
+        "dataType": "ap_axiu<8, 1, 1, 1>",
         "structImpl": "flat-field",
         "dataPack": true,
         "fields": {
@@ -104,7 +104,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "195",
+    "Latency": "193",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -120,9 +120,9 @@
     "AutoFamilySupport": ""
   },
   "Files": {
-    "CSource": ["..\/..\/HLS_CircleFilter\/filters.cpp"],
+    "CSource": ["..\/filters.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/AXIvideo2Mat.vhd",
+      "impl\/vhdl\/AXIvideo2Mat_DMA.vhd",
       "impl\/vhdl\/Block_proc.vhd",
       "impl\/vhdl\/fifo_w8_d2_A.vhd",
       "impl\/vhdl\/fifo_w10_d2_A.vhd",
@@ -148,7 +148,7 @@
       "impl\/vhdl\/filter_mul_mul_13mb6.vhd",
       "impl\/vhdl\/filter_mux_53_8_1_1.vhd",
       "impl\/vhdl\/GaussianBlur.vhd",
-      "impl\/vhdl\/Mat2AXIvideo.vhd",
+      "impl\/vhdl\/Mat2AXIvideo_DMA.vhd",
       "impl\/vhdl\/regslice_core.vhd",
       "impl\/vhdl\/start_for_GaussiawdI.vhd",
       "impl\/vhdl\/start_for_Mat2AXIxdS.vhd",
@@ -157,7 +157,7 @@
       "impl\/vhdl\/filter.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/AXIvideo2Mat.v",
+      "impl\/verilog\/AXIvideo2Mat_DMA.v",
       "impl\/verilog\/Block_proc.v",
       "impl\/verilog\/fifo_w8_d2_A.v",
       "impl\/verilog\/fifo_w10_d2_A.v",
@@ -183,7 +183,7 @@
       "impl\/verilog\/filter_mul_mul_13mb6.v",
       "impl\/verilog\/filter_mux_53_8_1_1.v",
       "impl\/verilog\/GaussianBlur.v",
-      "impl\/verilog\/Mat2AXIvideo.v",
+      "impl\/verilog\/Mat2AXIvideo_DMA.v",
       "impl\/verilog\/regslice_core.v",
       "impl\/verilog\/start_for_GaussiawdI.v",
       "impl\/verilog\/start_for_Mat2AXIxdS.v",
@@ -192,9 +192,9 @@
       "impl\/verilog\/filter.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "C:\/localization-hls\/Hardware\/HLS\/HLS_CircleFilter_Minized\/solution1\/.autopilot\/db\/filter.design.xml",
-    "DebugDir": "C:\/localization-hls\/Hardware\/HLS\/HLS_CircleFilter_Minized\/solution1\/.debug",
-    "ProtoInst": ["C:\/localization-hls\/Hardware\/HLS\/HLS_CircleFilter_Minized\/solution1\/.debug\/filter.protoinst"]
+    "DesignXml": "C:\/localization-hls\/Hardware\/HLS\/HLS_CircleFilter_Minized_2\/solution1\/.autopilot\/db\/filter.design.xml",
+    "DebugDir": "C:\/localization-hls\/Hardware\/HLS\/HLS_CircleFilter_Minized_2\/solution1\/.debug",
+    "ProtoInst": ["C:\/localization-hls\/Hardware\/HLS\/HLS_CircleFilter_Minized_2\/solution1\/.debug\/filter.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -225,15 +225,15 @@
       "ctype": {
         "TDATA": {
           "Type": "integer unsigned",
-          "Width": "16"
+          "Width": "8"
         },
         "TKEEP": {
           "Type": "integer unsigned",
-          "Width": "2"
+          "Width": "1"
         },
         "TSTRB": {
           "Type": "integer unsigned",
-          "Width": "2"
+          "Width": "1"
         },
         "TUSER": {
           "Type": "integer unsigned",
@@ -255,12 +255,12 @@
         "TREADY": {"Type": "bool"}
       },
       "port_width": {
-        "TDATA": "16",
+        "TDATA": "8",
         "TDEST": "1",
         "TID": "1",
-        "TKEEP": "2",
+        "TKEEP": "1",
         "TLAST": "1",
-        "TSTRB": "2",
+        "TSTRB": "1",
         "TUSER": "1"
       }
     },
@@ -272,15 +272,15 @@
       "ctype": {
         "TDATA": {
           "Type": "integer unsigned",
-          "Width": "16"
+          "Width": "8"
         },
         "TKEEP": {
           "Type": "integer unsigned",
-          "Width": "2"
+          "Width": "1"
         },
         "TSTRB": {
           "Type": "integer unsigned",
-          "Width": "2"
+          "Width": "1"
         },
         "TUSER": {
           "Type": "integer unsigned",
@@ -302,12 +302,12 @@
         "TREADY": {"Type": "bool"}
       },
       "port_width": {
-        "TDATA": "16",
+        "TDATA": "8",
         "TDEST": "1",
         "TID": "1",
-        "TKEEP": "2",
+        "TKEEP": "1",
         "TLAST": "1",
-        "TSTRB": "2",
+        "TSTRB": "1",
         "TUSER": "1"
       }
     }
@@ -315,15 +315,17 @@
   "RtlPorts": {
     "video_in_TDATA": {
       "dir": "in",
-      "width": "16"
+      "width": "8"
     },
     "video_in_TKEEP": {
       "dir": "in",
-      "width": "2"
+      "width": "1",
+      "isVector": "true"
     },
     "video_in_TSTRB": {
       "dir": "in",
-      "width": "2"
+      "width": "1",
+      "isVector": "true"
     },
     "video_in_TUSER": {
       "dir": "in",
@@ -355,15 +357,17 @@
     },
     "video_out_TDATA": {
       "dir": "out",
-      "width": "16"
+      "width": "8"
     },
     "video_out_TKEEP": {
       "dir": "out",
-      "width": "2"
+      "width": "1",
+      "isVector": "true"
     },
     "video_out_TSTRB": {
       "dir": "out",
-      "width": "2"
+      "width": "1",
+      "isVector": "true"
     },
     "video_out_TUSER": {
       "dir": "out",
@@ -415,16 +419,16 @@
             }]
         },
         {
-          "ModuleName": "AXIvideo2Mat",
-          "InstanceName": "AXIvideo2Mat_U0"
-        },
-        {
-          "ModuleName": "Mat2AXIvideo",
-          "InstanceName": "Mat2AXIvideo_U0"
+          "ModuleName": "Mat2AXIvideo_DMA",
+          "InstanceName": "Mat2AXIvideo_DMA_U0"
         },
         {
           "ModuleName": "Threshold",
           "InstanceName": "Threshold_U0"
+        },
+        {
+          "ModuleName": "AXIvideo2Mat_DMA",
+          "InstanceName": "AXIvideo2Mat_DMA_U0"
         },
         {
           "ModuleName": "Block_proc",
@@ -440,7 +444,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "AXIvideo2Mat": {
+      "AXIvideo2Mat_DMA": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -468,7 +472,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "Mat2AXIvideo": {
+      "Mat2AXIvideo_DMA": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -506,14 +510,14 @@
           "URAM": "0"
         }
       },
-      "AXIvideo2Mat": {
+      "AXIvideo2Mat_DMA": {
         "Latency": {
-          "LatencyBest": "3",
+          "LatencyBest": "1",
           "LatencyAvg": "",
-          "LatencyWorst": "309603",
-          "PipelineIIMin": "3",
-          "PipelineIIMax": "309603",
-          "PipelineII": "3 ~ 309603",
+          "LatencyWorst": "308641",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "308641",
+          "PipelineII": "1 ~ 308641",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -522,26 +526,17 @@
           "Uncertainty": "1.25",
           "Estimate": "7.268"
         },
-        "Loops": [
-          {
-            "Name": "loop_wait_for_start",
-            "TripCount": "0",
-            "Latency": "0",
-            "PipelineII": "1",
-            "PipelineDepth": "1"
-          },
-          {
+        "Loops": [{
             "Name": "loop_height",
             "TripCount": "",
             "LatencyMin": "0",
-            "LatencyMax": "309600",
-            "Latency": "0 ~ 309600",
+            "LatencyMax": "308640",
+            "Latency": "0 ~ 308640",
             "PipelineII": "",
-            "PipelineDepthMin": "5",
-            "PipelineDepthMax": "645",
-            "PipelineDepth": "5 ~ 645",
-            "Loops": [
-              {
+            "PipelineDepthMin": "3",
+            "PipelineDepthMax": "643",
+            "PipelineDepth": "3 ~ 643",
+            "Loops": [{
                 "Name": "loop_width",
                 "TripCount": "",
                 "LatencyMin": "0",
@@ -549,20 +544,11 @@
                 "Latency": "0 ~ 640",
                 "PipelineII": "1",
                 "PipelineDepth": "2"
-              },
-              {
-                "Name": "loop_wait_for_eol",
-                "TripCount": "0",
-                "Latency": "0",
-                "PipelineII": "1",
-                "PipelineDepth": "1"
-              }
-            ]
-          }
-        ],
+              }]
+          }],
         "Area": {
-          "FF": "269",
-          "LUT": "427",
+          "FF": "177",
+          "LUT": "258",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -680,7 +666,7 @@
           "URAM": "0"
         }
       },
-      "Mat2AXIvideo": {
+      "Mat2AXIvideo_DMA": {
         "Latency": {
           "LatencyBest": "1",
           "LatencyAvg": "",
@@ -717,8 +703,8 @@
               }]
           }],
         "Area": {
-          "FF": "205",
-          "LUT": "299",
+          "FF": "238",
+          "LUT": "362",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -726,9 +712,9 @@
       },
       "filter": {
         "Latency": {
-          "LatencyBest": "195",
+          "LatencyBest": "193",
           "LatencyAvg": "",
-          "LatencyWorst": "316711",
+          "LatencyWorst": "316709",
           "PipelineIIMin": "192",
           "PipelineIIMax": "316708",
           "PipelineII": "192 ~ 316708",
@@ -743,8 +729,8 @@
         "Area": {
           "BRAM_18K": "5",
           "DSP48E": "19",
-          "FF": "2085",
-          "LUT": "4093",
+          "FF": "2026",
+          "LUT": "3987",
           "URAM": "0"
         }
       }
@@ -760,7 +746,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-07 15:10:53 +0200",
+    "Time": "2020-05-14 01:38:33 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

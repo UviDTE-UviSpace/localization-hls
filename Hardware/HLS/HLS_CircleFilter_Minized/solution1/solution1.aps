@@ -15,7 +15,6 @@
     <UIConfigurations>
         <UIAutosynConf boardInfo="MiniZed (xc7z007sclg225-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynq/zynq</Platform>
-            <Platform>xilinx/zynq/zynq_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -52,7 +51,7 @@
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim" waveDebug="false">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim" waveDebug="false">
             <Rtl active="false" name="systemc"/>
             <Rtl active="false" name="verilog"/>
             <Rtl active="true" name="vhdl"/>
@@ -69,7 +68,7 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/zynq/zynq"/>
-        <library name="DefaultPlatform" value="xilinx/zynq/zynq_fpv6"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
 </solution>
 

@@ -40,15 +40,15 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z007s:-clg225:-1
-set SourceFiles {sc {} c ../../HLS_CircleFilter/filters.cpp}
+set SourceFiles {sc {} c ../filters.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized/solution1/solution1.directive
-set TBFiles {verilog ../filters_tb.cpp bc ../filters_tb.cpp vhdl ../filters_tb.cpp sc ../filters_tb.cpp cas ../filters_tb.cpp c {}}
+set DirectiveFile C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/solution1/solution1.directive
+set TBFiles {verilog {../IplImage2AXIvideo_DMA.h ../filters_tb.cpp} bc {../IplImage2AXIvideo_DMA.h ../filters_tb.cpp} sc {../IplImage2AXIvideo_DMA.h ../filters_tb.cpp} vhdl {../IplImage2AXIvideo_DMA.h ../filters_tb.cpp} c {} cas {../IplImage2AXIvideo_DMA.h ../filters_tb.cpp}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
-set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

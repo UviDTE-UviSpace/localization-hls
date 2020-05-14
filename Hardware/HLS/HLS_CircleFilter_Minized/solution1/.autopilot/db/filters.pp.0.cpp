@@ -1,5 +1,5 @@
-# 1 "HLS_CircleFilter/filters.cpp"
-# 1 "HLS_CircleFilter/filters.cpp" 1
+# 1 "HLS_CircleFilter_Minized/filters.cpp"
+# 1 "HLS_CircleFilter_Minized/filters.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -150,8 +150,8 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "HLS_CircleFilter/filters.cpp" 2
-# 1 "HLS_CircleFilter/filters.hpp" 1
+# 1 "HLS_CircleFilter_Minized/filters.cpp" 2
+# 1 "HLS_CircleFilter_Minized/filters.hpp" 1
 # 1 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_video.h" 1
 # 48 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_video.h"
 # 1 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_axi_io.h" 1
@@ -34432,16 +34432,16 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 
 }
 # 70 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_video.h" 2
-# 2 "HLS_CircleFilter/filters.hpp" 2
-# 16 "HLS_CircleFilter/filters.hpp"
-typedef hls::stream<ap_axiu<16,1,1,1> > AXI_STREAM;
+# 2 "HLS_CircleFilter_Minized/filters.hpp" 2
+# 15 "HLS_CircleFilter_Minized/filters.hpp"
+typedef hls::stream<ap_axiu<32,1,1,1> > AXI_STREAM;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((3)-1) << 11))> RGB_IMAGE;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((1)-1) << 11))> GRAY_IMAGE;
 typedef hls::Mat<480, 640, (((0) & ((1 << 11) - 1)) + (((2)-1) << 11))> YUV_IMAGE;
 
 
 void filter(AXI_STREAM& video_in, AXI_STREAM& video_out);
-# 2 "HLS_CircleFilter/filters.cpp" 2
+# 2 "HLS_CircleFilter_Minized/filters.cpp" 2
 
 
 void filter(AXI_STREAM& video_in, AXI_STREAM& video_out)
@@ -34449,18 +34449,19 @@ void filter(AXI_STREAM& video_in, AXI_STREAM& video_out)
 
 #pragma HLS INTERFACE axis port=&video_in
 #pragma HLS INTERFACE axis port=&video_out
-#pragma HLS INTERFACE ap_ctrl_none port=return
-# 21 "HLS_CircleFilter/filters.cpp"
+# 19 "HLS_CircleFilter_Minized/filters.cpp"
+ RGB_IMAGE img_0(480, 640);
  GRAY_IMAGE img_1(480, 640);
  GRAY_IMAGE img_2(480, 640);
  GRAY_IMAGE img_3(480, 640);
+ RGB_IMAGE img_4(480, 640);
 
 #pragma HLS dataflow
- hls::AXIvideo2Mat(video_in, img_1);
-
+ hls::AXIvideo2Mat(video_in, img_0);
+ hls::CvtColor<HLS_BGR2GRAY>(img_0, img_1);
  hls::GaussianBlur<5,5>(img_1, img_2, 0, 0);
  hls::Threshold(img_2 ,img_3 , 200,255,0);
-
- hls::Mat2AXIvideo(img_3, video_out);
+ hls::CvtColor<HLS_GRAY2RGB>(img_3, img_4);
+ hls::Mat2AXIvideo(img_4, video_out);
 
 }

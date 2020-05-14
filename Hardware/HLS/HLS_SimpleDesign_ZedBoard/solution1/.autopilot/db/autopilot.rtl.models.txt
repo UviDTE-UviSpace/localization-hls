@@ -1,0 +1,13 @@
+regslice_core
+regslice_core
+fifo_w10_d2_A
+fifo_w11_d2_A
+fifo_w8_d2_A
+fifo_w10_d2_A
+fifo_w11_d2_A
+start_for_Mat2AXIbkb
+regslice_core
+Block_proc
+AXIvideo2Mat_DMA
+Mat2AXIvideo_DMA
+passthrough

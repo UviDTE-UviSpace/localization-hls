@@ -13,42 +13,50 @@
 
 #include "Block_proc.h"
 #include "AXIvideo2Mat.h"
+#include "CvtColor_1.h"
 #include "GaussianBlur.h"
 #include "Threshold.h"
+#include "CvtColor.h"
 #include "Mat2AXIvideo.h"
 #include "fifo_w10_d2_A.h"
 #include "fifo_w11_d2_A.h"
-#include "fifo_w10_d4_A.h"
-#include "fifo_w11_d4_A.h"
+#include "fifo_w10_d5_A.h"
+#include "fifo_w11_d5_A.h"
 #include "fifo_w8_d2_A.h"
-#include "start_for_Threshovdy.h"
-#include "start_for_GaussiawdI.h"
-#include "start_for_Mat2AXIxdS.h"
+#include "start_for_Threshoyd2.h"
+#include "start_for_CvtColozec.h"
+#include "start_for_GaussiaAem.h"
+#include "start_for_CvtColoBew.h"
+#include "start_for_Mat2AXICeG.h"
 
 namespace ap_rtl {
 
 struct filter : public sc_module {
-    // Port declarations 20
-    sc_in< sc_lv<16> > video_in_TDATA;
-    sc_in< sc_lv<2> > video_in_TKEEP;
-    sc_in< sc_lv<2> > video_in_TSTRB;
+    // Port declarations 24
+    sc_in< sc_lv<32> > video_in_TDATA;
+    sc_in< sc_lv<4> > video_in_TKEEP;
+    sc_in< sc_lv<4> > video_in_TSTRB;
     sc_in< sc_lv<1> > video_in_TUSER;
     sc_in< sc_lv<1> > video_in_TLAST;
     sc_in< sc_lv<1> > video_in_TID;
     sc_in< sc_lv<1> > video_in_TDEST;
-    sc_out< sc_lv<16> > video_out_TDATA;
-    sc_out< sc_lv<2> > video_out_TKEEP;
-    sc_out< sc_lv<2> > video_out_TSTRB;
+    sc_out< sc_lv<32> > video_out_TDATA;
+    sc_out< sc_lv<4> > video_out_TKEEP;
+    sc_out< sc_lv<4> > video_out_TSTRB;
     sc_out< sc_lv<1> > video_out_TUSER;
     sc_out< sc_lv<1> > video_out_TLAST;
     sc_out< sc_lv<1> > video_out_TID;
     sc_out< sc_lv<1> > video_out_TDEST;
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst_n;
+    sc_in< sc_logic > ap_start;
     sc_in< sc_logic > video_in_TVALID;
     sc_out< sc_logic > video_in_TREADY;
     sc_out< sc_logic > video_out_TVALID;
     sc_in< sc_logic > video_out_TREADY;
+    sc_out< sc_logic > ap_done;
+    sc_out< sc_logic > ap_ready;
+    sc_out< sc_logic > ap_idle;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -64,23 +72,33 @@ struct filter : public sc_module {
     ofstream mHdltvoutHandle;
     Block_proc* Block_proc_U0;
     AXIvideo2Mat* AXIvideo2Mat_U0;
+    CvtColor_1* CvtColor_1_U0;
     GaussianBlur* GaussianBlur_U0;
     Threshold* Threshold_U0;
+    CvtColor* CvtColor_U0;
     Mat2AXIvideo* Mat2AXIvideo_U0;
-    fifo_w10_d2_A* img_1_rows_V_c_U;
-    fifo_w11_d2_A* img_1_cols_V_c_U;
-    fifo_w10_d4_A* img_3_rows_V_c_U;
-    fifo_w11_d4_A* img_3_cols_V_c_U;
+    fifo_w10_d2_A* img_0_rows_V_c_U;
+    fifo_w11_d2_A* img_0_cols_V_c_U;
+    fifo_w10_d5_A* img_3_rows_V_c_U;
+    fifo_w11_d5_A* img_3_cols_V_c_U;
+    fifo_w8_d2_A* img_0_data_stream_0_U;
+    fifo_w8_d2_A* img_0_data_stream_1_U;
+    fifo_w8_d2_A* img_0_data_stream_2_U;
+    fifo_w10_d2_A* img_0_rows_V_c14_U;
+    fifo_w11_d2_A* img_0_cols_V_c15_U;
     fifo_w8_d2_A* img_1_data_stream_0_U;
-    fifo_w10_d2_A* img_1_rows_V_c10_U;
-    fifo_w11_d2_A* img_1_cols_V_c11_U;
     fifo_w8_d2_A* img_2_data_stream_0_U;
     fifo_w8_d2_A* img_3_data_stream_0_U;
-    fifo_w10_d2_A* img_3_rows_V_c12_U;
-    fifo_w11_d2_A* img_3_cols_V_c13_U;
-    start_for_Threshovdy* start_for_Threshovdy_U;
-    start_for_GaussiawdI* start_for_GaussiawdI_U;
-    start_for_Mat2AXIxdS* start_for_Mat2AXIxdS_U;
+    fifo_w10_d2_A* img_3_rows_V_c16_U;
+    fifo_w11_d2_A* img_3_cols_V_c17_U;
+    fifo_w8_d2_A* img_4_data_stream_0_U;
+    fifo_w8_d2_A* img_4_data_stream_1_U;
+    fifo_w8_d2_A* img_4_data_stream_2_U;
+    start_for_Threshoyd2* start_for_Threshoyd2_U;
+    start_for_CvtColozec* start_for_CvtColozec_U;
+    start_for_GaussiaAem* start_for_GaussiaAem_U;
+    start_for_CvtColoBew* start_for_CvtColoBew_U;
+    start_for_Mat2AXICeG* start_for_Mat2AXICeG_U;
     sc_signal< sc_logic > ap_rst_n_inv;
     sc_signal< sc_logic > Block_proc_U0_ap_start;
     sc_signal< sc_logic > Block_proc_U0_ap_done;
@@ -89,10 +107,10 @@ struct filter : public sc_module {
     sc_signal< sc_logic > Block_proc_U0_ap_ready;
     sc_signal< sc_logic > Block_proc_U0_start_out;
     sc_signal< sc_logic > Block_proc_U0_start_write;
-    sc_signal< sc_lv<10> > Block_proc_U0_img_1_rows_V_out_din;
-    sc_signal< sc_logic > Block_proc_U0_img_1_rows_V_out_write;
-    sc_signal< sc_lv<11> > Block_proc_U0_img_1_cols_V_out_din;
-    sc_signal< sc_logic > Block_proc_U0_img_1_cols_V_out_write;
+    sc_signal< sc_lv<10> > Block_proc_U0_img_0_rows_V_out_din;
+    sc_signal< sc_logic > Block_proc_U0_img_0_rows_V_out_write;
+    sc_signal< sc_lv<11> > Block_proc_U0_img_0_cols_V_out_din;
+    sc_signal< sc_logic > Block_proc_U0_img_0_cols_V_out_write;
     sc_signal< sc_lv<10> > Block_proc_U0_img_3_rows_V_out_din;
     sc_signal< sc_logic > Block_proc_U0_img_3_rows_V_out_write;
     sc_signal< sc_lv<11> > Block_proc_U0_img_3_cols_V_out_din;
@@ -107,19 +125,35 @@ struct filter : public sc_module {
     sc_signal< sc_logic > AXIvideo2Mat_U0_video_in_TREADY;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_rows_V_read;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_cols_V_read;
-    sc_signal< sc_lv<8> > AXIvideo2Mat_U0_img_data_stream_V_din;
-    sc_signal< sc_logic > AXIvideo2Mat_U0_img_data_stream_V_write;
+    sc_signal< sc_lv<8> > AXIvideo2Mat_U0_img_data_stream_0_V_din;
+    sc_signal< sc_logic > AXIvideo2Mat_U0_img_data_stream_0_V_write;
+    sc_signal< sc_lv<8> > AXIvideo2Mat_U0_img_data_stream_1_V_din;
+    sc_signal< sc_logic > AXIvideo2Mat_U0_img_data_stream_1_V_write;
+    sc_signal< sc_lv<8> > AXIvideo2Mat_U0_img_data_stream_2_V_din;
+    sc_signal< sc_logic > AXIvideo2Mat_U0_img_data_stream_2_V_write;
     sc_signal< sc_lv<10> > AXIvideo2Mat_U0_img_rows_V_out_din;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_rows_V_out_write;
     sc_signal< sc_lv<11> > AXIvideo2Mat_U0_img_cols_V_out_din;
     sc_signal< sc_logic > AXIvideo2Mat_U0_img_cols_V_out_write;
+    sc_signal< sc_logic > CvtColor_1_U0_ap_start;
+    sc_signal< sc_logic > CvtColor_1_U0_ap_done;
+    sc_signal< sc_logic > CvtColor_1_U0_ap_continue;
+    sc_signal< sc_logic > CvtColor_1_U0_ap_idle;
+    sc_signal< sc_logic > CvtColor_1_U0_ap_ready;
+    sc_signal< sc_logic > CvtColor_1_U0_start_out;
+    sc_signal< sc_logic > CvtColor_1_U0_start_write;
+    sc_signal< sc_logic > CvtColor_1_U0_p_src_rows_V_read;
+    sc_signal< sc_logic > CvtColor_1_U0_p_src_cols_V_read;
+    sc_signal< sc_logic > CvtColor_1_U0_p_src_data_stream_0_V_read;
+    sc_signal< sc_logic > CvtColor_1_U0_p_src_data_stream_1_V_read;
+    sc_signal< sc_logic > CvtColor_1_U0_p_src_data_stream_2_V_read;
+    sc_signal< sc_lv<8> > CvtColor_1_U0_p_dst_data_stream_V_din;
+    sc_signal< sc_logic > CvtColor_1_U0_p_dst_data_stream_V_write;
     sc_signal< sc_logic > GaussianBlur_U0_ap_start;
     sc_signal< sc_logic > GaussianBlur_U0_ap_done;
     sc_signal< sc_logic > GaussianBlur_U0_ap_continue;
     sc_signal< sc_logic > GaussianBlur_U0_ap_idle;
     sc_signal< sc_logic > GaussianBlur_U0_ap_ready;
-    sc_signal< sc_logic > GaussianBlur_U0_p_src_rows_V_read;
-    sc_signal< sc_logic > GaussianBlur_U0_p_src_cols_V_read;
     sc_signal< sc_logic > GaussianBlur_U0_p_src_data_stream_V_read;
     sc_signal< sc_lv<8> > GaussianBlur_U0_p_dst_data_stream_V_din;
     sc_signal< sc_logic > GaussianBlur_U0_p_dst_data_stream_V_write;
@@ -139,83 +173,141 @@ struct filter : public sc_module {
     sc_signal< sc_logic > Threshold_U0_dst_rows_V_out_write;
     sc_signal< sc_lv<11> > Threshold_U0_dst_cols_V_out_din;
     sc_signal< sc_logic > Threshold_U0_dst_cols_V_out_write;
+    sc_signal< sc_logic > CvtColor_U0_ap_start;
+    sc_signal< sc_logic > CvtColor_U0_ap_done;
+    sc_signal< sc_logic > CvtColor_U0_ap_continue;
+    sc_signal< sc_logic > CvtColor_U0_ap_idle;
+    sc_signal< sc_logic > CvtColor_U0_ap_ready;
+    sc_signal< sc_logic > CvtColor_U0_start_out;
+    sc_signal< sc_logic > CvtColor_U0_start_write;
+    sc_signal< sc_logic > CvtColor_U0_p_src_rows_V_read;
+    sc_signal< sc_logic > CvtColor_U0_p_src_cols_V_read;
+    sc_signal< sc_logic > CvtColor_U0_p_src_data_stream_V_read;
+    sc_signal< sc_lv<8> > CvtColor_U0_p_dst_data_stream_0_V_din;
+    sc_signal< sc_logic > CvtColor_U0_p_dst_data_stream_0_V_write;
+    sc_signal< sc_lv<8> > CvtColor_U0_p_dst_data_stream_1_V_din;
+    sc_signal< sc_logic > CvtColor_U0_p_dst_data_stream_1_V_write;
+    sc_signal< sc_lv<8> > CvtColor_U0_p_dst_data_stream_2_V_din;
+    sc_signal< sc_logic > CvtColor_U0_p_dst_data_stream_2_V_write;
     sc_signal< sc_logic > Mat2AXIvideo_U0_ap_start;
     sc_signal< sc_logic > Mat2AXIvideo_U0_ap_done;
     sc_signal< sc_logic > Mat2AXIvideo_U0_ap_continue;
     sc_signal< sc_logic > Mat2AXIvideo_U0_ap_idle;
     sc_signal< sc_logic > Mat2AXIvideo_U0_ap_ready;
-    sc_signal< sc_logic > Mat2AXIvideo_U0_img_rows_V_read;
-    sc_signal< sc_logic > Mat2AXIvideo_U0_img_cols_V_read;
-    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_V_read;
-    sc_signal< sc_lv<16> > Mat2AXIvideo_U0_video_out_TDATA;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_0_V_read;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_1_V_read;
+    sc_signal< sc_logic > Mat2AXIvideo_U0_img_data_stream_2_V_read;
+    sc_signal< sc_lv<32> > Mat2AXIvideo_U0_video_out_TDATA;
     sc_signal< sc_logic > Mat2AXIvideo_U0_video_out_TVALID;
-    sc_signal< sc_lv<2> > Mat2AXIvideo_U0_video_out_TKEEP;
-    sc_signal< sc_lv<2> > Mat2AXIvideo_U0_video_out_TSTRB;
+    sc_signal< sc_lv<4> > Mat2AXIvideo_U0_video_out_TKEEP;
+    sc_signal< sc_lv<4> > Mat2AXIvideo_U0_video_out_TSTRB;
     sc_signal< sc_lv<1> > Mat2AXIvideo_U0_video_out_TUSER;
     sc_signal< sc_lv<1> > Mat2AXIvideo_U0_video_out_TLAST;
     sc_signal< sc_lv<1> > Mat2AXIvideo_U0_video_out_TID;
     sc_signal< sc_lv<1> > Mat2AXIvideo_U0_video_out_TDEST;
     sc_signal< sc_logic > ap_sync_continue;
-    sc_signal< sc_logic > img_1_rows_V_c_full_n;
-    sc_signal< sc_lv<10> > img_1_rows_V_c_dout;
-    sc_signal< sc_logic > img_1_rows_V_c_empty_n;
-    sc_signal< sc_logic > img_1_cols_V_c_full_n;
-    sc_signal< sc_lv<11> > img_1_cols_V_c_dout;
-    sc_signal< sc_logic > img_1_cols_V_c_empty_n;
+    sc_signal< sc_logic > img_0_rows_V_c_full_n;
+    sc_signal< sc_lv<10> > img_0_rows_V_c_dout;
+    sc_signal< sc_logic > img_0_rows_V_c_empty_n;
+    sc_signal< sc_logic > img_0_cols_V_c_full_n;
+    sc_signal< sc_lv<11> > img_0_cols_V_c_dout;
+    sc_signal< sc_logic > img_0_cols_V_c_empty_n;
     sc_signal< sc_logic > img_3_rows_V_c_full_n;
     sc_signal< sc_lv<10> > img_3_rows_V_c_dout;
     sc_signal< sc_logic > img_3_rows_V_c_empty_n;
     sc_signal< sc_logic > img_3_cols_V_c_full_n;
     sc_signal< sc_lv<11> > img_3_cols_V_c_dout;
     sc_signal< sc_logic > img_3_cols_V_c_empty_n;
+    sc_signal< sc_logic > img_0_data_stream_0_full_n;
+    sc_signal< sc_lv<8> > img_0_data_stream_0_dout;
+    sc_signal< sc_logic > img_0_data_stream_0_empty_n;
+    sc_signal< sc_logic > img_0_data_stream_1_full_n;
+    sc_signal< sc_lv<8> > img_0_data_stream_1_dout;
+    sc_signal< sc_logic > img_0_data_stream_1_empty_n;
+    sc_signal< sc_logic > img_0_data_stream_2_full_n;
+    sc_signal< sc_lv<8> > img_0_data_stream_2_dout;
+    sc_signal< sc_logic > img_0_data_stream_2_empty_n;
+    sc_signal< sc_logic > img_0_rows_V_c14_full_n;
+    sc_signal< sc_lv<10> > img_0_rows_V_c14_dout;
+    sc_signal< sc_logic > img_0_rows_V_c14_empty_n;
+    sc_signal< sc_logic > img_0_cols_V_c15_full_n;
+    sc_signal< sc_lv<11> > img_0_cols_V_c15_dout;
+    sc_signal< sc_logic > img_0_cols_V_c15_empty_n;
     sc_signal< sc_logic > img_1_data_stream_0_full_n;
     sc_signal< sc_lv<8> > img_1_data_stream_0_dout;
     sc_signal< sc_logic > img_1_data_stream_0_empty_n;
-    sc_signal< sc_logic > img_1_rows_V_c10_full_n;
-    sc_signal< sc_lv<10> > img_1_rows_V_c10_dout;
-    sc_signal< sc_logic > img_1_rows_V_c10_empty_n;
-    sc_signal< sc_logic > img_1_cols_V_c11_full_n;
-    sc_signal< sc_lv<11> > img_1_cols_V_c11_dout;
-    sc_signal< sc_logic > img_1_cols_V_c11_empty_n;
     sc_signal< sc_logic > img_2_data_stream_0_full_n;
     sc_signal< sc_lv<8> > img_2_data_stream_0_dout;
     sc_signal< sc_logic > img_2_data_stream_0_empty_n;
     sc_signal< sc_logic > img_3_data_stream_0_full_n;
     sc_signal< sc_lv<8> > img_3_data_stream_0_dout;
     sc_signal< sc_logic > img_3_data_stream_0_empty_n;
-    sc_signal< sc_logic > img_3_rows_V_c12_full_n;
-    sc_signal< sc_lv<10> > img_3_rows_V_c12_dout;
-    sc_signal< sc_logic > img_3_rows_V_c12_empty_n;
-    sc_signal< sc_logic > img_3_cols_V_c13_full_n;
-    sc_signal< sc_lv<11> > img_3_cols_V_c13_dout;
-    sc_signal< sc_logic > img_3_cols_V_c13_empty_n;
+    sc_signal< sc_logic > img_3_rows_V_c16_full_n;
+    sc_signal< sc_lv<10> > img_3_rows_V_c16_dout;
+    sc_signal< sc_logic > img_3_rows_V_c16_empty_n;
+    sc_signal< sc_logic > img_3_cols_V_c17_full_n;
+    sc_signal< sc_lv<11> > img_3_cols_V_c17_dout;
+    sc_signal< sc_logic > img_3_cols_V_c17_empty_n;
+    sc_signal< sc_logic > img_4_data_stream_0_full_n;
+    sc_signal< sc_lv<8> > img_4_data_stream_0_dout;
+    sc_signal< sc_logic > img_4_data_stream_0_empty_n;
+    sc_signal< sc_logic > img_4_data_stream_1_full_n;
+    sc_signal< sc_lv<8> > img_4_data_stream_1_dout;
+    sc_signal< sc_logic > img_4_data_stream_1_empty_n;
+    sc_signal< sc_logic > img_4_data_stream_2_full_n;
+    sc_signal< sc_lv<8> > img_4_data_stream_2_dout;
+    sc_signal< sc_logic > img_4_data_stream_2_empty_n;
+    sc_signal< sc_logic > ap_sync_done;
+    sc_signal< sc_logic > ap_sync_ready;
+    sc_signal< sc_logic > ap_sync_reg_Block_proc_U0_ap_ready;
+    sc_signal< sc_logic > ap_sync_Block_proc_U0_ap_ready;
+    sc_signal< sc_lv<2> > Block_proc_U0_ap_ready_count;
+    sc_signal< sc_logic > ap_sync_reg_AXIvideo2Mat_U0_ap_ready;
+    sc_signal< sc_logic > ap_sync_AXIvideo2Mat_U0_ap_ready;
+    sc_signal< sc_lv<2> > AXIvideo2Mat_U0_ap_ready_count;
     sc_signal< sc_lv<1> > start_for_Threshold_U0_din;
     sc_signal< sc_logic > start_for_Threshold_U0_full_n;
     sc_signal< sc_lv<1> > start_for_Threshold_U0_dout;
     sc_signal< sc_logic > start_for_Threshold_U0_empty_n;
+    sc_signal< sc_lv<1> > start_for_CvtColor_1_U0_din;
+    sc_signal< sc_logic > start_for_CvtColor_1_U0_full_n;
+    sc_signal< sc_lv<1> > start_for_CvtColor_1_U0_dout;
+    sc_signal< sc_logic > start_for_CvtColor_1_U0_empty_n;
     sc_signal< sc_lv<1> > start_for_GaussianBlur_U0_din;
     sc_signal< sc_logic > start_for_GaussianBlur_U0_full_n;
     sc_signal< sc_lv<1> > start_for_GaussianBlur_U0_dout;
     sc_signal< sc_logic > start_for_GaussianBlur_U0_empty_n;
     sc_signal< sc_logic > GaussianBlur_U0_start_full_n;
     sc_signal< sc_logic > GaussianBlur_U0_start_write;
+    sc_signal< sc_lv<1> > start_for_CvtColor_U0_din;
+    sc_signal< sc_logic > start_for_CvtColor_U0_full_n;
+    sc_signal< sc_lv<1> > start_for_CvtColor_U0_dout;
+    sc_signal< sc_logic > start_for_CvtColor_U0_empty_n;
     sc_signal< sc_lv<1> > start_for_Mat2AXIvideo_U0_din;
     sc_signal< sc_logic > start_for_Mat2AXIvideo_U0_full_n;
     sc_signal< sc_lv<1> > start_for_Mat2AXIvideo_U0_dout;
     sc_signal< sc_logic > start_for_Mat2AXIvideo_U0_empty_n;
     sc_signal< sc_logic > Mat2AXIvideo_U0_start_full_n;
     sc_signal< sc_logic > Mat2AXIvideo_U0_start_write;
-    static const sc_lv<16> ap_const_lv16_0;
-    static const sc_lv<2> ap_const_lv2_0;
+    static const sc_lv<32> ap_const_lv32_0;
+    static const sc_lv<4> ap_const_lv4_0;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
+    static const sc_lv<2> ap_const_lv2_0;
+    static const sc_lv<2> ap_const_lv2_1;
+    static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_var_for_const0();
+    void thread_ap_clk_no_reset_();
     void thread_AXIvideo2Mat_U0_ap_continue();
     void thread_AXIvideo2Mat_U0_ap_start();
     void thread_Block_proc_U0_ap_continue();
     void thread_Block_proc_U0_ap_start();
+    void thread_CvtColor_1_U0_ap_continue();
+    void thread_CvtColor_1_U0_ap_start();
+    void thread_CvtColor_U0_ap_continue();
+    void thread_CvtColor_U0_ap_start();
     void thread_GaussianBlur_U0_ap_continue();
     void thread_GaussianBlur_U0_ap_start();
     void thread_GaussianBlur_U0_start_full_n();
@@ -226,8 +318,17 @@ struct filter : public sc_module {
     void thread_Mat2AXIvideo_U0_start_write();
     void thread_Threshold_U0_ap_continue();
     void thread_Threshold_U0_ap_start();
+    void thread_ap_done();
+    void thread_ap_idle();
+    void thread_ap_ready();
     void thread_ap_rst_n_inv();
+    void thread_ap_sync_AXIvideo2Mat_U0_ap_ready();
+    void thread_ap_sync_Block_proc_U0_ap_ready();
     void thread_ap_sync_continue();
+    void thread_ap_sync_done();
+    void thread_ap_sync_ready();
+    void thread_start_for_CvtColor_1_U0_din();
+    void thread_start_for_CvtColor_U0_din();
     void thread_start_for_GaussianBlur_U0_din();
     void thread_start_for_Mat2AXIvideo_U0_din();
     void thread_start_for_Threshold_U0_din();

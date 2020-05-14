@@ -11,16 +11,16 @@ use IEEE.numeric_std.all;
 
 entity filter is
 port (
-    video_in_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
-    video_in_TKEEP : IN STD_LOGIC_VECTOR (1 downto 0);
-    video_in_TSTRB : IN STD_LOGIC_VECTOR (1 downto 0);
+    video_in_TDATA : IN STD_LOGIC_VECTOR (7 downto 0);
+    video_in_TKEEP : IN STD_LOGIC_VECTOR (0 downto 0);
+    video_in_TSTRB : IN STD_LOGIC_VECTOR (0 downto 0);
     video_in_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
     video_in_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
     video_in_TID : IN STD_LOGIC_VECTOR (0 downto 0);
     video_in_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
-    video_out_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
-    video_out_TKEEP : OUT STD_LOGIC_VECTOR (1 downto 0);
-    video_out_TSTRB : OUT STD_LOGIC_VECTOR (1 downto 0);
+    video_out_TDATA : OUT STD_LOGIC_VECTOR (7 downto 0);
+    video_out_TKEEP : OUT STD_LOGIC_VECTOR (0 downto 0);
+    video_out_TSTRB : OUT STD_LOGIC_VECTOR (0 downto 0);
     video_out_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
     video_out_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
     video_out_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
@@ -37,9 +37,8 @@ end;
 architecture behav of filter is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "filter,hls_ip_2019_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=10.830875,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=5,HLS_SYN_DSP=19,HLS_SYN_FF=2085,HLS_SYN_LUT=4093,HLS_VERSION=2019_2}";
-    constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    "filter,hls_ip_2019_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=10.830875,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=5,HLS_SYN_DSP=19,HLS_SYN_FF=2026,HLS_SYN_LUT=3987,HLS_VERSION=2019_2}";
+    constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
@@ -60,22 +59,22 @@ architecture behav of filter is
     signal Block_proc_U0_img_3_rows_V_out_write : STD_LOGIC;
     signal Block_proc_U0_img_3_cols_V_out_din : STD_LOGIC_VECTOR (10 downto 0);
     signal Block_proc_U0_img_3_cols_V_out_write : STD_LOGIC;
-    signal AXIvideo2Mat_U0_ap_start : STD_LOGIC;
-    signal AXIvideo2Mat_U0_ap_done : STD_LOGIC;
-    signal AXIvideo2Mat_U0_ap_continue : STD_LOGIC;
-    signal AXIvideo2Mat_U0_ap_idle : STD_LOGIC;
-    signal AXIvideo2Mat_U0_ap_ready : STD_LOGIC;
-    signal AXIvideo2Mat_U0_start_out : STD_LOGIC;
-    signal AXIvideo2Mat_U0_start_write : STD_LOGIC;
-    signal AXIvideo2Mat_U0_video_in_TREADY : STD_LOGIC;
-    signal AXIvideo2Mat_U0_img_rows_V_read : STD_LOGIC;
-    signal AXIvideo2Mat_U0_img_cols_V_read : STD_LOGIC;
-    signal AXIvideo2Mat_U0_img_data_stream_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal AXIvideo2Mat_U0_img_data_stream_V_write : STD_LOGIC;
-    signal AXIvideo2Mat_U0_img_rows_V_out_din : STD_LOGIC_VECTOR (9 downto 0);
-    signal AXIvideo2Mat_U0_img_rows_V_out_write : STD_LOGIC;
-    signal AXIvideo2Mat_U0_img_cols_V_out_din : STD_LOGIC_VECTOR (10 downto 0);
-    signal AXIvideo2Mat_U0_img_cols_V_out_write : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_ap_start : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_ap_done : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_ap_continue : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_ap_idle : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_ap_ready : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_start_out : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_start_write : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_video_in_TREADY : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_img_rows_V_read : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_img_cols_V_read : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_img_data_stream_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal AXIvideo2Mat_DMA_U0_img_data_stream_V_write : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_img_rows_V_out_din : STD_LOGIC_VECTOR (9 downto 0);
+    signal AXIvideo2Mat_DMA_U0_img_rows_V_out_write : STD_LOGIC;
+    signal AXIvideo2Mat_DMA_U0_img_cols_V_out_din : STD_LOGIC_VECTOR (10 downto 0);
+    signal AXIvideo2Mat_DMA_U0_img_cols_V_out_write : STD_LOGIC;
     signal GaussianBlur_U0_ap_start : STD_LOGIC;
     signal GaussianBlur_U0_ap_done : STD_LOGIC;
     signal GaussianBlur_U0_ap_continue : STD_LOGIC;
@@ -102,22 +101,22 @@ architecture behav of filter is
     signal Threshold_U0_dst_rows_V_out_write : STD_LOGIC;
     signal Threshold_U0_dst_cols_V_out_din : STD_LOGIC_VECTOR (10 downto 0);
     signal Threshold_U0_dst_cols_V_out_write : STD_LOGIC;
-    signal Mat2AXIvideo_U0_ap_start : STD_LOGIC;
-    signal Mat2AXIvideo_U0_ap_done : STD_LOGIC;
-    signal Mat2AXIvideo_U0_ap_continue : STD_LOGIC;
-    signal Mat2AXIvideo_U0_ap_idle : STD_LOGIC;
-    signal Mat2AXIvideo_U0_ap_ready : STD_LOGIC;
-    signal Mat2AXIvideo_U0_img_rows_V_read : STD_LOGIC;
-    signal Mat2AXIvideo_U0_img_cols_V_read : STD_LOGIC;
-    signal Mat2AXIvideo_U0_img_data_stream_V_read : STD_LOGIC;
-    signal Mat2AXIvideo_U0_video_out_TDATA : STD_LOGIC_VECTOR (15 downto 0);
-    signal Mat2AXIvideo_U0_video_out_TVALID : STD_LOGIC;
-    signal Mat2AXIvideo_U0_video_out_TKEEP : STD_LOGIC_VECTOR (1 downto 0);
-    signal Mat2AXIvideo_U0_video_out_TSTRB : STD_LOGIC_VECTOR (1 downto 0);
-    signal Mat2AXIvideo_U0_video_out_TUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal Mat2AXIvideo_U0_video_out_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal Mat2AXIvideo_U0_video_out_TID : STD_LOGIC_VECTOR (0 downto 0);
-    signal Mat2AXIvideo_U0_video_out_TDEST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Mat2AXIvideo_DMA_U0_ap_start : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_ap_done : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_ap_continue : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_ap_idle : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_ap_ready : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_img_rows_V_read : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_img_cols_V_read : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_img_data_stream_V_read : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_video_out_TDATA : STD_LOGIC_VECTOR (7 downto 0);
+    signal Mat2AXIvideo_DMA_U0_video_out_TVALID : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_video_out_TKEEP : STD_LOGIC_VECTOR (0 downto 0);
+    signal Mat2AXIvideo_DMA_U0_video_out_TSTRB : STD_LOGIC_VECTOR (0 downto 0);
+    signal Mat2AXIvideo_DMA_U0_video_out_TUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal Mat2AXIvideo_DMA_U0_video_out_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Mat2AXIvideo_DMA_U0_video_out_TID : STD_LOGIC_VECTOR (0 downto 0);
+    signal Mat2AXIvideo_DMA_U0_video_out_TDEST : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_sync_continue : STD_LOGIC;
     signal img_1_rows_V_c_full_n : STD_LOGIC;
     signal img_1_rows_V_c_dout : STD_LOGIC_VECTOR (9 downto 0);
@@ -162,12 +161,12 @@ architecture behav of filter is
     signal start_for_GaussianBlur_U0_empty_n : STD_LOGIC;
     signal GaussianBlur_U0_start_full_n : STD_LOGIC;
     signal GaussianBlur_U0_start_write : STD_LOGIC;
-    signal start_for_Mat2AXIvideo_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_Mat2AXIvideo_U0_full_n : STD_LOGIC;
-    signal start_for_Mat2AXIvideo_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_Mat2AXIvideo_U0_empty_n : STD_LOGIC;
-    signal Mat2AXIvideo_U0_start_full_n : STD_LOGIC;
-    signal Mat2AXIvideo_U0_start_write : STD_LOGIC;
+    signal start_for_Mat2AXIvideo_DMA_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Mat2AXIvideo_DMA_U0_full_n : STD_LOGIC;
+    signal start_for_Mat2AXIvideo_DMA_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_Mat2AXIvideo_DMA_U0_empty_n : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_start_full_n : STD_LOGIC;
+    signal Mat2AXIvideo_DMA_U0_start_write : STD_LOGIC;
 
     component Block_proc IS
     port (
@@ -196,7 +195,7 @@ architecture behav of filter is
     end component;
 
 
-    component AXIvideo2Mat IS
+    component AXIvideo2Mat_DMA IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -208,11 +207,11 @@ architecture behav of filter is
         ap_ready : OUT STD_LOGIC;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
-        video_in_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+        video_in_TDATA : IN STD_LOGIC_VECTOR (7 downto 0);
         video_in_TVALID : IN STD_LOGIC;
         video_in_TREADY : OUT STD_LOGIC;
-        video_in_TKEEP : IN STD_LOGIC_VECTOR (1 downto 0);
-        video_in_TSTRB : IN STD_LOGIC_VECTOR (1 downto 0);
+        video_in_TKEEP : IN STD_LOGIC_VECTOR (0 downto 0);
+        video_in_TSTRB : IN STD_LOGIC_VECTOR (0 downto 0);
         video_in_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
         video_in_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
         video_in_TID : IN STD_LOGIC_VECTOR (0 downto 0);
@@ -292,7 +291,7 @@ architecture behav of filter is
     end component;
 
 
-    component Mat2AXIvideo IS
+    component Mat2AXIvideo_DMA IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -310,11 +309,11 @@ architecture behav of filter is
         img_data_stream_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
         img_data_stream_V_empty_n : IN STD_LOGIC;
         img_data_stream_V_read : OUT STD_LOGIC;
-        video_out_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        video_out_TDATA : OUT STD_LOGIC_VECTOR (7 downto 0);
         video_out_TVALID : OUT STD_LOGIC;
         video_out_TREADY : IN STD_LOGIC;
-        video_out_TKEEP : OUT STD_LOGIC_VECTOR (1 downto 0);
-        video_out_TSTRB : OUT STD_LOGIC_VECTOR (1 downto 0);
+        video_out_TKEEP : OUT STD_LOGIC_VECTOR (0 downto 0);
+        video_out_TSTRB : OUT STD_LOGIC_VECTOR (0 downto 0);
         video_out_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
         video_out_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
         video_out_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
@@ -469,21 +468,21 @@ begin
         img_3_cols_V_out_full_n => img_3_cols_V_c_full_n,
         img_3_cols_V_out_write => Block_proc_U0_img_3_cols_V_out_write);
 
-    AXIvideo2Mat_U0 : component AXIvideo2Mat
+    AXIvideo2Mat_DMA_U0 : component AXIvideo2Mat_DMA
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => AXIvideo2Mat_U0_ap_start,
+        ap_start => AXIvideo2Mat_DMA_U0_ap_start,
         start_full_n => start_for_GaussianBlur_U0_full_n,
-        ap_done => AXIvideo2Mat_U0_ap_done,
-        ap_continue => AXIvideo2Mat_U0_ap_continue,
-        ap_idle => AXIvideo2Mat_U0_ap_idle,
-        ap_ready => AXIvideo2Mat_U0_ap_ready,
-        start_out => AXIvideo2Mat_U0_start_out,
-        start_write => AXIvideo2Mat_U0_start_write,
+        ap_done => AXIvideo2Mat_DMA_U0_ap_done,
+        ap_continue => AXIvideo2Mat_DMA_U0_ap_continue,
+        ap_idle => AXIvideo2Mat_DMA_U0_ap_idle,
+        ap_ready => AXIvideo2Mat_DMA_U0_ap_ready,
+        start_out => AXIvideo2Mat_DMA_U0_start_out,
+        start_write => AXIvideo2Mat_DMA_U0_start_write,
         video_in_TDATA => video_in_TDATA,
         video_in_TVALID => video_in_TVALID,
-        video_in_TREADY => AXIvideo2Mat_U0_video_in_TREADY,
+        video_in_TREADY => AXIvideo2Mat_DMA_U0_video_in_TREADY,
         video_in_TKEEP => video_in_TKEEP,
         video_in_TSTRB => video_in_TSTRB,
         video_in_TUSER => video_in_TUSER,
@@ -492,19 +491,19 @@ begin
         video_in_TDEST => video_in_TDEST,
         img_rows_V_dout => img_1_rows_V_c_dout,
         img_rows_V_empty_n => img_1_rows_V_c_empty_n,
-        img_rows_V_read => AXIvideo2Mat_U0_img_rows_V_read,
+        img_rows_V_read => AXIvideo2Mat_DMA_U0_img_rows_V_read,
         img_cols_V_dout => img_1_cols_V_c_dout,
         img_cols_V_empty_n => img_1_cols_V_c_empty_n,
-        img_cols_V_read => AXIvideo2Mat_U0_img_cols_V_read,
-        img_data_stream_V_din => AXIvideo2Mat_U0_img_data_stream_V_din,
+        img_cols_V_read => AXIvideo2Mat_DMA_U0_img_cols_V_read,
+        img_data_stream_V_din => AXIvideo2Mat_DMA_U0_img_data_stream_V_din,
         img_data_stream_V_full_n => img_1_data_stream_0_full_n,
-        img_data_stream_V_write => AXIvideo2Mat_U0_img_data_stream_V_write,
-        img_rows_V_out_din => AXIvideo2Mat_U0_img_rows_V_out_din,
+        img_data_stream_V_write => AXIvideo2Mat_DMA_U0_img_data_stream_V_write,
+        img_rows_V_out_din => AXIvideo2Mat_DMA_U0_img_rows_V_out_din,
         img_rows_V_out_full_n => img_1_rows_V_c10_full_n,
-        img_rows_V_out_write => AXIvideo2Mat_U0_img_rows_V_out_write,
-        img_cols_V_out_din => AXIvideo2Mat_U0_img_cols_V_out_din,
+        img_rows_V_out_write => AXIvideo2Mat_DMA_U0_img_rows_V_out_write,
+        img_cols_V_out_din => AXIvideo2Mat_DMA_U0_img_cols_V_out_din,
         img_cols_V_out_full_n => img_1_cols_V_c11_full_n,
-        img_cols_V_out_write => AXIvideo2Mat_U0_img_cols_V_out_write);
+        img_cols_V_out_write => AXIvideo2Mat_DMA_U0_img_cols_V_out_write);
 
     GaussianBlur_U0 : component GaussianBlur
     port map (
@@ -533,7 +532,7 @@ begin
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => Threshold_U0_ap_start,
-        start_full_n => start_for_Mat2AXIvideo_U0_full_n,
+        start_full_n => start_for_Mat2AXIvideo_DMA_U0_full_n,
         ap_done => Threshold_U0_ap_done,
         ap_continue => Threshold_U0_ap_continue,
         ap_idle => Threshold_U0_ap_idle,
@@ -559,33 +558,33 @@ begin
         dst_cols_V_out_full_n => img_3_cols_V_c13_full_n,
         dst_cols_V_out_write => Threshold_U0_dst_cols_V_out_write);
 
-    Mat2AXIvideo_U0 : component Mat2AXIvideo
+    Mat2AXIvideo_DMA_U0 : component Mat2AXIvideo_DMA
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Mat2AXIvideo_U0_ap_start,
-        ap_done => Mat2AXIvideo_U0_ap_done,
-        ap_continue => Mat2AXIvideo_U0_ap_continue,
-        ap_idle => Mat2AXIvideo_U0_ap_idle,
-        ap_ready => Mat2AXIvideo_U0_ap_ready,
+        ap_start => Mat2AXIvideo_DMA_U0_ap_start,
+        ap_done => Mat2AXIvideo_DMA_U0_ap_done,
+        ap_continue => Mat2AXIvideo_DMA_U0_ap_continue,
+        ap_idle => Mat2AXIvideo_DMA_U0_ap_idle,
+        ap_ready => Mat2AXIvideo_DMA_U0_ap_ready,
         img_rows_V_dout => img_3_rows_V_c12_dout,
         img_rows_V_empty_n => img_3_rows_V_c12_empty_n,
-        img_rows_V_read => Mat2AXIvideo_U0_img_rows_V_read,
+        img_rows_V_read => Mat2AXIvideo_DMA_U0_img_rows_V_read,
         img_cols_V_dout => img_3_cols_V_c13_dout,
         img_cols_V_empty_n => img_3_cols_V_c13_empty_n,
-        img_cols_V_read => Mat2AXIvideo_U0_img_cols_V_read,
+        img_cols_V_read => Mat2AXIvideo_DMA_U0_img_cols_V_read,
         img_data_stream_V_dout => img_3_data_stream_0_dout,
         img_data_stream_V_empty_n => img_3_data_stream_0_empty_n,
-        img_data_stream_V_read => Mat2AXIvideo_U0_img_data_stream_V_read,
-        video_out_TDATA => Mat2AXIvideo_U0_video_out_TDATA,
-        video_out_TVALID => Mat2AXIvideo_U0_video_out_TVALID,
+        img_data_stream_V_read => Mat2AXIvideo_DMA_U0_img_data_stream_V_read,
+        video_out_TDATA => Mat2AXIvideo_DMA_U0_video_out_TDATA,
+        video_out_TVALID => Mat2AXIvideo_DMA_U0_video_out_TVALID,
         video_out_TREADY => video_out_TREADY,
-        video_out_TKEEP => Mat2AXIvideo_U0_video_out_TKEEP,
-        video_out_TSTRB => Mat2AXIvideo_U0_video_out_TSTRB,
-        video_out_TUSER => Mat2AXIvideo_U0_video_out_TUSER,
-        video_out_TLAST => Mat2AXIvideo_U0_video_out_TLAST,
-        video_out_TID => Mat2AXIvideo_U0_video_out_TID,
-        video_out_TDEST => Mat2AXIvideo_U0_video_out_TDEST);
+        video_out_TKEEP => Mat2AXIvideo_DMA_U0_video_out_TKEEP,
+        video_out_TSTRB => Mat2AXIvideo_DMA_U0_video_out_TSTRB,
+        video_out_TUSER => Mat2AXIvideo_DMA_U0_video_out_TUSER,
+        video_out_TLAST => Mat2AXIvideo_DMA_U0_video_out_TLAST,
+        video_out_TID => Mat2AXIvideo_DMA_U0_video_out_TID,
+        video_out_TDEST => Mat2AXIvideo_DMA_U0_video_out_TDEST);
 
     img_1_rows_V_c_U : component fifo_w10_d2_A
     port map (
@@ -598,7 +597,7 @@ begin
         if_write => Block_proc_U0_img_1_rows_V_out_write,
         if_dout => img_1_rows_V_c_dout,
         if_empty_n => img_1_rows_V_c_empty_n,
-        if_read => AXIvideo2Mat_U0_img_rows_V_read);
+        if_read => AXIvideo2Mat_DMA_U0_img_rows_V_read);
 
     img_1_cols_V_c_U : component fifo_w11_d2_A
     port map (
@@ -611,7 +610,7 @@ begin
         if_write => Block_proc_U0_img_1_cols_V_out_write,
         if_dout => img_1_cols_V_c_dout,
         if_empty_n => img_1_cols_V_c_empty_n,
-        if_read => AXIvideo2Mat_U0_img_cols_V_read);
+        if_read => AXIvideo2Mat_DMA_U0_img_cols_V_read);
 
     img_3_rows_V_c_U : component fifo_w10_d4_A
     port map (
@@ -645,9 +644,9 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => AXIvideo2Mat_U0_img_data_stream_V_din,
+        if_din => AXIvideo2Mat_DMA_U0_img_data_stream_V_din,
         if_full_n => img_1_data_stream_0_full_n,
-        if_write => AXIvideo2Mat_U0_img_data_stream_V_write,
+        if_write => AXIvideo2Mat_DMA_U0_img_data_stream_V_write,
         if_dout => img_1_data_stream_0_dout,
         if_empty_n => img_1_data_stream_0_empty_n,
         if_read => GaussianBlur_U0_p_src_data_stream_V_read);
@@ -658,9 +657,9 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => AXIvideo2Mat_U0_img_rows_V_out_din,
+        if_din => AXIvideo2Mat_DMA_U0_img_rows_V_out_din,
         if_full_n => img_1_rows_V_c10_full_n,
-        if_write => AXIvideo2Mat_U0_img_rows_V_out_write,
+        if_write => AXIvideo2Mat_DMA_U0_img_rows_V_out_write,
         if_dout => img_1_rows_V_c10_dout,
         if_empty_n => img_1_rows_V_c10_empty_n,
         if_read => GaussianBlur_U0_p_src_rows_V_read);
@@ -671,9 +670,9 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => AXIvideo2Mat_U0_img_cols_V_out_din,
+        if_din => AXIvideo2Mat_DMA_U0_img_cols_V_out_din,
         if_full_n => img_1_cols_V_c11_full_n,
-        if_write => AXIvideo2Mat_U0_img_cols_V_out_write,
+        if_write => AXIvideo2Mat_DMA_U0_img_cols_V_out_write,
         if_dout => img_1_cols_V_c11_dout,
         if_empty_n => img_1_cols_V_c11_empty_n,
         if_read => GaussianBlur_U0_p_src_cols_V_read);
@@ -702,7 +701,7 @@ begin
         if_write => Threshold_U0_dst_data_stream_V_write,
         if_dout => img_3_data_stream_0_dout,
         if_empty_n => img_3_data_stream_0_empty_n,
-        if_read => Mat2AXIvideo_U0_img_data_stream_V_read);
+        if_read => Mat2AXIvideo_DMA_U0_img_data_stream_V_read);
 
     img_3_rows_V_c12_U : component fifo_w10_d2_A
     port map (
@@ -715,7 +714,7 @@ begin
         if_write => Threshold_U0_dst_rows_V_out_write,
         if_dout => img_3_rows_V_c12_dout,
         if_empty_n => img_3_rows_V_c12_empty_n,
-        if_read => Mat2AXIvideo_U0_img_rows_V_read);
+        if_read => Mat2AXIvideo_DMA_U0_img_rows_V_read);
 
     img_3_cols_V_c13_U : component fifo_w11_d2_A
     port map (
@@ -728,7 +727,7 @@ begin
         if_write => Threshold_U0_dst_cols_V_out_write,
         if_dout => img_3_cols_V_c13_dout,
         if_empty_n => img_3_cols_V_c13_empty_n,
-        if_read => Mat2AXIvideo_U0_img_cols_V_read);
+        if_read => Mat2AXIvideo_DMA_U0_img_cols_V_read);
 
     start_for_Threshovdy_U : component start_for_Threshovdy
     port map (
@@ -751,7 +750,7 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_GaussianBlur_U0_din,
         if_full_n => start_for_GaussianBlur_U0_full_n,
-        if_write => AXIvideo2Mat_U0_start_write,
+        if_write => AXIvideo2Mat_DMA_U0_start_write,
         if_dout => start_for_GaussianBlur_U0_dout,
         if_empty_n => start_for_GaussianBlur_U0_empty_n,
         if_read => GaussianBlur_U0_ap_ready);
@@ -762,28 +761,28 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => start_for_Mat2AXIvideo_U0_din,
-        if_full_n => start_for_Mat2AXIvideo_U0_full_n,
+        if_din => start_for_Mat2AXIvideo_DMA_U0_din,
+        if_full_n => start_for_Mat2AXIvideo_DMA_U0_full_n,
         if_write => Threshold_U0_start_write,
-        if_dout => start_for_Mat2AXIvideo_U0_dout,
-        if_empty_n => start_for_Mat2AXIvideo_U0_empty_n,
-        if_read => Mat2AXIvideo_U0_ap_ready);
+        if_dout => start_for_Mat2AXIvideo_DMA_U0_dout,
+        if_empty_n => start_for_Mat2AXIvideo_DMA_U0_empty_n,
+        if_read => Mat2AXIvideo_DMA_U0_ap_ready);
 
 
 
 
-    AXIvideo2Mat_U0_ap_continue <= ap_const_logic_1;
-    AXIvideo2Mat_U0_ap_start <= ap_const_logic_1;
+    AXIvideo2Mat_DMA_U0_ap_continue <= ap_const_logic_1;
+    AXIvideo2Mat_DMA_U0_ap_start <= ap_const_logic_1;
     Block_proc_U0_ap_continue <= ap_const_logic_1;
     Block_proc_U0_ap_start <= ap_const_logic_1;
     GaussianBlur_U0_ap_continue <= ap_const_logic_1;
     GaussianBlur_U0_ap_start <= start_for_GaussianBlur_U0_empty_n;
     GaussianBlur_U0_start_full_n <= ap_const_logic_1;
     GaussianBlur_U0_start_write <= ap_const_logic_0;
-    Mat2AXIvideo_U0_ap_continue <= ap_const_logic_1;
-    Mat2AXIvideo_U0_ap_start <= start_for_Mat2AXIvideo_U0_empty_n;
-    Mat2AXIvideo_U0_start_full_n <= ap_const_logic_1;
-    Mat2AXIvideo_U0_start_write <= ap_const_logic_0;
+    Mat2AXIvideo_DMA_U0_ap_continue <= ap_const_logic_1;
+    Mat2AXIvideo_DMA_U0_ap_start <= start_for_Mat2AXIvideo_DMA_U0_empty_n;
+    Mat2AXIvideo_DMA_U0_start_full_n <= ap_const_logic_1;
+    Mat2AXIvideo_DMA_U0_start_write <= ap_const_logic_0;
     Threshold_U0_ap_continue <= ap_const_logic_1;
     Threshold_U0_ap_start <= start_for_Threshold_U0_empty_n;
 
@@ -794,15 +793,15 @@ begin
 
     ap_sync_continue <= ap_const_logic_0;
     start_for_GaussianBlur_U0_din <= (0=>ap_const_logic_1, others=>'-');
-    start_for_Mat2AXIvideo_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_Mat2AXIvideo_DMA_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_Threshold_U0_din <= (0=>ap_const_logic_1, others=>'-');
-    video_in_TREADY <= AXIvideo2Mat_U0_video_in_TREADY;
-    video_out_TDATA <= Mat2AXIvideo_U0_video_out_TDATA;
-    video_out_TDEST <= Mat2AXIvideo_U0_video_out_TDEST;
-    video_out_TID <= Mat2AXIvideo_U0_video_out_TID;
-    video_out_TKEEP <= Mat2AXIvideo_U0_video_out_TKEEP;
-    video_out_TLAST <= Mat2AXIvideo_U0_video_out_TLAST;
-    video_out_TSTRB <= Mat2AXIvideo_U0_video_out_TSTRB;
-    video_out_TUSER <= Mat2AXIvideo_U0_video_out_TUSER;
-    video_out_TVALID <= Mat2AXIvideo_U0_video_out_TVALID;
+    video_in_TREADY <= AXIvideo2Mat_DMA_U0_video_in_TREADY;
+    video_out_TDATA <= Mat2AXIvideo_DMA_U0_video_out_TDATA;
+    video_out_TDEST <= Mat2AXIvideo_DMA_U0_video_out_TDEST;
+    video_out_TID <= Mat2AXIvideo_DMA_U0_video_out_TID;
+    video_out_TKEEP <= Mat2AXIvideo_DMA_U0_video_out_TKEEP;
+    video_out_TLAST <= Mat2AXIvideo_DMA_U0_video_out_TLAST;
+    video_out_TSTRB <= Mat2AXIvideo_DMA_U0_video_out_TSTRB;
+    video_out_TUSER <= Mat2AXIvideo_DMA_U0_video_out_TUSER;
+    video_out_TVALID <= Mat2AXIvideo_DMA_U0_video_out_TVALID;
 end behav;

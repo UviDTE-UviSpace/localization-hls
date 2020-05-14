@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 14 18:34:46 2020" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="bd_0" PACKAGE="clg225" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000.0" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="video_in_tvalid" SIGIS="undef" SIGNAME="hls_inst_video_in_TVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="video_in_tready" SIGIS="undef" SIGNAME="hls_inst_video_in_TREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="video_in_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TDATA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="video_in_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TKEEP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TKEEP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="video_in_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TSTRB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TSTRB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="video_in_tuser" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TUSER">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TUSER"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="video_in_tlast" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TLAST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TLAST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="video_in_tid" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="video_in_tdest" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TDEST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_in_TDEST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="video_out_tvalid" SIGIS="undef" SIGNAME="hls_inst_video_out_TVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="video_out_tready" SIGIS="undef" SIGNAME="hls_inst_video_out_TREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="video_out_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TDATA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="video_out_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TKEEP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TKEEP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="video_out_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TSTRB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TSTRB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="video_out_tuser" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TUSER">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TUSER"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="video_out_tlast" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TLAST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TLAST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="video_out_tid" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="video_out_tdest" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TDEST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="video_out_TDEST"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_video_in" NAME="video_in" TYPE="TARGET">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="video_in_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="video_in_tready"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="video_in_tdata"/>
+        <PORTMAP LOGICAL="TKEEP" PHYSICAL="video_in_tkeep"/>
+        <PORTMAP LOGICAL="TSTRB" PHYSICAL="video_in_tstrb"/>
+        <PORTMAP LOGICAL="TUSER" PHYSICAL="video_in_tuser"/>
+        <PORTMAP LOGICAL="TLAST" PHYSICAL="video_in_tlast"/>
+        <PORTMAP LOGICAL="TID" PHYSICAL="video_in_tid"/>
+        <PORTMAP LOGICAL="TDEST" PHYSICAL="video_in_tdest"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="hls_inst_video_out" NAME="video_out" TYPE="INITIATOR">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="video_out_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="video_out_tready"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="video_out_tdata"/>
+        <PORTMAP LOGICAL="TKEEP" PHYSICAL="video_out_tkeep"/>
+        <PORTMAP LOGICAL="TSTRB" PHYSICAL="video_out_tstrb"/>
+        <PORTMAP LOGICAL="TUSER" PHYSICAL="video_out_tuser"/>
+        <PORTMAP LOGICAL="TLAST" PHYSICAL="video_out_tlast"/>
+        <PORTMAP LOGICAL="TID" PHYSICAL="video_out_tid"/>
+        <PORTMAP LOGICAL="TDEST" PHYSICAL="video_out_tdest"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE COREREVISION="2005141834" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="blur_image" VLNV="xilinx.com:hls:blur_image:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="bd_0_hls_inst_0"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="3"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="video_in_TVALID" SIGIS="undef" SIGNAME="hls_inst_video_in_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_in_TREADY" SIGIS="undef" SIGNAME="hls_inst_video_in_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="video_in_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="video_in_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="video_in_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="video_in_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="video_in_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="video_in_TID" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="video_in_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_in_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_in_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_out_TVALID" SIGIS="undef" SIGNAME="hls_inst_video_out_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_out_TREADY" SIGIS="undef" SIGNAME="hls_inst_video_out_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="video_out_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="video_out_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="video_out_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="video_out_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="video_out_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="video_out_TID" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="video_out_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_video_out_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="video_out_tdest"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000.0" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_video_in" NAME="video_in" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="video_in_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="video_in_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="video_in_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="video_in_TKEEP"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="video_in_TSTRB"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="video_in_TUSER"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="video_in_TLAST"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="video_in_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="video_in_TDEST"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="hls_inst_video_out" NAME="video_out" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="video_out_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="video_out_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="video_out_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="video_out_TKEEP"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="video_out_TSTRB"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="video_out_TUSER"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="video_out_TLAST"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="video_out_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="video_out_TDEST"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

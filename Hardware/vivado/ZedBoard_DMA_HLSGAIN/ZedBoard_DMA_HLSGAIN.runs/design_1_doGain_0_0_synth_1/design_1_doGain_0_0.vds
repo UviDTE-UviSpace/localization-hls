@@ -1,0 +1,604 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu May 14 15:39:00 2020
+# Process ID: 700
+# Current directory: C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1
+# Command line: vivado.exe -log design_1_doGain_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_doGain_0_0.tcl
+# Log file: C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/design_1_doGain_0_0.vds
+# Journal file: C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_doGain_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/localization-hls/Hardware/HLS/CalcGain_Zed/solution1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.cache/ip 
+Command: synth_design -top design_1_doGain_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10156 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 951.672 ; gain = 233.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_doGain_0_0' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/synth/design_1_doGain_0_0.vhd:81]
+INFO: [Synth 8-3491] module 'doGain' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:12' bound to instance 'U0' of component 'doGain' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/synth/design_1_doGain_0_0.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'doGain' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:37]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:59]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:62]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:87]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:93]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_data_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf' (1#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf' (2#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_keep_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized1' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 4 - type: integer 
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized0' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized0' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized0' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized0' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized1' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_strb_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:196]
+	Parameter DataWidth bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_user_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized3' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 2 - type: integer 
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized1' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized1' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized1' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized1' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized3' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_last_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized5' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized2' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized2' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized2' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized2' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized5' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_id_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized7' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized3' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized3' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized3' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized3' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized7' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_inStream_V_dest_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:252]
+INFO: [Synth 8-638] synthesizing module 'regslice_both__parameterized9' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 6 - type: integer 
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ibuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:575' bound to instance 'ibuf_inst' of component 'ibuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_ibuf__parameterized4' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_ibuf__parameterized4' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:587]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'obuf' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:620' bound to instance 'obuf_inst' of component 'obuf' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_obuf__parameterized4' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+	Parameter W bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_obuf__parameterized4' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:632]
+INFO: [Synth 8-256] done synthesizing module 'regslice_both__parameterized9' (3#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:22]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_data_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:266]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_keep_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:280]
+	Parameter DataWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_strb_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:294]
+	Parameter DataWidth bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_user_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:308]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_last_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:322]
+	Parameter DataWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_id_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:336]
+	Parameter DataWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'regslice_both' declared at 'c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/regslice_core.vhd:7' bound to instance 'regslice_both_outStream_V_dest_V_U' of component 'regslice_both' [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:350]
+INFO: [Synth 8-256] done synthesizing module 'doGain' (4#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'design_1_doGain_0_0' (5#1) [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/synth/design_1_doGain_0_0.vhd:81]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1030.008 ; gain = 312.004
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1030.008 ; gain = 312.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1030.008 ; gain = 312.004
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1030.008 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/constraints/doGain_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ip/design_1_doGain_0_0/constraints/doGain_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1128.832 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1140.621 ; gain = 11.789
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 19    
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 16    
+	   4 Input      2 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 59    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xil_defaultlib_ibuf 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xil_defaultlib_ibuf__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xil_defaultlib_obuf__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module regslice_both__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module doGain 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_data_V_reg_181_reg' and it is trimmed from '32' to '31' bits. [c:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.srcs/sources_1/bd/design_1/ipshared/ddf1/hdl/vhdl/doGain.vhd:453]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\regslice_both_outStream_V_data_V_U/ibuf_inst/ireg_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1140.621 ; gain = 422.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    26|
+|3     |LUT3 |   117|
+|4     |LUT4 |    27|
+|5     |LUT5 |    17|
+|6     |LUT6 |    13|
+|7     |FDRE |   312|
+|8     |FDSE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------------------------------+---------------------------------------+------+
+|      |Instance                               |Module                                 |Cells |
++------+---------------------------------------+---------------------------------------+------+
+|1     |top                                    |                                       |   515|
+|2     |  U0                                   |doGain                                 |   515|
+|3     |    regslice_both_inStream_V_data_V_U  |regslice_both                          |   109|
+|4     |      ibuf_inst                        |xil_defaultlib_ibuf_22                 |    65|
+|5     |      obuf_inst                        |xil_defaultlib_obuf_23                 |    44|
+|6     |    regslice_both_inStream_V_dest_V_U  |regslice_both__parameterized9          |    24|
+|7     |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized4_20 |    15|
+|8     |      obuf_inst                        |xil_defaultlib_obuf__parameterized4_21 |     9|
+|9     |    regslice_both_inStream_V_id_V_U    |regslice_both__parameterized7          |    21|
+|10    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized3_18 |    13|
+|11    |      obuf_inst                        |xil_defaultlib_obuf__parameterized3_19 |     8|
+|12    |    regslice_both_inStream_V_keep_V_U  |regslice_both__parameterized1          |    18|
+|13    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0_16 |    11|
+|14    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0_17 |     7|
+|15    |    regslice_both_inStream_V_last_V_U  |regslice_both__parameterized5          |     9|
+|16    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized2_14 |     5|
+|17    |      obuf_inst                        |xil_defaultlib_obuf__parameterized2_15 |     4|
+|18    |    regslice_both_inStream_V_strb_V_U  |regslice_both__parameterized1_0        |    18|
+|19    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0_12 |    11|
+|20    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0_13 |     7|
+|21    |    regslice_both_inStream_V_user_V_U  |regslice_both__parameterized3          |    16|
+|22    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized1_10 |     8|
+|23    |      obuf_inst                        |xil_defaultlib_obuf__parameterized1_11 |     8|
+|24    |    regslice_both_outStream_V_data_V_U |regslice_both_1                        |   117|
+|25    |      ibuf_inst                        |xil_defaultlib_ibuf                    |    77|
+|26    |      obuf_inst                        |xil_defaultlib_obuf                    |    36|
+|27    |    regslice_both_outStream_V_dest_V_U |regslice_both__parameterized9_2        |    23|
+|28    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized4    |    14|
+|29    |      obuf_inst                        |xil_defaultlib_obuf__parameterized4    |     9|
+|30    |    regslice_both_outStream_V_id_V_U   |regslice_both__parameterized7_3        |    20|
+|31    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized3    |    12|
+|32    |      obuf_inst                        |xil_defaultlib_obuf__parameterized3    |     8|
+|33    |    regslice_both_outStream_V_keep_V_U |regslice_both__parameterized1_4        |    17|
+|34    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0_8  |    10|
+|35    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0_9  |     7|
+|36    |    regslice_both_outStream_V_last_V_U |regslice_both__parameterized5_5        |     9|
+|37    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized2    |     4|
+|38    |      obuf_inst                        |xil_defaultlib_obuf__parameterized2    |     5|
+|39    |    regslice_both_outStream_V_strb_V_U |regslice_both__parameterized1_6        |    17|
+|40    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized0    |    10|
+|41    |      obuf_inst                        |xil_defaultlib_obuf__parameterized0    |     7|
+|42    |    regslice_both_outStream_V_user_V_U |regslice_both__parameterized3_7        |    13|
+|43    |      ibuf_inst                        |xil_defaultlib_ibuf__parameterized1    |     6|
+|44    |      obuf_inst                        |xil_defaultlib_obuf__parameterized1    |     7|
++------+---------------------------------------+---------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1143.449 ; gain = 314.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1143.449 ; gain = 425.445
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1155.512 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1156.508 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+85 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1156.508 ; gain = 737.164
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1156.508 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/design_1_doGain_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_doGain_0_0, cache-ID = 3dd602dde9e029cf
+INFO: [Coretcl 2-1174] Renamed 43 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1156.508 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/localization-hls/Hardware/vivado/ZedBoard_DMA_HLSGAIN/ZedBoard_DMA_HLSGAIN.runs/design_1_doGain_0_0_synth_1/design_1_doGain_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_doGain_0_0_utilization_synth.rpt -pb design_1_doGain_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May 14 15:39:35 2020...

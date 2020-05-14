@@ -135,3 +135,9 @@ Software/Vitis/wksp1/zed1/*
 Software/Vitis/wksp1/.metadata/*
 Software/Vitis/wksp1/RemoteSystemsTempFiles/*
 Software/Vitis/wksp1/webtalk/*
+Hardware/HLS/HLS_CircleFilter_Minized/solution1/sim/vhdl/filter.wdb 
+Hardware/HLS/HLS_CircleFilter_Minized_2/solution1/sim/vhdl/filter.wdb
+Hardware/HLS/HLS_SimpleDesign/solution1/sim/vhdl/blur_image.wdb
+Hardware/HLS/HLS_SimpleDesign_ZedBoard/solution1/sim/vhdl/passthrough.wdb 
+Hardware/HLS/HLS_CircleFilter_Minized_8bit/solution1/sim/vhdl/filter.wdb
+Hardware/HLS/HLS_CircleFilter/solution1/sim/vhdl/filter.wdb 

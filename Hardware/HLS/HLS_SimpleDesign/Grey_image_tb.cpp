@@ -1,6 +1,7 @@
 #include "simple.hpp"
 #include <iostream>
 #include <hls_opencv.h>
+#include "IplImage2AXIvideo_DMA.h"
 
 using namespace std;
 
@@ -45,88 +46,34 @@ int main(){
    waitKey (0);
    */
 
-    IplImage* src;
-    IplImage* dst;
-    AXI_STREAM src_axi, dst_axi;
 
-	src=cvLoadImage(INPUT_IMAGE_CORE);
+	    IplImage* src;
+	    IplImage* dst;
+	    AXI_STREAM src_axi, dst_axi;
 
-    if(!src->imageData){
-	   printf("Error could not load file.\n\r");
-	   return -1;
-    }
+		src=cvLoadImage(INPUT_IMAGE_CORE, cv::IMREAD_GRAYSCALE);
 
-    printf("SRC CHANNELS %d\n\r", src->nChannels);
-    dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
-    IplImage2AXIvideo(src, src_axi);
-    blur_image(src_axi, dst_axi);//, src->width, src->height);//src->height,src->width);
-    AXIvideo2IplImage(dst_axi, dst);
-    printf("DST CHANNELS %d\n\r", dst->nChannels);
-    cvSaveImage(OUTPUT_IMAGE_CORE, dst);
-    cvReleaseImage(&src);
-    cvReleaseImage(&dst);
+	    if(!src->imageData){
+		   printf("Error could not load file.\n\r");
+		   return -1;
+	    }
 
-    /*
-	// Convert to grayscale
-	cv::cvtColor(imageSrc, imageSrc, CV_BGR2GRAY);
-	printf("Image Rows:%d Cols:%d\n",imageSrc.rows, imageSrc.cols);
-	findContours(thresh, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0,0) );
+	    printf("SRC WIDTH & HEIGTH: %d x  %d \n\r", src->width, src->height);
+	    dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
+	    cvSaveImage(OUTPUT_IMAGE_CORE, src);
 
-	// Define streams for input and output
-	AXI_STREAM inputStream;
-	AXI_STREAM outputStream;
+	    IplImage2AXIvideo_DMA(src, src_axi);
+		blur_image(src_axi, dst_axi);
+		AXIvideo2IplImage_DMA(dst_axi, dst);
 
-	// OpenCV mat that point to a array (cv::Size(Width, Height))
-	cv::Mat imgCvOut(cv::Size(imageSrc.cols, imageSrc.rows), CV_8UC1, outImage, cv::Mat::AUTO_STEP);
+	    cvSaveImage(OUTPUT_IMAGE_CORE2, dst);
 
-	// Populate the input stream with the image bytes
-	for (int idxRows=0; idxRows < imageSrc.rows; idxRows++)
-	{
-		for (int idxCols=0; idxCols < imageSrc.cols; idxCols++)
-		{
-			uint_8_side_channel valIn;
-			valIn.last = 0;
-			for (int idxRows=0; idxRows < imageSrc.rows; idxRows++)
-			{
-				for (int idxCols=0; idxCols < imageSrc.cols; idxCols++)
-				{
+		cvReleaseImage(&src);
+		cvReleaseImage(&dst);
 
-					valIn.data = imageSrc.at<unsigned char>(idxRows,idxCols);
-					valIn.keep = 1; valIn.strb = 1; valIn.id = 0; valIn.dest = 0; // valIn.user = 1;
-					if ((idxCols == 0) && (idxRows == 0))
-					{
-
-					valIn.user = 1;
-					}
-					else if (idxCols == 255)
-					{
-					valIn.last = 1;
-					}
-					else
-					{
-					valIn.last = 0; //valIn.user = 0;
-					}
-
-					inputStream.write(alIn);
-				}
-			}
-		}
-	}
-	*/
- printf("Image finished\n");
- return 0;
+		printf("Image finished\n");
+		return 0;
 }
-
-/*
-void hls_image_filter(IplImage *src, IplImage *dst)
-{
-	   printf("inside image filter func.\n\r");
-	   AXI_STREAM src_axi, dst_axi;
-	   IplImage2AXIvideo(src, src_axi);
-	   blur_image(src_axi, dst_axi, src->height, src->width);
-	   AXIvideo2IplImage(dst_axi, dst);
-}
-*/
 
 
 

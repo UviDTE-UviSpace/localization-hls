@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu May  7 15:17:21 2020
+| Date         : Tue May 12 16:57:22 2020
 | Host         : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file ./report/filter_timing_synth.rpt
 | Design       : bd_0_wrapper
@@ -76,14 +76,14 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 13 input ports with no input delay specified. (HIGH)
+ There are 30 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 22 ports with no output delay specified. (HIGH)
+ There are 43 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -128,7 +128,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      0.813        0.000                      0                 3095        0.254        0.000                      0                 3095        4.020        0.000                       0                  1207  
+      0.813        0.000                      0                 3388        0.254        0.000                      0                 3388        4.020        0.000                       0                  1374  
 
 
 All user specified timing constraints are met.
@@ -151,7 +151,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              0.813        0.000                      0                 3095        0.254        0.000                      0                 3095        4.020        0.000                       0                  1207  
+ap_clk              0.813        0.000                      0                 3388        0.254        0.000                      0                 3388        4.020        0.000                       0                  1374  
 
 
 ------------------------------------------------------------------------------------------------
@@ -191,9 +191,9 @@ PW    :            0  Failing Endpoints,  Worst Slack        4.020ns,  Total Vio
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.813ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/ap_enable_reg_pp0_iter5_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[0]
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/filter_mac_muladdjbC_U45/filter_mac_muladdjbC_DSP48_3_U/p/C[0]
                             (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
@@ -214,29 +214,29 @@ Slack (MET) :             0.813ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
+                         net (fo=1373, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/ap_enable_reg_pp0_iter5_reg/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.496     1.469 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/Q
-                         net (fo=67, unplaced)        0.560     2.029    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.324 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9/O
-                         net (fo=8, unplaced)         0.487     2.811    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9_n_0
-                         LUT6 (Prop_lut6_I4_O)        0.124     2.935 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_1/O
-                         net (fo=1, unplaced)         0.800     3.735    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_1_n_0
+                         FDRE (Prop_fdre_C_Q)         0.496     1.469 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/ap_enable_reg_pp0_iter5_reg/Q
+                         net (fo=67, unplaced)        0.560     2.029    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/ap_enable_reg_pp0_iter5
+                         LUT2 (Prop_lut2_I0_O)        0.295     2.324 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/grp_fu_1924_p2_i_9/O
+                         net (fo=8, unplaced)         0.487     2.811    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/grp_fu_1924_p2_i_9_n_1
+                         LUT6 (Prop_lut6_I4_O)        0.124     2.935 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/grp_fu_1924_p2_i_1/O
+                         net (fo=1, unplaced)         0.800     3.735    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/grp_fu_1924_p2_i_1_n_1
                          DSP48E1 (Prop_dsp48e1_A[7]_P[0])
-                                                      3.841     7.576 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2/P[0]
-                         net (fo=1, unplaced)         0.800     8.375    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/P[0]
-                         DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[0]
+                                                      3.841     7.576 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/grp_fu_1924_p2/P[0]
+                         net (fo=1, unplaced)         0.800     8.375    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/filter_mac_muladdjbC_U45/filter_mac_muladdjbC_DSP48_3_U/P[0]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/filter_mac_muladdjbC_U45/filter_mac_muladdjbC_DSP48_3_U/p/C[0]
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-                         DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         net (fo=1373, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/filter_mac_muladdjbC_U45/filter_mac_muladdjbC_DSP48_3_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/filter_mac_muladdjbC_U45/filter_mac_muladdjbC_DSP48_3_U/p/CLK
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
                          DSP48E1 (Setup_dsp48e1_CLK_C[0])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/filter_mac_muladdjbC_U45/filter_mac_muladdjbC_DSP48_3_U/p
   -------------------------------------------------------------------
                          required time                          9.188    
                          arrival time                          -8.375    
@@ -250,9 +250,9 @@ Slack (MET) :             0.813ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.254ns  (arrival time - required time)
-  Source:                 bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_312_reg[0]/C
+  Source:                 bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_360_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_209_reg[0]/D
+  Destination:            bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_257_reg[0]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
@@ -268,22 +268,22 @@ Slack (MET) :             0.254ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.410     0.410    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_312_reg[0]/C
+                         net (fo=1373, unset)         0.410     0.410    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_360_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.158     0.568 r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_312_reg[0]/Q
-                         net (fo=1, unplaced)         0.131     0.699    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_312[0]
-                         LUT3 (Prop_lut3_I2_O)        0.098     0.797 r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_209[0]_i_1/O
-                         net (fo=1, unplaced)         0.000     0.797    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_209[0]_i_1_n_0
-                         FDRE                                         r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_209_reg[0]/D
+                         FDRE (Prop_fdre_C_Q)         0.158     0.568 r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_360_reg[0]/Q
+                         net (fo=1, unplaced)         0.131     0.699    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_3_i_reg_360[0]
+                         LUT3 (Prop_lut3_I2_O)        0.098     0.797 r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_257[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.797    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_257[0]_i_1_n_1
+                         FDRE                                         r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_257_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.432     0.432    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_209_reg[0]/C
+                         net (fo=1373, unset)         0.432     0.432    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_257_reg[0]/C
                          clock pessimism              0.000     0.432    
-                         FDRE (Hold_fdre_C_D)         0.112     0.544    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_209_reg[0]
+                         FDRE (Hold_fdre_C_D)         0.112     0.544    bd_0_i/hls_inst/U0/AXIvideo2Mat_U0/axi_data_V_0_i_reg_257_reg[0]
   -------------------------------------------------------------------
                          required time                         -0.544    
                          arrival time                           0.797    
@@ -302,9 +302,9 @@ Period(ns):         10.000
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     DSP48E1/CLK  n/a            5.244         10.000      4.756                bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/mul_ln703_2_reg_2726_reg/CLK
-Low Pulse Width   Fast    SRL16E/CLK   n/a            0.980         5.000       4.020                bd_0_i/hls_inst/U0/img_3_cols_V_c_U/U_fifo_w11_d4_A_shiftReg/SRL_SIG_reg[3][7]_srl4/CLK
-High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         5.000       4.020                bd_0_i/hls_inst/U0/img_3_cols_V_c_U/U_fifo_w11_d4_A_shiftReg/SRL_SIG_reg[3][7]_srl4/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            5.244         10.000      4.756                bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_40/mul_ln703_2_reg_2508_reg/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.980         5.000       4.020                bd_0_i/hls_inst/U0/img_3_cols_V_c_U/U_fifo_w11_d5_A_shiftReg/SRL_SIG_reg[4][7]_srl5/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         5.000       4.020                bd_0_i/hls_inst/U0/img_3_cols_V_c_U/U_fifo_w11_d5_A_shiftReg/SRL_SIG_reg[4][7]_srl5/CLK
 
 
 

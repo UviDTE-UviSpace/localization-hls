@@ -59,7 +59,7 @@ entity apatb_filter_top is
       AUTOTB_LAT_RESULT_FILE    : STRING  := "filter.result.lat.rb";
       AUTOTB_PER_RESULT_TRANS_FILE    : STRING  := "filter.performance.result.transaction.xml";
       AUTOTB_II    : INTEGER :=316708;
-      AUTOTB_LATENCY     : INTEGER :=316711;
+      AUTOTB_LATENCY     : INTEGER :=316709;
       LENGTH_video_in_V_data_V     : INTEGER := 307200;
       LENGTH_video_in_V_keep_V     : INTEGER := 307200;
       LENGTH_video_in_V_strb_V     : INTEGER := 307200;
@@ -98,16 +98,16 @@ architecture behav of apatb_filter_top is
   signal ready :   STD_LOGIC := '0';
   signal ready_wire :   STD_LOGIC := '0';
 
-  signal video_in_TDATA :  STD_LOGIC_VECTOR (15 DOWNTO 0);
-  signal video_in_TKEEP :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-  signal video_in_TSTRB :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal video_in_TDATA :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+  signal video_in_TKEEP :  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal video_in_TSTRB :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TUSER :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TLAST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TID :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TDEST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
-  signal video_out_TDATA :  STD_LOGIC_VECTOR (15 DOWNTO 0);
-  signal video_out_TKEEP :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-  signal video_out_TSTRB :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal video_out_TDATA :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+  signal video_out_TKEEP :  STD_LOGIC_VECTOR (0 DOWNTO 0);
+  signal video_out_TSTRB :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_out_TUSER :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_out_TLAST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_out_TID :  STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -267,16 +267,16 @@ signal video_out_V_dest_V_out_size_vld: STD_LOGIC;
   shared variable reported_stuck_cnt : INTEGER := 0;
 component filter is
 port (
-    video_in_TDATA :  IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-    video_in_TKEEP :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
-    video_in_TSTRB :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+    video_in_TDATA :  IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+    video_in_TKEEP :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+    video_in_TSTRB :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TUSER :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TLAST :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TID :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TDEST :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
-    video_out_TDATA :  OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
-    video_out_TKEEP :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-    video_out_TSTRB :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    video_out_TDATA :  OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    video_out_TKEEP :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    video_out_TSTRB :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_out_TUSER :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_out_TLAST :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_out_TID :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -1187,7 +1187,7 @@ begin
               reported_stuck <= '0';
           elsif (reported_stuck = '0' and reported_stuck_cnt < 4) then
               if ( AESL_mLatCnterIn_addr > AESL_mLatCnterOut_addr ) then
-                  -- if ( AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000 and AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10 * 316711 ) then
+                  -- if ( AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000 and AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10 * 316709 ) then
                   if ( AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000 and AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000000 ) then
                       report "WARNING: The latency is much larger than expected. Simulation may be stuck.";
                       reported_stuck <= '1';

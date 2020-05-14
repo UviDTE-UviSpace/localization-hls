@@ -2,9 +2,9 @@
 <RtlPorts>
 <name>video_in_V_data_V</name>
 <CType>
-<TypeName>ap_uint 16</TypeName>
-<TypeWidth>16</TypeWidth>
-<PhysicalWidth>16</PhysicalWidth>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>
@@ -12,9 +12,9 @@
 <RtlPorts>
 <name>video_in_V_keep_V</name>
 <CType>
-<TypeName>ap_uint 2</TypeName>
-<TypeWidth>2</TypeWidth>
-<PhysicalWidth>2</PhysicalWidth>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>
@@ -22,9 +22,9 @@
 <RtlPorts>
 <name>video_in_V_strb_V</name>
 <CType>
-<TypeName>ap_uint 2</TypeName>
-<TypeWidth>2</TypeWidth>
-<PhysicalWidth>2</PhysicalWidth>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>
@@ -72,9 +72,9 @@
 <RtlPorts>
 <name>video_out_V_data_V</name>
 <CType>
-<TypeName>ap_uint 16</TypeName>
-<TypeWidth>16</TypeWidth>
-<PhysicalWidth>16</PhysicalWidth>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>
@@ -82,9 +82,9 @@
 <RtlPorts>
 <name>video_out_V_keep_V</name>
 <CType>
-<TypeName>ap_uint 2</TypeName>
-<TypeWidth>2</TypeWidth>
-<PhysicalWidth>2</PhysicalWidth>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>
@@ -92,9 +92,9 @@
 <RtlPorts>
 <name>video_out_V_strb_V</name>
 <CType>
-<TypeName>ap_uint 2</TypeName>
-<TypeWidth>2</TypeWidth>
-<PhysicalWidth>2</PhysicalWidth>
+<TypeName>ap_uint 4</TypeName>
+<TypeWidth>4</TypeWidth>
+<PhysicalWidth>4</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>

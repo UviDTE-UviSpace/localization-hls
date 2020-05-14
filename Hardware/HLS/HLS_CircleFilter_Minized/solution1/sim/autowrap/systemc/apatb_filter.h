@@ -4,5 +4,5 @@
 // ==============================================================
 
 extern void AESL_WRAP_filter (
-hls::stream<struct ap_axiu<16, 1, 1, 1 > > (&video_in),
-hls::stream<struct ap_axiu<16, 1, 1, 1 > > (&video_out));
+hls::stream<struct ap_axiu<32, 1, 1, 1 > > (&video_in),
+hls::stream<struct ap_axiu<32, 1, 1, 1 > > (&video_out));

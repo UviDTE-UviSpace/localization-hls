@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_in} \
     metadata {  } \
     op interface \
-    ports { video_in_TDATA { I 16 vector } } \
+    ports { video_in_TDATA { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_data_V'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_in} \
     metadata {  } \
     op interface \
-    ports { video_in_TKEEP { I 2 vector } } \
+    ports { video_in_TKEEP { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_keep_V'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {video_in} \
     metadata {  } \
     op interface \
-    ports { video_in_TSTRB { I 2 vector } } \
+    ports { video_in_TSTRB { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_strb_V'"
@@ -174,14 +174,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 14 \
-    name img_data_stream_V \
+    name img_data_stream_0_V \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_img_data_stream_V \
+    corename dc_img_data_stream_0_V \
     op interface \
-    ports { img_data_stream_V_din { O 8 vector } img_data_stream_V_full_n { I 1 bit } img_data_stream_V_write { O 1 bit } } \
+    ports { img_data_stream_0_V_din { O 8 vector } img_data_stream_0_V_full_n { I 1 bit } img_data_stream_0_V_write { O 1 bit } } \
 } "
 }
 
@@ -189,6 +189,36 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 15 \
+    name img_data_stream_1_V \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_img_data_stream_1_V \
+    op interface \
+    ports { img_data_stream_1_V_din { O 8 vector } img_data_stream_1_V_full_n { I 1 bit } img_data_stream_1_V_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 16 \
+    name img_data_stream_2_V \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_img_data_stream_2_V \
+    op interface \
+    ports { img_data_stream_2_V_din { O 8 vector } img_data_stream_2_V_full_n { I 1 bit } img_data_stream_2_V_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 17 \
     name img_rows_V_out \
     type fifo \
     dir O \
@@ -203,7 +233,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
+    id 18 \
     name img_cols_V_out \
     type fifo \
     dir O \
@@ -280,7 +310,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 17
+set ID 19
 set RegSliceName regslice_core
 set RegSliceInstName regslice_core_U
 set CoreName ap_simcore_regslice_core

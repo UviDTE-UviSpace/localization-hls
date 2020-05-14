@@ -27,10 +27,10 @@ using namespace sc_dt;
 
 // [dump_struct_tree [build_nameSpaceTree] dumpedStructList] ---------->
     template< int D ,int U ,int TI ,int TD > struct ap_axiu;
-    template<> struct ap_axiu<16, 1, 1, 1> {
-        ap_uint<16> data;
-        ap_uint<2> keep;
-        ap_uint<2> strb;
+    template<> struct ap_axiu<32, 1, 1, 1> {
+        ap_uint<32> data;
+        ap_uint<4> keep;
+        ap_uint<4> strb;
         ap_uint<1> user;
         ap_uint<1> last;
         ap_uint<1> id;
@@ -203,12 +203,12 @@ class INTER_TCL_FILE {
 };
 
 extern void filter (
-hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_in),
-hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out));
+hls::stream<ap_axiu<32, 1, 1, 1 > > (&video_in),
+hls::stream<ap_axiu<32, 1, 1, 1 > > (&video_out));
 
 void AESL_WRAP_filter (
-hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_in),
-hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
+hls::stream<ap_axiu<32, 1, 1, 1 > > (&video_in),
+hls::stream<ap_axiu<32, 1, 1, 1 > > (&video_out))
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -238,7 +238,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		}
 
 		// define output stream variables: "video_out"
-		std::vector<ap_axiu<16, 1, 1, 1 > > aesl_tmp_3;
+		std::vector<ap_axiu<32, 1, 1, 1 > > aesl_tmp_3;
 		int aesl_tmp_4;
 		int aesl_tmp_5 = 0;
 
@@ -265,7 +265,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		{
 			aesl_fh.read(AUTOTB_TVOUT_PC_video_out_V_data_V, AESL_token); // data
 
-			std::vector<sc_bv<16> > video_out_V_data_V_pc_buffer;
+			std::vector<sc_bv<32> > video_out_V_data_V_pc_buffer;
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -341,7 +341,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -351,18 +351,18 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 			{
 				// RTL Name: video_out_V_data_V
 				{
-					// bitslice(15, 0)
+					// bitslice(31, 0)
 					// {
-						// celement: video_out.V.data.V(15, 0)
+						// celement: video_out.V.data.V(31, 0)
 						// {
-							sc_lv<16>* video_out_V_data_V_lv0_0_0_1_lv1_0_0_1 = new sc_lv<16>[aesl_tmp_4 - aesl_tmp_5];
+							sc_lv<32>* video_out_V_data_V_lv0_0_0_1_lv1_0_0_1 = new sc_lv<32>[aesl_tmp_4 - aesl_tmp_5];
 						// }
 					// }
 
-					// bitslice(15, 0)
+					// bitslice(31, 0)
 					{
 						int hls_map_index = 0;
-						// celement: video_out.V.data.V(15, 0)
+						// celement: video_out.V.data.V(31, 0)
 						{
 							// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 							for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -372,7 +372,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 								{
 									if (&(aesl_tmp_3[0].data) != NULL) // check the null address if the c port is array or others
 									{
-										video_out_V_data_V_lv0_0_0_1_lv1_0_0_1[hls_map_index].range(15, 0) = sc_bv<16>(video_out_V_data_V_pc_buffer[hls_map_index].range(15, 0));
+										video_out_V_data_V_lv0_0_0_1_lv1_0_0_1[hls_map_index].range(31, 0) = sc_bv<32>(video_out_V_data_V_pc_buffer[hls_map_index].range(31, 0));
 										hls_map_index++;
 									}
 								}
@@ -380,10 +380,10 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 						}
 					}
 
-					// bitslice(15, 0)
+					// bitslice(31, 0)
 					{
 						int hls_map_index = 0;
-						// celement: video_out.V.data.V(15, 0)
+						// celement: video_out.V.data.V(31, 0)
 						{
 							// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 							for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -422,7 +422,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		{
 			aesl_fh.read(AUTOTB_TVOUT_PC_video_out_V_keep_V, AESL_token); // data
 
-			std::vector<sc_bv<2> > video_out_V_keep_V_pc_buffer;
+			std::vector<sc_bv<4> > video_out_V_keep_V_pc_buffer;
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -498,7 +498,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -508,18 +508,18 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 			{
 				// RTL Name: video_out_V_keep_V
 				{
-					// bitslice(1, 0)
+					// bitslice(3, 0)
 					// {
-						// celement: video_out.V.keep.V(1, 0)
+						// celement: video_out.V.keep.V(3, 0)
 						// {
-							sc_lv<2>* video_out_V_keep_V_lv0_0_0_1_lv1_0_0_1 = new sc_lv<2>[aesl_tmp_4 - aesl_tmp_5];
+							sc_lv<4>* video_out_V_keep_V_lv0_0_0_1_lv1_0_0_1 = new sc_lv<4>[aesl_tmp_4 - aesl_tmp_5];
 						// }
 					// }
 
-					// bitslice(1, 0)
+					// bitslice(3, 0)
 					{
 						int hls_map_index = 0;
-						// celement: video_out.V.keep.V(1, 0)
+						// celement: video_out.V.keep.V(3, 0)
 						{
 							// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 							for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -529,7 +529,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 								{
 									if (&(aesl_tmp_3[0].keep) != NULL) // check the null address if the c port is array or others
 									{
-										video_out_V_keep_V_lv0_0_0_1_lv1_0_0_1[hls_map_index].range(1, 0) = sc_bv<2>(video_out_V_keep_V_pc_buffer[hls_map_index].range(1, 0));
+										video_out_V_keep_V_lv0_0_0_1_lv1_0_0_1[hls_map_index].range(3, 0) = sc_bv<4>(video_out_V_keep_V_pc_buffer[hls_map_index].range(3, 0));
 										hls_map_index++;
 									}
 								}
@@ -537,10 +537,10 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 						}
 					}
 
-					// bitslice(1, 0)
+					// bitslice(3, 0)
 					{
 						int hls_map_index = 0;
-						// celement: video_out.V.keep.V(1, 0)
+						// celement: video_out.V.keep.V(3, 0)
 						{
 							// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 							for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -579,7 +579,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		{
 			aesl_fh.read(AUTOTB_TVOUT_PC_video_out_V_strb_V, AESL_token); // data
 
-			std::vector<sc_bv<2> > video_out_V_strb_V_pc_buffer;
+			std::vector<sc_bv<4> > video_out_V_strb_V_pc_buffer;
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -655,7 +655,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -665,18 +665,18 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 			{
 				// RTL Name: video_out_V_strb_V
 				{
-					// bitslice(1, 0)
+					// bitslice(3, 0)
 					// {
-						// celement: video_out.V.strb.V(1, 0)
+						// celement: video_out.V.strb.V(3, 0)
 						// {
-							sc_lv<2>* video_out_V_strb_V_lv0_0_0_1_lv1_0_0_1 = new sc_lv<2>[aesl_tmp_4 - aesl_tmp_5];
+							sc_lv<4>* video_out_V_strb_V_lv0_0_0_1_lv1_0_0_1 = new sc_lv<4>[aesl_tmp_4 - aesl_tmp_5];
 						// }
 					// }
 
-					// bitslice(1, 0)
+					// bitslice(3, 0)
 					{
 						int hls_map_index = 0;
-						// celement: video_out.V.strb.V(1, 0)
+						// celement: video_out.V.strb.V(3, 0)
 						{
 							// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 							for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -686,7 +686,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 								{
 									if (&(aesl_tmp_3[0].strb) != NULL) // check the null address if the c port is array or others
 									{
-										video_out_V_strb_V_lv0_0_0_1_lv1_0_0_1[hls_map_index].range(1, 0) = sc_bv<2>(video_out_V_strb_V_pc_buffer[hls_map_index].range(1, 0));
+										video_out_V_strb_V_lv0_0_0_1_lv1_0_0_1[hls_map_index].range(3, 0) = sc_bv<4>(video_out_V_strb_V_pc_buffer[hls_map_index].range(3, 0));
 										hls_map_index++;
 									}
 								}
@@ -694,10 +694,10 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 						}
 					}
 
-					// bitslice(1, 0)
+					// bitslice(3, 0)
 					{
 						int hls_map_index = 0;
-						// celement: video_out.V.strb.V(1, 0)
+						// celement: video_out.V.strb.V(3, 0)
 						{
 							// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 							for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -812,7 +812,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -969,7 +969,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -1126,7 +1126,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -1283,7 +1283,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 
 				for (int tmp_aesl_tmp_3 = 0; tmp_aesl_tmp_3 < aesl_tmp_4 - aesl_tmp_3_size; tmp_aesl_tmp_3++)
 				{
-					ap_axiu<16, 1, 1, 1 > tmp;
+					ap_axiu<32, 1, 1, 1 > tmp;
 					aesl_tmp_3.push_back(tmp);
 				}
 			}
@@ -1498,7 +1498,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		int leading_zero;
 
 		// dump stream tvin: "video_in"
-		std::vector<ap_axiu<16, 1, 1, 1 > > aesl_tmp_0;
+		std::vector<ap_axiu<32, 1, 1, 1 > > aesl_tmp_0;
 		int aesl_tmp_1 = 0;
 		while (!video_in.empty())
 		{
@@ -1507,7 +1507,7 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		}
 
 		// dump stream tvin: "video_out"
-		std::vector<ap_axiu<16, 1, 1, 1 > > aesl_tmp_3;
+		std::vector<ap_axiu<32, 1, 1, 1 > > aesl_tmp_3;
 		int aesl_tmp_4 = 0;
 		while (!video_out.empty())
 		{
@@ -1551,14 +1551,14 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		aesl_fh.write(AUTOTB_TVIN_video_in_V_data_V, tvin_video_in_V_data_V);
 		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_video_in_V_data_V, tvin_video_in_V_data_V);
 
-		sc_bv<16>* video_in_V_data_V_tvin_wrapc_buffer = new sc_bv<16>[aesl_tmp_1 - aesl_tmp_2];
+		sc_bv<32>* video_in_V_data_V_tvin_wrapc_buffer = new sc_bv<32>[aesl_tmp_1 - aesl_tmp_2];
 
 		// RTL Name: video_in_V_data_V
 		{
-			// bitslice(15, 0)
+			// bitslice(31, 0)
 			{
 				int hls_map_index = 0;
-				// celement: video_in.V.data.V(15, 0)
+				// celement: video_in.V.data.V(31, 0)
 				{
 					// carray: (0) => (aesl_tmp_1 - aesl_tmp_2 - 1) @ (1)
 					for (int i_0 = 0; i_0 <= aesl_tmp_1 - aesl_tmp_2 - 1; i_0 += 1)
@@ -1574,9 +1574,9 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 							// input_type_conversion : (aesl_tmp_0[i_0].data).to_string(2).c_str()
 							if (&(aesl_tmp_0[0].data) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<16> video_in_V_data_V_tmp_mem;
+								sc_lv<32> video_in_V_data_V_tmp_mem;
 								video_in_V_data_V_tmp_mem = (aesl_tmp_0[i_0].data).to_string(2).c_str();
-								video_in_V_data_V_tvin_wrapc_buffer[hls_map_index].range(15, 0) = video_in_V_data_V_tmp_mem.range(15, 0);
+								video_in_V_data_V_tvin_wrapc_buffer[hls_map_index].range(31, 0) = video_in_V_data_V_tmp_mem.range(31, 0);
                                  		       hls_map_index++;
 							}
 						}
@@ -1633,14 +1633,14 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		aesl_fh.write(AUTOTB_TVIN_video_in_V_keep_V, tvin_video_in_V_keep_V);
 		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_video_in_V_keep_V, tvin_video_in_V_keep_V);
 
-		sc_bv<2>* video_in_V_keep_V_tvin_wrapc_buffer = new sc_bv<2>[aesl_tmp_1 - aesl_tmp_2];
+		sc_bv<4>* video_in_V_keep_V_tvin_wrapc_buffer = new sc_bv<4>[aesl_tmp_1 - aesl_tmp_2];
 
 		// RTL Name: video_in_V_keep_V
 		{
-			// bitslice(1, 0)
+			// bitslice(3, 0)
 			{
 				int hls_map_index = 0;
-				// celement: video_in.V.keep.V(1, 0)
+				// celement: video_in.V.keep.V(3, 0)
 				{
 					// carray: (0) => (aesl_tmp_1 - aesl_tmp_2 - 1) @ (1)
 					for (int i_0 = 0; i_0 <= aesl_tmp_1 - aesl_tmp_2 - 1; i_0 += 1)
@@ -1656,9 +1656,9 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 							// input_type_conversion : (aesl_tmp_0[i_0].keep).to_string(2).c_str()
 							if (&(aesl_tmp_0[0].keep) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<2> video_in_V_keep_V_tmp_mem;
+								sc_lv<4> video_in_V_keep_V_tmp_mem;
 								video_in_V_keep_V_tmp_mem = (aesl_tmp_0[i_0].keep).to_string(2).c_str();
-								video_in_V_keep_V_tvin_wrapc_buffer[hls_map_index].range(1, 0) = video_in_V_keep_V_tmp_mem.range(1, 0);
+								video_in_V_keep_V_tvin_wrapc_buffer[hls_map_index].range(3, 0) = video_in_V_keep_V_tmp_mem.range(3, 0);
                                  		       hls_map_index++;
 							}
 						}
@@ -1715,14 +1715,14 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		aesl_fh.write(AUTOTB_TVIN_video_in_V_strb_V, tvin_video_in_V_strb_V);
 		aesl_fh.write(WRAPC_STREAM_INGRESS_STATUS_video_in_V_strb_V, tvin_video_in_V_strb_V);
 
-		sc_bv<2>* video_in_V_strb_V_tvin_wrapc_buffer = new sc_bv<2>[aesl_tmp_1 - aesl_tmp_2];
+		sc_bv<4>* video_in_V_strb_V_tvin_wrapc_buffer = new sc_bv<4>[aesl_tmp_1 - aesl_tmp_2];
 
 		// RTL Name: video_in_V_strb_V
 		{
-			// bitslice(1, 0)
+			// bitslice(3, 0)
 			{
 				int hls_map_index = 0;
-				// celement: video_in.V.strb.V(1, 0)
+				// celement: video_in.V.strb.V(3, 0)
 				{
 					// carray: (0) => (aesl_tmp_1 - aesl_tmp_2 - 1) @ (1)
 					for (int i_0 = 0; i_0 <= aesl_tmp_1 - aesl_tmp_2 - 1; i_0 += 1)
@@ -1738,9 +1738,9 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 							// input_type_conversion : (aesl_tmp_0[i_0].strb).to_string(2).c_str()
 							if (&(aesl_tmp_0[0].strb) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<2> video_in_V_strb_V_tmp_mem;
+								sc_lv<4> video_in_V_strb_V_tmp_mem;
 								video_in_V_strb_V_tmp_mem = (aesl_tmp_0[i_0].strb).to_string(2).c_str();
-								video_in_V_strb_V_tvin_wrapc_buffer[hls_map_index].range(1, 0) = video_in_V_strb_V_tmp_mem.range(1, 0);
+								video_in_V_strb_V_tvin_wrapc_buffer[hls_map_index].range(3, 0) = video_in_V_strb_V_tmp_mem.range(3, 0);
                                  		       hls_map_index++;
 							}
 						}
@@ -2124,14 +2124,14 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		sprintf(tvout_video_out_V_data_V, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVOUT_video_out_V_data_V, tvout_video_out_V_data_V);
 
-		sc_bv<16>* video_out_V_data_V_tvout_wrapc_buffer = new sc_bv<16>[aesl_tmp_4 - aesl_tmp_5];
+		sc_bv<32>* video_out_V_data_V_tvout_wrapc_buffer = new sc_bv<32>[aesl_tmp_4 - aesl_tmp_5];
 
 		// RTL Name: video_out_V_data_V
 		{
-			// bitslice(15, 0)
+			// bitslice(31, 0)
 			{
 				int hls_map_index = 0;
-				// celement: video_out.V.data.V(15, 0)
+				// celement: video_out.V.data.V(31, 0)
 				{
 					// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 					for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -2147,9 +2147,9 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 							// input_type_conversion : (aesl_tmp_3[i_0].data).to_string(2).c_str()
 							if (&(aesl_tmp_3[0].data) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<16> video_out_V_data_V_tmp_mem;
+								sc_lv<32> video_out_V_data_V_tmp_mem;
 								video_out_V_data_V_tmp_mem = (aesl_tmp_3[i_0].data).to_string(2).c_str();
-								video_out_V_data_V_tvout_wrapc_buffer[hls_map_index].range(15, 0) = video_out_V_data_V_tmp_mem.range(15, 0);
+								video_out_V_data_V_tvout_wrapc_buffer[hls_map_index].range(31, 0) = video_out_V_data_V_tmp_mem.range(31, 0);
                                  		       hls_map_index++;
 							}
 						}
@@ -2184,14 +2184,14 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		sprintf(tvout_video_out_V_keep_V, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVOUT_video_out_V_keep_V, tvout_video_out_V_keep_V);
 
-		sc_bv<2>* video_out_V_keep_V_tvout_wrapc_buffer = new sc_bv<2>[aesl_tmp_4 - aesl_tmp_5];
+		sc_bv<4>* video_out_V_keep_V_tvout_wrapc_buffer = new sc_bv<4>[aesl_tmp_4 - aesl_tmp_5];
 
 		// RTL Name: video_out_V_keep_V
 		{
-			// bitslice(1, 0)
+			// bitslice(3, 0)
 			{
 				int hls_map_index = 0;
-				// celement: video_out.V.keep.V(1, 0)
+				// celement: video_out.V.keep.V(3, 0)
 				{
 					// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 					for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -2207,9 +2207,9 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 							// input_type_conversion : (aesl_tmp_3[i_0].keep).to_string(2).c_str()
 							if (&(aesl_tmp_3[0].keep) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<2> video_out_V_keep_V_tmp_mem;
+								sc_lv<4> video_out_V_keep_V_tmp_mem;
 								video_out_V_keep_V_tmp_mem = (aesl_tmp_3[i_0].keep).to_string(2).c_str();
-								video_out_V_keep_V_tvout_wrapc_buffer[hls_map_index].range(1, 0) = video_out_V_keep_V_tmp_mem.range(1, 0);
+								video_out_V_keep_V_tvout_wrapc_buffer[hls_map_index].range(3, 0) = video_out_V_keep_V_tmp_mem.range(3, 0);
                                  		       hls_map_index++;
 							}
 						}
@@ -2244,14 +2244,14 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 		sprintf(tvout_video_out_V_strb_V, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVOUT_video_out_V_strb_V, tvout_video_out_V_strb_V);
 
-		sc_bv<2>* video_out_V_strb_V_tvout_wrapc_buffer = new sc_bv<2>[aesl_tmp_4 - aesl_tmp_5];
+		sc_bv<4>* video_out_V_strb_V_tvout_wrapc_buffer = new sc_bv<4>[aesl_tmp_4 - aesl_tmp_5];
 
 		// RTL Name: video_out_V_strb_V
 		{
-			// bitslice(1, 0)
+			// bitslice(3, 0)
 			{
 				int hls_map_index = 0;
-				// celement: video_out.V.strb.V(1, 0)
+				// celement: video_out.V.strb.V(3, 0)
 				{
 					// carray: (aesl_tmp_5) => (aesl_tmp_4 - 1) @ (1)
 					for (int i_0 = aesl_tmp_5; i_0 <= aesl_tmp_4 - 1; i_0 += 1)
@@ -2267,9 +2267,9 @@ hls::stream<ap_axiu<16, 1, 1, 1 > > (&video_out))
 							// input_type_conversion : (aesl_tmp_3[i_0].strb).to_string(2).c_str()
 							if (&(aesl_tmp_3[0].strb) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<2> video_out_V_strb_V_tmp_mem;
+								sc_lv<4> video_out_V_strb_V_tmp_mem;
 								video_out_V_strb_V_tmp_mem = (aesl_tmp_3[i_0].strb).to_string(2).c_str();
-								video_out_V_strb_V_tvout_wrapc_buffer[hls_map_index].range(1, 0) = video_out_V_strb_V_tmp_mem.range(1, 0);
+								video_out_V_strb_V_tvout_wrapc_buffer[hls_map_index].range(3, 0) = video_out_V_strb_V_tmp_mem.range(3, 0);
                                  		       hls_map_index++;
 							}
 						}

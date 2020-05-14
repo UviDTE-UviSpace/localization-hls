@@ -33,11 +33,11 @@ entity AESL_axi_s_video_out is
   port (
       clk         :   IN  STD_LOGIC;
       reset       :   IN  STD_LOGIC;
-    TRAN_video_out_TDATA : IN STD_LOGIC_VECTOR (16 - 1 downto 0);
+    TRAN_video_out_TDATA : IN STD_LOGIC_VECTOR (8 - 1 downto 0);
     video_out_TDATA_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-    TRAN_video_out_TKEEP : IN STD_LOGIC_VECTOR (2 - 1 downto 0);
+    TRAN_video_out_TKEEP : IN STD_LOGIC_VECTOR (1 - 1 downto 0);
     video_out_TKEEP_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-    TRAN_video_out_TSTRB : IN STD_LOGIC_VECTOR (2 - 1 downto 0);
+    TRAN_video_out_TSTRB : IN STD_LOGIC_VECTOR (1 - 1 downto 0);
     video_out_TSTRB_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
     TRAN_video_out_TUSER : IN STD_LOGIC_VECTOR (1 - 1 downto 0);
     video_out_TUSER_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -61,7 +61,7 @@ architecture behav of AESL_axi_s_video_out is
   signal  video_out_TDATA_mOutPtr :   STD_LOGIC_VECTOR (20 downto 0) := (others => '0');
   signal  video_out_TDATA_empty_n  :   STD_LOGIC;
   signal  video_out_TDATA_full_n   :   STD_LOGIC;
-  type video_out_TDATA_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(16 - 1 downto 0);
+  type video_out_TDATA_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(8 - 1 downto 0);
   signal video_out_TDATA_mem :   video_out_TDATA_arr2D := (others => (others => '0'));
   signal video_out_TDATA_ingress_status :  INTEGER;
   signal video_out_TDATA_ingress_status_bit :  STD_LOGIC;
@@ -78,7 +78,7 @@ architecture behav of AESL_axi_s_video_out is
   signal  video_out_TKEEP_mOutPtr :   STD_LOGIC_VECTOR (20 downto 0) := (others => '0');
   signal  video_out_TKEEP_empty_n  :   STD_LOGIC;
   signal  video_out_TKEEP_full_n   :   STD_LOGIC;
-  type video_out_TKEEP_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(2 - 1 downto 0);
+  type video_out_TKEEP_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(1 - 1 downto 0);
   signal video_out_TKEEP_mem :   video_out_TKEEP_arr2D := (others => (others => '0'));
   signal video_out_TKEEP_ingress_status :  INTEGER;
   signal video_out_TKEEP_ingress_status_bit :  STD_LOGIC;
@@ -95,7 +95,7 @@ architecture behav of AESL_axi_s_video_out is
   signal  video_out_TSTRB_mOutPtr :   STD_LOGIC_VECTOR (20 downto 0) := (others => '0');
   signal  video_out_TSTRB_empty_n  :   STD_LOGIC;
   signal  video_out_TSTRB_full_n   :   STD_LOGIC;
-  type video_out_TSTRB_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(2 - 1 downto 0);
+  type video_out_TSTRB_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(1 - 1 downto 0);
   signal video_out_TSTRB_mem :   video_out_TSTRB_arr2D := (others => (others => '0'));
   signal video_out_TSTRB_ingress_status :  INTEGER;
   signal video_out_TSTRB_ingress_status_bit :  STD_LOGIC;

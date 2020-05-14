@@ -14,14 +14,14 @@ set isEnableWaveformDebug 1
 set C_modelName {Block__proc}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ img_1_rows_V_out int 10 regular {fifo 1}  }
-	{ img_1_cols_V_out int 11 regular {fifo 1}  }
+	{ img_0_rows_V_out int 10 regular {fifo 1}  }
+	{ img_0_cols_V_out int 11 regular {fifo 1}  }
 	{ img_3_rows_V_out int 10 regular {fifo 1}  }
 	{ img_3_cols_V_out int 11 regular {fifo 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "img_1_rows_V_out", "interface" : "fifo", "bitwidth" : 10, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "img_1_cols_V_out", "interface" : "fifo", "bitwidth" : 11, "direction" : "WRITEONLY"} , 
+	{ "Name" : "img_0_rows_V_out", "interface" : "fifo", "bitwidth" : 10, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "img_0_cols_V_out", "interface" : "fifo", "bitwidth" : 11, "direction" : "WRITEONLY"} , 
  	{ "Name" : "img_3_rows_V_out", "interface" : "fifo", "bitwidth" : 10, "direction" : "WRITEONLY"} , 
  	{ "Name" : "img_3_cols_V_out", "interface" : "fifo", "bitwidth" : 11, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -37,12 +37,12 @@ set portList {
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ start_out sc_out sc_logic 1 signal -1 } 
 	{ start_write sc_out sc_logic 1 signal -1 } 
-	{ img_1_rows_V_out_din sc_out sc_lv 10 signal 0 } 
-	{ img_1_rows_V_out_full_n sc_in sc_logic 1 signal 0 } 
-	{ img_1_rows_V_out_write sc_out sc_logic 1 signal 0 } 
-	{ img_1_cols_V_out_din sc_out sc_lv 11 signal 1 } 
-	{ img_1_cols_V_out_full_n sc_in sc_logic 1 signal 1 } 
-	{ img_1_cols_V_out_write sc_out sc_logic 1 signal 1 } 
+	{ img_0_rows_V_out_din sc_out sc_lv 10 signal 0 } 
+	{ img_0_rows_V_out_full_n sc_in sc_logic 1 signal 0 } 
+	{ img_0_rows_V_out_write sc_out sc_logic 1 signal 0 } 
+	{ img_0_cols_V_out_din sc_out sc_lv 11 signal 1 } 
+	{ img_0_cols_V_out_full_n sc_in sc_logic 1 signal 1 } 
+	{ img_0_cols_V_out_write sc_out sc_logic 1 signal 1 } 
 	{ img_3_rows_V_out_din sc_out sc_lv 10 signal 2 } 
 	{ img_3_rows_V_out_full_n sc_in sc_logic 1 signal 2 } 
 	{ img_3_rows_V_out_write sc_out sc_logic 1 signal 2 } 
@@ -61,12 +61,12 @@ set NewPortList {[
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "start_out", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_out", "role": "default" }} , 
  	{ "name": "start_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_write", "role": "default" }} , 
- 	{ "name": "img_1_rows_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "img_1_rows_V_out", "role": "din" }} , 
- 	{ "name": "img_1_rows_V_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_1_rows_V_out", "role": "full_n" }} , 
- 	{ "name": "img_1_rows_V_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_1_rows_V_out", "role": "write" }} , 
- 	{ "name": "img_1_cols_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "img_1_cols_V_out", "role": "din" }} , 
- 	{ "name": "img_1_cols_V_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_1_cols_V_out", "role": "full_n" }} , 
- 	{ "name": "img_1_cols_V_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_1_cols_V_out", "role": "write" }} , 
+ 	{ "name": "img_0_rows_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "din" }} , 
+ 	{ "name": "img_0_rows_V_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "full_n" }} , 
+ 	{ "name": "img_0_rows_V_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_0_rows_V_out", "role": "write" }} , 
+ 	{ "name": "img_0_cols_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "img_0_cols_V_out", "role": "din" }} , 
+ 	{ "name": "img_0_cols_V_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_0_cols_V_out", "role": "full_n" }} , 
+ 	{ "name": "img_0_cols_V_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_0_cols_V_out", "role": "write" }} , 
  	{ "name": "img_3_rows_V_out_din", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "img_3_rows_V_out", "role": "din" }} , 
  	{ "name": "img_3_rows_V_out_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_3_rows_V_out", "role": "full_n" }} , 
  	{ "name": "img_3_rows_V_out_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_3_rows_V_out", "role": "write" }} , 
@@ -89,12 +89,12 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "img_1_rows_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "0", "DependentChan" : "0",
+			{"Name" : "img_0_rows_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "0", "DependentChan" : "0",
 				"BlockSignal" : [
-					{"Name" : "img_1_rows_V_out_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "img_1_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "0", "DependentChan" : "0",
+					{"Name" : "img_0_rows_V_out_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "img_0_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "0", "DependentChan" : "0",
 				"BlockSignal" : [
-					{"Name" : "img_1_cols_V_out_blk_n", "Type" : "RtlSignal"}]},
+					{"Name" : "img_0_cols_V_out_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "img_3_rows_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "0", "DependentChan" : "0",
 				"BlockSignal" : [
 					{"Name" : "img_3_rows_V_out_blk_n", "Type" : "RtlSignal"}]},
@@ -105,8 +105,8 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	Block_proc {
-		img_1_rows_V_out {Type O LastRead -1 FirstWrite 0}
-		img_1_cols_V_out {Type O LastRead -1 FirstWrite 0}
+		img_0_rows_V_out {Type O LastRead -1 FirstWrite 0}
+		img_0_cols_V_out {Type O LastRead -1 FirstWrite 0}
 		img_3_rows_V_out {Type O LastRead -1 FirstWrite 0}
 		img_3_cols_V_out {Type O LastRead -1 FirstWrite 0}}}
 
@@ -121,8 +121,8 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	img_1_rows_V_out { ap_fifo {  { img_1_rows_V_out_din fifo_data 1 10 }  { img_1_rows_V_out_full_n fifo_status 0 1 }  { img_1_rows_V_out_write fifo_update 1 1 } } }
-	img_1_cols_V_out { ap_fifo {  { img_1_cols_V_out_din fifo_data 1 11 }  { img_1_cols_V_out_full_n fifo_status 0 1 }  { img_1_cols_V_out_write fifo_update 1 1 } } }
+	img_0_rows_V_out { ap_fifo {  { img_0_rows_V_out_din fifo_data 1 10 }  { img_0_rows_V_out_full_n fifo_status 0 1 }  { img_0_rows_V_out_write fifo_update 1 1 } } }
+	img_0_cols_V_out { ap_fifo {  { img_0_cols_V_out_din fifo_data 1 11 }  { img_0_cols_V_out_full_n fifo_status 0 1 }  { img_0_cols_V_out_write fifo_update 1 1 } } }
 	img_3_rows_V_out { ap_fifo {  { img_3_rows_V_out_din fifo_data 1 10 }  { img_3_rows_V_out_full_n fifo_status 0 1 }  { img_3_rows_V_out_write fifo_update 1 1 } } }
 	img_3_cols_V_out { ap_fifo {  { img_3_cols_V_out_din fifo_data 1 11 }  { img_3_cols_V_out_full_n fifo_status 0 1 }  { img_3_cols_V_out_write fifo_update 1 1 } } }
 }

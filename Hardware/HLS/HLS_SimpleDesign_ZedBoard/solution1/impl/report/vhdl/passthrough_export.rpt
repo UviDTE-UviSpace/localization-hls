@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2019.2
+Project:             HLS_SimpleDesign_ZedBoard
+Solution:            solution1
+Device target:       xc7z020-clg484-1
+Report date:         Thu May 14 20:22:14 +0200 2020
+
+#=== Post-Implementation Resource usage ===
+SLICE:          105
+LUT:            162
+FF:             305
+DSP:              0
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    5.380
+CP achieved post-implementation:    5.842
+Timing met

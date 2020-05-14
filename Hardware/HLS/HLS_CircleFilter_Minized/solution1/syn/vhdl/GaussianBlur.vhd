@@ -18,12 +18,6 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    p_src_rows_V_dout : IN STD_LOGIC_VECTOR (9 downto 0);
-    p_src_rows_V_empty_n : IN STD_LOGIC;
-    p_src_rows_V_read : OUT STD_LOGIC;
-    p_src_cols_V_dout : IN STD_LOGIC_VECTOR (10 downto 0);
-    p_src_cols_V_empty_n : IN STD_LOGIC;
-    p_src_cols_V_read : OUT STD_LOGIC;
     p_src_data_stream_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
     p_src_data_stream_V_empty_n : IN STD_LOGIC;
     p_src_data_stream_V_read : OUT STD_LOGIC;
@@ -48,23 +42,19 @@ architecture behav of GaussianBlur is
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal p_src_rows_V_blk_n : STD_LOGIC;
-    signal p_src_cols_V_blk_n : STD_LOGIC;
-    signal p_src_rows_V_read_reg_94 : STD_LOGIC_VECTOR (9 downto 0);
-    signal ap_block_state1 : BOOLEAN;
-    signal p_src_cols_V_read_reg_99 : STD_LOGIC_VECTOR (10 downto 0);
-    signal grp_Filter2D_fu_82_ap_start : STD_LOGIC;
-    signal grp_Filter2D_fu_82_ap_done : STD_LOGIC;
-    signal grp_Filter2D_fu_82_ap_idle : STD_LOGIC;
-    signal grp_Filter2D_fu_82_ap_ready : STD_LOGIC;
-    signal grp_Filter2D_fu_82_p_src_data_stream_V_read : STD_LOGIC;
-    signal grp_Filter2D_fu_82_p_dst_data_stream_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_Filter2D_fu_82_p_dst_data_stream_V_write : STD_LOGIC;
-    signal grp_Filter2D_fu_82_ap_start_reg : STD_LOGIC := '0';
-    signal ap_block_state1_ignore_call6 : BOOLEAN;
+    signal grp_Filter2D_fu_40_ap_start : STD_LOGIC;
+    signal grp_Filter2D_fu_40_ap_done : STD_LOGIC;
+    signal grp_Filter2D_fu_40_ap_idle : STD_LOGIC;
+    signal grp_Filter2D_fu_40_ap_ready : STD_LOGIC;
+    signal grp_Filter2D_fu_40_p_src_data_stream_V_read : STD_LOGIC;
+    signal grp_Filter2D_fu_40_p_dst_data_stream_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_Filter2D_fu_40_p_dst_data_stream_V_write : STD_LOGIC;
+    signal grp_Filter2D_fu_40_ap_start_reg : STD_LOGIC := '0';
+    signal ap_block_state1_ignore_call2 : BOOLEAN;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_block_state1 : BOOLEAN;
 
     component Filter2D IS
     port (
@@ -74,8 +64,6 @@ architecture behav of GaussianBlur is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        p_src_rows_V_read : IN STD_LOGIC_VECTOR (9 downto 0);
-        p_src_cols_V_read : IN STD_LOGIC_VECTOR (10 downto 0);
         p_src_data_stream_V_dout : IN STD_LOGIC_VECTOR (7 downto 0);
         p_src_data_stream_V_empty_n : IN STD_LOGIC;
         p_src_data_stream_V_read : OUT STD_LOGIC;
@@ -87,22 +75,20 @@ architecture behav of GaussianBlur is
 
 
 begin
-    grp_Filter2D_fu_82 : component Filter2D
+    grp_Filter2D_fu_40 : component Filter2D
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_Filter2D_fu_82_ap_start,
-        ap_done => grp_Filter2D_fu_82_ap_done,
-        ap_idle => grp_Filter2D_fu_82_ap_idle,
-        ap_ready => grp_Filter2D_fu_82_ap_ready,
-        p_src_rows_V_read => p_src_rows_V_read_reg_94,
-        p_src_cols_V_read => p_src_cols_V_read_reg_99,
+        ap_start => grp_Filter2D_fu_40_ap_start,
+        ap_done => grp_Filter2D_fu_40_ap_done,
+        ap_idle => grp_Filter2D_fu_40_ap_idle,
+        ap_ready => grp_Filter2D_fu_40_ap_ready,
         p_src_data_stream_V_dout => p_src_data_stream_V_dout,
         p_src_data_stream_V_empty_n => p_src_data_stream_V_empty_n,
-        p_src_data_stream_V_read => grp_Filter2D_fu_82_p_src_data_stream_V_read,
-        p_dst_data_stream_V_din => grp_Filter2D_fu_82_p_dst_data_stream_V_din,
+        p_src_data_stream_V_read => grp_Filter2D_fu_40_p_src_data_stream_V_read,
+        p_dst_data_stream_V_din => grp_Filter2D_fu_40_p_dst_data_stream_V_din,
         p_dst_data_stream_V_full_n => p_dst_data_stream_V_full_n,
-        p_dst_data_stream_V_write => grp_Filter2D_fu_82_p_dst_data_stream_V_write);
+        p_dst_data_stream_V_write => grp_Filter2D_fu_40_p_dst_data_stream_V_write);
 
 
 
@@ -128,7 +114,7 @@ begin
             else
                 if ((ap_continue = ap_const_logic_1)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif (((grp_Filter2D_fu_82_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                elsif (((grp_Filter2D_fu_40_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -136,42 +122,33 @@ begin
     end process;
 
 
-    grp_Filter2D_fu_82_ap_start_reg_assign_proc : process(ap_clk)
+    grp_Filter2D_fu_40_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_Filter2D_fu_82_ap_start_reg <= ap_const_logic_0;
+                grp_Filter2D_fu_40_ap_start_reg <= ap_const_logic_0;
             else
-                if ((not(((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                    grp_Filter2D_fu_82_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_Filter2D_fu_82_ap_ready = ap_const_logic_1)) then 
-                    grp_Filter2D_fu_82_ap_start_reg <= ap_const_logic_0;
+                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                    grp_Filter2D_fu_40_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_Filter2D_fu_40_ap_ready = ap_const_logic_1)) then 
+                    grp_Filter2D_fu_40_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((not(((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
-                p_src_cols_V_read_reg_99 <= p_src_cols_V_dout;
-                p_src_rows_V_read_reg_94 <= p_src_rows_V_dout;
-            end if;
-        end if;
-    end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, p_src_rows_V_empty_n, p_src_cols_V_empty_n, grp_Filter2D_fu_82_ap_done, ap_CS_fsm_state2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, grp_Filter2D_fu_40_ap_done, ap_CS_fsm_state2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
-                if ((not(((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((grp_Filter2D_fu_82_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                if (((grp_Filter2D_fu_40_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -183,21 +160,21 @@ begin
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
 
-    ap_block_state1_assign_proc : process(ap_start, ap_done_reg, p_src_rows_V_empty_n, p_src_cols_V_empty_n)
+    ap_block_state1_assign_proc : process(ap_start, ap_done_reg)
     begin
-                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
+                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
     end process;
 
 
-    ap_block_state1_ignore_call6_assign_proc : process(ap_start, ap_done_reg, p_src_rows_V_empty_n, p_src_cols_V_empty_n)
+    ap_block_state1_ignore_call2_assign_proc : process(ap_start, ap_done_reg)
     begin
-                ap_block_state1_ignore_call6 <= ((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
+                ap_block_state1_ignore_call2 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
     end process;
 
 
-    ap_done_assign_proc : process(ap_done_reg, grp_Filter2D_fu_82_ap_done, ap_CS_fsm_state2)
+    ap_done_assign_proc : process(ap_done_reg, grp_Filter2D_fu_40_ap_done, ap_CS_fsm_state2)
     begin
-        if (((grp_Filter2D_fu_82_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if (((grp_Filter2D_fu_40_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_done_reg;
@@ -215,74 +192,34 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(grp_Filter2D_fu_82_ap_done, ap_CS_fsm_state2)
+    ap_ready_assign_proc : process(grp_Filter2D_fu_40_ap_done, ap_CS_fsm_state2)
     begin
-        if (((grp_Filter2D_fu_82_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if (((grp_Filter2D_fu_40_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_Filter2D_fu_82_ap_start <= grp_Filter2D_fu_82_ap_start_reg;
-    p_dst_data_stream_V_din <= grp_Filter2D_fu_82_p_dst_data_stream_V_din;
+    grp_Filter2D_fu_40_ap_start <= grp_Filter2D_fu_40_ap_start_reg;
+    p_dst_data_stream_V_din <= grp_Filter2D_fu_40_p_dst_data_stream_V_din;
 
-    p_dst_data_stream_V_write_assign_proc : process(grp_Filter2D_fu_82_p_dst_data_stream_V_write, ap_CS_fsm_state2)
+    p_dst_data_stream_V_write_assign_proc : process(grp_Filter2D_fu_40_p_dst_data_stream_V_write, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            p_dst_data_stream_V_write <= grp_Filter2D_fu_82_p_dst_data_stream_V_write;
+            p_dst_data_stream_V_write <= grp_Filter2D_fu_40_p_dst_data_stream_V_write;
         else 
             p_dst_data_stream_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    p_src_cols_V_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, p_src_cols_V_empty_n)
-    begin
-        if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            p_src_cols_V_blk_n <= p_src_cols_V_empty_n;
-        else 
-            p_src_cols_V_blk_n <= ap_const_logic_1;
-        end if; 
-    end process;
-
-
-    p_src_cols_V_read_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, p_src_rows_V_empty_n, p_src_cols_V_empty_n)
-    begin
-        if ((not(((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            p_src_cols_V_read <= ap_const_logic_1;
-        else 
-            p_src_cols_V_read <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    p_src_data_stream_V_read_assign_proc : process(grp_Filter2D_fu_82_p_src_data_stream_V_read, ap_CS_fsm_state2)
+    p_src_data_stream_V_read_assign_proc : process(grp_Filter2D_fu_40_p_src_data_stream_V_read, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            p_src_data_stream_V_read <= grp_Filter2D_fu_82_p_src_data_stream_V_read;
+            p_src_data_stream_V_read <= grp_Filter2D_fu_40_p_src_data_stream_V_read;
         else 
             p_src_data_stream_V_read <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    p_src_rows_V_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, p_src_rows_V_empty_n)
-    begin
-        if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            p_src_rows_V_blk_n <= p_src_rows_V_empty_n;
-        else 
-            p_src_rows_V_blk_n <= ap_const_logic_1;
-        end if; 
-    end process;
-
-
-    p_src_rows_V_read_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, p_src_rows_V_empty_n, p_src_cols_V_empty_n)
-    begin
-        if ((not(((ap_start = ap_const_logic_0) or (p_src_cols_V_empty_n = ap_const_logic_0) or (p_src_rows_V_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            p_src_rows_V_read <= ap_const_logic_1;
-        else 
-            p_src_rows_V_read <= ap_const_logic_0;
         end if; 
     end process;
 

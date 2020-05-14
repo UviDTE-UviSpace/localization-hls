@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Tue Apr 28 16:25:47 2020
+// Date        : Thu May 14 17:09:46 2020
 // Host        : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/localization-hls/Hardware/HLS/HLS_CircleFilter/solution1/impl/vhdl/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v
@@ -19,21 +19,21 @@ module bd_0_hls_inst_0(video_in_TVALID, video_in_TREADY,
   video_in_TID, video_in_TDEST, video_out_TVALID, video_out_TREADY, video_out_TDATA, 
   video_out_TKEEP, video_out_TSTRB, video_out_TUSER, video_out_TLAST, video_out_TID, 
   video_out_TDEST, ap_clk, ap_rst_n)
-/* synthesis syn_black_box black_box_pad_pin="video_in_TVALID,video_in_TREADY,video_in_TDATA[15:0],video_in_TKEEP[1:0],video_in_TSTRB[1:0],video_in_TUSER[0:0],video_in_TLAST[0:0],video_in_TID[0:0],video_in_TDEST[0:0],video_out_TVALID,video_out_TREADY,video_out_TDATA[15:0],video_out_TKEEP[1:0],video_out_TSTRB[1:0],video_out_TUSER[0:0],video_out_TLAST[0:0],video_out_TID[0:0],video_out_TDEST[0:0],ap_clk,ap_rst_n" */;
+/* synthesis syn_black_box black_box_pad_pin="video_in_TVALID,video_in_TREADY,video_in_TDATA[7:0],video_in_TKEEP[0:0],video_in_TSTRB[0:0],video_in_TUSER[0:0],video_in_TLAST[0:0],video_in_TID[0:0],video_in_TDEST[0:0],video_out_TVALID,video_out_TREADY,video_out_TDATA[7:0],video_out_TKEEP[0:0],video_out_TSTRB[0:0],video_out_TUSER[0:0],video_out_TLAST[0:0],video_out_TID[0:0],video_out_TDEST[0:0],ap_clk,ap_rst_n" */;
   input video_in_TVALID;
   output video_in_TREADY;
-  input [15:0]video_in_TDATA;
-  input [1:0]video_in_TKEEP;
-  input [1:0]video_in_TSTRB;
+  input [7:0]video_in_TDATA;
+  input [0:0]video_in_TKEEP;
+  input [0:0]video_in_TSTRB;
   input [0:0]video_in_TUSER;
   input [0:0]video_in_TLAST;
   input [0:0]video_in_TID;
   input [0:0]video_in_TDEST;
   output video_out_TVALID;
   input video_out_TREADY;
-  output [15:0]video_out_TDATA;
-  output [1:0]video_out_TKEEP;
-  output [1:0]video_out_TSTRB;
+  output [7:0]video_out_TDATA;
+  output [0:0]video_out_TKEEP;
+  output [0:0]video_out_TSTRB;
   output [0:0]video_out_TUSER;
   output [0:0]video_out_TLAST;
   output [0:0]video_out_TID;

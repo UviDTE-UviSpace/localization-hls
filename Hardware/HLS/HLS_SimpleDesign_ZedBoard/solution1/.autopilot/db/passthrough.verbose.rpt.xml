@@ -1,0 +1,131 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'passthrough'" level="0">
+<item name = "Date">Thu May 14 20:16:13 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">HLS_SimpleDesign_ZedBoard</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.268 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3, 309123, 30.000 ns, 3.091 ms, 2, 309122, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="Mat2AXIvideo_DMA_U0">Mat2AXIvideo_DMA, 1, 309121, 10.000 ns, 3.091 ms, 1, 309121, none</column>
+<column name="AXIvideo2Mat_DMA_U0">AXIvideo2Mat_DMA, 1, 308641, 10.000 ns, 3.086 ms, 1, 308641, none</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">0, -, 25, 110, -</column>
+<column name="Instance">-, -, 417, 649, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="AXIvideo2Mat_DMA_U0">AXIvideo2Mat_DMA, 0, 0, 177, 258, 0</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 2, 29, 0</column>
+<column name="Mat2AXIvideo_DMA_U0">Mat2AXIvideo_DMA, 0, 0, 238, 362, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="img_1_cols_V_c5_U">0, 5, 0, -, 2, 11, 22</column>
+<column name="img_1_cols_V_c_U">0, 5, 0, -, 2, 11, 22</column>
+<column name="img_1_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_1_rows_V_c4_U">0, 5, 0, -, 2, 10, 20</column>
+<column name="img_1_rows_V_c_U">0, 5, 0, -, 2, 10, 20</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="video_in_TDATA">in, 8, axis, video_in_V_data_V, pointer</column>
+<column name="video_in_TKEEP">in, 1, axis, video_in_V_keep_V, pointer</column>
+<column name="video_in_TSTRB">in, 1, axis, video_in_V_strb_V, pointer</column>
+<column name="video_in_TUSER">in, 1, axis, video_in_V_user_V, pointer</column>
+<column name="video_in_TLAST">in, 1, axis, video_in_V_last_V, pointer</column>
+<column name="video_in_TID">in, 1, axis, video_in_V_id_V, pointer</column>
+<column name="video_in_TDEST">in, 1, axis, video_in_V_dest_V, pointer</column>
+<column name="video_in_TVALID">in, 1, axis, video_in_V_dest_V, pointer</column>
+<column name="video_in_TREADY">out, 1, axis, video_in_V_dest_V, pointer</column>
+<column name="video_out_TDATA">out, 8, axis, video_out_V_data_V, pointer</column>
+<column name="video_out_TKEEP">out, 1, axis, video_out_V_keep_V, pointer</column>
+<column name="video_out_TSTRB">out, 1, axis, video_out_V_strb_V, pointer</column>
+<column name="video_out_TUSER">out, 1, axis, video_out_V_user_V, pointer</column>
+<column name="video_out_TLAST">out, 1, axis, video_out_V_last_V, pointer</column>
+<column name="video_out_TID">out, 1, axis, video_out_V_id_V, pointer</column>
+<column name="video_out_TDEST">out, 1, axis, video_out_V_dest_V, pointer</column>
+<column name="video_out_TVALID">out, 1, axis, video_out_V_dest_V, pointer</column>
+<column name="video_out_TREADY">in, 1, axis, video_out_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, passthrough, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, passthrough, return value</column>
+</table>
+</item>
+</section>
+</profile>

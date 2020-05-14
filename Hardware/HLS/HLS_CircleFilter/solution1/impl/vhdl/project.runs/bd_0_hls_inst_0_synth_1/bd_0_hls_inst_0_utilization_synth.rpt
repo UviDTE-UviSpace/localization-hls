@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Apr 28 16:25:47 2020
+| Date         : Thu May 14 17:09:46 2020
 | Host         : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 | Command      : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
 | Design       : bd_0_hls_inst_0
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1565 |     0 |     53200 |  2.94 |
-|   LUT as Logic             | 1559 |     0 |     53200 |  2.93 |
+| Slice LUTs*                | 1547 |     0 |     53200 |  2.91 |
+|   LUT as Logic             | 1541 |     0 |     53200 |  2.90 |
 |   LUT as Memory            |    6 |     0 |     17400 |  0.03 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    6 |     0 |           |       |
-| Slice Registers            | 1173 |     0 |    106400 |  1.10 |
-|   Register as Flip Flop    | 1173 |     0 |    106400 |  1.10 |
+| Slice Registers            | 1112 |     0 |    106400 |  1.05 |
+|   Register as Flip Flop    | 1112 |     0 |    106400 |  1.05 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 44    |          Yes |         Set |            - |
-| 1129  |          Yes |       Reset |            - |
+| 1068  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,14 +150,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1129 |        Flop & Latch |
-| LUT1     |  400 |                 LUT |
+| FDRE     | 1068 |        Flop & Latch |
+| LUT1     |  401 |                 LUT |
 | LUT6     |  327 |                 LUT |
-| LUT2     |  295 |                 LUT |
-| CARRY4   |  280 |          CarryLogic |
-| LUT5     |  278 |                 LUT |
-| LUT4     |  227 |                 LUT |
-| LUT3     |  207 |                 LUT |
+| LUT2     |  304 |                 LUT |
+| CARRY4   |  283 |          CarryLogic |
+| LUT5     |  270 |                 LUT |
+| LUT4     |  221 |                 LUT |
+| LUT3     |  185 |                 LUT |
 | FDSE     |   44 |        Flop & Latch |
 | DSP48E1  |   23 |    Block Arithmetic |
 | SRL16E   |    6 |  Distributed Memory |

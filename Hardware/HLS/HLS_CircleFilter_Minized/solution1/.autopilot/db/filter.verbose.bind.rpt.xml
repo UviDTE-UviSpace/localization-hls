@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filter'" level="0">
-<item name = "Date">Thu May  7 15:10:47 2020
+<item name = "Date">Tue May 12 16:47:56 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">HLS_CircleFilter_Minized</item>
@@ -24,18 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">195, 316711, 2.112 us, 3.430 ms, 192, 316708, dataflow</column>
+<column name="">315409, 315409, 3.416 ms, 3.416 ms, 315402, 315402, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_GaussianBlur_fu_294">GaussianBlur, 191, 316707, 2.069 us, 3.430 ms, 191, 316707, none</column>
-<column name="grp_AXIvideo2Mat_fu_302">AXIvideo2Mat, 3, 309603, 32.493 ns, 3.353 ms, 3, 309603, none</column>
-<column name="grp_Mat2AXIvideo_fu_325">Mat2AXIvideo, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
-<column name="grp_Threshold_fu_346">Threshold, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
-<column name="call_ln0_Block_proc_fu_356">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="grp_GaussianBlur_fu_416">GaussianBlur, 315401, 315401, 3.416 ms, 3.416 ms, 315401, 315401, none</column>
+<column name="grp_AXIvideo2Mat_fu_422">AXIvideo2Mat, 3, 309603, 32.493 ns, 3.353 ms, 3, 309603, none</column>
+<column name="grp_Threshold_fu_447">Threshold, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
+<column name="grp_CvtColor_1_fu_457">CvtColor_1, 1, 310081, 10.831 ns, 3.358 ms, 1, 310081, none</column>
+<column name="grp_Mat2AXIvideo_fu_467">Mat2AXIvideo, 309121, 309121, 3.348 ms, 3.348 ms, 309121, 309121, none</column>
+<column name="grp_CvtColor_fu_488">CvtColor, 1, 308641, 10.831 ns, 3.343 ms, 1, 308641, none</column>
+<column name="call_ln0_Block_proc_fu_498">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -2414,7 +2414,7 @@
 			<pipe_depth>3</pipe_depth>
 		</item>
 		<item class_id_reference="33" object_id="_100">
-			<region_name>hls_label_0</region_name>
+			<region_name>hls_label_4</region_name>
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>

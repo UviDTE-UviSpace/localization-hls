@@ -142,7 +142,7 @@ entry:7  call void @_ssdm_op_Write.ap_fifo.i11P(i11* %img_3_cols_V_out, i11 640)
 entry:8  ret void
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln24"/></StgValue>
+<StgValue><ssdm name="ret_ln26"/></StgValue>
 </operation>
 </state>
 </state_list>

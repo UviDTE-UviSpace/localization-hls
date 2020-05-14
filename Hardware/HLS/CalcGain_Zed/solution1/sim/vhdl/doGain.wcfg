@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="doGain.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_doGain_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">outStream(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TDEST" type="array">
+               <obj_property name="ElementShortName">outStream_TDEST[5:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TDEST[5:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TID" type="array">
+               <obj_property name="ElementShortName">outStream_TID[4:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TID[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TLAST" type="array">
+               <obj_property name="ElementShortName">outStream_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TUSER" type="array">
+               <obj_property name="ElementShortName">outStream_TUSER[1:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TUSER[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TSTRB" type="array">
+               <obj_property name="ElementShortName">outStream_TSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TKEEP" type="array">
+               <obj_property name="ElementShortName">outStream_TKEEP[3:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TKEEP[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TREADY" type="logic">
+               <obj_property name="ElementShortName">outStream_TREADY</obj_property>
+               <obj_property name="ObjectShortName">outStream_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TVALID" type="logic">
+               <obj_property name="ElementShortName">outStream_TVALID</obj_property>
+               <obj_property name="ObjectShortName">outStream_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/outStream_TDATA" type="array">
+               <obj_property name="ElementShortName">outStream_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group13" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group14" type="group">
+            <obj_property name="label">inStream(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TDEST" type="array">
+               <obj_property name="ElementShortName">inStream_TDEST[5:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TDEST[5:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TID" type="array">
+               <obj_property name="ElementShortName">inStream_TID[4:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TID[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TLAST" type="array">
+               <obj_property name="ElementShortName">inStream_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TUSER" type="array">
+               <obj_property name="ElementShortName">inStream_TUSER[1:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TUSER[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TSTRB" type="array">
+               <obj_property name="ElementShortName">inStream_TSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TKEEP" type="array">
+               <obj_property name="ElementShortName">inStream_TKEEP[3:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TKEEP[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TREADY" type="logic">
+               <obj_property name="ElementShortName">inStream_TREADY</obj_property>
+               <obj_property name="ObjectShortName">inStream_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TVALID" type="logic">
+               <obj_property name="ElementShortName">inStream_TVALID</obj_property>
+               <obj_property name="ObjectShortName">inStream_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/inStream_TDATA" type="array">
+               <obj_property name="ElementShortName">inStream_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group24" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/ap_rst_n" type="logic">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group26" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_doGain_top/AESL_inst_doGain/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group28" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group29" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group30" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_doGain_top/AUTOTB_TRANSACTION_NUM" type="other">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_data_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_data_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_data_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_keep_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_keep_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_keep_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_strb_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_strb_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_strb_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_user_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_user_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_user_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_last_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_last_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_last_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_id_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_id_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_id_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvin_trans_num_inStream_V_dest_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_inStream_V_dest_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_inStream_V_dest_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_data_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_data_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_data_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_keep_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_keep_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_keep_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_strb_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_strb_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_strb_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_user_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_user_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_user_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_last_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_last_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_last_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_id_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_id_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_id_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/ap_c_n_tvout_trans_num_outStream_V_dest_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_outStream_V_dest_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_outStream_V_dest_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group31" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_data_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_data_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_data_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_keep_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_keep_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_keep_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_strb_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_strb_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_strb_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_user_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_user_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_user_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_last_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_last_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_last_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_id_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_id_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_id_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_inStream_V_dest_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_inStream_V_dest_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inStream_V_dest_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_data_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_data_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_data_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_keep_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_keep_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_keep_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_strb_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_strb_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_strb_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_user_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_user_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_user_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_last_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_last_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_last_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_id_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_id_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_id_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/LENGTH_outStream_V_dest_V" type="other">
+               <obj_property name="ElementShortName">LENGTH_outStream_V_dest_V</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_outStream_V_dest_V</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group63" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group64" type="group">
+            <obj_property name="label">outStream(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TDEST" type="array">
+               <obj_property name="ElementShortName">outStream_TDEST[5:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TDEST[5:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TID" type="array">
+               <obj_property name="ElementShortName">outStream_TID[4:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TID[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TLAST" type="array">
+               <obj_property name="ElementShortName">outStream_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TUSER" type="array">
+               <obj_property name="ElementShortName">outStream_TUSER[1:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TUSER[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TSTRB" type="array">
+               <obj_property name="ElementShortName">outStream_TSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TKEEP" type="array">
+               <obj_property name="ElementShortName">outStream_TKEEP[3:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TKEEP[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TREADY" type="logic">
+               <obj_property name="ElementShortName">outStream_TREADY</obj_property>
+               <obj_property name="ObjectShortName">outStream_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TVALID" type="logic">
+               <obj_property name="ElementShortName">outStream_TVALID</obj_property>
+               <obj_property name="ObjectShortName">outStream_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/outStream_TDATA" type="array">
+               <obj_property name="ElementShortName">outStream_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">outStream_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group74" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group75" type="group">
+            <obj_property name="label">inStream(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TDEST" type="array">
+               <obj_property name="ElementShortName">inStream_TDEST[5:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TDEST[5:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TID" type="array">
+               <obj_property name="ElementShortName">inStream_TID[4:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TID[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TLAST" type="array">
+               <obj_property name="ElementShortName">inStream_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TUSER" type="array">
+               <obj_property name="ElementShortName">inStream_TUSER[1:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TUSER[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TSTRB" type="array">
+               <obj_property name="ElementShortName">inStream_TSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TKEEP" type="array">
+               <obj_property name="ElementShortName">inStream_TKEEP[3:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TKEEP[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TREADY" type="logic">
+               <obj_property name="ElementShortName">inStream_TREADY</obj_property>
+               <obj_property name="ObjectShortName">inStream_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TVALID" type="logic">
+               <obj_property name="ElementShortName">inStream_TVALID</obj_property>
+               <obj_property name="ObjectShortName">inStream_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_doGain_top/inStream_TDATA" type="array">
+               <obj_property name="ElementShortName">inStream_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">inStream_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

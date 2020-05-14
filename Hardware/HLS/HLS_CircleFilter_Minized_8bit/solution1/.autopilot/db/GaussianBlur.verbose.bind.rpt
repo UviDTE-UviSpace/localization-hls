@@ -1,0 +1,602 @@
+
+
+================================================================
+== Vivado HLS Report for 'GaussianBlur'
+================================================================
+* Date:           Thu May 14 00:43:26 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        HLS_CircleFilter_Minized_8bit
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z007s-clg225-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 10.00 ns | 10.831 ns |   1.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   | min |   max  |   Type  |
+    +---------+---------+----------+----------+-----+--------+---------+
+    |      191|   316707| 2.069 us | 3.430 ms |  191|  316707|   none  |
+    +---------+---------+----------+----------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------+----------+---------+---------+----------+----------+-----+--------+---------+
+        |                    |          |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+        |      Instance      |  Module  |   min   |   max   |    min   |    max   | min |   max  |   Type  |
+        +--------------------+----------+---------+---------+----------+----------+-----+--------+---------+
+        |grp_Filter2D_fu_82  |Filter2D  |      190|   316706| 2.058 us | 3.430 ms |  190|  316706|   none  |
+        +--------------------+----------+---------+---------+----------+----------+-----+--------+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.36>
+ST_1 : Operation 3 [1/1] (3.63ns)   --->   "%p_src_rows_V_read = call i10 @_ssdm_op_Read.ap_fifo.i10P(i10* %p_src_rows_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 3 'read' 'p_src_rows_V_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%p_src_cols_V_read = call i11 @_ssdm_op_Read.ap_fifo.i11P(i11* %p_src_cols_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 4 'read' 'p_src_cols_V_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [2/2] (1.73ns)   --->   "call fastcc void @Filter2D(i10 %p_src_rows_V_read, i11 %p_src_cols_V_read, i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2678->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 5 'call' <Predicate = true> <Delay = 1.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str191, i32 0, i32 0, [1 x i8]* @p_str192, [1 x i8]* @p_str193, [1 x i8]* @p_str194, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str195, [1 x i8]* @p_str196)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str184, i32 0, i32 0, [1 x i8]* @p_str185, [1 x i8]* @p_str186, [1 x i8]* @p_str187, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str188, [1 x i8]* @p_str189)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i10* %p_src_rows_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str293, i32 0, i32 0, [1 x i8]* @p_str294, [1 x i8]* @p_str295, [1 x i8]* @p_str296, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str297, [11 x i8]* @ScalarProp_str)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %p_src_cols_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str298, i32 0, i32 0, [1 x i8]* @p_str299, [1 x i8]* @p_str300, [1 x i8]* @p_str301, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str302, [11 x i8]* @ScalarProp_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (0.00ns)   --->   "call fastcc void @Filter2D(i10 %p_src_rows_V_read, i11 %p_src_cols_V_read, i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2678->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 11 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ p_src_rows_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_src_cols_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_src_data_stream_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ p_dst_data_stream_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+p_src_rows_V_read (read         ) [ 001]
+p_src_cols_V_read (read         ) [ 001]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+call_ln2678       (call         ) [ 000]
+ret_ln0           (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="p_src_rows_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_rows_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="p_src_cols_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_cols_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="p_src_data_stream_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_data_stream_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="p_dst_data_stream_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dst_data_stream_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i10P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i11P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Filter2D"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str191"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str192"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str193"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str194"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str195"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str196"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str184"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str185"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str186"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str187"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str188"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str189"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str293"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str294"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str295"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str296"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str297"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str298"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str299"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str300"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str301"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str302"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="p_src_rows_V_read_read_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="10" slack="0"/>
+<pin id="72" dir="0" index="1" bw="10" slack="0"/>
+<pin id="73" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_src_rows_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="p_src_cols_V_read_read_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="11" slack="0"/>
+<pin id="78" dir="0" index="1" bw="11" slack="0"/>
+<pin id="79" dir="1" index="2" bw="11" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_src_cols_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="grp_Filter2D_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="0" slack="0"/>
+<pin id="84" dir="0" index="1" bw="10" slack="0"/>
+<pin id="85" dir="0" index="2" bw="11" slack="0"/>
+<pin id="86" dir="0" index="3" bw="8" slack="0"/>
+<pin id="87" dir="0" index="4" bw="8" slack="0"/>
+<pin id="88" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln2678/1 "/>
+</bind>
+</comp>
+
+<comp id="94" class="1005" name="p_src_rows_V_read_reg_94">
+<pin_list>
+<pin id="95" dir="0" index="0" bw="10" slack="1"/>
+<pin id="96" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_src_rows_V_read "/>
+</bind>
+</comp>
+
+<comp id="99" class="1005" name="p_src_cols_V_read_reg_99">
+<pin_list>
+<pin id="100" dir="0" index="0" bw="11" slack="1"/>
+<pin id="101" dir="1" index="1" bw="11" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_src_cols_V_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="74"><net_src comp="8" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="75"><net_src comp="0" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="80"><net_src comp="10" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="81"><net_src comp="2" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="89"><net_src comp="12" pin="0"/><net_sink comp="82" pin=0"/></net>
+
+<net id="90"><net_src comp="70" pin="2"/><net_sink comp="82" pin=1"/></net>
+
+<net id="91"><net_src comp="76" pin="2"/><net_sink comp="82" pin=2"/></net>
+
+<net id="92"><net_src comp="4" pin="0"/><net_sink comp="82" pin=3"/></net>
+
+<net id="93"><net_src comp="6" pin="0"/><net_sink comp="82" pin=4"/></net>
+
+<net id="97"><net_src comp="70" pin="2"/><net_sink comp="94" pin=0"/></net>
+
+<net id="98"><net_src comp="94" pin="1"/><net_sink comp="82" pin=1"/></net>
+
+<net id="102"><net_src comp="76" pin="2"/><net_sink comp="99" pin=0"/></net>
+
+<net id="103"><net_src comp="99" pin="1"/><net_sink comp="82" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: p_dst_data_stream_V | {1 2 }
+ - Input state : 
+	Port: GaussianBlur : p_src_rows_V | {1 }
+	Port: GaussianBlur : p_src_cols_V | {1 }
+	Port: GaussianBlur : p_src_data_stream_V | {1 2 }
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|        Functional Unit       |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|------------------------------|---------|---------|---------|---------|---------|---------|
+|   call   |      grp_Filter2D_fu_82      |    5    |    19   |  15.921 |   1003  |   2432  |    0    |
+|----------|------------------------------|---------|---------|---------|---------|---------|---------|
+|   read   | p_src_rows_V_read_read_fu_70 |    0    |    0    |    0    |    0    |    0    |    0    |
+|          | p_src_cols_V_read_read_fu_76 |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                              |    5    |    19   |  15.921 |   1003  |   2432  |    0    |
+|----------|------------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------+--------+
+|                        |   FF   |
++------------------------+--------+
+|p_src_cols_V_read_reg_99|   11   |
+|p_src_rows_V_read_reg_94|   10   |
++------------------------+--------+
+|          Total         |   21   |
++------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------------------|------|------|------|--------||---------||---------|
+|        Comp        |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|--------------------|------|------|------|--------||---------||---------|
+| grp_Filter2D_fu_82 |  p1  |   2  |  10  |   20   ||    9    |
+| grp_Filter2D_fu_82 |  p2  |   2  |  11  |   22   ||    9    |
+|--------------------|------|------|------|--------||---------||---------|
+|        Total       |      |      |      |   42   ||  3.538  ||    18   |
+|--------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    5   |   19   |   15   |  1003  |  2432  |    0   |
+|   Memory  |    -   |    -   |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    3   |    -   |   18   |    -   |
+|  Register |    -   |    -   |    -   |   21   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |    5   |   19   |   19   |  1024  |  2450  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

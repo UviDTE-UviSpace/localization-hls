@@ -21,14 +21,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>191</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>316707</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.069 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.430 ms</Worst-caseRealTimeLatency>
-<Interval-min>191</Interval-min>
-<Interval-max>316707</Interval-max>
+<Best-caseLatency>315401</Best-caseLatency>
+<Average-caseLatency>315401</Average-caseLatency>
+<Worst-caseLatency>315401</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.416 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.416 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>3.416 ms</Worst-caseRealTimeLatency>
+<Interval-min>315401</Interval-min>
+<Interval-max>315401</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
@@ -36,8 +36,8 @@
 <Resources>
 <BRAM_18K>5</BRAM_18K>
 <DSP48E>19</DSP48E>
-<FF>1381</FF>
-<LUT>2797</LUT>
+<FF>1105</FF>
+<LUT>1830</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -122,72 +122,6 @@
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_src_rows_V_dout</name>
-<Object>p_src_rows_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>10</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_src_rows_V_empty_n</name>
-<Object>p_src_rows_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_src_rows_V_read</name>
-<Object>p_src_rows_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_src_cols_V_dout</name>
-<Object>p_src_cols_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>11</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_src_cols_V_empty_n</name>
-<Object>p_src_cols_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_src_cols_V_read</name>
-<Object>p_src_cols_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>

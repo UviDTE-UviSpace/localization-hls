@@ -4,7 +4,7 @@
 // ==============================================================
 #ifndef __filter_mac_muladdtde__HH__
 #define __filter_mac_muladdtde__HH__
-#include "simcore_mac_9.h"
+#include "simcore_mac_8.h"
 #include <systemc>
 
 template<
@@ -22,13 +22,13 @@ SC_MODULE(filter_mac_muladdtde) {
 
 
 
-    simcore_mac_9<ID, 1, din0_WIDTH, din1_WIDTH, din2_WIDTH, dout_WIDTH> simcore_mac_9_U;
+    simcore_mac_8<ID, 1, din0_WIDTH, din1_WIDTH, din2_WIDTH, dout_WIDTH> simcore_mac_8_U;
 
-    SC_CTOR(filter_mac_muladdtde):  simcore_mac_9_U ("simcore_mac_9_U") {
-        simcore_mac_9_U.din0(din0);
-        simcore_mac_9_U.din1(din1);
-        simcore_mac_9_U.din2(din2);
-        simcore_mac_9_U.dout(dout);
+    SC_CTOR(filter_mac_muladdtde):  simcore_mac_8_U ("simcore_mac_8_U") {
+        simcore_mac_8_U.din0(din0);
+        simcore_mac_8_U.din1(din1);
+        simcore_mac_8_U.din2(din2);
+        simcore_mac_8_U.dout(dout);
 
     }
 

@@ -37,24 +37,29 @@
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/ap_axi_sdata.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/ap_axi_sdata.h</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/Mat2AXIvideo_DMA.h</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/Mat2AXIvideo_DMA.h</location>
+		</link>
+		<link>
 			<name>source/filters.cpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.cpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/filters.cpp</location>
 		</link>
 		<link>
 			<name>source/filters.hpp</name>
 			<type>1</type>
-			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.hpp</location>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/filters.hpp</location>
+		</link>
+		<link>
+			<name>testbench/IplImage2AXIvideo_DMA.h</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter_Minized_2/IplImage2AXIvideo_DMA.h</location>
 		</link>
 		<link>
 			<name>testbench/filters_tb.cpp</name>

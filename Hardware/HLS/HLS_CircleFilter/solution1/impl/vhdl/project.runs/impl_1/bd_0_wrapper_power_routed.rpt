@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Tue Apr 28 16:27:52 2020
+| Date             : Thu May 14 17:11:49 2020
 | Host             : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 | Command          : report_power -file bd_0_wrapper_power_routed.rpt -pb bd_0_wrapper_power_summary_routed.pb -rpx bd_0_wrapper_power_routed.rpx
 | Design           : bd_0_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.005 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     3322 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     1518 |     53200 |            2.85 |
-|   CARRY4                |    <0.001 |      280 |     13300 |            2.11 |
-|   Register              |    <0.001 |     1173 |    106400 |            1.10 |
-|   Others                |     0.000 |      124 |       --- |             --- |
+| Slice Logic             |     0.003 |     3228 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     1497 |     53200 |            2.81 |
+|   CARRY4                |    <0.001 |      283 |     13300 |            2.13 |
+|   Register              |    <0.001 |     1112 |    106400 |            1.05 |
+|   Others                |     0.000 |      115 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |        6 |     17400 |            0.03 |
-| Signals                 |     0.004 |     3020 |       --- |             --- |
+| Signals                 |     0.004 |     2990 |       --- |             --- |
 | Block RAM               |    <0.001 |      2.5 |       140 |            1.79 |
-| DSPs                    |     0.020 |       23 |       220 |           10.45 |
+| DSPs                    |     0.019 |       23 |       220 |           10.45 |
 | Static Power            |     0.103 |          |           |                 |
 | Total                   |     0.135 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.040 |       0.032 |      0.008 |
+| Vccint    |       1.000 |     0.039 |       0.031 |      0.008 |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

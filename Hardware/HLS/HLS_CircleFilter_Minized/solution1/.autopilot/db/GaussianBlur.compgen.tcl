@@ -10,37 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 68 \
-    name p_src_rows_V \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_src_rows_V \
-    op interface \
-    ports { p_src_rows_V_dout { I 10 vector } p_src_rows_V_empty_n { I 1 bit } p_src_rows_V_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 69 \
-    name p_src_cols_V \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_src_cols_V \
-    op interface \
-    ports { p_src_cols_V_dout { I 11 vector } p_src_cols_V_empty_n { I 1 bit } p_src_cols_V_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 70 \
+    id 80 \
     name p_src_data_stream_V \
     type fifo \
     dir I \
@@ -55,7 +25,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 71 \
+    id 81 \
     name p_dst_data_stream_V \
     type fifo \
     dir O \

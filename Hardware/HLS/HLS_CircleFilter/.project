@@ -42,6 +42,11 @@
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/Mat2AXIvideo_DMA.h</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/Mat2AXIvideo_DMA.h</location>
+		</link>
+		<link>
 			<name>source/filters.cpp</name>
 			<type>1</type>
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.cpp</location>
@@ -50,6 +55,11 @@
 			<name>source/filters.hpp</name>
 			<type>1</type>
 			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/filters.hpp</location>
+		</link>
+		<link>
+			<name>testbench/IplImage2AXIvideo_DMA.h</name>
+			<type>1</type>
+			<location>C:/localization-hls/Hardware/HLS/HLS_CircleFilter/IplImage2AXIvideo_DMA.h</location>
 		</link>
 		<link>
 			<name>testbench/filters_tb.cpp</name>

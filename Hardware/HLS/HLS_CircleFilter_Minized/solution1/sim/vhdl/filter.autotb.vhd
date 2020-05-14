@@ -58,8 +58,6 @@ entity apatb_filter_top is
        AUTOTB_TVOUT_video_out_V_dest_V_out_wrapc : STRING := "../tv/rtldatafile/rtl.filter.autotvout_video_out_V_dest_V.dat";
       AUTOTB_LAT_RESULT_FILE    : STRING  := "filter.result.lat.rb";
       AUTOTB_PER_RESULT_TRANS_FILE    : STRING  := "filter.performance.result.transaction.xml";
-      AUTOTB_II    : INTEGER :=316708;
-      AUTOTB_LATENCY     : INTEGER :=316711;
       LENGTH_video_in_V_data_V     : INTEGER := 307200;
       LENGTH_video_in_V_keep_V     : INTEGER := 307200;
       LENGTH_video_in_V_strb_V     : INTEGER := 307200;
@@ -98,26 +96,30 @@ architecture behav of apatb_filter_top is
   signal ready :   STD_LOGIC := '0';
   signal ready_wire :   STD_LOGIC := '0';
 
-  signal video_in_TDATA :  STD_LOGIC_VECTOR (15 DOWNTO 0);
-  signal video_in_TKEEP :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-  signal video_in_TSTRB :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal video_in_TDATA :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+  signal video_in_TKEEP :  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal video_in_TSTRB :  STD_LOGIC_VECTOR (3 DOWNTO 0);
   signal video_in_TUSER :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TLAST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TID :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_in_TDEST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
-  signal video_out_TDATA :  STD_LOGIC_VECTOR (15 DOWNTO 0);
-  signal video_out_TKEEP :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-  signal video_out_TSTRB :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+  signal video_out_TDATA :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+  signal video_out_TKEEP :  STD_LOGIC_VECTOR (3 DOWNTO 0);
+  signal video_out_TSTRB :  STD_LOGIC_VECTOR (3 DOWNTO 0);
   signal video_out_TUSER :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_out_TLAST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_out_TID :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal video_out_TDEST :  STD_LOGIC_VECTOR (0 DOWNTO 0);
   signal ap_clk :  STD_LOGIC;
   signal ap_rst_n :  STD_LOGIC;
+  signal ap_start :  STD_LOGIC;
   signal video_in_TVALID :  STD_LOGIC;
   signal video_in_TREADY :  STD_LOGIC;
   signal video_out_TVALID :  STD_LOGIC;
   signal video_out_TREADY :  STD_LOGIC;
+  signal ap_done :  STD_LOGIC;
+  signal ap_ready :  STD_LOGIC;
+  signal ap_idle :  STD_LOGIC;
 
   signal ready_cnt : STD_LOGIC_VECTOR(31 DOWNTO 0);
   signal done_cnt	: STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -127,132 +129,6 @@ architecture behav of apatb_filter_top is
   signal ready_delay_last_n	:   STD_LOGIC;
   signal done_delay_last_n	:   STD_LOGIC;
   signal interface_done :	STD_LOGIC := '0';
-signal ap_c_n_tvin_trans_num_video_in_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_in_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_in_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_in_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_in_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_in_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_in_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_video_out_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_in_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvin_trans_num_reg_video_out_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_data_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_keep_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_strb_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_user_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_last_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_id_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_dest_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_data_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_keep_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_strb_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_user_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_last_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_id_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_dest_V_in_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_data_V_in_end: STD_LOGIC;
-signal video_in_V_keep_V_in_end: STD_LOGIC;
-signal video_in_V_strb_V_in_end: STD_LOGIC;
-signal video_in_V_user_V_in_end: STD_LOGIC;
-signal video_in_V_last_V_in_end: STD_LOGIC;
-signal video_in_V_id_V_in_end: STD_LOGIC;
-signal video_in_V_dest_V_in_end: STD_LOGIC;
-signal video_out_V_data_V_in_end: STD_LOGIC;
-signal video_out_V_keep_V_in_end: STD_LOGIC;
-signal video_out_V_strb_V_in_end: STD_LOGIC;
-signal video_out_V_user_V_in_end: STD_LOGIC;
-signal video_out_V_last_V_in_end: STD_LOGIC;
-signal video_out_V_id_V_in_end: STD_LOGIC;
-signal video_out_V_dest_V_in_end: STD_LOGIC;
-signal video_in_V_data_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_keep_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_strb_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_user_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_last_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_id_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_dest_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_data_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_keep_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_strb_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_user_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_last_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_id_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_dest_V_in_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_in_V_data_V_in_size_vld: STD_LOGIC;
-signal video_in_V_keep_V_in_size_vld: STD_LOGIC;
-signal video_in_V_strb_V_in_size_vld: STD_LOGIC;
-signal video_in_V_user_V_in_size_vld: STD_LOGIC;
-signal video_in_V_last_V_in_size_vld: STD_LOGIC;
-signal video_in_V_id_V_in_size_vld: STD_LOGIC;
-signal video_in_V_dest_V_in_size_vld: STD_LOGIC;
-signal video_out_V_data_V_in_size_vld: STD_LOGIC;
-signal video_out_V_keep_V_in_size_vld: STD_LOGIC;
-signal video_out_V_strb_V_in_size_vld: STD_LOGIC;
-signal video_out_V_user_V_in_size_vld: STD_LOGIC;
-signal video_out_V_last_V_in_size_vld: STD_LOGIC;
-signal video_out_V_id_V_in_size_vld: STD_LOGIC;
-signal video_out_V_dest_V_in_size_vld: STD_LOGIC;
-signal ap_c_n_tvout_trans_num_video_out_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_video_out_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_video_out_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_video_out_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_video_out_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_video_out_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_video_out_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-signal ap_c_n_tvout_trans_num_reg_video_out_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvout_trans_num_reg_video_out_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvout_trans_num_reg_video_out_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvout_trans_num_reg_video_out_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvout_trans_num_reg_video_out_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvout_trans_num_reg_video_out_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal ap_c_n_tvout_trans_num_reg_video_out_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_data_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_keep_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_strb_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_user_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_last_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_id_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_dest_V_out_i: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_data_V_out_end: STD_LOGIC;
-signal video_out_V_keep_V_out_end: STD_LOGIC;
-signal video_out_V_strb_V_out_end: STD_LOGIC;
-signal video_out_V_user_V_out_end: STD_LOGIC;
-signal video_out_V_last_V_out_end: STD_LOGIC;
-signal video_out_V_id_V_out_end: STD_LOGIC;
-signal video_out_V_dest_V_out_end: STD_LOGIC;
-signal video_out_V_data_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_keep_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_strb_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_user_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_last_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_id_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_dest_V_out_size: STD_LOGIC_VECTOR(31 DOWNTO 0);
-signal video_out_V_data_V_out_size_vld: STD_LOGIC;
-signal video_out_V_keep_V_out_size_vld: STD_LOGIC;
-signal video_out_V_strb_V_out_size_vld: STD_LOGIC;
-signal video_out_V_user_V_out_size_vld: STD_LOGIC;
-signal video_out_V_last_V_out_size_vld: STD_LOGIC;
-signal video_out_V_id_V_out_size_vld: STD_LOGIC;
-signal video_out_V_dest_V_out_size_vld: STD_LOGIC;
   -- Subtype for random state number, to prevent confusing it with true integers
   -- Top of range should be (2**31)-1 but this literal calculation causes overflow on 32-bit machines
   subtype T_RANDINT is integer range 1 to integer'high;
@@ -267,26 +143,30 @@ signal video_out_V_dest_V_out_size_vld: STD_LOGIC;
   shared variable reported_stuck_cnt : INTEGER := 0;
 component filter is
 port (
-    video_in_TDATA :  IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-    video_in_TKEEP :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
-    video_in_TSTRB :  IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+    video_in_TDATA :  IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+    video_in_TKEEP :  IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+    video_in_TSTRB :  IN STD_LOGIC_VECTOR (3 DOWNTO 0);
     video_in_TUSER :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TLAST :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TID :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_in_TDEST :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
-    video_out_TDATA :  OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
-    video_out_TKEEP :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-    video_out_TSTRB :  OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    video_out_TDATA :  OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+    video_out_TKEEP :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    video_out_TSTRB :  OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
     video_out_TUSER :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_out_TLAST :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_out_TID :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     video_out_TDEST :  OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     ap_clk :  IN STD_LOGIC;
     ap_rst_n :  IN STD_LOGIC;
+    ap_start :  IN STD_LOGIC;
     video_in_TVALID :  IN STD_LOGIC;
     video_in_TREADY :  OUT STD_LOGIC;
     video_out_TVALID :  OUT STD_LOGIC;
-    video_out_TREADY :  IN STD_LOGIC);
+    video_out_TREADY :  IN STD_LOGIC;
+    ap_done :  OUT STD_LOGIC;
+    ap_ready :  OUT STD_LOGIC;
+    ap_idle :  OUT STD_LOGIC);
 end component;
 
 signal video_in_ready :   STD_LOGIC := '0';
@@ -295,6 +175,14 @@ signal axi_s_video_in_TVALID :   STD_LOGIC := '0';
 signal axi_s_video_in_TREADY :   STD_LOGIC := '0';
 signal reg_video_in_TVALID :   STD_LOGIC := '0';
 signal reg_video_in_TREADY :   STD_LOGIC := '0';
+signal ap_c_n_tvin_trans_num_video_in_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvin_trans_num_video_in_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvin_trans_num_video_in_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvin_trans_num_video_in_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvin_trans_num_video_in_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvin_trans_num_video_in_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvin_trans_num_video_in_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal   video_in_ready_reg :   STD_LOGIC := '0';
 
 component AESL_axi_s_video_in is
   port(
@@ -327,6 +215,14 @@ signal axi_s_video_out_TVALID :   STD_LOGIC := '0';
 signal axi_s_video_out_TREADY :   STD_LOGIC := '0';
 signal reg_video_out_TVALID :   STD_LOGIC := '0';
 signal reg_video_out_TREADY :   STD_LOGIC := '0';
+signal ap_c_n_tvout_trans_num_video_out_V_data_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvout_trans_num_video_out_V_keep_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvout_trans_num_video_out_V_strb_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvout_trans_num_video_out_V_user_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvout_trans_num_video_out_V_last_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvout_trans_num_video_out_V_id_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal ap_c_n_tvout_trans_num_video_out_V_dest_V : STD_LOGIC_VECTOR(31 DOWNTO 0) := conv_std_logic_vector(1, 32);
+signal   video_out_ready_reg :   STD_LOGIC := '0';
 
 component AESL_axi_s_video_out is
   port(
@@ -683,19 +579,51 @@ AESL_inst_filter    :   filter port map (
    video_out_TDEST  =>  video_out_TDEST,
    ap_clk  =>  ap_clk,
    ap_rst_n  =>  ap_rst_n,
+   ap_start  =>  ap_start,
    video_in_TVALID  =>  video_in_TVALID,
    video_in_TREADY  =>  video_in_TREADY,
    video_out_TVALID  =>  video_out_TVALID,
-   video_out_TREADY  =>  video_out_TREADY
+   video_out_TREADY  =>  video_out_TREADY,
+   ap_done  =>  ap_done,
+   ap_ready  =>  ap_ready,
+   ap_idle  =>  ap_idle
 );
 
 -- Assignment for control signal
   ap_clk <= AESL_clock;
   ap_rst_n <= AESL_reset;
   AESL_reset <= rst;
+  ap_start <= AESL_start;
   AESL_start <= start;
+  AESL_done <= ap_done;
+  AESL_ready <= ap_ready;
+  AESL_idle <= ap_idle;
   AESL_ce <= ce;
   AESL_continue <= continue;
+gen_check_strlSignal_AESL_done_proc : process(AESL_clock)
+begin
+  if (AESL_clock'event and AESL_clock = '1') then
+    if(AESL_reset = '0') then
+      NULL;
+    else
+        if ( AESL_done /= '1' and AESL_done /= '0' ) then
+            assert false report "Control signal AESL_done is invalid!" severity failure;
+        end if;
+    end if;
+  end if;
+end process;
+gen_check_strlSignal_AESL_ready_proc : process(AESL_clock)
+begin
+  if (AESL_clock'event and AESL_clock = '1') then
+    if(AESL_reset = '0') then
+      NULL;
+    else
+        if ( AESL_ready /= '1' and AESL_ready /= '0' ) then
+            assert false report "Control signal AESL_ready is invalid!" severity failure;
+        end if;
+    end if;
+  end if;
+end process;
 AESL_axi_s_inst_video_in : AESL_axi_s_video_in port map (
     clk   =>   AESL_clock,
     reset =>   AESL_reset,
@@ -718,7 +646,7 @@ AESL_axi_s_inst_video_in : AESL_axi_s_video_in port map (
     ready   =>   video_in_ready,
     done    =>   video_in_done
 );
-video_in_ready   <=   ready;
+video_in_ready   <=   video_in_ready_reg or ready_initial;
 video_in_done    <=   '0';
 
 video_in_TVALID    <=   axi_s_video_in_TVALID;
@@ -832,7 +760,6 @@ end process;
 gen_start_proc : process
     variable  rand            :   T_RANDINT     := init_rand(0);
     variable  rint            :   INTEGER;
-    variable  wait_i          :   INTEGER;
 begin
   start <= '0';
   ce <= '1';
@@ -841,7 +768,11 @@ begin
   start <= '1';
   while(ready_cnt /= AUTOTB_TRANSACTION_NUM + 1) loop
       wait until (AESL_clock'event and AESL_clock = '1');
-end loop;
+      if(AESL_ready = '1') then
+          start <= '0';
+          start <= '1';
+      end if;
+  end loop;
   start <= '0';
   wait;
 end process;
@@ -873,15 +804,6 @@ begin
     wait;
 end process;
 
-gen_ready_initial_n_proc : process
-begin
-    ready_initial_n <= '0';
-    wait until AESL_reset = '1';
-    wait until AESL_clock'event and AESL_clock = '1';
-    ready_initial_n <= '1';
-    wait;
-end process;
-
 ready_last_n_proc : process
 begin
   ready_last_n <= '1';
@@ -892,8 +814,19 @@ begin
   wait;
 end process;
 
+gen_ready_delay_n_last_proc : process(AESL_clock)
+begin
+  if (AESL_clock'event and AESL_clock = '1') then
+    if(AESL_reset = '0') then
+          ready_delay_last_n <= '0';
+      else
+          ready_delay_last_n <= ready_last_n;
+      end if;
+  end if;
+end process;
+
 ready <= (ready_initial or AESL_ready_delay);
-ready_wire <= ready;
+ready_wire <= ready_initial or AESL_ready_delay;
 done_delay_last_n <= '0' when done_cnt = AUTOTB_TRANSACTION_NUM else '1';
 
 gen_done_delay_proc : process(AESL_clock)
@@ -920,31 +853,35 @@ begin
     end if;
 end process;
 
-proc_ap_c_n_mLatCnterIn : process
+proc_gen_video_in_internal_ready : process
+variable    internal_trans_num :   INTEGER;
 begin
+    wait until AESL_reset = '1';
+    wait until ready_initial = '1';
+    video_in_ready_reg <= '0';
     wait until AESL_clock'event and AESL_clock = '1';
-    AESL_mLatCnterIn_addr := 0;
-    while (AESL_start = '0') loop
-        wait until AESL_clock'event and AESL_clock = '1';
-    end loop;
-    AESL_mLatCnterIn(AESL_mLatCnterIn_addr) := AESL_clk_counter;
-    AESL_mLatCnterIn_addr := AESL_mLatCnterIn_addr + 1;
-    while ( true ) loop
-        wait until AESL_clock'event and AESL_clock = '1';
-        if (ready = '1') then
-            if (AESL_mLatCnterIn_addr < AUTOTB_TRANSACTION_NUM ) then
-                AESL_mLatCnterIn(AESL_mLatCnterIn_addr) := AESL_clk_counter;
-                AESL_mLatCnterIn_addr := AESL_mLatCnterIn_addr + 1;
-            end if;
+    internal_trans_num := 1;
+    while(internal_trans_num /= AUTOTB_TRANSACTION_NUM + 1) loop
+      if (true 
+          and ap_c_n_tvin_trans_num_video_in_V_data_V > internal_trans_num
+          and ap_c_n_tvin_trans_num_video_in_V_keep_V > internal_trans_num
+          and ap_c_n_tvin_trans_num_video_in_V_strb_V > internal_trans_num
+          and ap_c_n_tvin_trans_num_video_in_V_user_V > internal_trans_num
+          and ap_c_n_tvin_trans_num_video_in_V_last_V > internal_trans_num
+          and ap_c_n_tvin_trans_num_video_in_V_id_V > internal_trans_num
+          and ap_c_n_tvin_trans_num_video_in_V_dest_V > internal_trans_num
+      ) then
+            video_in_ready_reg <= '1';
+            wait until AESL_clock'event and AESL_clock = '1';
+            video_in_ready_reg <= '0';
+            internal_trans_num := internal_trans_num + 1;
+        else
+            wait until AESL_clock'event and AESL_clock = '1';
         end if;
     end loop;
+    video_in_ready_reg <= '0';
     wait;
 end process;
-
-AESL_ready <= '1' when ((ap_c_n_tvin_trans_num_video_in_V_data_V > ready_cnt) and (ap_c_n_tvin_trans_num_video_in_V_keep_V > ready_cnt) and (ap_c_n_tvin_trans_num_video_in_V_strb_V > ready_cnt) and (ap_c_n_tvin_trans_num_video_in_V_user_V > ready_cnt) and (ap_c_n_tvin_trans_num_video_in_V_last_V > ready_cnt) and (ap_c_n_tvin_trans_num_video_in_V_id_V > ready_cnt) and (ap_c_n_tvin_trans_num_video_in_V_dest_V > ready_cnt)) and (ready_cnt /= AUTOTB_TRANSACTION_NUM + 1) else '0';
-
-AESL_done <= '1' when (ap_c_n_tvout_trans_num_video_out_V_data_V > done_cnt) and (ap_c_n_tvout_trans_num_video_out_V_keep_V > done_cnt) and (ap_c_n_tvout_trans_num_video_out_V_strb_V > done_cnt) and (ap_c_n_tvout_trans_num_video_out_V_user_V > done_cnt) and (ap_c_n_tvout_trans_num_video_out_V_last_V > done_cnt) and (ap_c_n_tvout_trans_num_video_out_V_id_V > done_cnt) and (ap_c_n_tvout_trans_num_video_out_V_dest_V > done_cnt) else '0';
-
 -- Write "[[[runtime]]]" and "[[[/runtime]]]" for output transactor 
 write_output_transactor_video_out_V_data_V_runtime_proc : process
   file        fp              :   TEXT;
@@ -1187,7 +1124,7 @@ begin
               reported_stuck <= '0';
           elsif (reported_stuck = '0' and reported_stuck_cnt < 4) then
               if ( AESL_mLatCnterIn_addr > AESL_mLatCnterOut_addr ) then
-                  -- if ( AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000 and AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10 * 316711 ) then
+                  -- if ( AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000 and AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10 * 315409 ) then
                   if ( AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000 and AESL_clk_counter - AESL_mLatCnterIn(AESL_mLatCnterOut_addr) > 10000000 ) then
                       report "WARNING: The latency is much larger than expected. Simulation may be stuck.";
                       reported_stuck <= '1';
@@ -1195,6 +1132,23 @@ begin
                   end if;
               end if;
           end if;
+      end if;
+  end if;
+end process;
+
+gen_mLatcnterin_proc : process(AESL_clock)
+begin
+  if (AESL_clock'event and AESL_clock = '1') then
+    if(AESL_reset = '0') then
+          AESL_mLatCnterIn_addr := 0;
+      else
+    if (AESL_start = '1' and AESL_mLatCnterIn_addr = 0) then
+        AESL_mLatCnterIn(AESL_mLatCnterIn_addr) := AESL_clk_counter;
+        AESL_mLatCnterIn_addr := AESL_mLatCnterIn_addr + 1;
+    elsif (AESL_ready = '1' and AESL_mLatCnterIn_addr < AUTOTB_TRANSACTION_NUM + 1 ) then
+        AESL_mLatCnterIn(AESL_mLatCnterIn_addr) := AESL_clk_counter;
+        AESL_mLatCnterIn_addr := AESL_mLatCnterIn_addr + 1;
+    end if;
       end if;
   end if;
 end process;

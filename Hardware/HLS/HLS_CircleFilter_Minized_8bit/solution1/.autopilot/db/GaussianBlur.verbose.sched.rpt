@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vivado HLS Report for 'GaussianBlur'
+================================================================
+* Date:           Thu May 14 00:43:25 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        HLS_CircleFilter_Minized_8bit
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z007s-clg225-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 10.00 ns | 10.831 ns |   1.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   | min |   max  |   Type  |
+    +---------+---------+----------+----------+-----+--------+---------+
+    |      191|   316707| 2.069 us | 3.430 ms |  191|  316707|   none  |
+    +---------+---------+----------+----------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.36>
+ST_1 : Operation 3 [1/1] (3.63ns)   --->   "%p_src_rows_V_read = call i10 @_ssdm_op_Read.ap_fifo.i10P(i10* %p_src_rows_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 3 'read' 'p_src_rows_V_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 4 [1/1] (3.63ns)   --->   "%p_src_cols_V_read = call i11 @_ssdm_op_Read.ap_fifo.i11P(i11* %p_src_cols_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 4 'read' 'p_src_cols_V_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [2/2] (1.73ns)   --->   "call fastcc void @Filter2D(i10 %p_src_rows_V_read, i11 %p_src_cols_V_read, i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2678->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 5 'call' <Predicate = true> <Delay = 1.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str191, i32 0, i32 0, [1 x i8]* @p_str192, [1 x i8]* @p_str193, [1 x i8]* @p_str194, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str195, [1 x i8]* @p_str196)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str184, i32 0, i32 0, [1 x i8]* @p_str185, [1 x i8]* @p_str186, [1 x i8]* @p_str187, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str188, [1 x i8]* @p_str189)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i10* %p_src_rows_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str293, i32 0, i32 0, [1 x i8]* @p_str294, [1 x i8]* @p_str295, [1 x i8]* @p_str296, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str297, [11 x i8]* @ScalarProp_str)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %p_src_cols_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str298, i32 0, i32 0, [1 x i8]* @p_str299, [1 x i8]* @p_str300, [1 x i8]* @p_str301, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str302, [11 x i8]* @ScalarProp_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (0.00ns)   --->   "call fastcc void @Filter2D(i10 %p_src_rows_V_read, i11 %p_src_cols_V_read, i8* %p_src_data_stream_V, i8* %p_dst_data_stream_V)" [C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2678->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688]   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 11 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.37ns
+The critical path consists of the following:
+	fifo read on port 'p_src_rows_V' (C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688) [9]  (3.63 ns)
+	'call' operation ('call_ln2678', C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2678->C:/Xilinx/Vivado/2019.2/common/technology/autopilot/hls/hls_video_imgproc.h:2688) to 'Filter2D' [11]  (1.73 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,10 +1,10 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filter'" level="0">
-<item name = "Date">Thu May  7 15:10:50 2020
+<item name = "Date">Thu May 14 01:38:28 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
-<item name = "Project">HLS_CircleFilter_Minized</item>
+<item name = "Project">HLS_CircleFilter_Minized_2</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z007s-clg225-1</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">195, 316711, 2.112 us, 3.430 ms, 192, 316708, dataflow</column>
+<column name="">193, 316709, 2.090 us, 3.430 ms, 192, 316708, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,9 +32,9 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="GaussianBlur_U0">GaussianBlur, 191, 316707, 2.069 us, 3.430 ms, 191, 316707, none</column>
-<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 309603, 32.493 ns, 3.353 ms, 3, 309603, none</column>
-<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
+<column name="Mat2AXIvideo_DMA_U0">Mat2AXIvideo_DMA, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
 <column name="Threshold_U0">Threshold, 1, 309121, 10.831 ns, 3.348 ms, 1, 309121, none</column>
+<column name="AXIvideo2Mat_DMA_U0">AXIvideo2Mat_DMA, 1, 308641, 10.831 ns, 3.343 ms, 1, 308641, none</column>
 <column name="Block_proc_U0">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
 </table>
 </item>
@@ -54,22 +54,22 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">0, -, 55, 240, -</column>
-<column name="Instance">5, 19, 2030, 3853, 0</column>
+<column name="Instance">5, 19, 1971, 3747, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, -, -</column>
 <column name="Register">-, -, -, -, -</column>
 <specialColumn name="Available">100, 66, 28800, 14400, 0</specialColumn>
-<specialColumn name="Utilization (%)">5, 28, 7, 28, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, 28, 7, 27, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 269, 427, 0</column>
+<column name="AXIvideo2Mat_DMA_U0">AXIvideo2Mat_DMA, 0, 0, 177, 258, 0</column>
 <column name="Block_proc_U0">Block_proc, 0, 0, 3, 56, 0</column>
 <column name="GaussianBlur_U0">GaussianBlur, 5, 19, 1381, 2797, 0</column>
-<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 205, 299, 0</column>
+<column name="Mat2AXIvideo_DMA_U0">Mat2AXIvideo_DMA, 0, 0, 238, 362, 0</column>
 <column name="Threshold_U0">Threshold, 0, 0, 172, 274, 0</column>
 </table>
 </item>
@@ -115,18 +115,18 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="video_in_TDATA">in, 16, axis, video_in_V_data_V, pointer</column>
-<column name="video_in_TKEEP">in, 2, axis, video_in_V_keep_V, pointer</column>
-<column name="video_in_TSTRB">in, 2, axis, video_in_V_strb_V, pointer</column>
+<column name="video_in_TDATA">in, 8, axis, video_in_V_data_V, pointer</column>
+<column name="video_in_TKEEP">in, 1, axis, video_in_V_keep_V, pointer</column>
+<column name="video_in_TSTRB">in, 1, axis, video_in_V_strb_V, pointer</column>
 <column name="video_in_TUSER">in, 1, axis, video_in_V_user_V, pointer</column>
 <column name="video_in_TLAST">in, 1, axis, video_in_V_last_V, pointer</column>
 <column name="video_in_TID">in, 1, axis, video_in_V_id_V, pointer</column>
 <column name="video_in_TDEST">in, 1, axis, video_in_V_dest_V, pointer</column>
 <column name="video_in_TVALID">in, 1, axis, video_in_V_dest_V, pointer</column>
 <column name="video_in_TREADY">out, 1, axis, video_in_V_dest_V, pointer</column>
-<column name="video_out_TDATA">out, 16, axis, video_out_V_data_V, pointer</column>
-<column name="video_out_TKEEP">out, 2, axis, video_out_V_keep_V, pointer</column>
-<column name="video_out_TSTRB">out, 2, axis, video_out_V_strb_V, pointer</column>
+<column name="video_out_TDATA">out, 8, axis, video_out_V_data_V, pointer</column>
+<column name="video_out_TKEEP">out, 1, axis, video_out_V_keep_V, pointer</column>
+<column name="video_out_TSTRB">out, 1, axis, video_out_V_strb_V, pointer</column>
 <column name="video_out_TUSER">out, 1, axis, video_out_V_user_V, pointer</column>
 <column name="video_out_TLAST">out, 1, axis, video_out_V_last_V, pointer</column>
 <column name="video_out_TID">out, 1, axis, video_out_V_id_V, pointer</column>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filter'" level="0">
-<item name = "Date">Thu May  7 15:10:46 2020
+<item name = "Date">Tue May 12 16:47:56 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">HLS_CircleFilter_Minized</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">195, 316711, 2.112 us, 3.430 ms, 192, 316708, dataflow</column>
+<column name="">315409, 315409, 3.416 ms, 3.416 ms, 315402, 315402, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

@@ -33,11 +33,11 @@ entity AESL_axi_s_video_in is
   port (
       clk         :   IN  STD_LOGIC;
       reset       :   IN  STD_LOGIC;
-    TRAN_video_in_TDATA : OUT STD_LOGIC_VECTOR (16 - 1 downto 0);
+    TRAN_video_in_TDATA : OUT STD_LOGIC_VECTOR (32 - 1 downto 0);
     video_in_TDATA_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-    TRAN_video_in_TKEEP : OUT STD_LOGIC_VECTOR (2 - 1 downto 0);
+    TRAN_video_in_TKEEP : OUT STD_LOGIC_VECTOR (4 - 1 downto 0);
     video_in_TKEEP_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-    TRAN_video_in_TSTRB : OUT STD_LOGIC_VECTOR (2 - 1 downto 0);
+    TRAN_video_in_TSTRB : OUT STD_LOGIC_VECTOR (4 - 1 downto 0);
     video_in_TSTRB_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
     TRAN_video_in_TUSER : OUT STD_LOGIC_VECTOR (1 - 1 downto 0);
     video_in_TUSER_trans_num : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -63,7 +63,7 @@ architecture behav of AESL_axi_s_video_in is
   signal  video_in_TDATA_mOutPtr :   STD_LOGIC_VECTOR (20 downto 0) := (others => '0');
   signal  video_in_TDATA_empty_n  :   STD_LOGIC;
   signal  video_in_TDATA_full_n   :   STD_LOGIC;
-  type video_in_TDATA_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(16 - 1 downto 0);
+  type video_in_TDATA_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(32 - 1 downto 0);
   signal video_in_TDATA_mem :   video_in_TDATA_arr2D := (others => (others => '0'));
   signal video_in_TDATA_ingress_status :  INTEGER;
   signal video_in_TDATA_ingress_status_bit :  STD_LOGIC;
@@ -80,7 +80,7 @@ architecture behav of AESL_axi_s_video_in is
   signal  video_in_TKEEP_mOutPtr :   STD_LOGIC_VECTOR (20 downto 0) := (others => '0');
   signal  video_in_TKEEP_empty_n  :   STD_LOGIC;
   signal  video_in_TKEEP_full_n   :   STD_LOGIC;
-  type video_in_TKEEP_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(2 - 1 downto 0);
+  type video_in_TKEEP_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(4 - 1 downto 0);
   signal video_in_TKEEP_mem :   video_in_TKEEP_arr2D := (others => (others => '0'));
   signal video_in_TKEEP_ingress_status :  INTEGER;
   signal video_in_TKEEP_ingress_status_bit :  STD_LOGIC;
@@ -97,7 +97,7 @@ architecture behav of AESL_axi_s_video_in is
   signal  video_in_TSTRB_mOutPtr :   STD_LOGIC_VECTOR (20 downto 0) := (others => '0');
   signal  video_in_TSTRB_empty_n  :   STD_LOGIC;
   signal  video_in_TSTRB_full_n   :   STD_LOGIC;
-  type video_in_TSTRB_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(2 - 1 downto 0);
+  type video_in_TSTRB_arr2D is array(0 to 307200) of STD_LOGIC_VECTOR(4 - 1 downto 0);
   signal video_in_TSTRB_mem :   video_in_TSTRB_arr2D := (others => (others => '0'));
   signal video_in_TSTRB_ingress_status :  INTEGER;
   signal video_in_TSTRB_ingress_status_bit :  STD_LOGIC;
@@ -691,7 +691,7 @@ end process;
               if (CONV_INTEGER(video_in_TDATA_mInPtr_var) > 307200 - 1) then
                   assert false report "Fifo overflow!" severity failure;
               end if;
-              video_in_TDATA_mem_var(CONV_INTEGER(video_in_TDATA_mInPtr_var)) := esl_str2lv_hex(token, 16);
+              video_in_TDATA_mem_var(CONV_INTEGER(video_in_TDATA_mInPtr_var)) := esl_str2lv_hex(token, 32);
               video_in_TDATA_mInPtr_var := esl_add(video_in_TDATA_mInPtr_var, "1");
               esl_read_token(fp, token_line, token);
               ingress_status_var := esl_str_dec2int(token_ingress_status);
@@ -711,7 +711,7 @@ end process;
       video_in_TDATA_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TDATA_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;
@@ -880,7 +880,7 @@ end process;
               if (CONV_INTEGER(video_in_TKEEP_mInPtr_var) > 307200 - 1) then
                   assert false report "Fifo overflow!" severity failure;
               end if;
-              video_in_TKEEP_mem_var(CONV_INTEGER(video_in_TKEEP_mInPtr_var)) := esl_str2lv_hex(token, 2);
+              video_in_TKEEP_mem_var(CONV_INTEGER(video_in_TKEEP_mInPtr_var)) := esl_str2lv_hex(token, 4);
               video_in_TKEEP_mInPtr_var := esl_add(video_in_TKEEP_mInPtr_var, "1");
               esl_read_token(fp, token_line, token);
               ingress_status_var := esl_str_dec2int(token_ingress_status);
@@ -900,7 +900,7 @@ end process;
       video_in_TKEEP_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TKEEP_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;
@@ -1069,7 +1069,7 @@ end process;
               if (CONV_INTEGER(video_in_TSTRB_mInPtr_var) > 307200 - 1) then
                   assert false report "Fifo overflow!" severity failure;
               end if;
-              video_in_TSTRB_mem_var(CONV_INTEGER(video_in_TSTRB_mInPtr_var)) := esl_str2lv_hex(token, 2);
+              video_in_TSTRB_mem_var(CONV_INTEGER(video_in_TSTRB_mInPtr_var)) := esl_str2lv_hex(token, 4);
               video_in_TSTRB_mInPtr_var := esl_add(video_in_TSTRB_mInPtr_var, "1");
               esl_read_token(fp, token_line, token);
               ingress_status_var := esl_str_dec2int(token_ingress_status);
@@ -1089,7 +1089,7 @@ end process;
       video_in_TSTRB_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TSTRB_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;
@@ -1278,7 +1278,7 @@ end process;
       video_in_TUSER_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TUSER_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;
@@ -1467,7 +1467,7 @@ end process;
       video_in_TLAST_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TLAST_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;
@@ -1656,7 +1656,7 @@ end process;
       video_in_TID_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TID_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;
@@ -1845,7 +1845,7 @@ end process;
       video_in_TDEST_load_TV_done <= '1';
       file_close(fp);
       wait until clk'event and clk = '0';
-      while (TRAN_video_in_TREADY /= '1') loop
+          while (video_in_TDEST_in_end_reg /= '1') loop
           wait until clk'event and clk = '0';
       end loop;
       wait;

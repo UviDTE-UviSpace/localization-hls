@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF1A33D6BB3FACF44",
+      "boundary_crc": "0xD3DB160FCCCD57EC",
       "device": "xc7z020clg484-1",
       "name": "bd_0",
       "synth_flow_mode": "Hierarchical",
@@ -17,7 +17,7 @@
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
           "TDATA_NUM_BYTES": {
-            "value": "2"
+            "value": "1"
           },
           "TDEST_WIDTH": {
             "value": "1"
@@ -65,7 +65,7 @@
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
           "TDATA_NUM_BYTES": {
-            "value": "2",
+            "value": "1",
             "value_src": "const_prop"
           },
           "TDEST_WIDTH": {

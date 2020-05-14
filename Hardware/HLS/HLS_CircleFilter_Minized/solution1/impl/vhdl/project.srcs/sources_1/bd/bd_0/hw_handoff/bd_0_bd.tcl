@@ -155,6 +155,8 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set ap_ctrl [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:acc_handshake_rtl:1.0 ap_ctrl ]
+
   set video_in [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 video_in ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000.0} \
@@ -163,7 +165,7 @@ proc create_root_design { parentCell } {
    CONFIG.HAS_TREADY {1} \
    CONFIG.HAS_TSTRB {1} \
    CONFIG.LAYERED_METADATA {undef} \
-   CONFIG.TDATA_NUM_BYTES {2} \
+   CONFIG.TDATA_NUM_BYTES {4} \
    CONFIG.TDEST_WIDTH {1} \
    CONFIG.TID_WIDTH {1} \
    CONFIG.TUSER_WIDTH {1} \
@@ -183,6 +185,7 @@ proc create_root_design { parentCell } {
   set hls_inst [ create_bd_cell -type ip -vlnv xilinx.com:hls:filter:1.0 hls_inst ]
 
   # Create interface connections
+  connect_bd_intf_net -intf_net ap_ctrl_0_1 [get_bd_intf_ports ap_ctrl] [get_bd_intf_pins hls_inst/ap_ctrl]
   connect_bd_intf_net -intf_net hls_inst_video_out [get_bd_intf_ports video_out] [get_bd_intf_pins hls_inst/video_out]
   connect_bd_intf_net -intf_net video_in_0_1 [get_bd_intf_ports video_in] [get_bd_intf_pins hls_inst/video_in]
 

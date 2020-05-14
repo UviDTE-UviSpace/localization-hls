@@ -9,7 +9,7 @@ add_files Simple_Adder/add_ex.c
 add_files Simple_Adder/add_ex.h
 add_files -tb Simple_Adder/add_tb.c
 open_solution "solution1"
-set_part {xc7z020clg484-1}
+set_part {xc7z020-clg484-1}
 create_clock -period 10 -name default
 #source "./Simple_Adder/solution1/directives.tcl"
 csim_design -clean -setup

@@ -16,9 +16,9 @@
 						<type>1</type>
 						<id>1</id>
 						<name>img_1_rows_V_out</name>
-						<fileName>HLS_CircleFilter/filters.cpp</fileName>
+						<fileName>HLS_CircleFilter_Minized_2/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo class_id="6" tracking_level="0" version="0">
 							<count>1</count>
@@ -30,10 +30,10 @@
 									<item_version>0</item_version>
 									<item class_id="9" tracking_level="0" version="0">
 										<first class_id="10" tracking_level="0" version="0">
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>21</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -58,9 +58,9 @@
 						<type>1</type>
 						<id>2</id>
 						<name>img_1_cols_V_out</name>
-						<fileName>HLS_CircleFilter/filters.cpp</fileName>
+						<fileName>HLS_CircleFilter_Minized_2/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -72,10 +72,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>21</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -100,9 +100,9 @@
 						<type>1</type>
 						<id>3</id>
 						<name>img_3_rows_V_out</name>
-						<fileName>HLS_CircleFilter/filters.cpp</fileName>
+						<fileName>HLS_CircleFilter_Minized_2/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>26</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -114,10 +114,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>23</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -142,9 +142,9 @@
 						<type>1</type>
 						<id>4</id>
 						<name>img_3_cols_V_out</name>
-						<fileName>HLS_CircleFilter/filters.cpp</fileName>
+						<fileName>HLS_CircleFilter_Minized_2/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<lineNumber>26</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -156,10 +156,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>23</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -216,10 +216,10 @@
 									</item>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>21</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -280,10 +280,10 @@
 									</item>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>21</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -344,10 +344,10 @@
 									</item>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>23</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -408,10 +408,10 @@
 									</item>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>23</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -443,10 +443,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>_ln25</name>
-						<fileName>HLS_CircleFilter/filters.cpp</fileName>
+						<name>_ln29</name>
+						<fileName>HLS_CircleFilter_Minized_2/filters.cpp</fileName>
 						<fileDirectory>C:\localization-hls\Hardware\HLS</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -458,10 +458,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>HLS_CircleFilter/filters.cpp</first>
+											<first>HLS_CircleFilter_Minized_2/filters.cpp</first>
 											<second>filter</second>
 										</first>
-										<second>25</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>

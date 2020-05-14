@@ -16,7 +16,7 @@
 namespace ap_rtl {
 
 struct GaussianBlur : public sc_module {
-    // Port declarations 19
+    // Port declarations 13
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
@@ -24,12 +24,6 @@ struct GaussianBlur : public sc_module {
     sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_in< sc_lv<10> > p_src_rows_V_dout;
-    sc_in< sc_logic > p_src_rows_V_empty_n;
-    sc_out< sc_logic > p_src_rows_V_read;
-    sc_in< sc_lv<11> > p_src_cols_V_dout;
-    sc_in< sc_logic > p_src_cols_V_empty_n;
-    sc_out< sc_logic > p_src_cols_V_read;
     sc_in< sc_lv<8> > p_src_data_stream_V_dout;
     sc_in< sc_logic > p_src_data_stream_V_empty_n;
     sc_out< sc_logic > p_src_data_stream_V_read;
@@ -46,26 +40,22 @@ struct GaussianBlur : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Filter2D* grp_Filter2D_fu_82;
+    Filter2D* grp_Filter2D_fu_40;
     sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_logic > p_src_rows_V_blk_n;
-    sc_signal< sc_logic > p_src_cols_V_blk_n;
-    sc_signal< sc_lv<10> > p_src_rows_V_read_reg_94;
-    sc_signal< bool > ap_block_state1;
-    sc_signal< sc_lv<11> > p_src_cols_V_read_reg_99;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_ap_start;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_ap_done;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_ap_idle;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_ap_ready;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_p_src_data_stream_V_read;
-    sc_signal< sc_lv<8> > grp_Filter2D_fu_82_p_dst_data_stream_V_din;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_p_dst_data_stream_V_write;
-    sc_signal< sc_logic > grp_Filter2D_fu_82_ap_start_reg;
-    sc_signal< bool > ap_block_state1_ignore_call6;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_ap_start;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_ap_done;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_ap_idle;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_ap_ready;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_p_src_data_stream_V_read;
+    sc_signal< sc_lv<8> > grp_Filter2D_fu_40_p_dst_data_stream_V_din;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_p_dst_data_stream_V_write;
+    sc_signal< sc_logic > grp_Filter2D_fu_40_ap_start_reg;
+    sc_signal< bool > ap_block_state1_ignore_call2;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_lv<2> > ap_NS_fsm;
+    sc_signal< bool > ap_block_state1;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<2> ap_ST_fsm_state1;
@@ -78,18 +68,14 @@ struct GaussianBlur : public sc_module {
     void thread_ap_CS_fsm_state1();
     void thread_ap_CS_fsm_state2();
     void thread_ap_block_state1();
-    void thread_ap_block_state1_ignore_call6();
+    void thread_ap_block_state1_ignore_call2();
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
-    void thread_grp_Filter2D_fu_82_ap_start();
+    void thread_grp_Filter2D_fu_40_ap_start();
     void thread_p_dst_data_stream_V_din();
     void thread_p_dst_data_stream_V_write();
-    void thread_p_src_cols_V_blk_n();
-    void thread_p_src_cols_V_read();
     void thread_p_src_data_stream_V_read();
-    void thread_p_src_rows_V_blk_n();
-    void thread_p_src_rows_V_read();
     void thread_ap_NS_fsm();
 };
 

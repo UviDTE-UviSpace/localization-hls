@@ -254,12 +254,12 @@ codeRepl:44  call fastcc void @Block__proc(i10* %img_1_rows_V_c, i11* %img_1_col
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="10" op_9_bw="11" op_10_bw="8" op_11_bw="10" op_12_bw="11" op_13_bw="0" op_14_bw="0">
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="10" op_9_bw="11" op_10_bw="8" op_11_bw="10" op_12_bw="11" op_13_bw="0" op_14_bw="0">
 <![CDATA[
-codeRepl:49  call fastcc void @AXIvideo2Mat(i16* %video_in_V_data_V, i2* %video_in_V_keep_V, i2* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)
+codeRepl:49  call fastcc void @AXIvideo2Mat_DMA(i8* %video_in_V_data_V, i1* %video_in_V_keep_V, i1* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)
 
 ]]></Node>
-<StgValue><ssdm name="call_ln25"/></StgValue>
+<StgValue><ssdm name="call_ln27"/></StgValue>
 </operation>
 </state>
 
@@ -272,12 +272,12 @@ codeRepl:49  call fastcc void @AXIvideo2Mat(i16* %video_in_V_data_V, i2* %video_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="10" op_9_bw="11" op_10_bw="8" op_11_bw="10" op_12_bw="11" op_13_bw="0" op_14_bw="0">
+<Node id="64" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="10" op_9_bw="11" op_10_bw="8" op_11_bw="10" op_12_bw="11" op_13_bw="0" op_14_bw="0">
 <![CDATA[
-codeRepl:49  call fastcc void @AXIvideo2Mat(i16* %video_in_V_data_V, i2* %video_in_V_keep_V, i2* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)
+codeRepl:49  call fastcc void @AXIvideo2Mat_DMA(i8* %video_in_V_data_V, i1* %video_in_V_keep_V, i1* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)
 
 ]]></Node>
-<StgValue><ssdm name="call_ln25"/></StgValue>
+<StgValue><ssdm name="call_ln27"/></StgValue>
 </operation>
 </state>
 
@@ -295,7 +295,7 @@ codeRepl:49  call fastcc void @AXIvideo2Mat(i16* %video_in_V_data_V, i2* %video_
 codeRepl:50  call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i11* nocapture %img_1_cols_V_c11, i8* %img_1_data_stream_0, i8* %img_2_data_stream_0)
 
 ]]></Node>
-<StgValue><ssdm name="call_ln27"/></StgValue>
+<StgValue><ssdm name="call_ln28"/></StgValue>
 </operation>
 </state>
 
@@ -313,7 +313,7 @@ codeRepl:50  call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i1
 codeRepl:50  call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i11* nocapture %img_1_cols_V_c11, i8* %img_1_data_stream_0, i8* %img_2_data_stream_0)
 
 ]]></Node>
-<StgValue><ssdm name="call_ln27"/></StgValue>
+<StgValue><ssdm name="call_ln28"/></StgValue>
 </operation>
 </state>
 
@@ -331,7 +331,7 @@ codeRepl:50  call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i1
 codeRepl:55  call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocapture %img_3_rows_V_c, i11* nocapture %img_3_cols_V_c, i8* %img_3_data_stream_0, i10* %img_3_rows_V_c12, i11* %img_3_cols_V_c13)
 
 ]]></Node>
-<StgValue><ssdm name="call_ln28"/></StgValue>
+<StgValue><ssdm name="call_ln29"/></StgValue>
 </operation>
 </state>
 
@@ -349,7 +349,7 @@ codeRepl:55  call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocaptur
 codeRepl:55  call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocapture %img_3_rows_V_c, i11* nocapture %img_3_cols_V_c, i8* %img_3_data_stream_0, i10* %img_3_rows_V_c12, i11* %img_3_cols_V_c13)
 
 ]]></Node>
-<StgValue><ssdm name="call_ln28"/></StgValue>
+<StgValue><ssdm name="call_ln29"/></StgValue>
 </operation>
 </state>
 
@@ -362,9 +362,9 @@ codeRepl:55  call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocaptur
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="0" op_0_bw="0" op_1_bw="10" op_2_bw="11" op_3_bw="8" op_4_bw="16" op_5_bw="2" op_6_bw="2" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="0" op_12_bw="0">
+<Node id="71" bw="0" op_0_bw="0" op_1_bw="10" op_2_bw="11" op_3_bw="8" op_4_bw="8" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="0" op_12_bw="0">
 <![CDATA[
-codeRepl:56  call fastcc void @Mat2AXIvideo(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i16* %video_out_V_data_V, i2* %video_out_V_keep_V, i2* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)
+codeRepl:56  call fastcc void @Mat2AXIvideo_DMA(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i8* %video_out_V_data_V, i1* %video_out_V_keep_V, i1* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)
 
 ]]></Node>
 <StgValue><ssdm name="call_ln30"/></StgValue>
@@ -380,9 +380,9 @@ codeRepl:56  call fastcc void @Mat2AXIvideo(i10* nocapture %img_3_rows_V_c12, i1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="0" op_0_bw="0" op_1_bw="10" op_2_bw="11" op_3_bw="8" op_4_bw="16" op_5_bw="2" op_6_bw="2" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="0" op_12_bw="0">
+<Node id="71" bw="0" op_0_bw="0" op_1_bw="10" op_2_bw="11" op_3_bw="8" op_4_bw="8" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="1" op_11_bw="0" op_12_bw="0">
 <![CDATA[
-codeRepl:56  call fastcc void @Mat2AXIvideo(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i16* %video_out_V_data_V, i2* %video_out_V_keep_V, i2* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)
+codeRepl:56  call fastcc void @Mat2AXIvideo_DMA(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i8* %video_out_V_data_V, i1* %video_out_V_keep_V, i1* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)
 
 ]]></Node>
 <StgValue><ssdm name="call_ln30"/></StgValue>
@@ -403,7 +403,7 @@ codeRepl:56  call fastcc void @Mat2AXIvideo(i10* nocapture %img_3_rows_V_c12, i1
 codeRepl:8  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln24"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln26"/></StgValue>
 </operation>
 
 <operation id="32" st_id="10" stage="1" lat="1">
@@ -413,9 +413,9 @@ codeRepl:8  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="0" op_0_bw="0" op_1_bw="16">
+<Node id="24" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-codeRepl:9  call void (...)* @_ssdm_op_SpecBitsMap(i16* %video_in_V_data_V), !map !337
+codeRepl:9  call void (...)* @_ssdm_op_SpecBitsMap(i8* %video_in_V_data_V), !map !335
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -428,9 +428,9 @@ codeRepl:9  call void (...)* @_ssdm_op_SpecBitsMap(i16* %video_in_V_data_V), !ma
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="25" bw="0" op_0_bw="0" op_1_bw="2">
+<Node id="25" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:10  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_in_V_keep_V), !map !341
+codeRepl:10  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_keep_V), !map !339
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -443,9 +443,9 @@ codeRepl:10  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_in_V_keep_V), !ma
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="26" bw="0" op_0_bw="0" op_1_bw="2">
+<Node id="26" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:11  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_in_V_strb_V), !map !345
+codeRepl:11  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_strb_V), !map !343
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -460,7 +460,7 @@ codeRepl:11  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_in_V_strb_V), !ma
 
 <Node id="27" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_user_V), !map !349
+codeRepl:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_user_V), !map !347
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -475,7 +475,7 @@ codeRepl:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_user_V), !ma
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:13  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_last_V), !map !353
+codeRepl:13  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_last_V), !map !351
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -490,7 +490,7 @@ codeRepl:13  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_last_V), !ma
 
 <Node id="29" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:14  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_id_V), !map !357
+codeRepl:14  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_id_V), !map !355
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -505,7 +505,7 @@ codeRepl:14  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_id_V), !map 
 
 <Node id="30" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:15  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_dest_V), !map !361
+codeRepl:15  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_dest_V), !map !359
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -518,9 +518,9 @@ codeRepl:15  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_dest_V), !ma
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="0" op_0_bw="0" op_1_bw="16">
+<Node id="31" bw="0" op_0_bw="0" op_1_bw="8">
 <![CDATA[
-codeRepl:16  call void (...)* @_ssdm_op_SpecBitsMap(i16* %video_out_V_data_V), !map !365
+codeRepl:16  call void (...)* @_ssdm_op_SpecBitsMap(i8* %video_out_V_data_V), !map !363
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -533,9 +533,9 @@ codeRepl:16  call void (...)* @_ssdm_op_SpecBitsMap(i16* %video_out_V_data_V), !
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="0" op_0_bw="0" op_1_bw="2">
+<Node id="32" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:17  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_out_V_keep_V), !map !369
+codeRepl:17  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_keep_V), !map !367
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -548,9 +548,9 @@ codeRepl:17  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_out_V_keep_V), !m
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="0" op_0_bw="0" op_1_bw="2">
+<Node id="33" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:18  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_out_V_strb_V), !map !373
+codeRepl:18  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_strb_V), !map !371
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -565,7 +565,7 @@ codeRepl:18  call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_out_V_strb_V), !m
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:19  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_user_V), !map !377
+codeRepl:19  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_user_V), !map !375
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -580,7 +580,7 @@ codeRepl:19  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_user_V), !m
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:20  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_last_V), !map !381
+codeRepl:20  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_last_V), !map !379
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -595,7 +595,7 @@ codeRepl:20  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_last_V), !m
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:21  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_id_V), !map !385
+codeRepl:21  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_id_V), !map !383
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -610,7 +610,7 @@ codeRepl:21  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_id_V), !map
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:22  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_dest_V), !map !389
+codeRepl:22  call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_dest_V), !map !387
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -728,9 +728,9 @@ codeRepl:32  call void (...)* @_ssdm_op_SpecInterface(i8* %img_3_data_stream_0, 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0">
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0">
 <![CDATA[
-codeRepl:33  call void (...)* @_ssdm_op_SpecInterface(i16* %video_in_V_data_V, i2* %video_in_V_keep_V, i2* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+codeRepl:33  call void (...)* @_ssdm_op_SpecInterface(i8* %video_in_V_data_V, i1* %video_in_V_keep_V, i1* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln7"/></StgValue>
@@ -743,9 +743,9 @@ codeRepl:33  call void (...)* @_ssdm_op_SpecInterface(i16* %video_in_V_data_V, i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="49" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0">
+<Node id="49" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0">
 <![CDATA[
-codeRepl:34  call void (...)* @_ssdm_op_SpecInterface(i16* %video_out_V_data_V, i2* %video_out_V_keep_V, i2* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+codeRepl:34  call void (...)* @_ssdm_op_SpecInterface(i8* %video_out_V_data_V, i1* %video_out_V_keep_V, i1* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln8"/></StgValue>

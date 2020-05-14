@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="filter" xd:componentRef="filter" xd:initiationInterval="316712" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="video_in.data" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="video_in.keep" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_in.strb" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_in.user" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_in.last" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_in.id" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_in.dest" xd:originalName="video_in" xd:direction="in" xd:interfaceRef="video_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_out.data" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="video_out.keep" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_out.strb" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_out.user" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_out.last" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_out.id" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="video_out.dest" xd:originalName="video_out" xd:direction="out" xd:interfaceRef="video_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="195" xd:worst-case="316711" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="4078" xd:FF="2037" xd:BRAM="5" xd:DSP="19"/>
+</xd:acceleratorMap>

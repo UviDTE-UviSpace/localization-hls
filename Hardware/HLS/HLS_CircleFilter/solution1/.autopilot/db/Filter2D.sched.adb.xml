@@ -1163,7 +1163,7 @@ hls::LineBuffer<10, 640, unsigned char, 0>::LineBuffer.1.region:65  br label %0
 
 <Node id="78" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-loop_height_begin:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8) nounwind
+loop_height_begin:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str6) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln443"/></StgValue>
@@ -1179,7 +1179,7 @@ loop_height_begin:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str8)
 
 <Node id="79" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-loop_height_begin:1  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)
+loop_height_begin:1  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -3920,7 +3920,7 @@ loop_width_begin:10  %right_border_buf_0_29 = load i8* %right_border_buf_0_12
 
 <Node id="186" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-loop_width_begin:11  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9) nounwind
+loop_width_begin:11  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str7) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln444"/></StgValue>
@@ -3935,7 +3935,7 @@ loop_width_begin:11  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str9)
 
 <Node id="187" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-loop_width_begin:12  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str9)
+loop_width_begin:12  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str7)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_1"/></StgValue>
@@ -6868,7 +6868,7 @@ loop_width_end:10  %src_kernel_win_0_va_55 = load i8* %src_kernel_win_0_va_13
 
 <Node id="451" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-loop_width_end:15  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str9, i32 %tmp_1)
+loop_width_end:15  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str7, i32 %tmp_1)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -7388,10 +7388,10 @@ loop_width_end:36  br label %1
 
 <Node id="474" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-loop_height_end:0  %empty_50 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_s)
+loop_height_end:0  %empty_47 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_s)
 
 ]]></Node>
-<StgValue><ssdm name="empty_50"/></StgValue>
+<StgValue><ssdm name="empty_47"/></StgValue>
 </operation>
 
 <operation id="466" st_id="11" stage="1" lat="1">

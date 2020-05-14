@@ -3,10 +3,10 @@
 ================================================================
 == Vivado HLS Report for 'filter'
 ================================================================
-* Date:           Thu May  7 15:10:50 2020
+* Date:           Thu May 14 01:38:28 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
-* Project:        HLS_CircleFilter_Minized
+* Project:        HLS_CircleFilter_Minized_2
 * Solution:       solution1
 * Product family: zynq
 * Target device:  xc7z007s-clg225-1
@@ -29,21 +29,21 @@
     |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline |
     |   min   |   max   |    min   |    max   | min |   max  |   Type   |
     +---------+---------+----------+----------+-----+--------+----------+
-    |      195|   316711| 2.112 us | 3.430 ms |  192|  316708| dataflow |
+    |      193|   316709| 2.090 us | 3.430 ms |  192|  316708| dataflow |
     +---------+---------+----------+----------+-----+--------+----------+
 
     + Detail: 
         * Instance: 
-        +-----------------+--------------+---------+---------+-----------+----------+-----+--------+---------+
-        |                 |              |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
-        |     Instance    |    Module    |   min   |   max   |    min    |    max   | min |   max  |   Type  |
-        +-----------------+--------------+---------+---------+-----------+----------+-----+--------+---------+
-        |GaussianBlur_U0  |GaussianBlur  |      191|   316707|  2.069 us | 3.430 ms |  191|  316707|   none  |
-        |AXIvideo2Mat_U0  |AXIvideo2Mat  |        3|   309603| 32.493 ns | 3.353 ms |    3|  309603|   none  |
-        |Mat2AXIvideo_U0  |Mat2AXIvideo  |        1|   309121| 10.831 ns | 3.348 ms |    1|  309121|   none  |
-        |Threshold_U0     |Threshold     |        1|   309121| 10.831 ns | 3.348 ms |    1|  309121|   none  |
-        |Block_proc_U0    |Block_proc    |        0|        0|    0 ns   |   0 ns   |    0|       0|   none  |
-        +-----------------+--------------+---------+---------+-----------+----------+-----+--------+---------+
+        +---------------------+------------------+---------+---------+-----------+----------+-----+--------+---------+
+        |                     |                  |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
+        |       Instance      |      Module      |   min   |   max   |    min    |    max   | min |   max  |   Type  |
+        +---------------------+------------------+---------+---------+-----------+----------+-----+--------+---------+
+        |GaussianBlur_U0      |GaussianBlur      |      191|   316707|  2.069 us | 3.430 ms |  191|  316707|   none  |
+        |Mat2AXIvideo_DMA_U0  |Mat2AXIvideo_DMA  |        1|   309121| 10.831 ns | 3.348 ms |    1|  309121|   none  |
+        |Threshold_U0         |Threshold         |        1|   309121| 10.831 ns | 3.348 ms |    1|  309121|   none  |
+        |AXIvideo2Mat_DMA_U0  |AXIvideo2Mat_DMA  |        1|   308641| 10.831 ns | 3.343 ms |    1|  308641|   none  |
+        |Block_proc_U0        |Block_proc        |        0|        0|    0 ns   |   0 ns   |    0|       0|   none  |
+        +---------------------+------------------+---------+---------+-----------+----------+-----+--------+---------+
 
         * Loop: 
         N/A
@@ -60,31 +60,31 @@
 |DSP              |        -|      -|      -|      -|    -|
 |Expression       |        -|      -|      -|      -|    -|
 |FIFO             |        0|      -|     55|    240|    -|
-|Instance         |        5|     19|   2030|   3853|    0|
+|Instance         |        5|     19|   1971|   3747|    0|
 |Memory           |        -|      -|      -|      -|    -|
 |Multiplexer      |        -|      -|      -|      -|    -|
 |Register         |        -|      -|      -|      -|    -|
 +-----------------+---------+-------+-------+-------+-----+
-|Total            |        5|     19|   2085|   4093|    0|
+|Total            |        5|     19|   2026|   3987|    0|
 +-----------------+---------+-------+-------+-------+-----+
 |Available        |      100|     66|  28800|  14400|    0|
 +-----------------+---------+-------+-------+-------+-----+
-|Utilization (%)  |        5|     28|      7|     28|    0|
+|Utilization (%)  |        5|     28|      7|     27|    0|
 +-----------------+---------+-------+-------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +-----------------+--------------+---------+-------+------+------+-----+
-    |     Instance    |    Module    | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
-    +-----------------+--------------+---------+-------+------+------+-----+
-    |AXIvideo2Mat_U0  |AXIvideo2Mat  |        0|      0|   269|   427|    0|
-    |Block_proc_U0    |Block_proc    |        0|      0|     3|    56|    0|
-    |GaussianBlur_U0  |GaussianBlur  |        5|     19|  1381|  2797|    0|
-    |Mat2AXIvideo_U0  |Mat2AXIvideo  |        0|      0|   205|   299|    0|
-    |Threshold_U0     |Threshold     |        0|      0|   172|   274|    0|
-    +-----------------+--------------+---------+-------+------+------+-----+
-    |Total            |              |        5|     19|  2030|  3853|    0|
-    +-----------------+--------------+---------+-------+------+------+-----+
+    +---------------------+------------------+---------+-------+------+------+-----+
+    |       Instance      |      Module      | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +---------------------+------------------+---------+-------+------+------+-----+
+    |AXIvideo2Mat_DMA_U0  |AXIvideo2Mat_DMA  |        0|      0|   177|   258|    0|
+    |Block_proc_U0        |Block_proc        |        0|      0|     3|    56|    0|
+    |GaussianBlur_U0      |GaussianBlur      |        5|     19|  1381|  2797|    0|
+    |Mat2AXIvideo_DMA_U0  |Mat2AXIvideo_DMA  |        0|      0|   238|   362|    0|
+    |Threshold_U0         |Threshold         |        0|      0|   172|   274|    0|
+    +---------------------+------------------+---------+-------+------+------+-----+
+    |Total                |                  |        5|     19|  1971|  3747|    0|
+    +---------------------+------------------+---------+-------+------+------+-----+
 
     * DSP48E: 
     N/A
@@ -129,18 +129,18 @@
 +------------------+-----+-----+--------------+--------------------+--------------+
 |     RTL Ports    | Dir | Bits|   Protocol   |    Source Object   |    C Type    |
 +------------------+-----+-----+--------------+--------------------+--------------+
-|video_in_TDATA    |  in |   16|     axis     |  video_in_V_data_V |    pointer   |
-|video_in_TKEEP    |  in |    2|     axis     |  video_in_V_keep_V |    pointer   |
-|video_in_TSTRB    |  in |    2|     axis     |  video_in_V_strb_V |    pointer   |
+|video_in_TDATA    |  in |    8|     axis     |  video_in_V_data_V |    pointer   |
+|video_in_TKEEP    |  in |    1|     axis     |  video_in_V_keep_V |    pointer   |
+|video_in_TSTRB    |  in |    1|     axis     |  video_in_V_strb_V |    pointer   |
 |video_in_TUSER    |  in |    1|     axis     |  video_in_V_user_V |    pointer   |
 |video_in_TLAST    |  in |    1|     axis     |  video_in_V_last_V |    pointer   |
 |video_in_TID      |  in |    1|     axis     |   video_in_V_id_V  |    pointer   |
 |video_in_TDEST    |  in |    1|     axis     |  video_in_V_dest_V |    pointer   |
 |video_in_TVALID   |  in |    1|     axis     |  video_in_V_dest_V |    pointer   |
 |video_in_TREADY   | out |    1|     axis     |  video_in_V_dest_V |    pointer   |
-|video_out_TDATA   | out |   16|     axis     | video_out_V_data_V |    pointer   |
-|video_out_TKEEP   | out |    2|     axis     | video_out_V_keep_V |    pointer   |
-|video_out_TSTRB   | out |    2|     axis     | video_out_V_strb_V |    pointer   |
+|video_out_TDATA   | out |    8|     axis     | video_out_V_data_V |    pointer   |
+|video_out_TKEEP   | out |    1|     axis     | video_out_V_keep_V |    pointer   |
+|video_out_TSTRB   | out |    1|     axis     | video_out_V_strb_V |    pointer   |
 |video_out_TUSER   | out |    1|     axis     | video_out_V_user_V |    pointer   |
 |video_out_TLAST   | out |    1|     axis     | video_out_V_last_V |    pointer   |
 |video_out_TID     | out |    1|     axis     |  video_out_V_id_V  |    pointer   |
@@ -205,51 +205,51 @@ ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%img_3_cols_V_c = alloca i11, align
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%img_3_rows_V_c = alloca i10, align 2"   --->   Operation 16 'alloca' 'img_3_rows_V_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%img_1_cols_V_c = alloca i11, align 2"   --->   Operation 17 'alloca' 'img_1_cols_V_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%img_1_rows_V_c = alloca i10, align 2"   --->   Operation 18 'alloca' 'img_1_rows_V_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%img_1_data_stream_0 = alloca i8, align 1" [HLS_CircleFilter/filters.cpp:21]   --->   Operation 19 'alloca' 'img_1_data_stream_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%img_2_data_stream_0 = alloca i8, align 1" [HLS_CircleFilter/filters.cpp:22]   --->   Operation 20 'alloca' 'img_2_data_stream_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%img_3_data_stream_0 = alloca i8, align 1" [HLS_CircleFilter/filters.cpp:23]   --->   Operation 21 'alloca' 'img_3_data_stream_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%img_1_data_stream_0 = alloca i8, align 1" [HLS_CircleFilter_Minized_2/filters.cpp:24]   --->   Operation 19 'alloca' 'img_1_data_stream_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%img_2_data_stream_0 = alloca i8, align 1" [HLS_CircleFilter_Minized_2/filters.cpp:25]   --->   Operation 20 'alloca' 'img_2_data_stream_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%img_3_data_stream_0 = alloca i8, align 1" [HLS_CircleFilter_Minized_2/filters.cpp:26]   --->   Operation 21 'alloca' 'img_3_data_stream_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call fastcc void @Block__proc(i10* %img_1_rows_V_c, i11* %img_1_cols_V_c, i10* %img_3_rows_V_c, i11* %img_3_cols_V_c)"   --->   Operation 22 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 23 [2/2] (0.00ns)   --->   "call fastcc void @AXIvideo2Mat(i16* %video_in_V_data_V, i2* %video_in_V_keep_V, i2* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)" [HLS_CircleFilter/filters.cpp:26]   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 23 [2/2] (0.00ns)   --->   "call fastcc void @AXIvideo2Mat_DMA(i8* %video_in_V_data_V, i1* %video_in_V_keep_V, i1* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)" [HLS_CircleFilter_Minized_2/filters.cpp:30]   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 24 [1/2] (0.00ns)   --->   "call fastcc void @AXIvideo2Mat(i16* %video_in_V_data_V, i2* %video_in_V_keep_V, i2* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)" [HLS_CircleFilter/filters.cpp:26]   --->   Operation 24 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 24 [1/2] (0.00ns)   --->   "call fastcc void @AXIvideo2Mat_DMA(i8* %video_in_V_data_V, i1* %video_in_V_keep_V, i1* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, i10* nocapture %img_1_rows_V_c, i11* nocapture %img_1_cols_V_c, i8* %img_1_data_stream_0, i10* %img_1_rows_V_c10, i11* %img_1_cols_V_c11)" [HLS_CircleFilter_Minized_2/filters.cpp:30]   --->   Operation 24 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 25 [2/2] (0.00ns)   --->   "call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i11* nocapture %img_1_cols_V_c11, i8* %img_1_data_stream_0, i8* %img_2_data_stream_0)" [HLS_CircleFilter/filters.cpp:28]   --->   Operation 25 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 25 [2/2] (0.00ns)   --->   "call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i11* nocapture %img_1_cols_V_c11, i8* %img_1_data_stream_0, i8* %img_2_data_stream_0)" [HLS_CircleFilter_Minized_2/filters.cpp:32]   --->   Operation 25 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 26 [1/2] (0.00ns)   --->   "call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i11* nocapture %img_1_cols_V_c11, i8* %img_1_data_stream_0, i8* %img_2_data_stream_0)" [HLS_CircleFilter/filters.cpp:28]   --->   Operation 26 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 26 [1/2] (0.00ns)   --->   "call fastcc void @GaussianBlur(i10* nocapture %img_1_rows_V_c10, i11* nocapture %img_1_cols_V_c11, i8* %img_1_data_stream_0, i8* %img_2_data_stream_0)" [HLS_CircleFilter_Minized_2/filters.cpp:32]   --->   Operation 26 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 27 [2/2] (0.00ns)   --->   "call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocapture %img_3_rows_V_c, i11* nocapture %img_3_cols_V_c, i8* %img_3_data_stream_0, i10* %img_3_rows_V_c12, i11* %img_3_cols_V_c13)" [HLS_CircleFilter/filters.cpp:29]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 27 [2/2] (0.00ns)   --->   "call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocapture %img_3_rows_V_c, i11* nocapture %img_3_cols_V_c, i8* %img_3_data_stream_0, i10* %img_3_rows_V_c12, i11* %img_3_cols_V_c13)" [HLS_CircleFilter_Minized_2/filters.cpp:33]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 7 <SV = 6> <Delay = 0.00>
-ST_7 : Operation 28 [1/2] (0.00ns)   --->   "call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocapture %img_3_rows_V_c, i11* nocapture %img_3_cols_V_c, i8* %img_3_data_stream_0, i10* %img_3_rows_V_c12, i11* %img_3_cols_V_c13)" [HLS_CircleFilter/filters.cpp:29]   --->   Operation 28 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 28 [1/2] (0.00ns)   --->   "call fastcc void @Threshold(i8* %img_2_data_stream_0, i10* nocapture %img_3_rows_V_c, i11* nocapture %img_3_cols_V_c, i8* %img_3_data_stream_0, i10* %img_3_rows_V_c12, i11* %img_3_cols_V_c13)" [HLS_CircleFilter_Minized_2/filters.cpp:33]   --->   Operation 28 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 29 [2/2] (0.00ns)   --->   "call fastcc void @Mat2AXIvideo(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i16* %video_out_V_data_V, i2* %video_out_V_keep_V, i2* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)" [HLS_CircleFilter/filters.cpp:31]   --->   Operation 29 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 29 [2/2] (0.00ns)   --->   "call fastcc void @Mat2AXIvideo_DMA(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i8* %video_out_V_data_V, i1* %video_out_V_keep_V, i1* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)" [HLS_CircleFilter_Minized_2/filters.cpp:35]   --->   Operation 29 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 0.00>
-ST_9 : Operation 30 [1/2] (0.00ns)   --->   "call fastcc void @Mat2AXIvideo(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i16* %video_out_V_data_V, i2* %video_out_V_keep_V, i2* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)" [HLS_CircleFilter/filters.cpp:31]   --->   Operation 30 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 30 [1/2] (0.00ns)   --->   "call fastcc void @Mat2AXIvideo_DMA(i10* nocapture %img_3_rows_V_c12, i11* nocapture %img_3_cols_V_c13, i8* %img_3_data_stream_0, i8* %video_out_V_data_V, i1* %video_out_V_keep_V, i1* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V)" [HLS_CircleFilter_Minized_2/filters.cpp:35]   --->   Operation 30 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 10 <SV = 9> <Delay = 0.00>
-ST_10 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str2) nounwind" [HLS_CircleFilter/filters.cpp:25]   --->   Operation 31 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %video_in_V_data_V), !map !337"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_in_V_keep_V), !map !341"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_in_V_strb_V), !map !345"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_user_V), !map !349"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_last_V), !map !353"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_id_V), !map !357"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_dest_V), !map !361"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %video_out_V_data_V), !map !365"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_out_V_keep_V), !map !369"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %video_out_V_strb_V), !map !373"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_user_V), !map !377"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_last_V), !map !381"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_id_V), !map !385"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_dest_V), !map !389"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str3) nounwind" [HLS_CircleFilter_Minized_2/filters.cpp:29]   --->   Operation 31 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %video_in_V_data_V), !map !335"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_keep_V), !map !339"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_strb_V), !map !343"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_user_V), !map !347"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_last_V), !map !351"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_id_V), !map !355"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_in_V_dest_V), !map !359"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %video_out_V_data_V), !map !363"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_keep_V), !map !367"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_strb_V), !map !371"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_user_V), !map !375"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_last_V), !map !379"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_id_V), !map !383"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %video_out_V_dest_V), !map !387"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @filter_str) nounwind"   --->   Operation 46 'spectopmodule' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 47 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @img_1_OC_data_stream, i32 1, [1 x i8]* @p_str183, [1 x i8]* @p_str183, i32 2, i32 2, i8* %img_1_data_stream_0, i8* %img_1_data_stream_0)"   --->   Operation 47 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_1_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str184, i32 0, i32 0, [1 x i8]* @p_str185, [1 x i8]* @p_str186, [1 x i8]* @p_str187, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str188, [1 x i8]* @p_str189)"   --->   Operation 48 'specinterface' <Predicate = true> <Delay = 0.00>
@@ -257,9 +257,9 @@ ST_10 : Operation 49 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm
 ST_10 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_2_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str191, i32 0, i32 0, [1 x i8]* @p_str192, [1 x i8]* @p_str193, [1 x i8]* @p_str194, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str195, [1 x i8]* @p_str196)"   --->   Operation 50 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @img_3_OC_data_stream, i32 1, [1 x i8]* @p_str197, [1 x i8]* @p_str197, i32 2, i32 2, i8* %img_3_data_stream_0, i8* %img_3_data_stream_0)"   --->   Operation 51 'specchannel' 'empty_11' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_3_data_stream_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str198, i32 0, i32 0, [1 x i8]* @p_str199, [1 x i8]* @p_str200, [1 x i8]* @p_str201, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str202, [1 x i8]* @p_str203)"   --->   Operation 52 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %video_in_V_data_V, i2* %video_in_V_keep_V, i2* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS_CircleFilter/filters.cpp:7]   --->   Operation 53 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %video_out_V_data_V, i2* %video_out_V_keep_V, i2* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS_CircleFilter/filters.cpp:8]   --->   Operation 54 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS_CircleFilter/filters.cpp:9]   --->   Operation 55 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %video_in_V_data_V, i1* %video_in_V_keep_V, i1* %video_in_V_strb_V, i1* %video_in_V_user_V, i1* %video_in_V_last_V, i1* %video_in_V_id_V, i1* %video_in_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind" [HLS_CircleFilter_Minized_2/filters.cpp:10]   --->   Operation 53 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %video_out_V_data_V, i1* %video_out_V_keep_V, i1* %video_out_V_strb_V, i1* %video_out_V_user_V, i1* %video_out_V_last_V, i1* %video_out_V_id_V, i1* %video_out_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind" [HLS_CircleFilter_Minized_2/filters.cpp:11]   --->   Operation 54 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind" [HLS_CircleFilter_Minized_2/filters.cpp:12]   --->   Operation 55 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 56 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @img_1_OC_rows_OC_V_c_1, i32 1, [1 x i8]* @p_str229, [1 x i8]* @p_str229, i32 2, i32 0, i10* %img_1_rows_V_c, i10* %img_1_rows_V_c)"   --->   Operation 56 'specchannel' 'empty_12' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i10* %img_1_rows_V_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str230, i32 0, i32 0, [1 x i8]* @p_str231, [1 x i8]* @p_str232, [1 x i8]* @p_str233, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str234, [1 x i8]* @p_str235)"   --->   Operation 57 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @img_1_OC_cols_OC_V_c_1, i32 1, [1 x i8]* @p_str236, [1 x i8]* @p_str236, i32 2, i32 0, i11* %img_1_cols_V_c, i11* %img_1_cols_V_c)"   --->   Operation 58 'specchannel' 'empty_13' <Predicate = true> <Delay = 0.00>
@@ -276,7 +276,7 @@ ST_10 : Operation 68 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm
 ST_10 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i10* %img_3_rows_V_c12, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str325, i32 0, i32 0, [1 x i8]* @p_str326, [1 x i8]* @p_str327, [1 x i8]* @p_str328, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str329, [1 x i8]* @p_str330)"   --->   Operation 69 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 70 [1/1] (0.00ns)   --->   "%empty_19 = call i32 (...)* @_ssdm_op_SpecChannel([17 x i8]* @img_3_OC_cols_OC_V_c, i32 1, [1 x i8]* @p_str331, [1 x i8]* @p_str331, i32 2, i32 0, i11* %img_3_cols_V_c13, i11* %img_3_cols_V_c13)"   --->   Operation 70 'specchannel' 'empty_19' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i11* %img_3_cols_V_c13, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str332, i32 0, i32 0, [1 x i8]* @p_str333, [1 x i8]* @p_str334, [1 x i8]* @p_str335, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str336, [1 x i8]* @p_str337)"   --->   Operation 71 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 72 [1/1] (0.00ns)   --->   "ret void" [HLS_CircleFilter/filters.cpp:33]   --->   Operation 72 'ret' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 72 [1/1] (0.00ns)   --->   "ret void" [HLS_CircleFilter_Minized_2/filters.cpp:37]   --->   Operation 72 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -322,11 +322,11 @@ img_1_data_stream_0       (alloca              ) [ 00111111111]
 img_2_data_stream_0       (alloca              ) [ 00111111111]
 img_3_data_stream_0       (alloca              ) [ 00111111111]
 call_ln0                  (call                ) [ 00000000000]
-call_ln26                 (call                ) [ 00000000000]
-call_ln28                 (call                ) [ 00000000000]
-call_ln29                 (call                ) [ 00000000000]
-call_ln31                 (call                ) [ 00000000000]
-specdataflowpipeline_ln25 (specdataflowpipeline) [ 00000000000]
+call_ln30                 (call                ) [ 00000000000]
+call_ln32                 (call                ) [ 00000000000]
+call_ln33                 (call                ) [ 00000000000]
+call_ln35                 (call                ) [ 00000000000]
+specdataflowpipeline_ln29 (specdataflowpipeline) [ 00000000000]
 specbitsmap_ln0           (specbitsmap         ) [ 00000000000]
 specbitsmap_ln0           (specbitsmap         ) [ 00000000000]
 specbitsmap_ln0           (specbitsmap         ) [ 00000000000]
@@ -348,9 +348,9 @@ empty_10                  (specchannel         ) [ 00000000000]
 specinterface_ln0         (specinterface       ) [ 00000000000]
 empty_11                  (specchannel         ) [ 00000000000]
 specinterface_ln0         (specinterface       ) [ 00000000000]
-specinterface_ln7         (specinterface       ) [ 00000000000]
-specinterface_ln8         (specinterface       ) [ 00000000000]
-specinterface_ln9         (specinterface       ) [ 00000000000]
+specinterface_ln10        (specinterface       ) [ 00000000000]
+specinterface_ln11        (specinterface       ) [ 00000000000]
+specinterface_ln12        (specinterface       ) [ 00000000000]
 empty_12                  (specchannel         ) [ 00000000000]
 specinterface_ln0         (specinterface       ) [ 00000000000]
 empty_13                  (specchannel         ) [ 00000000000]
@@ -367,7 +367,7 @@ empty_18                  (specchannel         ) [ 00000000000]
 specinterface_ln0         (specinterface       ) [ 00000000000]
 empty_19                  (specchannel         ) [ 00000000000]
 specinterface_ln0         (specinterface       ) [ 00000000000]
-ret_ln33                  (ret                 ) [ 00000000000]
+ret_ln37                  (ret                 ) [ 00000000000]
 </LifeTime>
 
 <model>
@@ -522,7 +522,7 @@ ret_ln33                  (ret                 ) [ 00000000000]
 <pin id="33" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="AXIvideo2Mat"/></StgValue>
+<StgValue><ssdm name="AXIvideo2Mat_DMA"/></StgValue>
 </bind>
 </comp>
 
@@ -549,7 +549,7 @@ ret_ln33                  (ret                 ) [ 00000000000]
 <pin id="39" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Mat2AXIvideo"/></StgValue>
+<StgValue><ssdm name="Mat2AXIvideo_DMA"/></StgValue>
 </bind>
 </comp>
 
@@ -585,7 +585,7 @@ ret_ln33                  (ret                 ) [ 00000000000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -900,7 +900,7 @@ ret_ln33                  (ret                 ) [ 00000000000]
 <pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1"/></StgValue>
+<StgValue><ssdm name="p_str2"/></StgValue>
 </bind>
 </comp>
 
@@ -909,7 +909,7 @@ ret_ln33                  (ret                 ) [ 00000000000]
 <pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
+<StgValue><ssdm name="p_str4"/></StgValue>
 </bind>
 </comp>
 
@@ -1630,68 +1630,68 @@ ret_ln33                  (ret                 ) [ 00000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln28/4 "/>
+<opset="call_ln32/4 "/>
 </bind>
 </comp>
 
-<comp id="302" class="1004" name="grp_AXIvideo2Mat_fu_302">
+<comp id="302" class="1004" name="grp_Mat2AXIvideo_DMA_fu_302">
 <pin_list>
 <pin id="303" dir="0" index="0" bw="0" slack="0"/>
-<pin id="304" dir="0" index="1" bw="16" slack="0"/>
-<pin id="305" dir="0" index="2" bw="2" slack="0"/>
-<pin id="306" dir="0" index="3" bw="2" slack="0"/>
-<pin id="307" dir="0" index="4" bw="1" slack="0"/>
+<pin id="304" dir="0" index="1" bw="10" slack="7"/>
+<pin id="305" dir="0" index="2" bw="11" slack="7"/>
+<pin id="306" dir="0" index="3" bw="8" slack="7"/>
+<pin id="307" dir="0" index="4" bw="8" slack="0"/>
 <pin id="308" dir="0" index="5" bw="1" slack="0"/>
 <pin id="309" dir="0" index="6" bw="1" slack="0"/>
 <pin id="310" dir="0" index="7" bw="1" slack="0"/>
-<pin id="311" dir="0" index="8" bw="10" slack="1"/>
-<pin id="312" dir="0" index="9" bw="11" slack="1"/>
-<pin id="313" dir="0" index="10" bw="8" slack="1"/>
-<pin id="314" dir="0" index="11" bw="10" slack="1"/>
-<pin id="315" dir="0" index="12" bw="11" slack="1"/>
-<pin id="316" dir="1" index="13" bw="0" slack="2147483647"/>
+<pin id="311" dir="0" index="8" bw="1" slack="0"/>
+<pin id="312" dir="0" index="9" bw="1" slack="0"/>
+<pin id="313" dir="0" index="10" bw="1" slack="0"/>
+<pin id="314" dir="1" index="11" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln26/2 "/>
+<opset="call_ln35/8 "/>
 </bind>
 </comp>
 
-<comp id="325" class="1004" name="grp_Mat2AXIvideo_fu_325">
+<comp id="323" class="1004" name="grp_Threshold_fu_323">
 <pin_list>
-<pin id="326" dir="0" index="0" bw="0" slack="0"/>
-<pin id="327" dir="0" index="1" bw="10" slack="7"/>
-<pin id="328" dir="0" index="2" bw="11" slack="7"/>
-<pin id="329" dir="0" index="3" bw="8" slack="7"/>
-<pin id="330" dir="0" index="4" bw="16" slack="0"/>
-<pin id="331" dir="0" index="5" bw="2" slack="0"/>
-<pin id="332" dir="0" index="6" bw="2" slack="0"/>
-<pin id="333" dir="0" index="7" bw="1" slack="0"/>
-<pin id="334" dir="0" index="8" bw="1" slack="0"/>
-<pin id="335" dir="0" index="9" bw="1" slack="0"/>
-<pin id="336" dir="0" index="10" bw="1" slack="0"/>
-<pin id="337" dir="1" index="11" bw="0" slack="2147483647"/>
+<pin id="324" dir="0" index="0" bw="0" slack="0"/>
+<pin id="325" dir="0" index="1" bw="8" slack="5"/>
+<pin id="326" dir="0" index="2" bw="10" slack="5"/>
+<pin id="327" dir="0" index="3" bw="11" slack="5"/>
+<pin id="328" dir="0" index="4" bw="8" slack="5"/>
+<pin id="329" dir="0" index="5" bw="10" slack="5"/>
+<pin id="330" dir="0" index="6" bw="11" slack="5"/>
+<pin id="331" dir="1" index="7" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln31/8 "/>
+<opset="call_ln33/6 "/>
 </bind>
 </comp>
 
-<comp id="346" class="1004" name="grp_Threshold_fu_346">
+<comp id="333" class="1004" name="grp_AXIvideo2Mat_DMA_fu_333">
 <pin_list>
-<pin id="347" dir="0" index="0" bw="0" slack="0"/>
-<pin id="348" dir="0" index="1" bw="8" slack="5"/>
-<pin id="349" dir="0" index="2" bw="10" slack="5"/>
-<pin id="350" dir="0" index="3" bw="11" slack="5"/>
-<pin id="351" dir="0" index="4" bw="8" slack="5"/>
-<pin id="352" dir="0" index="5" bw="10" slack="5"/>
-<pin id="353" dir="0" index="6" bw="11" slack="5"/>
-<pin id="354" dir="1" index="7" bw="0" slack="2147483647"/>
+<pin id="334" dir="0" index="0" bw="0" slack="0"/>
+<pin id="335" dir="0" index="1" bw="8" slack="0"/>
+<pin id="336" dir="0" index="2" bw="1" slack="0"/>
+<pin id="337" dir="0" index="3" bw="1" slack="0"/>
+<pin id="338" dir="0" index="4" bw="1" slack="0"/>
+<pin id="339" dir="0" index="5" bw="1" slack="0"/>
+<pin id="340" dir="0" index="6" bw="1" slack="0"/>
+<pin id="341" dir="0" index="7" bw="1" slack="0"/>
+<pin id="342" dir="0" index="8" bw="10" slack="1"/>
+<pin id="343" dir="0" index="9" bw="11" slack="1"/>
+<pin id="344" dir="0" index="10" bw="8" slack="1"/>
+<pin id="345" dir="0" index="11" bw="10" slack="1"/>
+<pin id="346" dir="0" index="12" bw="11" slack="1"/>
+<pin id="347" dir="1" index="13" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln29/6 "/>
+<opset="call_ln30/2 "/>
 </bind>
 </comp>
 
@@ -1847,63 +1847,63 @@ ret_ln33                  (ret                 ) [ 00000000000]
 
 <net id="301"><net_src comp="34" pin="0"/><net_sink comp="294" pin=0"/></net>
 
-<net id="317"><net_src comp="32" pin="0"/><net_sink comp="302" pin=0"/></net>
+<net id="315"><net_src comp="38" pin="0"/><net_sink comp="302" pin=0"/></net>
 
-<net id="318"><net_src comp="0" pin="0"/><net_sink comp="302" pin=1"/></net>
+<net id="316"><net_src comp="14" pin="0"/><net_sink comp="302" pin=4"/></net>
 
-<net id="319"><net_src comp="2" pin="0"/><net_sink comp="302" pin=2"/></net>
+<net id="317"><net_src comp="16" pin="0"/><net_sink comp="302" pin=5"/></net>
 
-<net id="320"><net_src comp="4" pin="0"/><net_sink comp="302" pin=3"/></net>
+<net id="318"><net_src comp="18" pin="0"/><net_sink comp="302" pin=6"/></net>
 
-<net id="321"><net_src comp="6" pin="0"/><net_sink comp="302" pin=4"/></net>
+<net id="319"><net_src comp="20" pin="0"/><net_sink comp="302" pin=7"/></net>
 
-<net id="322"><net_src comp="8" pin="0"/><net_sink comp="302" pin=5"/></net>
+<net id="320"><net_src comp="22" pin="0"/><net_sink comp="302" pin=8"/></net>
 
-<net id="323"><net_src comp="10" pin="0"/><net_sink comp="302" pin=6"/></net>
+<net id="321"><net_src comp="24" pin="0"/><net_sink comp="302" pin=9"/></net>
 
-<net id="324"><net_src comp="12" pin="0"/><net_sink comp="302" pin=7"/></net>
+<net id="322"><net_src comp="26" pin="0"/><net_sink comp="302" pin=10"/></net>
 
-<net id="338"><net_src comp="38" pin="0"/><net_sink comp="325" pin=0"/></net>
+<net id="332"><net_src comp="36" pin="0"/><net_sink comp="323" pin=0"/></net>
 
-<net id="339"><net_src comp="14" pin="0"/><net_sink comp="325" pin=4"/></net>
+<net id="348"><net_src comp="32" pin="0"/><net_sink comp="333" pin=0"/></net>
 
-<net id="340"><net_src comp="16" pin="0"/><net_sink comp="325" pin=5"/></net>
+<net id="349"><net_src comp="0" pin="0"/><net_sink comp="333" pin=1"/></net>
 
-<net id="341"><net_src comp="18" pin="0"/><net_sink comp="325" pin=6"/></net>
+<net id="350"><net_src comp="2" pin="0"/><net_sink comp="333" pin=2"/></net>
 
-<net id="342"><net_src comp="20" pin="0"/><net_sink comp="325" pin=7"/></net>
+<net id="351"><net_src comp="4" pin="0"/><net_sink comp="333" pin=3"/></net>
 
-<net id="343"><net_src comp="22" pin="0"/><net_sink comp="325" pin=8"/></net>
+<net id="352"><net_src comp="6" pin="0"/><net_sink comp="333" pin=4"/></net>
 
-<net id="344"><net_src comp="24" pin="0"/><net_sink comp="325" pin=9"/></net>
+<net id="353"><net_src comp="8" pin="0"/><net_sink comp="333" pin=5"/></net>
 
-<net id="345"><net_src comp="26" pin="0"/><net_sink comp="325" pin=10"/></net>
+<net id="354"><net_src comp="10" pin="0"/><net_sink comp="333" pin=6"/></net>
 
-<net id="355"><net_src comp="36" pin="0"/><net_sink comp="346" pin=0"/></net>
+<net id="355"><net_src comp="12" pin="0"/><net_sink comp="333" pin=7"/></net>
 
 <net id="363"><net_src comp="30" pin="0"/><net_sink comp="356" pin=0"/></net>
 
 <net id="367"><net_src comp="250" pin="1"/><net_sink comp="364" pin=0"/></net>
 
-<net id="368"><net_src comp="364" pin="1"/><net_sink comp="346" pin=6"/></net>
+<net id="368"><net_src comp="364" pin="1"/><net_sink comp="323" pin=6"/></net>
 
-<net id="369"><net_src comp="364" pin="1"/><net_sink comp="325" pin=2"/></net>
+<net id="369"><net_src comp="364" pin="1"/><net_sink comp="302" pin=2"/></net>
 
 <net id="373"><net_src comp="254" pin="1"/><net_sink comp="370" pin=0"/></net>
 
-<net id="374"><net_src comp="370" pin="1"/><net_sink comp="346" pin=5"/></net>
+<net id="374"><net_src comp="370" pin="1"/><net_sink comp="323" pin=5"/></net>
 
-<net id="375"><net_src comp="370" pin="1"/><net_sink comp="325" pin=1"/></net>
+<net id="375"><net_src comp="370" pin="1"/><net_sink comp="302" pin=1"/></net>
 
 <net id="379"><net_src comp="258" pin="1"/><net_sink comp="376" pin=0"/></net>
 
-<net id="380"><net_src comp="376" pin="1"/><net_sink comp="302" pin=12"/></net>
+<net id="380"><net_src comp="376" pin="1"/><net_sink comp="333" pin=12"/></net>
 
 <net id="381"><net_src comp="376" pin="1"/><net_sink comp="294" pin=2"/></net>
 
 <net id="385"><net_src comp="262" pin="1"/><net_sink comp="382" pin=0"/></net>
 
-<net id="386"><net_src comp="382" pin="1"/><net_sink comp="302" pin=11"/></net>
+<net id="386"><net_src comp="382" pin="1"/><net_sink comp="333" pin=11"/></net>
 
 <net id="387"><net_src comp="382" pin="1"/><net_sink comp="294" pin=1"/></net>
 
@@ -1911,29 +1911,29 @@ ret_ln33                  (ret                 ) [ 00000000000]
 
 <net id="392"><net_src comp="388" pin="1"/><net_sink comp="356" pin=4"/></net>
 
-<net id="393"><net_src comp="388" pin="1"/><net_sink comp="346" pin=3"/></net>
+<net id="393"><net_src comp="388" pin="1"/><net_sink comp="323" pin=3"/></net>
 
 <net id="397"><net_src comp="270" pin="1"/><net_sink comp="394" pin=0"/></net>
 
 <net id="398"><net_src comp="394" pin="1"/><net_sink comp="356" pin=3"/></net>
 
-<net id="399"><net_src comp="394" pin="1"/><net_sink comp="346" pin=2"/></net>
+<net id="399"><net_src comp="394" pin="1"/><net_sink comp="323" pin=2"/></net>
 
 <net id="403"><net_src comp="274" pin="1"/><net_sink comp="400" pin=0"/></net>
 
 <net id="404"><net_src comp="400" pin="1"/><net_sink comp="356" pin=2"/></net>
 
-<net id="405"><net_src comp="400" pin="1"/><net_sink comp="302" pin=9"/></net>
+<net id="405"><net_src comp="400" pin="1"/><net_sink comp="333" pin=9"/></net>
 
 <net id="409"><net_src comp="278" pin="1"/><net_sink comp="406" pin=0"/></net>
 
 <net id="410"><net_src comp="406" pin="1"/><net_sink comp="356" pin=1"/></net>
 
-<net id="411"><net_src comp="406" pin="1"/><net_sink comp="302" pin=8"/></net>
+<net id="411"><net_src comp="406" pin="1"/><net_sink comp="333" pin=8"/></net>
 
 <net id="415"><net_src comp="282" pin="1"/><net_sink comp="412" pin=0"/></net>
 
-<net id="416"><net_src comp="412" pin="1"/><net_sink comp="302" pin=10"/></net>
+<net id="416"><net_src comp="412" pin="1"/><net_sink comp="333" pin=10"/></net>
 
 <net id="417"><net_src comp="412" pin="1"/><net_sink comp="294" pin=3"/></net>
 
@@ -1941,13 +1941,13 @@ ret_ln33                  (ret                 ) [ 00000000000]
 
 <net id="422"><net_src comp="418" pin="1"/><net_sink comp="294" pin=4"/></net>
 
-<net id="423"><net_src comp="418" pin="1"/><net_sink comp="346" pin=1"/></net>
+<net id="423"><net_src comp="418" pin="1"/><net_sink comp="323" pin=1"/></net>
 
 <net id="427"><net_src comp="290" pin="1"/><net_sink comp="424" pin=0"/></net>
 
-<net id="428"><net_src comp="424" pin="1"/><net_sink comp="346" pin=4"/></net>
+<net id="428"><net_src comp="424" pin="1"/><net_sink comp="323" pin=4"/></net>
 
-<net id="429"><net_src comp="424" pin="1"/><net_sink comp="325" pin=3"/></net>
+<net id="429"><net_src comp="424" pin="1"/><net_sink comp="302" pin=3"/></net>
 
 </net_list>
 
@@ -1990,17 +1990,17 @@ ret_ln33                  (ret                 ) [ 00000000000]
 ============================================================
 
 * Functional unit list:
-|----------|----------------------------|---------|---------|---------|---------|---------|---------|
-| Operation|       Functional Unit      |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |   URAM  |
-|----------|----------------------------|---------|---------|---------|---------|---------|---------|
-|          |   grp_GaussianBlur_fu_294  |    5    |    19   |  19.459 |   1024  |   2450  |    0    |
-|          |   grp_AXIvideo2Mat_fu_302  |    0    |    0    |  1.769  |   308   |   125   |    0    |
-|   call   |   grp_Mat2AXIvideo_fu_325  |    0    |    0    |  3.538  |   246   |   192   |    0    |
-|          |    grp_Threshold_fu_346    |    0    |    0    |    0    |   195   |   133   |    0    |
-|          | call_ln0_Block_proc_fu_356 |    0    |    0    |    0    |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|---------|---------|---------|
-|   Total  |                            |    5    |    19   |  24.766 |   1773  |   2900  |    0    |
-|----------|----------------------------|---------|---------|---------|---------|---------|---------|
+|----------|-----------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|       Functional Unit       |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|-----------------------------|---------|---------|---------|---------|---------|---------|
+|          |   grp_GaussianBlur_fu_294   |    5    |    19   |  19.459 |   1024  |   2450  |    0    |
+|          | grp_Mat2AXIvideo_DMA_fu_302 |    0    |    0    |  1.769  |   270   |   245   |    0    |
+|   call   |     grp_Threshold_fu_323    |    0    |    0    |    0    |   195   |   133   |    0    |
+|          | grp_AXIvideo2Mat_DMA_fu_333 |    0    |    0    |    0    |   202   |   114   |    0    |
+|          |  call_ln0_Block_proc_fu_356 |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|-----------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                             |    5    |    19   |  21.228 |   1691  |   2942  |    0    |
+|----------|-----------------------------|---------|---------|---------|---------|---------|---------|
 
 Memories:
 N/A
@@ -2037,10 +2037,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    5   |   19   |   24   |  1773  |  2900  |    0   |
+|  Function |    5   |   19   |   21   |  1691  |  2942  |    0   |
 |   Memory  |    -   |    -   |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
 |  Register |    -   |    -   |    -   |   108  |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |    5   |   19   |   24   |  1881  |  2900  |    0   |
+|   Total   |    5   |   19   |   21   |  1799  |  2942  |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

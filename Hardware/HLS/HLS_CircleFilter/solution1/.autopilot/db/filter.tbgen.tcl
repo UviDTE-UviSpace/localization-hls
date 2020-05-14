@@ -14,32 +14,32 @@ set isEnableWaveformDebug 1
 set C_modelName {filter}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ video_in_V_data_V int 16 regular {axi_s 0 volatile  { video_in Data } }  }
-	{ video_in_V_keep_V int 2 regular {axi_s 0 volatile  { video_in Keep } }  }
-	{ video_in_V_strb_V int 2 regular {axi_s 0 volatile  { video_in Strb } }  }
+	{ video_in_V_data_V int 8 regular {axi_s 0 volatile  { video_in Data } }  }
+	{ video_in_V_keep_V int 1 regular {axi_s 0 volatile  { video_in Keep } }  }
+	{ video_in_V_strb_V int 1 regular {axi_s 0 volatile  { video_in Strb } }  }
 	{ video_in_V_user_V int 1 regular {axi_s 0 volatile  { video_in User } }  }
 	{ video_in_V_last_V int 1 regular {axi_s 0 volatile  { video_in Last } }  }
 	{ video_in_V_id_V int 1 regular {axi_s 0 volatile  { video_in ID } }  }
 	{ video_in_V_dest_V int 1 regular {axi_s 0 volatile  { video_in Dest } }  }
-	{ video_out_V_data_V int 16 regular {axi_s 1 volatile  { video_out Data } }  }
-	{ video_out_V_keep_V int 2 regular {axi_s 1 volatile  { video_out Keep } }  }
-	{ video_out_V_strb_V int 2 regular {axi_s 1 volatile  { video_out Strb } }  }
+	{ video_out_V_data_V int 8 regular {axi_s 1 volatile  { video_out Data } }  }
+	{ video_out_V_keep_V int 1 regular {axi_s 1 volatile  { video_out Keep } }  }
+	{ video_out_V_strb_V int 1 regular {axi_s 1 volatile  { video_out Strb } }  }
 	{ video_out_V_user_V int 1 regular {axi_s 1 volatile  { video_out User } }  }
 	{ video_out_V_last_V int 1 regular {axi_s 1 volatile  { video_out Last } }  }
 	{ video_out_V_id_V int 1 regular {axi_s 1 volatile  { video_out ID } }  }
 	{ video_out_V_dest_V int 1 regular {axi_s 1 volatile  { video_out Dest } }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "video_in_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "video_in.V.data.V","cData": "uint16","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "video_in_V_keep_V", "interface" : "axis", "bitwidth" : 2, "direction" : "READONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "video_in.V.keep.V","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "video_in_V_strb_V", "interface" : "axis", "bitwidth" : 2, "direction" : "READONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "video_in.V.strb.V","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+	{ "Name" : "video_in_V_data_V", "interface" : "axis", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "video_in.V.data.V","cData": "uint8","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "video_in_V_keep_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_in.V.keep.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "video_in_V_strb_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_in.V.strb.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_in_V_user_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_in.V.user.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_in_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_in.V.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_in_V_id_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_in.V.id.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_in_V_dest_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_in.V.dest.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "video_out_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "video_out.V.data.V","cData": "uint16","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "video_out_V_keep_V", "interface" : "axis", "bitwidth" : 2, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "video_out.V.keep.V","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "video_out_V_strb_V", "interface" : "axis", "bitwidth" : 2, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "video_out.V.strb.V","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "video_out_V_data_V", "interface" : "axis", "bitwidth" : 8, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "video_out.V.data.V","cData": "uint8","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "video_out_V_keep_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_out.V.keep.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "video_out_V_strb_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_out.V.strb.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_out_V_user_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_out.V.user.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_out_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_out.V.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "video_out_V_id_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "video_out.V.id.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
@@ -47,16 +47,16 @@ set C_modelArgMapList {[
 # RTL Port declarations: 
 set portNum 20
 set portList { 
-	{ video_in_TDATA sc_in sc_lv 16 signal 0 } 
-	{ video_in_TKEEP sc_in sc_lv 2 signal 1 } 
-	{ video_in_TSTRB sc_in sc_lv 2 signal 2 } 
+	{ video_in_TDATA sc_in sc_lv 8 signal 0 } 
+	{ video_in_TKEEP sc_in sc_lv 1 signal 1 } 
+	{ video_in_TSTRB sc_in sc_lv 1 signal 2 } 
 	{ video_in_TUSER sc_in sc_lv 1 signal 3 } 
 	{ video_in_TLAST sc_in sc_lv 1 signal 4 } 
 	{ video_in_TID sc_in sc_lv 1 signal 5 } 
 	{ video_in_TDEST sc_in sc_lv 1 signal 6 } 
-	{ video_out_TDATA sc_out sc_lv 16 signal 7 } 
-	{ video_out_TKEEP sc_out sc_lv 2 signal 8 } 
-	{ video_out_TSTRB sc_out sc_lv 2 signal 9 } 
+	{ video_out_TDATA sc_out sc_lv 8 signal 7 } 
+	{ video_out_TKEEP sc_out sc_lv 1 signal 8 } 
+	{ video_out_TSTRB sc_out sc_lv 1 signal 9 } 
 	{ video_out_TUSER sc_out sc_lv 1 signal 10 } 
 	{ video_out_TLAST sc_out sc_lv 1 signal 11 } 
 	{ video_out_TID sc_out sc_lv 1 signal 12 } 
@@ -69,16 +69,16 @@ set portList {
 	{ video_out_TREADY sc_in sc_logic 1 outacc 13 } 
 }
 set NewPortList {[ 
-	{ "name": "video_in_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "video_in_V_data_V", "role": "default" }} , 
- 	{ "name": "video_in_TKEEP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "video_in_V_keep_V", "role": "default" }} , 
- 	{ "name": "video_in_TSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "video_in_V_strb_V", "role": "default" }} , 
+	{ "name": "video_in_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "video_in_V_data_V", "role": "default" }} , 
+ 	{ "name": "video_in_TKEEP", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_in_V_keep_V", "role": "default" }} , 
+ 	{ "name": "video_in_TSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_in_V_strb_V", "role": "default" }} , 
  	{ "name": "video_in_TUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_in_V_user_V", "role": "default" }} , 
  	{ "name": "video_in_TLAST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_in_V_last_V", "role": "default" }} , 
  	{ "name": "video_in_TID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_in_V_id_V", "role": "default" }} , 
  	{ "name": "video_in_TDEST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_in_V_dest_V", "role": "default" }} , 
- 	{ "name": "video_out_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "video_out_V_data_V", "role": "default" }} , 
- 	{ "name": "video_out_TKEEP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "video_out_V_keep_V", "role": "default" }} , 
- 	{ "name": "video_out_TSTRB", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "video_out_V_strb_V", "role": "default" }} , 
+ 	{ "name": "video_out_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "video_out_V_data_V", "role": "default" }} , 
+ 	{ "name": "video_out_TKEEP", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_out_V_keep_V", "role": "default" }} , 
+ 	{ "name": "video_out_TSTRB", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_out_V_strb_V", "role": "default" }} , 
  	{ "name": "video_out_TUSER", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_out_V_user_V", "role": "default" }} , 
  	{ "name": "video_out_TLAST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_out_V_last_V", "role": "default" }} , 
  	{ "name": "video_out_TID", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "video_out_V_id_V", "role": "default" }} , 
@@ -97,7 +97,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "195", "EstimateLatencyMax" : "316711",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "193", "EstimateLatencyMax" : "316709",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -106,52 +106,52 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"InputProcess" : [
 			{"ID" : "1", "Name" : "Block_proc_U0"},
-			{"ID" : "2", "Name" : "AXIvideo2Mat_U0"}],
+			{"ID" : "2", "Name" : "AXIvideo2Mat_DMA_U0"}],
 		"OutputProcess" : [
-			{"ID" : "47", "Name" : "Mat2AXIvideo_U0"}],
+			{"ID" : "47", "Name" : "Mat2AXIvideo_DMA_U0"}],
 		"Port" : [
 			{"Name" : "video_in_V_data_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_data_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_data_V"}]},
 			{"Name" : "video_in_V_keep_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
 			{"Name" : "video_in_V_strb_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
 			{"Name" : "video_in_V_user_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_user_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_user_V"}]},
 			{"Name" : "video_in_V_last_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_last_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_last_V"}]},
 			{"Name" : "video_in_V_id_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_id_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_id_V"}]},
 			{"Name" : "video_in_V_dest_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_U0", "Port" : "AXI_video_strm_V_dest_V"}]},
+					{"ID" : "2", "SubInstance" : "AXIvideo2Mat_DMA_U0", "Port" : "AXI_video_strm_V_dest_V"}]},
 			{"Name" : "video_out_V_data_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_data_V"}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_data_V"}]},
 			{"Name" : "video_out_V_keep_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_keep_V"}]},
 			{"Name" : "video_out_V_strb_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_strb_V"}]},
 			{"Name" : "video_out_V_user_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_user_V"}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_user_V"}]},
 			{"Name" : "video_out_V_last_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_last_V"}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_last_V"}]},
 			{"Name" : "video_out_V_id_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_id_V"}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_id_V"}]},
 			{"Name" : "video_out_V_dest_V", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_U0", "Port" : "AXI_video_strm_V_dest_V"}]}]},
+					{"ID" : "47", "SubInstance" : "Mat2AXIvideo_DMA_U0", "Port" : "AXI_video_strm_V_dest_V"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Block_proc_U0", "Parent" : "0",
 		"CDFG" : "Block_proc",
 		"Protocol" : "ap_ctrl_hs",
@@ -178,13 +178,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "img_3_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "46", "DependentChan" : "58",
 				"BlockSignal" : [
 					{"Name" : "img_3_cols_V_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0", "Parent" : "0", "Child" : ["3", "4", "5", "6", "7", "8", "9"],
-		"CDFG" : "AXIvideo2Mat",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0", "Parent" : "0", "Child" : ["3", "4", "5", "6", "7", "8", "9"],
+		"CDFG" : "AXIvideo2Mat_DMA",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "309603",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "308641",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -216,13 +216,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "img_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "10", "DependentChan" : "61",
 				"BlockSignal" : [
 					{"Name" : "img_cols_V_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_data_V_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_keep_V_U", "Parent" : "2"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_strb_V_U", "Parent" : "2"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_user_V_U", "Parent" : "2"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_last_V_U", "Parent" : "2"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_id_V_U", "Parent" : "2"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0.regslice_both_AXI_video_strm_V_dest_V_U", "Parent" : "2"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_data_V_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_keep_V_U", "Parent" : "2"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_strb_V_U", "Parent" : "2"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_user_V_U", "Parent" : "2"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_last_V_U", "Parent" : "2"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_id_V_U", "Parent" : "2"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_DMA_U0.regslice_both_AXI_video_strm_V_dest_V_U", "Parent" : "2"},
 	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.GaussianBlur_U0", "Parent" : "0", "Child" : ["11"],
 		"CDFG" : "GaussianBlur",
 		"Protocol" : "ap_ctrl_hs",
@@ -374,8 +374,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "dst_cols_V_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "47", "DependentChan" : "65",
 				"BlockSignal" : [
 					{"Name" : "dst_cols_V_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "47", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0", "Parent" : "0", "Child" : ["48", "49", "50", "51", "52", "53", "54"],
-		"CDFG" : "Mat2AXIvideo",
+	{"ID" : "47", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0", "Parent" : "0", "Child" : ["48", "49", "50", "51", "52", "53", "54"],
+		"CDFG" : "Mat2AXIvideo_DMA",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -408,13 +408,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "AXI_video_strm_V_last_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "AXI_video_strm_V_id_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "AXI_video_strm_V_dest_V", "Type" : "Axis", "Direction" : "O"}]},
-	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_data_V_U", "Parent" : "47"},
-	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_keep_V_U", "Parent" : "47"},
-	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_strb_V_U", "Parent" : "47"},
-	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_user_V_U", "Parent" : "47"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_last_V_U", "Parent" : "47"},
-	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_id_V_U", "Parent" : "47"},
-	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0.regslice_both_AXI_video_strm_V_dest_V_U", "Parent" : "47"},
+	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_data_V_U", "Parent" : "47"},
+	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_keep_V_U", "Parent" : "47"},
+	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_strb_V_U", "Parent" : "47"},
+	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_user_V_U", "Parent" : "47"},
+	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_last_V_U", "Parent" : "47"},
+	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_id_V_U", "Parent" : "47"},
+	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_DMA_U0.regslice_both_AXI_video_strm_V_dest_V_U", "Parent" : "47"},
 	{"ID" : "55", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.img_1_rows_V_c_U", "Parent" : "0"},
 	{"ID" : "56", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.img_1_cols_V_c_U", "Parent" : "0"},
 	{"ID" : "57", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.img_3_rows_V_c_U", "Parent" : "0"},
@@ -433,13 +433,13 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	filter {
-		video_in_V_data_V {Type I LastRead 6 FirstWrite -1}
-		video_in_V_keep_V {Type I LastRead 6 FirstWrite -1}
-		video_in_V_strb_V {Type I LastRead 6 FirstWrite -1}
-		video_in_V_user_V {Type I LastRead 6 FirstWrite -1}
-		video_in_V_last_V {Type I LastRead 6 FirstWrite -1}
-		video_in_V_id_V {Type I LastRead 6 FirstWrite -1}
-		video_in_V_dest_V {Type I LastRead 6 FirstWrite -1}
+		video_in_V_data_V {Type I LastRead 2 FirstWrite -1}
+		video_in_V_keep_V {Type I LastRead 2 FirstWrite -1}
+		video_in_V_strb_V {Type I LastRead 2 FirstWrite -1}
+		video_in_V_user_V {Type I LastRead 2 FirstWrite -1}
+		video_in_V_last_V {Type I LastRead 2 FirstWrite -1}
+		video_in_V_id_V {Type I LastRead 2 FirstWrite -1}
+		video_in_V_dest_V {Type I LastRead 2 FirstWrite -1}
 		video_out_V_data_V {Type O LastRead -1 FirstWrite 3}
 		video_out_V_keep_V {Type O LastRead -1 FirstWrite 3}
 		video_out_V_strb_V {Type O LastRead -1 FirstWrite 3}
@@ -452,17 +452,17 @@ set ArgLastReadFirstWriteLatency {
 		img_1_cols_V_out {Type O LastRead -1 FirstWrite 0}
 		img_3_rows_V_out {Type O LastRead -1 FirstWrite 0}
 		img_3_cols_V_out {Type O LastRead -1 FirstWrite 0}}
-	AXIvideo2Mat {
-		AXI_video_strm_V_data_V {Type I LastRead 6 FirstWrite -1}
-		AXI_video_strm_V_keep_V {Type I LastRead 6 FirstWrite -1}
-		AXI_video_strm_V_strb_V {Type I LastRead 6 FirstWrite -1}
-		AXI_video_strm_V_user_V {Type I LastRead 6 FirstWrite -1}
-		AXI_video_strm_V_last_V {Type I LastRead 6 FirstWrite -1}
-		AXI_video_strm_V_id_V {Type I LastRead 6 FirstWrite -1}
-		AXI_video_strm_V_dest_V {Type I LastRead 6 FirstWrite -1}
+	AXIvideo2Mat_DMA {
+		AXI_video_strm_V_data_V {Type I LastRead 2 FirstWrite -1}
+		AXI_video_strm_V_keep_V {Type I LastRead 2 FirstWrite -1}
+		AXI_video_strm_V_strb_V {Type I LastRead 2 FirstWrite -1}
+		AXI_video_strm_V_user_V {Type I LastRead 2 FirstWrite -1}
+		AXI_video_strm_V_last_V {Type I LastRead 2 FirstWrite -1}
+		AXI_video_strm_V_id_V {Type I LastRead 2 FirstWrite -1}
+		AXI_video_strm_V_dest_V {Type I LastRead 2 FirstWrite -1}
 		img_rows_V {Type I LastRead 0 FirstWrite -1}
 		img_cols_V {Type I LastRead 0 FirstWrite -1}
-		img_data_stream_V {Type O LastRead -1 FirstWrite 5}
+		img_data_stream_V {Type O LastRead -1 FirstWrite 3}
 		img_rows_V_out {Type O LastRead -1 FirstWrite 0}
 		img_cols_V_out {Type O LastRead -1 FirstWrite 0}}
 	GaussianBlur {
@@ -482,7 +482,7 @@ set ArgLastReadFirstWriteLatency {
 		dst_data_stream_V {Type O LastRead -1 FirstWrite 4}
 		dst_rows_V_out {Type O LastRead -1 FirstWrite 0}
 		dst_cols_V_out {Type O LastRead -1 FirstWrite 0}}
-	Mat2AXIvideo {
+	Mat2AXIvideo_DMA {
 		img_rows_V {Type I LastRead 0 FirstWrite -1}
 		img_cols_V {Type I LastRead 0 FirstWrite -1}
 		img_data_stream_V {Type I LastRead 3 FirstWrite -1}
@@ -497,7 +497,7 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "195", "Max" : "316711"}
+	{"Name" : "Latency", "Min" : "193", "Max" : "316709"}
 	, {"Name" : "Interval", "Min" : "192", "Max" : "316708"}
 ]}
 
@@ -505,16 +505,16 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	video_in_V_data_V { axis {  { video_in_TDATA in_data 0 16 } } }
-	video_in_V_keep_V { axis {  { video_in_TKEEP in_data 0 2 } } }
-	video_in_V_strb_V { axis {  { video_in_TSTRB in_data 0 2 } } }
+	video_in_V_data_V { axis {  { video_in_TDATA in_data 0 8 } } }
+	video_in_V_keep_V { axis {  { video_in_TKEEP in_data 0 1 } } }
+	video_in_V_strb_V { axis {  { video_in_TSTRB in_data 0 1 } } }
 	video_in_V_user_V { axis {  { video_in_TUSER in_data 0 1 } } }
 	video_in_V_last_V { axis {  { video_in_TLAST in_data 0 1 } } }
 	video_in_V_id_V { axis {  { video_in_TID in_data 0 1 } } }
 	video_in_V_dest_V { axis {  { video_in_TDEST in_data 0 1 }  { video_in_TVALID in_vld 0 1 }  { video_in_TREADY in_acc 1 1 } } }
-	video_out_V_data_V { axis {  { video_out_TDATA out_data 1 16 } } }
-	video_out_V_keep_V { axis {  { video_out_TKEEP out_data 1 2 } } }
-	video_out_V_strb_V { axis {  { video_out_TSTRB out_data 1 2 } } }
+	video_out_V_data_V { axis {  { video_out_TDATA out_data 1 8 } } }
+	video_out_V_keep_V { axis {  { video_out_TKEEP out_data 1 1 } } }
+	video_out_V_strb_V { axis {  { video_out_TSTRB out_data 1 1 } } }
 	video_out_V_user_V { axis {  { video_out_TUSER out_data 1 1 } } }
 	video_out_V_last_V { axis {  { video_out_TLAST out_data 1 1 } } }
 	video_out_V_id_V { axis {  { video_out_TID out_data 1 1 } } }

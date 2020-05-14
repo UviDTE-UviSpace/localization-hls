@@ -163,7 +163,7 @@ proc create_root_design { parentCell } {
    CONFIG.HAS_TREADY {1} \
    CONFIG.HAS_TSTRB {1} \
    CONFIG.LAYERED_METADATA {undef} \
-   CONFIG.TDATA_NUM_BYTES {2} \
+   CONFIG.TDATA_NUM_BYTES {1} \
    CONFIG.TDEST_WIDTH {1} \
    CONFIG.TID_WIDTH {1} \
    CONFIG.TUSER_WIDTH {1} \

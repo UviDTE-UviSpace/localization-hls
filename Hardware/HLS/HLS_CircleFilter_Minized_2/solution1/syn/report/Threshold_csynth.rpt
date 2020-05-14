@@ -3,10 +3,10 @@
 ================================================================
 == Vivado HLS Report for 'Threshold'
 ================================================================
-* Date:           Thu May  7 15:10:49 2020
+* Date:           Thu May 14 01:38:27 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
-* Project:        HLS_CircleFilter_Minized
+* Project:        HLS_CircleFilter_Minized_2
 * Solution:       solution1
 * Product family: zynq
 * Target device:  xc7z007s-clg225-1

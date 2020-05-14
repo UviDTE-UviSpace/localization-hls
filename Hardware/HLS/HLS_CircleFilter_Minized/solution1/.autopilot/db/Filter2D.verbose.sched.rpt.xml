@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Filter2D'" level="0">
-<item name = "Date">Thu May  7 15:10:44 2020
+<item name = "Date">Tue May 12 16:47:53 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">HLS_CircleFilter_Minized</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">190, 316706, 2.058 us, 3.430 ms, 190, 316706, none</column>
+<column name="">315400, 315400, 3.416 ms, 3.416 ms, 315400, 315400, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_height">189, 316705, 21 ~ 653, -, -, 9 ~ 485, no</column>
-<column name=" + loop_width">18, 650, 8, 1, 1, 12 ~ 644, yes</column>
+<column name="- loop_height">315399, 315399, 653, -, -, 483, no</column>
+<column name=" + loop_width">650, 650, 8, 1, 1, 644, yes</column>
 </table>
 </item>
 </section>

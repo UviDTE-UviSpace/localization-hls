@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Apr 28 16:27:59 2020
+| Date         : Thu May 14 17:11:56 2020
 | Host         : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 | Command      : report_timing -max_paths 10 -file ./report/filter_timing_paths_routed.rpt
 | Design       : bd_0_wrapper
@@ -11,423 +11,15 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             0.512ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+Slack (MET) :             0.500ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[40]
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[22]
                             (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.703ns  (logic 4.735ns (61.469%)  route 2.968ns (38.531%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          1.025     8.676    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[40]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[40])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.676    
-  -------------------------------------------------------------------
-                         slack                                  0.512    
-
-Slack (MET) :             0.518ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[22]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.697ns  (logic 4.735ns (61.515%)  route 2.962ns (38.485%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          1.019     8.670    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[22]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[22])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.670    
-  -------------------------------------------------------------------
-                         slack                                  0.518    
-
-Slack (MET) :             0.541ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[23]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.674ns  (logic 4.735ns (61.705%)  route 2.939ns (38.295%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.995     8.647    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[23]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[23])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.647    
-  -------------------------------------------------------------------
-                         slack                                  0.541    
-
-Slack (MET) :             0.541ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[41]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.674ns  (logic 4.735ns (61.705%)  route 2.939ns (38.295%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.995     8.647    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[41]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[41])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.647    
-  -------------------------------------------------------------------
-                         slack                                  0.541    
-
-Slack (MET) :             0.549ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[26]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.666ns  (logic 4.735ns (61.765%)  route 2.931ns (38.235%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.988     8.639    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[26]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[26])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.639    
-  -------------------------------------------------------------------
-                         slack                                  0.549    
-
-Slack (MET) :             0.550ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[25]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.665ns  (logic 4.735ns (61.773%)  route 2.930ns (38.227%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.987     8.638    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[25]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[25])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.638    
-  -------------------------------------------------------------------
-                         slack                                  0.550    
-
-Slack (MET) :             0.550ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[27]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.665ns  (logic 4.735ns (61.773%)  route 2.930ns (38.227%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.987     8.638    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[27]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[27])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.638    
-  -------------------------------------------------------------------
-                         slack                                  0.550    
-
-Slack (MET) :             0.588ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[30]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.627ns  (logic 4.735ns (62.085%)  route 2.892ns (37.915%))
-  Logic Levels:           2  (DSP48E1=1 LUT4=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.948     8.600    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[30]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[30])
-                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
-  -------------------------------------------------------------------
-                         required time                          9.188    
-                         arrival time                          -8.600    
-  -------------------------------------------------------------------
-                         slack                                  0.588    
-
-Slack (MET) :             0.604ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/icmp_ln444_reg_2569_pp0_iter4_reg_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[26]
-                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.611ns  (logic 4.545ns (59.719%)  route 3.066ns (40.281%))
+  Data Path Delay:        7.715ns  (logic 4.778ns (61.934%)  route 2.937ns (38.066%))
   Logic Levels:           3  (DSP48E1=1 LUT2=1 LUT6=1)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
@@ -443,44 +35,44 @@ Slack (MET) :             0.604ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X28Y6          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/icmp_ln444_reg_2569_pp0_iter4_reg_reg[0]/C
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X31Y2          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X28Y6          FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/icmp_ln444_reg_2569_pp0_iter4_reg_reg[0]/Q
-                         net (fo=66, routed)          0.470     1.899    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/icmp_ln444_reg_2569_pp0_iter4_reg_reg_n_0_[0]
-    SLICE_X28Y8          LUT2 (Prop_lut2_I1_O)        0.124     2.023 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9/O
-                         net (fo=8, routed)           0.768     2.792    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9_n_0
-    SLICE_X27Y4          LUT6 (Prop_lut6_I4_O)        0.124     2.916 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_3/O
-                         net (fo=1, routed)           0.788     3.704    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_3_n_0
-    DSP48_X1Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      3.841     7.545 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2/P[16]
-                         net (fo=32, routed)          1.039     8.584    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/P[16]
-    DSP48_X1Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[26]
+    SLICE_X31Y2          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/Q
+                         net (fo=67, routed)          0.662     2.091    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5
+    SLICE_X31Y2          LUT2 (Prop_lut2_I0_O)        0.149     2.240 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9/O
+                         net (fo=8, routed)           0.720     2.960    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9_n_0
+    SLICE_X33Y2          LUT6 (Prop_lut6_I4_O)        0.332     3.292 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_4/O
+                         net (fo=1, routed)           0.522     3.814    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_4_n_0
+    DSP48_X2Y0           DSP48E1 (Prop_dsp48e1_A[4]_P[16])
+                                                      3.841     7.655 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2/P[16]
+                         net (fo=32, routed)          1.033     8.688    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/P[16]
+    DSP48_X2Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[22]
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X1Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/CLK
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    DSP48_X1Y1           DSP48E1 (Setup_dsp48e1_CLK_C[26])
+    DSP48_X2Y1           DSP48E1 (Setup_dsp48e1_CLK_C[22])
                                                      -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p
   -------------------------------------------------------------------
                          required time                          9.188    
-                         arrival time                          -8.584    
+                         arrival time                          -8.688    
   -------------------------------------------------------------------
-                         slack                                  0.604    
+                         slack                                  0.500    
 
-Slack (MET) :             0.632ns  (required time - arrival time)
+Slack (MET) :             0.502ns  (required time - arrival time)
   Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[36]
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[40]
                             (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.583ns  (logic 4.735ns (62.446%)  route 2.848ns (37.554%))
+  Data Path Delay:        7.713ns  (logic 4.651ns (60.297%)  route 3.062ns (39.703%))
   Logic Levels:           2  (DSP48E1=1 LUT4=1)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
@@ -496,32 +88,444 @@ Slack (MET) :             0.632ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
-    SLICE_X12Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y7          FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
-                         net (fo=19, routed)          1.255     2.746    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
-    SLICE_X12Y1          LUT4 (Prop_lut4_I2_O)        0.152     2.898 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
-                         net (fo=1, routed)           0.689     3.586    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
-    DSP48_X0Y0           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
-                                                      4.065     7.651 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
-                         net (fo=32, routed)          0.904     8.556    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[36]
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          1.030     8.686    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[40]
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=1206, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
-    DSP48_X0Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    DSP48_X0Y1           DSP48E1 (Setup_dsp48e1_CLK_C[36])
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[40])
                                                      -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
   -------------------------------------------------------------------
                          required time                          9.188    
-                         arrival time                          -8.556    
+                         arrival time                          -8.686    
   -------------------------------------------------------------------
-                         slack                                  0.632    
+                         slack                                  0.502    
+
+Slack (MET) :             0.508ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[40]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.707ns  (logic 4.778ns (61.997%)  route 2.929ns (38.003%))
+  Logic Levels:           3  (DSP48E1=1 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X31Y2          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y2          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/Q
+                         net (fo=67, routed)          0.662     2.091    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5
+    SLICE_X31Y2          LUT2 (Prop_lut2_I0_O)        0.149     2.240 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9/O
+                         net (fo=8, routed)           0.720     2.960    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9_n_0
+    SLICE_X33Y2          LUT6 (Prop_lut6_I4_O)        0.332     3.292 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_4/O
+                         net (fo=1, routed)           0.522     3.814    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_4_n_0
+    DSP48_X2Y0           DSP48E1 (Prop_dsp48e1_A[4]_P[16])
+                                                      3.841     7.655 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2/P[16]
+                         net (fo=32, routed)          1.025     8.680    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/P[16]
+    DSP48_X2Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[40]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y1           DSP48E1 (Setup_dsp48e1_CLK_C[40])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.680    
+  -------------------------------------------------------------------
+                         slack                                  0.508    
+
+Slack (MET) :             0.522ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[41]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.693ns  (logic 4.651ns (60.458%)  route 3.042ns (39.542%))
+  Logic Levels:           2  (DSP48E1=1 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          1.009     8.666    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[41]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[41])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.666    
+  -------------------------------------------------------------------
+                         slack                                  0.522    
+
+Slack (MET) :             0.528ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[22]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.687ns  (logic 4.651ns (60.507%)  route 3.036ns (39.493%))
+  Logic Levels:           2  (DSP48E1=1 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          1.003     8.660    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[22]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[22])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.660    
+  -------------------------------------------------------------------
+                         slack                                  0.528    
+
+Slack (MET) :             0.532ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[21]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.683ns  (logic 4.651ns (60.536%)  route 3.032ns (39.464%))
+  Logic Levels:           2  (DSP48E1=1 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          1.000     8.656    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[21]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[21])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.656    
+  -------------------------------------------------------------------
+                         slack                                  0.532    
+
+Slack (MET) :             0.532ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[42]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.683ns  (logic 4.651ns (60.536%)  route 3.032ns (39.464%))
+  Logic Levels:           2  (DSP48E1=1 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          1.000     8.656    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[42]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[42])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.656    
+  -------------------------------------------------------------------
+                         slack                                  0.532    
+
+Slack (MET) :             0.532ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[43]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.683ns  (logic 4.651ns (60.536%)  route 3.032ns (39.464%))
+  Logic Levels:           2  (DSP48E1=1 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          1.000     8.656    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[43]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[43])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.656    
+  -------------------------------------------------------------------
+                         slack                                  0.532    
+
+Slack (MET) :             0.536ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[23]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.679ns  (logic 4.651ns (60.571%)  route 3.028ns (39.429%))
+  Logic Levels:           2  (DSP48E1=1 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X33Y7          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y7          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3_reg/Q
+                         net (fo=19, routed)          1.335     2.764    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter3
+    SLICE_X38Y8          LUT4 (Prop_lut4_I2_O)        0.150     2.914 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3/O
+                         net (fo=1, routed)           0.697     3.612    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2_i_3_n_0
+    DSP48_X2Y5           DSP48E1 (Prop_dsp48e1_A[5]_P[16])
+                                                      4.045     7.657 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2057_p2/P[16]
+                         net (fo=32, routed)          0.995     8.652    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p_0[16]
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/C[23]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y4           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y4           DSP48E1 (Setup_dsp48e1_CLK_C[23])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U28/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.652    
+  -------------------------------------------------------------------
+                         slack                                  0.536    
+
+Slack (MET) :             0.538ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[23]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.677ns  (logic 4.778ns (62.235%)  route 2.899ns (37.765%))
+  Logic Levels:           3  (DSP48E1=1 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.973     0.973    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_clk
+    SLICE_X31Y2          FDRE                                         r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y2          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5_reg/Q
+                         net (fo=67, routed)          0.662     2.091    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/ap_enable_reg_pp0_iter5
+    SLICE_X31Y2          LUT2 (Prop_lut2_I0_O)        0.149     2.240 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9/O
+                         net (fo=8, routed)           0.720     2.960    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_9_n_0
+    SLICE_X33Y2          LUT6 (Prop_lut6_I4_O)        0.332     3.292 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_4/O
+                         net (fo=1, routed)           0.522     3.814    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2_i_4_n_0
+    DSP48_X2Y0           DSP48E1 (Prop_dsp48e1_A[4]_P[16])
+                                                      3.841     7.655 r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/grp_fu_2082_p2/P[16]
+                         net (fo=32, routed)          0.995     8.650    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/P[16]
+    DSP48_X2Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/C[23]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1145, unset)         0.924    10.924    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/ap_clk
+    DSP48_X2Y1           DSP48E1                                      r  bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X2Y1           DSP48E1 (Setup_dsp48e1_CLK_C[23])
+                                                     -1.701     9.188    bd_0_i/hls_inst/U0/GaussianBlur_U0/grp_Filter2D_fu_82/filter_mac_muladdg8j_U31/filter_mac_muladdg8j_DSP48_0_U/p
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -8.650    
+  -------------------------------------------------------------------
+                         slack                                  0.538    
 
 
 

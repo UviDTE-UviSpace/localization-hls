@@ -2,9 +2,11 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="simple.hpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign\simple.hpp"/>
+    <originFiles name="Mat2AXIvideo_DMA.h" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign\Mat2AXIvideo_DMA.h"/>
     <originFiles name="Grey_image.cpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign\Grey_image.cpp"/>
   </source>
   <testbench>
+    <originFiles name="IplImage2AXIvideo_DMA.h" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign\IplImage2AXIvideo_DMA.h"/>
     <originFiles name="Grey_image_tb.cpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign\Grey_image_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

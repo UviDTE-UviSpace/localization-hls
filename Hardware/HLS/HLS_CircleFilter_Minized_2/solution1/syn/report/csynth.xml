@@ -21,10 +21,10 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>195</Best-caseLatency>
+<Best-caseLatency>193</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>316711</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.112 us</Best-caseRealTimeLatency>
+<Worst-caseLatency>316709</Worst-caseLatency>
+<Best-caseRealTimeLatency>2.090 us</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>3.430 ms</Worst-caseRealTimeLatency>
 <DataflowPipelineThroughput>
@@ -42,8 +42,8 @@
 <Resources>
 <BRAM_18K>5</BRAM_18K>
 <DSP48E>19</DSP48E>
-<FF>2085</FF>
-<LUT>4093</LUT>
+<FF>2026</FF>
+<LUT>3987</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -64,7 +64,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>16</Bits>
+<Bits>8</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -76,7 +76,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>1</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -88,7 +88,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>2</Bits>
+<Bits>1</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -172,7 +172,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>16</Bits>
+<Bits>8</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -184,7 +184,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>2</Bits>
+<Bits>1</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -196,7 +196,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>2</Bits>
+<Bits>1</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
