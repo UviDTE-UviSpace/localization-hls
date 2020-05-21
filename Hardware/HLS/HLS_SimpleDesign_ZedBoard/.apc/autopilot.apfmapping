@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="core.cpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\core.cpp"/>
     <originFiles name="core.hpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\core.hpp"/>
+    <originFiles name="core.cpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\core.cpp"/>
     <originFiles name="Mat2AXIvideo_DMA.h" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\Mat2AXIvideo_DMA.h"/>
   </source>
   <testbench>
-    <originFiles name="IplImage2AXIvideo_DMA.h" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\IplImage2AXIvideo_DMA.h"/>
     <originFiles name="tb.cpp" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\tb.cpp"/>
+    <originFiles name="IplImage2AXIvideo_DMA.h" path="C:\localization-hls\Hardware\HLS\HLS_SimpleDesign_ZedBoard\IplImage2AXIvideo_DMA.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

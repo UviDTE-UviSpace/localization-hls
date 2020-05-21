@@ -11,12 +11,38 @@ max & standard deviation of orientation.
 mean value x,y, angle = mean error, max error, standard deviation.
 if no difference = algo is robust
 
+#Vragen
 Does axiVideo2Mat wait itself to fill the mat object given as parameter
 typedef hls::Mat<HEIGHT,   WIDTH,   HLS_8UC3> RGB_IMAGE; ?
 VDMA transfer call like DMA?
 UIO, Xilinx DMA driver ?
+Petalinux has DMA soft driver, but does this have to be changed from 16MB to 500?
+Sending the adress of the openCV image will send it as a 1D array ?
 Comparison table triangle same as Circle one created?
 Algorithm is half in Hardware. Profiling showed some filters in HW should suffice.
+Invite for
+
+#TODO
+* [x] send DMA soft driver, bare metal application (random data & pixel 10x10). 18/05
+* [ ] STDV of angle position and place in accuracy table. 18/05
+* [x] PetaLinux builds with DMA DTI 18/05
+* [ ] Read back image into dst image from DMA memory map.
+* [ ] triangle STDV 1000 pics (Dont spend too much time to try this)
+
+* [ ] Send mail Jj prof with public paper and finished full paper.
+* [ ] Send mail Bart Hours of final presentations.
+* [ ] Update Software GitHub text & pics.
+* [ ] Update images Software & HArdware chapters text in pics (Axi2Mat_DMA).
+* [ ] Update images PEtaLinux, place rootfs, hw description, module, drivers etc ... on the block design.
+
+#project
+part 1 accucary
+part 2 HLS to improve
+part 3 hardware comparison to software
+
+triangle STDV 1000 pics
+1500mm HEIGHT
+2000mm WIDTH
 
 1) If size of data is bigger or smaller by 1 then the DMA wont stream data to the IP-core.
 2) can NOT check "while (XAxiDma_Busy(&axiDMA, XAXIDMA_DMA_TO_DEVICE));" before started the DMA transfer from IP-core to DMA.
@@ -59,8 +85,10 @@ img array has 2400rows*16colums = 38400 hexadecimals  (each hexi nr is 4 bits so
 img array in bits is 38400*8 = 307200 bits
 
 IP-core fills Hls::mat<480,640, HLS_8UC3> RGB_image so 480*640*8*3 = 7372800 unsigned bits
-send stream in integer is 7372800/32 = 230400 bits
-send stream in chars is 7372800/8 = 921600 bits
+send stream in integer is 7372800/32 = 230400 ints
+send stream in chars is 7372800/8 = 921600 chars
 
+Base adress is 0x01000000
 read TX reg with : mrd 0x01100000 64
 read RX reg with : mrd 0x01300000 64
+read RX reg with : devmem 0x01300000 64

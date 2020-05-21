@@ -12,6 +12,13 @@ import numpy as np
 import pandas as pd
 import math
 
+stdvmmlistX = 0
+stdvmmlistXtotal = []
+stdvmmlistY = 0
+stdvmmlistYtotal = []
+stdvmmlistR = 0
+stdvmmlistRtotal = []
+
 
 def _makePlot(df, itr):
     
@@ -140,7 +147,19 @@ def _makePlot(df, itr):
     print("Max X = ", np.max(data1), " =>       Max Y = ", np.max(data2), " =>      Max R = ", np.max(data3))
     print("Mean X = ", Mean_X, " =>       Mean Y = ", Mean_Y, " =>      Mean R = ", Mean_R)
     print("STDV X pixel = ", STDV_X, "  =>        STDV Y pixel = ", STDV_Y, "  =>       STDV R pixel = ", STDV_R)
-    print("STDV X mm= ", 0.264583333*STDV_X, "  =>    STDV Y mm = ", 0.264583333*STDV_Y, "mm  =>     STDV R mm = ", 0.264583333*STDV_R)
+    #print("STDV X mm= ", 0.264583333*STDV_X, "  =>    STDV Y mm = ", 0.264583333*STDV_Y, "mm  =>     STDV R mm = ", 0.264583333*STDV_R)
+    print("STDV X mm= ", 3.125*STDV_X, "  =>    STDV Y mm = ", 3.125*STDV_Y, "mm  =>     STDV R mm = ", 3.125*STDV_R)
+    
+    stdvmmlistX = 3.125*STDV_X
+    stdvmmlistY = 3.125*STDV_Y
+    stdvmmlistR = 3.125*STDV_R
+    stdvmmlistXtotal.append(stdvmmlistX)
+    stdvmmlistYtotal.append(stdvmmlistY)
+    stdvmmlistRtotal.append(stdvmmlistR)
+    
+    print("X in mm = ", stdvmmlistX)
+    print("Y in mm = ", stdvmmlistY)
+    print("R in mm = ", stdvmmlistR)
     
     varianceX = 0
     varianceY = 0
@@ -164,4 +183,7 @@ if __name__ == '__main__':
     _makePlot(df,5)
     _makePlot(df,6)    
     
+    print("X: max, min , mean = ", np.max(stdvmmlistXtotal), np.min(stdvmmlistXtotal), np.mean(stdvmmlistXtotal))
+    print("Y; max, min , mean = ", np.max(stdvmmlistYtotal), np.min(stdvmmlistYtotal), np.mean(stdvmmlistYtotal))
+    print("R; max, min , mean = ", np.max(stdvmmlistRtotal), np.min(stdvmmlistRtotal), np.mean(stdvmmlistRtotal))
    
