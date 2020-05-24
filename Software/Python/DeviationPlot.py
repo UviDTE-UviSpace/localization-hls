@@ -172,18 +172,44 @@ def _makePlot(df, itr):
        varianceR = varianceR + math.sqrt( (get-int(Mean_Y)) )
     print("Vari X = ", varianceX/1000, " =>       Vari Y = ", varianceY/1000, " =>          Vari R = ", varianceR/1000 )
     
+    
+def _thetaAngle(df):
+    df1 = df[["bin_0degree_Theta"]]
+    df2 = df[["bin_45degree_Theta"]]
+    df3 = df[["bin_90degree_Theta"]]
+    data1 = df1.values
+    data2 = df2.values
+    data3 = df3.values 
+    
+    Mean_Theta0=np.mean(data1)
+    Mean_Theta45=np.mean(data2) 
+    Mean_Theta90=np.mean(data3) 
+    
+    STDV_Theta0=np.std(data1)
+    STDV_Theta45=np.std(data2)
+    STDV_Theta90=np.std(data3)
+    
+    print("Min thet0 = ", np.min(data1), " =>      Min thet45 = ", np.min(data2), " =>      Min thet90 = ", np.min(data3))
+    print("Max thet0 = ", np.max(data1), " =>       Max thet45 = ", np.max(data2), " =>      Max thet90 = ", np.max(data3))
+    print("Mean thet0 = ", Mean_Theta0, " =>       Mean thet45 = ", Mean_Theta45, " =>      Mean thet90 = ", Mean_Theta90)
+    print("STDV thet0 pixel = ", STDV_Theta0, "  =>        STDV thet45 pixel = ", STDV_Theta45, "  =>       STDV thet90 pixel = ", STDV_Theta90)
+    #print("STDV X mm= ", 0.264583333*STDV_X, "  =>    STDV Y mm = ", 0.264583333*STDV_Y, "mm  =>     STDV R mm = ", 0.264583333*STDV_R)
+    print("STDV thet0 mm= ", 3.125*STDV_Theta0, "  =>    STDV thet45 mm = ", 3.125*STDV_Theta45, "mm  =>     STDV thet90 mm = ", 3.125*STDV_Theta90)
+    
+    
 if __name__ == '__main__':   
     # load array
     df = pd.read_pickle('measuredata\\data.pkl')
-    #print(df[["Y_big_0degree", "Y_big_90degree", "Y_big_45degree"]])
+    print(df)
+    _thetaAngle(df)
     _makePlot(df,1)
     _makePlot(df,2)
     _makePlot(df,3)
     _makePlot(df,4)
     _makePlot(df,5)
-    _makePlot(df,6)    
-    
+    _makePlot(df,6)   
     print("X: max, min , mean = ", np.max(stdvmmlistXtotal), np.min(stdvmmlistXtotal), np.mean(stdvmmlistXtotal))
     print("Y; max, min , mean = ", np.max(stdvmmlistYtotal), np.min(stdvmmlistYtotal), np.mean(stdvmmlistYtotal))
     print("R; max, min , mean = ", np.max(stdvmmlistRtotal), np.min(stdvmmlistRtotal), np.mean(stdvmmlistRtotal))
+
    

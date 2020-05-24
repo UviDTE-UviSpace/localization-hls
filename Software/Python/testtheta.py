@@ -24,6 +24,7 @@ radiusSize = 12 # !!! Change later with code line 51 !!!!
 point1 = []
 point2 = []
 
+
 def _findCircleMass(imgFind):
     
     filenameBila = 'images/bila.jpg'
@@ -79,6 +80,7 @@ def _groupUGV(contourData):
             smallCircles.append(centerpoints[:2])
             point2.append(centerpoints[0])
             point2.append(centerpoints[1])
+            
     
     for big, small in zip(bigCircles, smallCircles):
         UVGList.append([big, small]) 
@@ -92,7 +94,7 @@ if __name__ == '__main__':
     #start = time.time()
     tic = time.perf_counter()
     #Read binary image
-    img = cv.imread('images//binary/circle/bin_90degree.png',0)
+    img = cv.imread('images//binary/circle/bin_0degree.png',0)
     #Get dimensions
     h, w = img.shape[:2]
     #Find center locations
@@ -129,7 +131,7 @@ if __name__ == '__main__':
     theta_radians2 = math.atan2(delta_y2, delta_x2)
     '''
     print("before radian",theta_radians)
-    theta_radians = theta_radians + 1.5707963267948966
+    theta_radians = theta_radians # + 1.5707963267948966
     print("after radian", theta_radians)
     #plt.gca().invert_yaxis()
     plt.plot(x_values, y_values)

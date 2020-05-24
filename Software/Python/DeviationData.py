@@ -76,6 +76,7 @@ from numpy import asarray
 from numpy import save
 import pandas as pd
 from matplotlib import pyplot as plt
+import math
 
 radiusSize = 12 # !!! Change later with code line 51 !!!!
 directory0degree = 'D:\deviations\\bin\\circles\\0_degrees'
@@ -110,6 +111,13 @@ bin_0degree_R_Big = []
 bin_45degree_R_Big = []
 bin_90degree_R_Big= []
 
+bin_0degree_Theta = []
+bin_45degree_Theta = []
+bin_90degree_Theta = []
+
+point1 = []
+point2 = []
+
 def _findCircle(imgFind):
     
     imgray = cv.bilateralFilter(imgFind,9,75,75)
@@ -141,6 +149,9 @@ def _groupDataset0Degree(contourData):
         #Save data in small circle dataset
         if data[2] >= radiusSize and data[2] <= radiusSize + 3:
             bigCircles0degree.append(data[:2])
+
+            point1.append(data[0])
+            point1.append(data[1])
             
             bin_0degree_X_Big.append(data[0])           
             bin_0degree_Y_Big.append(data[1])         
@@ -149,14 +160,16 @@ def _groupDataset0Degree(contourData):
         #Save data in big circle dataset
         elif data[2] <= radiusSize and data[2] >= radiusSize - 3:
             smallCircles0degree.append(data[:2])
+            point2.append(data[0])
+            point2.append(data[1])
             
             bin_0degree_X_Small.append(data[0])            
             bin_0degree_Y_Small.append(data[1])           
-            bin_0degree_R_Small.append(data[2])
+            bin_0degree_R_Small.append(data[2])            
             
     for big, small in zip(bigCircles0degree, smallCircles0degree):
         UVGList0degree.append([big, small]) 
-
+        
 def _groupDataset45Degree(contourData):
     
     bigCircles45degree = []
@@ -168,6 +181,8 @@ def _groupDataset45Degree(contourData):
         if data[2] >= radiusSize and data[2] <= radiusSize + 3:
             bigCircles45degree.append(data[:2])
             
+            point1.append(data[0])
+            point1.append(data[1])          
             bin_45degree_X_Big.append(data[0])           
             bin_45degree_Y_Big.append(data[1])         
             bin_45degree_R_Big.append(data[2])
@@ -176,6 +191,8 @@ def _groupDataset45Degree(contourData):
         elif data[2] <= radiusSize and data[2] >= radiusSize - 3:
             smallCircles45degree.append(data[:2])
             
+            point2.append(data[0])
+            point2.append(data[1])   
             bin_45degree_X_Small.append(data[0])            
             bin_45degree_Y_Small.append(data[1])           
             bin_45degree_R_Small.append(data[2])
@@ -194,6 +211,8 @@ def _groupDataset90Degree(contourData):
         if data[2] >= radiusSize and data[2] <= radiusSize + 3:
             bigCircles90degree.append(data[:2])
             
+            point1.append(data[0])
+            point1.append(data[1])    
             bin_90degree_X_Big.append(data[0])           
             bin_90degree_Y_Big.append(data[1])         
             bin_90degree_R_Big.append(data[2])
@@ -202,6 +221,8 @@ def _groupDataset90Degree(contourData):
         elif data[2] <= radiusSize and data[2] >= radiusSize - 3:
             smallCircles90degree.append(data[:2])
             
+            point2.append(data[0])
+            point2.append(data[1])   
             bin_90degree_X_Small.append(data[0])            
             bin_90degree_Y_Small.append(data[1])           
             bin_90degree_R_Small.append(data[2])
@@ -210,6 +231,15 @@ def _groupDataset90Degree(contourData):
         UVGList90degree.append([big, small])         
 if __name__ == '__main__':
     print("Deviation calulations of circle algorithm by Gilles Lenaerts.")
+    '''
+    theta_radians = theta_radians + 1.5707963267948966
+    #this is used to calibrate and validate the correction error which is added with the calculated radian of the images taken in the lab.
+    #This setup would be 45°. The radian added is 1.5707963267948966 to work the Y-axis. If it is supposed to work on X-axis, remove the radian added.
+    delta_x2 = 200 - 250
+    delta_y2 = 200 - 250
+    theta_radians2 = math.atan2(delta_y2, delta_x2)
+    '''
+    itrtheta = 0
     itr1 = 0
     itr2 = 0
     itr3 = 0
@@ -221,7 +251,18 @@ if __name__ == '__main__':
         img = cv.imread(path,0)
         data = _findCircle(img)
         _groupDataset0Degree(data)
-        
+        x_values = [point1[itrtheta], point2[itrtheta]]
+        y_values = [point1[itrtheta+1], point2[itrtheta+1]]
+        delta_x = point2[itrtheta] - point1[itrtheta]
+        delta_y = point2[itrtheta+1] - point1[itrtheta+1]
+        theta_radians = math.atan2(delta_y, delta_x)
+        theta_radians = theta_radians + 1.5707963267948966
+        print("after radian", theta_radians)
+        bin_0degree_Theta.append(theta_radians)
+        itrtheta = itrtheta + 2
+    itrtheta = 0
+    point1.clear()
+    point2.clear()
     for f in os.listdir(directory45degree):
         itr2 = itr2+1
         path = directory45degree+'\\'+f
@@ -229,7 +270,18 @@ if __name__ == '__main__':
         img = cv.imread(path,0)
         data = _findCircle(img)
         _groupDataset45Degree(data)
-         
+        x_values = [point1[itrtheta], point2[itrtheta]]
+        y_values = [point1[itrtheta+1], point2[itrtheta+1]]
+        delta_x = point2[itrtheta] - point1[itrtheta]
+        delta_y = point2[itrtheta+1] - point1[itrtheta+1]
+        theta_radians = math.atan2(delta_y, delta_x)
+        theta_radians = theta_radians + 1.5707963267948966
+        print("after radian", theta_radians)
+        bin_45degree_Theta.append(theta_radians)
+        itrtheta = itrtheta + 2
+    itrtheta = 0 
+    point1.clear()
+    point2.clear()    
     for f in os.listdir(directory90degree):
         itr3 = itr3+1
         path = directory90degree+'\\'+f
@@ -237,6 +289,17 @@ if __name__ == '__main__':
         img = cv.imread(path,0)
         data = _findCircle(img)
         _groupDataset90Degree(data)
+        x_values = [point1[itrtheta], point2[itrtheta]]
+        y_values = [point1[itrtheta+1], point2[itrtheta+1]]
+        delta_x = point2[itrtheta] - point1[itrtheta]
+        delta_y = point2[itrtheta+1] - point1[itrtheta+1]
+        theta_radians = math.atan2(delta_y, delta_x)
+        theta_radians = theta_radians + 1.5707963267948966
+        print("after radian", theta_radians)
+        bin_90degree_Theta.append(theta_radians)
+        itrtheta = itrtheta + 2
+        
+
         
     print("UGV0degree = ",len(UVGList0degree), "UGV45degree = ", len(UVGList45degree), "UGV90degree =" , len(UVGList90degree) )
     print("UGVR0degreemax = ", max(bin_0degree_R_Big),"UGVR45degreemax = ", max(bin_45degree_R_Big),"UGVR90degreemax = ", max(bin_90degree_R_Big) )
@@ -258,19 +321,19 @@ if __name__ == '__main__':
         # save to csv file
         
         zippedList =  list(zip(bin_0degree_X_Big, bin_0degree_Y_Big, bin_0degree_R_Big,
-                               bin_0degree_X_Small, bin_0degree_Y_Small, bin_0degree_R_Small,
+                               bin_0degree_X_Small, bin_0degree_Y_Small, bin_0degree_R_Small, bin_0degree_Theta,
                                bin_45degree_X_Big, bin_45degree_Y_Big, bin_45degree_R_Big,
-                               bin_45degree_X_Small, bin_45degree_Y_Small, bin_45degree_R_Small,
+                               bin_45degree_X_Small, bin_45degree_Y_Small, bin_45degree_R_Small, bin_45degree_Theta, 
                                bin_90degree_X_Big, bin_90degree_Y_Big, bin_90degree_R_Big,
-                               bin_90degree_X_Small, bin_90degree_Y_Small, bin_90degree_R_Small,))
+                               bin_90degree_X_Small, bin_90degree_Y_Small, bin_90degree_R_Small, bin_90degree_Theta))
         
         
         df = pd.DataFrame(zippedList, columns = ['X_big_0degree','Y_big_0degree','R_big_0degree',
-                                     'X_small_0degree','Y_small_0degree','R_small_0degree',
+                                     'X_small_0degree','Y_small_0degree','R_small_0degree', 'bin_0degree_Theta',
                                      'X_big_45degree','Y_big_45degree','R_big_45degree',
-                                     'X_small_45degree','Y_small_45degree','R_small_45degree',
+                                     'X_small_45degree','Y_small_45degree','R_small_45degree', 'bin_45degree_Theta',
                                      'X_big_90degree','Y_big_90degree','R_big_90degree',
-                                     'X_small_90degree','Y_small_90degree','R_small_90degree' ])
+                                     'X_small_90degree','Y_small_90degree','R_small_90degree', 'bin_90degree_Theta'])
         '''
         pd2 = pd.DataFrame(bin_0degree_Y_Big, 'Y_big_0degree')
         pd3 = pd.DataFrame(bin_0degree_R_Big, 'R_big_0degree')
