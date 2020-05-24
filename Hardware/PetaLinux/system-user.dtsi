@@ -1,0 +1,27 @@
+/include/ "system-conf.dtsi"
+/ {
+
+	amba_pl: amba_pl {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "simple-bus";
+		ranges ;
+		axi_dma_0: dma@40400000 {
+			compatible="generic-uio";
+		};
+	};
+	udmabuf@0x00 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "udmabuf0";
+		minor-number = <0>;
+		size = <0x0004B001>;
+	};
+	reserved_memory{
+
+		device_type="reserved_memory";
+		reg=<0x80001000  0x80003C00>;
+		compatible="generic-uio";
+	};
+
+};
+

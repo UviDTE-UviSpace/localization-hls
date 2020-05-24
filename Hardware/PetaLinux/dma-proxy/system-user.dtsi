@@ -1,0 +1,10 @@
+/include/ "system-conf.dtsi"
+/ {
+	dma_proxy_dev: dma_proxy_dev@1 {
+		compatible ="jf,axi-dma-proxy-dev-1.00.a";
+                dmas = <&axi_dma_0 0
+			&axi_dma_0 1>;
+                dma-names = "axidma0", "axidma1";
+
+	};
+};
