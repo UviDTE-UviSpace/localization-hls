@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Thu May 14 21:44:23 2020
+| Date             : Thu May 28 15:13:18 2020
 | Host             : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,15 +52,15 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |     7936 |       --- |             --- |
+| Clocks                   |     0.013 |        3 |       --- |             --- |
+| Slice Logic              |     0.003 |     7940 |       --- |             --- |
 |   LUT as Logic           |     0.002 |     2569 |     53200 |            4.83 |
 |   CARRY4                 |    <0.001 |      134 |     13300 |            1.01 |
-|   Register               |    <0.001 |     3739 |    106400 |            3.51 |
+|   Register               |    <0.001 |     3741 |    106400 |            3.52 |
 |   LUT as Shift Register  |    <0.001 |      201 |     17400 |            1.16 |
 |   Others                 |     0.000 |      445 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
-| Signals                  |     0.003 |     5669 |       --- |             --- |
+| Signals                  |     0.003 |     5674 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       140 |            1.43 |
 | PS7                      |     1.533 |        1 |       --- |             --- |
 | Static Power             |     0.142 |          |           |                 |
@@ -155,7 +155,7 @@ Table of Contents
 |     axi_dma_0            |     0.009 |
 |       U0                 |     0.009 |
 |     axi_mem_intercon     |     0.004 |
-|       m00_couplers       |     0.002 |
+|       m00_couplers       |     0.001 |
 |       xbar               |     0.001 |
 |     passthrough_0        |     0.001 |
 |       U0                 |     0.001 |

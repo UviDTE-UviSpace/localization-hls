@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 -- Date        : Thu May 14 21:41:25 2020
 -- Host        : DESKTOP-LVJ56DR running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/localization-hls/Hardware/vivado/ZedBoard_DMA_SimpleDesign/ZedBoard_DMA_SimpleDesign.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_us_0 -prefix
+--               design_1_auto_us_0_ design_1_auto_us_0_stub.vhdl
 -- Design      : design_1_auto_us_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
