@@ -24,16 +24,19 @@ Invite for
 
 #TODO
 * [x] send DMA soft driver, bare metal application (random data & pixel 10x10). 18/05
-* [ ] STDV of angle position and place in accuracy table. 18/05
-* [x] PetaLinux builds with DMA DTI 18/05
-* [ ] Read back image into dst image from DMA memory map.
-* [ ] triangle STDV 1000 pics (Dont spend too much time to try this)
+* [x] PetaLinux builds with DMA to passthrough IP 18/05
+* [x] Read back image from DMA memory map.
+* [X] STDV of angle position and place in accuracy table. 21/05
+* [X] Ptlx with DMA to Filter. 21/05
+* [X] triangle STDV 1000 pics (Dont spend too much time to try this)
+* [ ] In user space, run TX in loop (like video stream) & see if 1 rx is working?
+* [ ] baremetal timing vs Software timing, thesis can say HLS is working, but implementing it into OS it shows the filter is slower.
 
-* [ ] Send mail Jj prof with public paper and finished full paper.
-* [ ] Send mail Bart Hours of final presentations.
+
+* [ ] Send mail jj Rodriguez prof with public paper and finished full paper.
 * [ ] Update Software GitHub text & pics.
 * [ ] Update images Software & HArdware chapters text in pics (Axi2Mat_DMA).
-* [ ] Update images PEtaLinux, place rootfs, hw description, module, drivers etc ... on the block design.
+* [ ] Update images in block designs with PetaLinux, place rootfs, hw description, module, drivers etc ... on the block design.
 
 #project
 part 1 accucary
