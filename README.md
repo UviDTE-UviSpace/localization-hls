@@ -14,8 +14,8 @@ ___
 * [x] Vivado block design with DMA access to filter IP block
 * [x] PetaLinux DMA access with driver to setup transfers from/to filter IP block in the ZedBoard HW
 * [x] Complete hardware implementation of the circle algorithm through HLS
-* [ ] Document steps
-* [ ] Comparison with software implementation
+* [x] Document steps
+* [x] Comparison with software implementation
 
 #### Other
 * [ ] Documentation

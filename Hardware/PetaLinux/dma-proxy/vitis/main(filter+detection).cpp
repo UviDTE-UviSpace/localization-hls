@@ -172,10 +172,10 @@ int main(int argc, char *argv[])
 	imgoutS = high_resolution_clock::now();
 	for(int i = 0; i < dst.rows; i++)
 	{
-		pixel = dst.ptr<uchar>(i-2); //point to first color in row		//weird shift inside HLS again? -2 rows offset.
+		pixel = dst.ptr<uchar>(i-2); //point to first color in row		//weird shift when running on Vitis. Running app on board is OK without offset.
 	    for(int j = 0; j < dst.cols; j++)
 	    {
-	    	*pixel++ = rx_proxy_interface_p->buffer[(i*640)+j+16];		//weird shift inside HLS again? +18 cols offset, +3 for simpledesign...
+	    	*pixel++ = rx_proxy_interface_p->buffer[(i*640)+j+16];		//weird shift when running on Vitis( +16 cols offset). Running app on board is OK. Probably the line buffer issue in driver. 
 	    }
 	}
 	imgoutST = high_resolution_clock::now();

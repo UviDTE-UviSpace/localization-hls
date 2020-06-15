@@ -161,7 +161,7 @@ void grpUGV(vector<UGV_data>& UGVS, vector<Circle_data>& circles)
 ---
 # EXAMPLE
 To display the center points on an image from '/Docs' make sure:
-* the defined radiusSize = 46, for new images change this.
+* the defined radiusSize = 46, for new images change this(for hardware part this is 11).
 * line 46 = img path is correct
 * drawCircleCenter() uncommented
 * all files on the ZedBoard (done with WinSCP)
@@ -171,9 +171,9 @@ To display the center points on an image from '/Docs' make sure:
 ![Vitis TCF-Agent log](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/C%2B%2B/pics/VitisLog.png)
 ![Center points](https://github.com/UviDTE-UviSpace/localization-hls/blob/master/Software/C%2B%2B/pics/CentersPlot.jpg)
 
-### Execution speed = ~20ms.
-### Time = 20/1000 = 0.02s.
-### FPS = 1/Time =  5 fps.
+### Execution speed = ~200ms.
+### Time = 200/1000 = 0.2s.
+### FPS = 1/Time =  0.5 fps.
 ---
 ## Documentation
 * [Image moments](https://www.learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/)

@@ -1,9 +1,9 @@
 # Vivado, Vitis projects and boot files
 ___
 ## INFO
-* PetaLinux are the generated images and sysroot of the PetaLinux build to implement in the vitis platform project (linux).
-* HLS are projects in the the High-Level Synthesis environment created for the circle algorithm to execute accelerated through the hardware of an FPGA, the ZedBoard in this research.
-* Vivado contains the built hardware design to implement and use into PetaLinux.
+* PetaLinux contains the generated images & sysroot of the PetaLinux project and also the Vitis platform application for running this on Linux.
+* HLS are projects in the the High-Level Synthesis environment created for the circle algorithm to execute accelerated through the hardware of an FPGA.
+* Vivado contains the built hardware block design to implement into PetaLinux.
 
 ### High-level Synthesis (HLS)
 * CalcGain_Zed is the IP-Core for processing an array of 1000 inputs with a given gain.

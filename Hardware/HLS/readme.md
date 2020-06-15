@@ -1,6 +1,6 @@
 ## TODO
-* []Redesign convolution through #pragma HLS dataflow that make the circle detection A LOT faster than current filters.
-* []Acces DMA through PetaLinux userspace
+* [ ]Redesign convolution through #pragma HLS dataflow that make the circle detection A LOT faster than current filters.
+* [x]Set up AXI Direct Memory Access through PetaLinux userspace.
 * [x]Implement CircleFilter design into HW, with Vivado & PetaLinux.
 
 ## FINISHED
