@@ -1,3 +1,6 @@
+# INFO
+* DeviationData.py is used to gather data from 1000 binary pictures with 1 UGV in 3 positions taken in UviSpace Lab. These pictures are found in 'pics'. The script saves the data from each position in a Pandas Dataframe for ease of use and saved under 'measuredata' as a pickle (.pkl). This data is read with the DeviationPlot.py script to plot the positions and measure the standard deviations of these angles of the UGVs.
+
 # Positioning the center of a circle with OpenCV.
 ___
 ## _circleContours.py
